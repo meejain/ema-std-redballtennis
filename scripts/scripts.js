@@ -10,6 +10,9 @@ import {
   loadSections,
   loadCSS,
   buildBlock,
+  readBlockConfig,
+  toClassName,
+  toCamelCase,
 } from './aem.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
@@ -164,12 +167,63 @@ function decorateButtons(main) {
 }
 
 /**
+ * Applies authored `section-metadata` tables still present in the markup (raw DA source;
+ * the delivery pipeline normally converts them): `style` becomes section classes, other
+ * keys become data attributes, and the table is removed.
+ * @param {Element} main The container element
+ */
+function applySectionMetadata(main) {
+  main.querySelectorAll(':scope > div > div.section-metadata').forEach((meta) => {
+    const section = meta.parentElement;
+    const config = readBlockConfig(meta);
+    Object.entries(config).forEach(([key, value]) => {
+      if (key === 'style') {
+        [value].flat().join(',').split(',').map((s) => toClassName(s.trim()))
+          .filter(Boolean)
+          .forEach((style) => section.classList.add(style));
+      } else {
+        section.dataset[toCamelCase(key)] = value;
+      }
+    });
+    meta.remove();
+  });
+}
+
+/**
+ * Moves an authored `metadata` table still present in the markup (raw DA source) into
+ * document <meta> tags, then removes it.
+ * @param {Element} main The main element
+ */
+function applyPageMetadata(main) {
+  main.querySelectorAll(':scope > div > div.metadata').forEach((block) => {
+    [...block.children].forEach((row) => {
+      const [keyCell, valueCell] = row.children;
+      if (!keyCell || !valueCell) return;
+      const key = keyCell.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+      const value = valueCell.textContent.trim();
+      if (!key) return;
+      if (key === 'title') document.title = value;
+      const attr = key.includes(':') ? 'property' : 'name';
+      let tag = document.head.querySelector(`meta[${attr}="${key}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute(attr, key);
+        document.head.append(tag);
+      }
+      tag.content = value;
+    });
+    block.remove();
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
 // eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   decorateIcons(main);
+  applySectionMetadata(main);
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
@@ -182,8 +236,9 @@ export function decorateMain(main) {
  */
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
-  decorateTemplateAndTheme();
   const main = doc.querySelector('main');
+  if (main) applyPageMetadata(main);
+  decorateTemplateAndTheme();
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');

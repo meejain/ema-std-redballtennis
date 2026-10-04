@@ -34,6 +34,14 @@ export async function loadFragment(path) {
       resetAttributeBase('img', 'src');
       resetAttributeBase('source', 'srcset');
 
+      // DA preview serves fragment media from {ref}--{site}--{org}.preview.da.live, which
+      // does not resolve outside DA; point it at the equivalent content.da.live asset instead
+      const daPreview = /https:\/\/[^/\s]+--([^/\s]+)--([^/\s.]+)\.preview\.da\.live\//g;
+      main.querySelectorAll('img[src*=".preview.da.live/"], source[srcset*=".preview.da.live/"]').forEach((elem) => {
+        const attr = elem.tagName === 'IMG' ? 'src' : 'srcset';
+        elem.setAttribute(attr, elem.getAttribute(attr).replace(daPreview, 'https://content.da.live/$2/$1/'));
+      });
+
       decorateMain(main);
       await loadSections(main);
       return main;
