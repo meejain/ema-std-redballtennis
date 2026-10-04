@@ -1,0 +1,197 @@
+{
+  "slug": "host",
+  "type": "program",
+  "renderBranch": "A",
+  "fidelityTier": "archetype",
+  "archetypeSource": "host",
+  "template": null,
+  "modules": [
+    "utility-bar",
+    "site-nav",
+    "breadcrumb",
+    "site-footer",
+    "hero-split",
+    "promo-band",
+    "prop-cards",
+    "signup-form"
+  ],
+  "slotsFilled": [],
+  "canonShas": {
+    "header": "fe5297b",
+    "footer": "ed0fd17",
+    "css": "bb18f0d"
+  },
+  "deviations": [],
+  "migrationDecisions": [
+    {
+      "kind": "path-rehome",
+      "from": "/en/home/host.html",
+      "to": "host/index.html",
+      "reason": "MIGRATION-PLAN.md § 1 URL map: short EDS paths; source paths kept alive via stardust/redirects.tsv"
+    }
+  ],
+  "contentDeviations": [
+    {
+      "kind": "dynamic-dependency",
+      "row": "f-signup-form",
+      "class": "F",
+      "disposition": "rebuild-native",
+      "reproducibility": "needs-backend",
+      "status": "scaffolded-awaiting-owner",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "f-host-interest-form",
+      "class": "F",
+      "disposition": "rebuild-native",
+      "reproducibility": "needs-backend",
+      "status": "scaffolded-awaiting-owner",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-usta-sites-dropdown",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-mobile-nav",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-analytics-stack",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-business-decision",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-consent-onetrust",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-credential",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    }
+  ],
+  "gatesPassed": [
+    "provenance",
+    "placeholder-gate",
+    "mobile-adapt",
+    "content-count"
+  ],
+  "sourceFidelityGate": {
+    "breakpoints": {
+      "360": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.63,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 1.91,
+        "pass": true
+      },
+      "1440": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.17,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 0.63,
+        "pass": true
+      }
+    },
+    "motion": {
+      "observedFiles": [
+        "stardust/replica/motion/host.json",
+        "stardust/replica/motion/host-360.json"
+      ],
+      "observed": [
+        "1440 hover .button-core: opacity 1 → 0.7 (fired)",
+        "1440 hover .footer-links__sites a: color #fff → rgb(207,255,5) (fired)",
+        "1440 hover .navigation-menu__list-item-link--level-1: NO change (dead on live)",
+        "1440 click .drop-down__label-wrapper: no class mutation, no transform/scroll sample (attribute/state-only toggle)",
+        "360 click .top-navigation__logo-hamburger: classes added top-navigation__top-bar--opened + top-to-bottom on .top-navigation__top-bar; transition top 0.3s",
+        "scroll traversal: 0 animations, 0 transitions, 0 class mutations, headerTimeline all null (no scroll-morph)"
+      ],
+      "implemented": [
+        "button hover opacity .7 — canon.css .button-core:hover / .button-primary-style:hover (no page code)",
+        "footer link hover lime — canon.css .footer-links__sites li.nav-link a:hover (no page code)"
+      ],
+      "dead": [
+        "nav level-1 link hover (canon.css implements a lime hover the live probe did not fire — see chromeDeltas)",
+        "no entrance/scroll animations on this page"
+      ],
+      "pixelAfterMotion": "no page-level motion code added; pixel-final re-run unchanged"
+    }
+  },
+  "metadata": {
+    "title": "Host",
+    "description": "Host",
+    "canonical": "https://main--sdt-redballtennis--aemcoder.aem.live/host/"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Red Ball Tennis (USTA)",
+      "url": "https://main--sdt-redballtennis--aemcoder.aem.live",
+      "logo": "https://main--sdt-redballtennis--aemcoder.aem.live/assets/media/red-ball-tennis-wbg-04927f.png",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "United States Tennis Association",
+        "url": "https://www.usta.com/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Host Red Ball Tennis",
+      "provider": {
+        "@type": "Organization",
+        "name": "United States Tennis Association"
+      },
+      "description": "Host",
+      "url": "https://main--sdt-redballtennis--aemcoder.aem.live/host"
+    }
+  ],
+  "brokenInternalLinks": [],
+  "migratedAt": "2026-09-17T16:42:50.611Z",
+  "designMdSha": "3ce6325",
+  "designJsonSha": "7558fc7",
+  "sourceCurrentSha": "c803c78",
+  "sourceProposedSha": "ddcf0a7",
+  "assetsBundled": 16,
+  "bundledAssetList": [
+    "media/Sites-Icon-4d7f1c.svg",
+    "media/Hamburger-Menu-White-339cdd.svg",
+    "media/Cancel_Bold_White-4f3fe8.svg",
+    "media/red-ball-tennis-wbg-04927f.png",
+    "media/red-ball-logo-mob-c70708.png",
+    "media/rbt-host-v1-455e8d.jpeg",
+    "media/man-430c35.png",
+    "media/man-6f51c2.png",
+    "media/on-the-court-5fd7d2.png",
+    "media/in-the-wild-text-and-image-1856b0.png",
+    "media/red-icons-03-f424a0.png",
+    "media/red-icons-01-66de25.png",
+    "media/red-icons-02-7dd0e7.png",
+    "media/rbt-favicon-180x180-d1914d.png",
+    "media/red-ball-tennis-wbg-d7e509.png",
+    "favicon.ico"
+  ],
+  "outputPath": "host/index.html",
+  "sourceUrl": "/en/home/host.html"
+}

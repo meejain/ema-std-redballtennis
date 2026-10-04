@@ -1,0 +1,13 @@
+chrome-parity @ 1440px, tolerance 1px
+  live:  https://www.redballtennis.com/en/home/play.html
+  build: http://localhost:8793/stardust/prototypes/play-proposed.html
+
+■ header: 3 delta(s) — 7 paired of 7/7 texts, 1/1 icons
+  PAIR         ">"  paddingLeft 6px → 8px; Δw +2px (20→22)
+  PAIR         "Play"  Δx +2px (67→69)
+  ICON         icon #0: signature "red-ball-tennis-wbg.png" → "red-ball-tennis-wbg-04927f.png"
+
+■ footer: 1 delta(s) — 2 paired of 2/2 texts, 1/1 icons
+  ICON         icon #0: signature "red-ball-tennis-wbg.png" → "red-ball-tennis-wbg-d7e509.png"
+
+✗ 4 delta(s) — fix these before any pixel iteration on chrome; re-run until quiet, then crop-compare confirms.

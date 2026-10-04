@@ -1,0 +1,49 @@
+{
+  "source": "http://localhost:8793/stardust/prototypes/404-proposed.html",
+  "width": 1280,
+  "profile": "eds",
+  "sections": [
+    {
+      "section": "notfound",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "Sorry, we couldn't find that page"
+        },
+        {
+          "role": "cta",
+          "order": 1,
+          "text": "TAKE ME BACK TO THE HOMEPAGE",
+          "href": "/en/home.html"
+        },
+        {
+          "role": "cta",
+          "order": 2,
+          "text": "TAKE ME BACK TO THE HOMEPAGE",
+          "href": "/en/home.html"
+        }
+      ],
+      "imgCount": 1,
+      "editableTexts": 1,
+      "repeats": [],
+      "defaultContent": true,
+      "repeatsNote": "AEM grid columns, not repeat units — default content (D1)"
+    }
+  ],
+  "componentModelShapes": {
+    "simple": [
+      "hero",
+      "embed",
+      "signup-form"
+    ],
+    "container": [
+      "cards",
+      "columns"
+    ],
+    "key-value": [
+      "metadata",
+      "section-metadata"
+    ]
+  }
+}

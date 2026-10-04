@@ -1,0 +1,68 @@
+{
+ "total": 15,
+ "offset": 0,
+ "limit": 15,
+ "data": [
+  {
+   "source": "/en/home.html",
+   "destination": "/"
+  },
+  {
+   "source": "/en/home/play.html",
+   "destination": "/play"
+  },
+  {
+   "source": "/en/home/host.html",
+   "destination": "/host"
+  },
+  {
+   "source": "/en/home/404.html",
+   "destination": "/404"
+  },
+  {
+   "source": "/en/home/free-racquet-pack.html",
+   "destination": "/"
+  },
+  {
+   "source": "/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html",
+   "destination": "/"
+  },
+  {
+   "source": "/en/home/confirmation.html",
+   "destination": "https://account.usta.com/"
+  },
+  {
+   "source": "/confirmation",
+   "destination": "https://account.usta.com/"
+  },
+  {
+   "source": "/en/home",
+   "destination": "/"
+  },
+  {
+   "source": "/en/home/play",
+   "destination": "/play"
+  },
+  {
+   "source": "/en/home/host",
+   "destination": "/host"
+  },
+  {
+   "source": "/en",
+   "destination": "/"
+  },
+  {
+   "source": "/play/",
+   "destination": "/play"
+  },
+  {
+   "source": "/host/",
+   "destination": "/host"
+  },
+  {
+   "source": "/404/",
+   "destination": "/404"
+  }
+ ],
+ ":type": "sheet"
+}

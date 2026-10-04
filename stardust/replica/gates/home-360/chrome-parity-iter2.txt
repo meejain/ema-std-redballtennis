@@ -1,0 +1,12 @@
+chrome-parity @ 360px, tolerance 1px
+  live:  https://www.redballtennis.com/en/home.html
+  build: http://localhost:8793/stardust/prototypes/home-proposed.html
+
+■ header: 2 delta(s) — 1 paired of 1/1 texts, 2/2 icons
+  ICON         "Menu"  icon #0 near "Menu": signature "Hamburger-Menu-White.svg" → "Hamburger-Menu-White-339cdd.svg"
+  ICON         icon #1: signature "red-ball-logo-mob.png" → "red-ball-logo-mob-c70708.png"
+
+■ footer: 1 delta(s) — 3 paired of 3/3 texts, 1/1 icons
+  ICON         icon #0: signature "red-ball-tennis-wbg.png" → "red-ball-tennis-wbg-d7e509.png"
+
+✗ 3 delta(s) — fix these before any pixel iteration on chrome; re-run until quiet, then crop-compare confirms.

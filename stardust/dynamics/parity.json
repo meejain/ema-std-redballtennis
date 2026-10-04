@@ -1,0 +1,213 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:dynamics",
+    "writtenAt": "2026-09-17T19:59:10.216Z",
+    "note": "replayed by scripts/dynamics/dynamics-check.mjs --origin <published origin>; form selectors to be confirmed against blocks/signup-form after the page conversion"
+  },
+  "method": "Static replica first (pixel-gated prototypes → EDS blocks); chrome behaviours rebuilt natively in blocks/header from the observed live state machines; YouTube kept as the same-src embed; lead-gen forms rebuilt with client validation and a visible not-connected notice until the owner supplies the endpoint (scripts/site-config.js); tags/consent shipped disabled; AEM runtime data and the account login decided-out (redirect).",
+  "features": [
+    {
+      "id": "m-usta-sites-dropdown",
+      "feature": "USTA SITES utility dropdown",
+      "class": "M",
+      "pages": 4,
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "done",
+      "verifiedBy": "deployed 1440: button at [8,12] 180×36; list 400×397 opens on click (aria-expanded=true), 8 links, Escape closes",
+      "checks": [
+        {
+          "type": "dom-count",
+          "path": "/",
+          "selector": ".drop-down__label-wrapper",
+          "min": 1
+        },
+        {
+          "type": "dom-count",
+          "path": "/",
+          "selector": ".drop-down__select-list a[href]",
+          "min": 8
+        }
+      ]
+    },
+    {
+      "id": "m-mobile-nav",
+      "feature": "Hamburger navigation ≤1369px",
+      "class": "M",
+      "pages": 4,
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "done",
+      "verifiedBy": "harness 360: header 74 = 44 + 30; click adds top-navigation__top-bar--opened + top-to-bottom, panel top 74px, menu re-parented, rows 59/49/49/49, icon swap, second click closes (blocks/header)",
+      "checks": [
+        {
+          "type": "dom-count",
+          "path": "/",
+          "selector": ".top-navigation__logo-hamburger",
+          "min": 1
+        }
+      ]
+    },
+    {
+      "id": "v-video-youtube",
+      "feature": "Home hero YouTube embed 0d6ahBtLavQ",
+      "class": "V",
+      "pages": 1,
+      "disposition": "embed-passthrough",
+      "reproducibility": "self",
+      "status": "pending D2-a",
+      "verifiedBy": "same-src iframe https://www.youtube.com/embed/0d6ahBtLavQ 450×300 (prototype gated 0.22%)",
+      "checks": [
+        {
+          "type": "video-plays",
+          "path": "/",
+          "iframeSelector": "iframe[src*=\"youtube.com/embed/0d6ahBtLavQ\"]",
+          "playbackHost": "youtube.com"
+        }
+      ]
+    },
+    {
+      "id": "f-signup-form",
+      "feature": "Newsletter sign-up (EMAIL + ZIP, *JOIN THE FUN)",
+      "class": "F",
+      "pages": 2,
+      "disposition": "rebuild-native",
+      "reproducibility": "needs-backend",
+      "status": "scaffolded-awaiting-owner",
+      "owner": "USTA digital: lead-generation endpoint (or forms service) + consent copy sign-off — set scripts/site-config.js forms.leadGenEndpoint",
+      "verifiedBy": "deployed: form.lead-form with #email-value-id + #zipcode-value-id, submit disabled until both valid; on submit with no endpoint the block shows the explicit not-connected notice and makes NO request — the form-flow check type requires a POST to arrive, so the flow cannot pass until the owner supplies forms.leadGenEndpoint (decision batch #1); presence checks only until then",
+      "checks": [
+        {
+          "type": "dom-count",
+          "path": "/",
+          "selector": ".signup-form form input",
+          "min": 2
+        },
+        {
+          "type": "dom-count",
+          "path": "/",
+          "selector": ".signup-form form button[disabled]",
+          "min": 1
+        }
+      ]
+    },
+    {
+      "id": "f-host-interest-form",
+      "feature": "Host interest form (same widget, host copy)",
+      "class": "F",
+      "pages": 1,
+      "disposition": "rebuild-native",
+      "reproducibility": "needs-backend",
+      "status": "scaffolded-awaiting-owner",
+      "owner": "USTA digital (same endpoint as f-signup-form)",
+      "verifiedBy": "deployed: form.lead-form with #email-value-id + #zipcode-value-id, submit disabled until both valid; on submit with no endpoint the block shows the explicit not-connected notice and makes NO request — the form-flow check type requires a POST to arrive, so the flow cannot pass until the owner supplies forms.leadGenEndpoint (decision batch #1); presence checks only until then",
+      "checks": [
+        {
+          "type": "dom-count",
+          "path": "/host",
+          "selector": ".signup-form form input",
+          "min": 2
+        },
+        {
+          "type": "dom-count",
+          "path": "/host",
+          "selector": ".signup-form form button[disabled]",
+          "min": 1
+        }
+      ]
+    },
+    {
+      "id": "t-analytics-stack",
+      "feature": "Adobe Launch / Analytics / Target, Hotjar, ad pixels",
+      "class": "T",
+      "pages": 4,
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-business-decision",
+      "status": "scaffolded-awaiting-owner",
+      "owner": "USTA marketing: Launch property URL + which pixels run on the new host (scripts/site-config.js analytics.enabled)",
+      "verifiedBy": "disabled: zero requests to assets.adobedtm.com / demdex.net / omtrdc.net / hotjar.com / facebook.net / doubleclick.net",
+      "checks": [
+        {
+          "type": "consent-gate",
+          "path": "/",
+          "forbiddenHosts": [
+            "assets.adobedtm.com",
+            "dpm.demdex.net",
+            "usta.demdex.net",
+            "unitedstatestennisas.tt.omtrdc.net",
+            "static.hotjar.com",
+            "connect.facebook.net",
+            "cm.g.doubleclick.net",
+            "cdn.bttrack.com",
+            "tag.simpli.fi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t-consent-onetrust",
+      "feature": "OneTrust CMP",
+      "class": "T",
+      "pages": 4,
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-credential",
+      "status": "scaffolded-awaiting-owner",
+      "owner": "USTA privacy: OneTrust domain script id for the new host (scripts/site-config.js consent.enabled)",
+      "verifiedBy": "disabled: zero requests to cdn.cookielaw.org / geolocation.onetrust.com",
+      "checks": [
+        {
+          "type": "consent-gate",
+          "path": "/",
+          "forbiddenHosts": [
+            "cdn.cookielaw.org",
+            "geolocation.onetrust.com"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "x-auth-confirmation",
+      "feature": "/confirmation → USTA account login",
+      "class": "X",
+      "pages": 1,
+      "disposition": "decided-out",
+      "reproducibility": "needs-business-decision",
+      "status": "decided-out",
+      "owner": "USTA identity: confirm the post-login return URL on the new host",
+      "verifiedBy": "redirects.json: /en/home/confirmation.html and /confirmation → 301 https://account.usta.com/ (verified on aem.page)",
+      "checks": []
+    },
+    {
+      "id": "a-aem-settings",
+      "feature": "AEM runtime data (csrf token, i18n dict, segments, ContextHub)",
+      "class": "A",
+      "pages": 4,
+      "disposition": "decided-out",
+      "reproducibility": "self",
+      "status": "decided-out",
+      "verifiedBy": "no consumer on the migrated pages; host-bound on the target",
+      "checks": []
+    },
+    {
+      "id": "site-no-errors",
+      "feature": "No uncaught exceptions on any delivered page",
+      "class": "CR",
+      "pages": 4,
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending D2-a",
+      "verifiedBy": "0 pageerrors on /, /play, /host, /404 at 1440",
+      "checks": [
+        {
+          "type": "no-page-errors",
+          "paths": [
+            "/",
+            "/play",
+            "/host",
+            "/404"
+          ]
+        }
+      ]
+    }
+  ]
+}

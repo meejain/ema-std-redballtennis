@@ -1,0 +1,119 @@
+/* stardust prototype — host (program page). Every value lifted from ALL-RULES.txt (AEM grid, padding
+   utilities, lead-generation form) or the computed lift (lift-host-1440/360.json). Desktop rules are the
+   ≥992 grid; the single media block is the live (max-width:767px) mobile grid. */
+
+/* live body computes overflow: hidden auto (the 340px card image overflows the 360 viewport on live) */
+body.redball-editable-page { overflow: hidden auto; }
+
+.page-host { display: block; }
+
+/* ---- AEM grid primitives used on this page --------------------------------------------------- */
+/* component column (.text/.image/.separator/.button): float, 8px vertical pad, 15px gutters (mobile 4px) */
+.page-host .col { float: left; clear: none; padding: 8px 0; margin-left: 15px; margin-right: 15px; }
+.page-host .col--newline { clear: both !important; }
+/* container column (.container.responsivegrid.full-width): percentage width, no gutter */
+.page-host .ctn { float: left; clear: none; margin: 0; display: flow-root; }
+/* hr as computed live (bootstrap hr + separator utilities) */
+.page-host hr { margin: 20px 0; border: 0; border-top: 1px solid #fff; height: 0; }
+.page-host .rule--7 hr { margin: 7px 0; }
+.page-host .rule--pad-4 { padding: 4px 0 !important; }
+.page-host .rule--transparent hr { border-color: transparent; }
+.page-host .rule--none hr { margin: 0; }
+/* foundation clientlib: div.image{margin-bottom:20px;overflow:hidden} — visible on float columns only (the
+   space-around bands' margin:auto !important overrides it, as on live) */
+.page-host div.image { margin-bottom: 20px; overflow: hidden; }
+/* .aem-GridColumn--default--hide and friends */
+.page-host [hidden] { display: none !important; }
+
+/* ---- 1. hero: "This Is Your Game" — 7/12 copy column + 5/12 photo column, align-items center ------ */
+.band--hero { padding-top: 0; } /* .padding-top-none; red-stripe keeps the 8px column padding-bottom */
+.hero__grid { display: flex; flex-wrap: wrap; align-items: center; }
+.hero__copy { width: 58.33333333%; padding: 64px 30px 32px; } /* padding-top-medium / bottom-small / left+right-triple */
+.hero__copy .col { margin-left: 20px; margin-right: 20px; } /* .container--elements-margin--fixed: 40px gutters */
+.hero__title { width: calc(66.66666667% - 40px); } /* .text default--8 */
+.hero__title h1 { font-size: 100px; line-height: 110px; color: #0a2396; text-align: left; margin: 0; }
+.hero__mobile-image { display: none; width: calc(100% - 40px); } /* default--hide, mobile--12 */
+.hero__rule { width: 100% !important; margin-left: 0 !important; margin-right: 0 !important; } /* separator--width--full-width */
+.hero__lede { width: calc(100% - 40px); } /* .text default--12 newline */
+.hero__lede p { color: #000; text-align: left; }
+.hero__lede .lede-p { font-size: 32px; line-height: 34px; } /* live inline style on both lede paragraphs */
+.hero__photo { width: 41.66666667%; padding: 224px 0; /* padding-top/bottom small+medium+large = 224 */
+  background: url("/stardust/current/assets/media/host-red-ball-e309b8.jpg") 50% center / cover no-repeat; }
+.hero__photo-grid { display: flex; align-items: baseline; flex-wrap: wrap; } /* .inner_full-height */
+.hero__photo .col { width: calc(100% - 30px); } /* .separator default--5 in a 5-grid */
+
+/* ---- 2. promo: REDESIGNED FOR YOU — flex space-around, every column margin:auto ----------------- */
+.band--promo .promo__inner { padding: 32px 0 64px; display: flex; flex-wrap: wrap; justify-content: space-around; } /* padding-top-small / bottom-medium */
+.band--promo .col { margin: auto !important; float: none; }
+.promo__text { width: calc(91.66666667% - 30px); } /* .text default--11 */
+.promo__text h2 { font-size: 76px; line-height: 83.6px; color: #0a2396; margin: 0; }
+.promo__text p { color: #0a2396; }
+.promo__rule { width: 100%; } /* default--12 under full-width root → 100%, margin 0 */
+.promo__btn { width: calc(16.66666667% - 30px); } /* .button default--2 */
+.promo__btn .button-core { background-color: #0a2396; color: #fff; }
+
+/* ---- 3. blue-balls band: two prop cards + footnote + HOST WITH THE MOST -------------------------- */
+.play__bg { background: url("/stardust/current/assets/media/host-play-bg-33c81e.jpg") 50% center / cover no-repeat; }
+/* .justify-content_space-around: EVERY nested .cmp-container>.aem-Grid is flex/space-around and EVERY
+   nested column carries margin:auto (descendant selectors on live) */
+.play__grid, .play__inner-body, .play__card-body { display: flex; flex-wrap: wrap; justify-content: space-around; }
+.band--play .col, .band--play .ctn { margin: auto !important; float: none; }
+.play__inner { width: 75%; padding: 8px 0; } /* container default--9 offset 1 (offset absorbed by margin:auto) */
+.play__inner-body { padding: 64px 0; } /* padding-top-medium / padding-bottom-medium */
+.play__card { width: 44.44444444%; padding: 8px 0; } /* container default--4 of the 9-grid */
+.play__card-image { width: calc(75% - 30px); } /* .image default--3 of the 4-grid */
+.play__card--wild .play__card-image { width: calc(100% - 30px); } /* .image default--4 */
+.play__card--wild .cmp-image { width: 340px; } /* live inline style on .cmp-image */
+.play__card-text { width: calc(100% - 30px); } /* .text default--4 */
+.play__card-text p { color: #fff; }
+.play__card-text .card-p { font-size: 20px; font-family: "Graphik Semibold", Tahoma, sans-serif; font-weight: 500; } /* live inline style */
+.play__rule, .play__note, .play__cta, .play__hidden-btn { width: calc(100% - 30px); } /* default--9 of the 9-grid */
+.play__note p { color: #fff; }
+.play__cta .button-core, .play__hidden-btn .button-core, .play__ambassadors .button-core { background-color: #fff; color: #000; }
+
+/* ---- 4. lead-generation form (Vue .v-lead-generation, in-page view) ------------------------------ */
+.page-host .col.form__col { width: 100%; margin: 0; } /* default--12 under the full-width root: 100%, no gutter */
+.v-lead-generation__in-page-view { background-color: transparent; padding: 30px; }
+.v-lead-generation-form { display: flex; flex-direction: column; gap: 8px; padding: 20px; margin: 0 auto; }
+.v-lead-generation-form__icon { width: 62px; height: 62px; }
+.v-lead-generation-form__title { font-family: "Graphik XXCond Bold", Tahoma, sans-serif; font-weight: 400; font-size: 56px; line-height: 50.5px; color: #000; margin: 10px 0; }
+.v-lead-generation-form__cta-text p { font-family: "Graphik Semibold", Tahoma, sans-serif; font-weight: 400; font-size: 16px; line-height: 22px; color: #000; }
+.v-lead-generation-form .inputs-row { display: flex; align-items: end; gap: 30px; margin-top: 20px; }
+.v-lead-generation-form .inputs-row .text-input { width: 40%; margin-top: 30px; }
+.v-base-input { position: relative; }
+.v-base-input__wrapper { position: relative; }
+.v-lead-generation-form .text-input label { width: 100%; text-align: left; color: #000; margin: 0; font-weight: 400; }
+.v-lead-generation-form__asterisk { color: #c8102e; margin-right: 2px; }
+.v-lead-generation-form .subscribe-button { background-color: #000; color: #fff; }
+.v-lead-generation-form .subscribe-button:disabled { opacity: .5; cursor: not-allowed; }
+.v-lead-generation-form__terms-description { margin-top: 30px; }
+.v-lead-generation-form__terms-description p { font-family: "Graphik Regular", Tahoma, sans-serif; color: #000; font-weight: 400; font-size: 16px; line-height: 22px; text-align: left; }
+.v-lead-generation-form__terms-description p a { color: #0357b8; }
+
+/* ---- mobile grid (live @media (max-width:767px)) ------------------------------------------------ */
+@media (max-width: 767px) {
+  .page-host .col { margin-left: 4px; margin-right: 4px; }
+  .hero__copy { width: 100%; padding: 32px 8px 16px; } /* mobile--12; padding utilities halve; triple = 8px */
+  .hero__copy .col { margin-left: 20px; margin-right: 20px; }
+  .hero__title { width: calc(100% - 40px); }
+  .hero__title h1 { font-size: 54px; line-height: 59.4px; }
+  .hero__mobile-image { display: block; }
+  .hero__mobile-image img { aspect-ratio: 512 / 388; } /* live serves the 512×388 rendition at mobile (304×230.375); the local file is the 1024 rendition */
+  .hero__lede { width: calc(100% - 40px); }
+  .page-host .hero__photo { display: none; } /* aem-GridColumn--mobile--hide */
+  .band--promo .promo__inner { padding: 16px 0 32px; }
+  .promo__text { width: calc(91.66666667% - 8px); }
+  .promo__text h2 { font-size: 44px; line-height: 48.4px; }
+  .promo__btn { width: calc(16.66666667% - 8px); }
+  .play__inner { width: 83.33333333%; } /* mobile--10 */
+  .play__inner-body { padding: 32px 0; }
+  .play__card { width: 100%; } /* mobile--10 of a 10-grid */
+  .play__card-image, .play__card--wild .play__card-image, .play__card-text,
+  .play__rule, .play__note, .play__cta, .play__hidden-btn { width: calc(100% - 8px); }
+  .v-lead-generation-form__title { margin-top: 0; }
+  .v-lead-generation-form .inputs-row { flex-direction: column; align-items: center; gap: 20px; margin-top: 0; }
+  .v-lead-generation-form .inputs-row .text-input { width: 100%; }
+  .v-lead-generation-form .inputs-row .v-lead-generation-form__buttons { width: 100%; display: flex; flex-direction: column; margin-top: 30px; align-items: center; }
+  .v-lead-generation-form__terms-description { margin-top: 18px; }
+  .v-lead-generation-form__terms-description p { font-size: 14px; line-height: 18px; }
+}

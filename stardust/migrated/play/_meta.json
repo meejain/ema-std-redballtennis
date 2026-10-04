@@ -1,0 +1,191 @@
+{
+  "slug": "play",
+  "type": "program",
+  "renderBranch": "A",
+  "fidelityTier": "archetype",
+  "archetypeSource": "play",
+  "template": null,
+  "modules": [
+    "utility-bar",
+    "site-nav",
+    "breadcrumb",
+    "site-footer",
+    "hero-split",
+    "promo-band",
+    "signup-form",
+    "icon-columns",
+    "centered-cta-band"
+  ],
+  "slotsFilled": [],
+  "canonShas": {
+    "header": "fe5297b",
+    "footer": "ed0fd17",
+    "css": "bb18f0d"
+  },
+  "deviations": [],
+  "migrationDecisions": [
+    {
+      "kind": "path-rehome",
+      "from": "/en/home/play.html",
+      "to": "play/index.html",
+      "reason": "MIGRATION-PLAN.md § 1 URL map: short EDS paths; source paths kept alive via stardust/redirects.tsv"
+    }
+  ],
+  "contentDeviations": [
+    {
+      "kind": "dynamic-dependency",
+      "row": "f-signup-form",
+      "class": "F",
+      "disposition": "rebuild-native",
+      "reproducibility": "needs-backend",
+      "status": "scaffolded-awaiting-owner",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "v-video-youtube",
+      "class": "V",
+      "disposition": "embed-passthrough",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-usta-sites-dropdown",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-mobile-nav",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-analytics-stack",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-business-decision",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-consent-onetrust",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-credential",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    }
+  ],
+  "gatesPassed": [
+    "provenance",
+    "placeholder-gate",
+    "mobile-adapt",
+    "content-count"
+  ],
+  "sourceFidelityGate": {
+    "breakpoints": {
+      "360": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.56,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 1.91,
+        "pass": true
+      },
+      "1440": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.13,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 0.63,
+        "pass": true
+      }
+    },
+    "motion": {
+      "observed": [
+        ".button-core hover → opacity 1 → 0.7 (fired; no transition)",
+        ".footer-links__sites a hover → color #fff → #cfff05 (fired; no transition)",
+        ".navigation-menu__list-item-link--level-1 hover → NO change fired (dead)",
+        "360 .top-navigation__logo-hamburger click → adds top-navigation__top-bar--opened + top-to-bottom on .top-navigation__top-bar; transition top .3s (fired)",
+        "1440 .drop-down__label-wrapper click → no class mutation / animation captured (aria-expanded state only)",
+        "0 scroll animations, 0 header timeline states at both widths"
+      ],
+      "implemented": [
+        "none page-level — the only fired page behaviour (.button-core:hover opacity .7) is already in canon.css; play.css adds no motion, so the gated pixel numbers stand unchanged"
+      ],
+      "dead": [
+        ".navigation-menu__list-item--level-1:hover … { color: #cfff05 } in canon.css — never fired live (chrome delta, home agent)"
+      ],
+      "files": [
+        "stardust/replica/motion/play.json",
+        "stardust/replica/motion/play-360.json"
+      ]
+    }
+  },
+  "metadata": {
+    "title": "Play",
+    "description": "Play",
+    "canonical": "https://main--sdt-redballtennis--aemcoder.aem.live/play/"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Red Ball Tennis (USTA)",
+      "url": "https://main--sdt-redballtennis--aemcoder.aem.live",
+      "logo": "https://main--sdt-redballtennis--aemcoder.aem.live/assets/media/red-ball-tennis-wbg-04927f.png",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "United States Tennis Association",
+        "url": "https://www.usta.com/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Play Red Ball Tennis",
+      "provider": {
+        "@type": "Organization",
+        "name": "United States Tennis Association"
+      },
+      "description": "Play",
+      "url": "https://main--sdt-redballtennis--aemcoder.aem.live/play"
+    }
+  ],
+  "brokenInternalLinks": [],
+  "migratedAt": "2026-09-17T16:42:50.611Z",
+  "designMdSha": "3ce6325",
+  "designJsonSha": "7558fc7",
+  "sourceCurrentSha": "36c9901",
+  "sourceProposedSha": "cb33451",
+  "assetsBundled": 12,
+  "bundledAssetList": [
+    "media/Sites-Icon-4d7f1c.svg",
+    "media/Hamburger-Menu-White-339cdd.svg",
+    "media/Cancel_Bold_White-4f3fe8.svg",
+    "media/red-ball-tennis-wbg-04927f.png",
+    "media/red-ball-logo-mob-c70708.png",
+    "media/icon-resources-6-2c7bad.svg",
+    "media/icon-resources-5-788f05.svg",
+    "media/hit-to-be-fit-403c8b.svg",
+    "media/red-tennis-ball-c7c254.svg",
+    "media/rbt-favicon-180x180-d1914d.png",
+    "media/red-ball-tennis-wbg-d7e509.png",
+    "favicon.ico"
+  ],
+  "outputPath": "play/index.html",
+  "sourceUrl": "/en/home/play.html"
+}

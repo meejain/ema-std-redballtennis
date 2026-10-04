@@ -1,0 +1,242 @@
+{
+  "source": "http://localhost:8793/stardust/prototypes/home-proposed.html",
+  "width": 1280,
+  "profile": "eds",
+  "sections": [
+    {
+      "section": "hero",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "Red Ball Tennis"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "RAW THE LINES"
+        },
+        {
+          "role": "body",
+          "order": 2,
+          "text": "RED"
+        },
+        {
+          "role": "body",
+          "order": 3,
+          "text": "RAW THE LINES"
+        },
+        {
+          "role": "body",
+          "order": 4,
+          "text": "RED"
+        },
+        {
+          "role": "body",
+          "order": 5,
+          "text": "Red Ball Tennis drops the pressure and dials up the fun of the classic game we all love. Whether you’re new to the game, coming back after a break, or just looking to get active, Red Ball makes it easy to jump in. No formal courts, no strict rules, just high-energy play whenever and wherever you want."
+        }
+      ],
+      "imgCount": 1,
+      "editableTexts": 4,
+      "repeats": [
+        {
+          "unitSelector": "DIV.text",
+          "count": 3,
+          "unit": {
+            "headings": 1,
+            "ctas": 0,
+            "imgs": 0,
+            "textRuns": 1
+          },
+          "uniform": false
+        }
+      ],
+      "block": "hero",
+      "tier": "template-slotted",
+      "shape": "simple"
+    },
+    {
+      "section": "promo",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "REDESIGNED FOR YOU"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "Get the official racquet for Red Ball Tennis!"
+        },
+        {
+          "role": "cta",
+          "order": 2,
+          "text": "Shop Now",
+          "href": "https://www.head.com/en_US/product/redball-23-230056?cid=RBTHeadRacquetShop_20260822_chint_brrbt_owpla_ctpro_endcid"
+        }
+      ],
+      "imgCount": 0,
+      "editableTexts": 2,
+      "repeats": [],
+      "defaultContent": true,
+      "repeatsNote": "AEM grid columns, not repeat units — default content (D1)"
+    },
+    {
+      "section": "play-host",
+      "items": [
+        {
+          "role": "body",
+          "order": 0,
+          "text": "Host your own red ball event and become an ambassador"
+        },
+        {
+          "role": "cta",
+          "order": 1,
+          "text": "FIND AN EVENT",
+          "href": "/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html"
+        },
+        {
+          "role": "body",
+          "order": 2,
+          "text": "Host your own red ball event and become an ambassador"
+        },
+        {
+          "role": "cta",
+          "order": 3,
+          "text": "HOST AN EVENT",
+          "href": "https://customercare.usta.com/hc/en-us/requests/new?ticket_form_id=29846834371860"
+        },
+        {
+          "role": "body",
+          "order": 4,
+          "text": "Game on! Discover how easy and fun Red Ball Tennis can be from the court to your street."
+        },
+        {
+          "role": "cta",
+          "order": 5,
+          "text": "PLAY YOUR WAY",
+          "href": "/en/home/play.html"
+        },
+        {
+          "role": "body",
+          "order": 6,
+          "text": "Rally your friends and serve up some smiles by hosting a Red Ball Tennis event!"
+        },
+        {
+          "role": "cta",
+          "order": 7,
+          "text": "SHARE THE LOVE",
+          "href": "/en/home/host.html"
+        }
+      ],
+      "imgCount": 2,
+      "editableTexts": 4,
+      "repeats": [
+        {
+          "unitSelector": "DIV.card",
+          "count": 2,
+          "unit": {
+            "headings": 1,
+            "ctas": 1,
+            "imgs": 0,
+            "textRuns": 2
+          },
+          "uniform": true
+        },
+        {
+          "unitSelector": "ARTICLE.card",
+          "count": 2,
+          "unit": {
+            "headings": 0,
+            "ctas": 1,
+            "imgs": 1,
+            "textRuns": 2
+          },
+          "uniform": true
+        }
+      ],
+      "block": "cards props",
+      "tier": "reconstructive",
+      "shape": "container"
+    },
+    {
+      "section": "newsletter",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "RED IS IN. ARE YOU?"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "SIGN UP FOR RED BALL TENNIS NEWS, EVENTS, AND A FEW SURPRISES."
+        },
+        {
+          "role": "eyebrow",
+          "order": 2,
+          "text": "EMAIL"
+        },
+        {
+          "role": "eyebrow",
+          "order": 3,
+          "text": "*"
+        },
+        {
+          "role": "eyebrow",
+          "order": 4,
+          "text": "ZIP/POSTAL CODE"
+        },
+        {
+          "role": "eyebrow",
+          "order": 5,
+          "text": "*"
+        },
+        {
+          "role": "eyebrow",
+          "order": 6,
+          "text": "*JOIN THE FUN"
+        },
+        {
+          "role": "body",
+          "order": 7,
+          "text": "*By clicking JOIN THE FUN, you are signing up to receive email communications from USTA and its affiliates about Red Ball Tennis play opportunities, programs and other promotional communications. You agree to and understand that personal information you provide will be used as described in . You must be 13 years of age or older to subscribe to these communications."
+        },
+        {
+          "role": "cta",
+          "order": 8,
+          "text": "USTA's Terms of Use",
+          "href": "https://www.usta.com/en/home/about-usta/who-we-are/national/usta-terms-of-use.html"
+        },
+        {
+          "role": "cta",
+          "order": 9,
+          "text": "USTA's Privacy Policy",
+          "href": "https://www.usta.com/en/home/about-usta/who-we-are/national/usta-privacy-policy.html"
+        }
+      ],
+      "imgCount": 1,
+      "editableTexts": 3,
+      "repeats": [],
+      "block": "signup-form",
+      "tier": "template-slotted",
+      "shape": "simple"
+    }
+  ],
+  "componentModelShapes": {
+    "simple": [
+      "hero",
+      "embed",
+      "signup-form"
+    ],
+    "container": [
+      "cards",
+      "columns"
+    ],
+    "key-value": [
+      "metadata",
+      "section-metadata"
+    ]
+  }
+}

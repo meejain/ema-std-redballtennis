@@ -1,0 +1,310 @@
+{
+  "source": "http://localhost:8793/stardust/prototypes/play-proposed.html",
+  "width": 1280,
+  "profile": "eds",
+  "sections": [
+    {
+      "section": "hero",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "Tennis esigned For You"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "Red"
+        },
+        {
+          "role": "body",
+          "order": 2,
+          "text": "YOU DRAW THE LINE"
+        },
+        {
+          "role": "body",
+          "order": 3,
+          "text": "Get ready to experience tennis like never before. With slower balls, a smaller court, and no strict rules, you’ll be playing Red Ball with your friends in no time. So what are you waiting for? Let’s rally!"
+        }
+      ],
+      "imgCount": 0,
+      "editableTexts": 3,
+      "repeats": [
+        {
+          "unitSelector": "DIV.cmp-text",
+          "count": 2,
+          "unit": {
+            "headings": 1,
+            "ctas": 0,
+            "imgs": 0,
+            "textRuns": 2
+          },
+          "uniform": false
+        }
+      ],
+      "block": "hero",
+      "tier": "template-slotted",
+      "shape": "simple"
+    },
+    {
+      "section": "promo",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "REDESIGNED FOR YOU"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "Get the official racquet for Red Ball Tennis!"
+        },
+        {
+          "role": "cta",
+          "order": 2,
+          "text": "Shop Now",
+          "href": "https://www.head.com/en_US/product/redball-23-230056?cid=RBTHeadRacquetShop_20260822_chint_brrbt_owpla_ctpro_endcid"
+        }
+      ],
+      "imgCount": 0,
+      "editableTexts": 2,
+      "repeats": [],
+      "defaultContent": true,
+      "repeatsNote": "AEM grid columns, not repeat units — default content (D1)"
+    },
+    {
+      "section": "spacer",
+      "items": [],
+      "imgCount": 0,
+      "editableTexts": 0,
+      "repeats": [],
+      "defaultContent": false,
+      "omitted": true,
+      "note": "16px empty AEM container — folded into blocks/embed padding (empty EDS sections collapse)"
+    },
+    {
+      "section": "video",
+      "items": [],
+      "imgCount": 0,
+      "editableTexts": 0,
+      "repeats": [],
+      "block": "embed",
+      "shape": "simple"
+    },
+    {
+      "section": "howto",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "HOW TO PLAY"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "Players decide who serves first"
+        },
+        {
+          "role": "body",
+          "order": 2,
+          "text": "Serve underhand, cross-court, with two chances to put the ball in play"
+        },
+        {
+          "role": "body",
+          "order": 3,
+          "text": "The ball must bounce once on the return; no volleys!"
+        },
+        {
+          "role": "body",
+          "order": 4,
+          "text": "Switch sides after every odd game"
+        },
+        {
+          "role": "heading",
+          "order": 5,
+          "text": "HOW TO SCORE"
+        },
+        {
+          "role": "body",
+          "order": 6,
+          "text": "First to 4 points wins the game"
+        },
+        {
+          "role": "body",
+          "order": 7,
+          "text": "First to 4 games wins the set"
+        },
+        {
+          "role": "body",
+          "order": 8,
+          "text": "The first player/team to win 2 out of 3 sets wins the match"
+        },
+        {
+          "role": "body",
+          "order": 9,
+          "text": "Or play a timed match and the team with the most games wins"
+        }
+      ],
+      "imgCount": 2,
+      "editableTexts": 10,
+      "repeats": [
+        {
+          "unitSelector": "DIV.howto__col",
+          "count": 2,
+          "unit": {
+            "headings": 1,
+            "ctas": 0,
+            "imgs": 1,
+            "textRuns": 5
+          },
+          "uniform": true
+        }
+      ],
+      "block": "columns icons-dark",
+      "tier": "reconstructive",
+      "shape": "container"
+    },
+    {
+      "section": "need",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "WHAT YOU NEED TO PLAY"
+        },
+        {
+          "role": "heading",
+          "order": 1,
+          "text": "23-INCH RACQUETS"
+        },
+        {
+          "role": "body",
+          "order": 2,
+          "text": "(smaller than a traditional tennis racquet)"
+        },
+        {
+          "role": "heading",
+          "order": 3,
+          "text": "TENNIS \"RED BALL\""
+        },
+        {
+          "role": "body",
+          "order": 4,
+          "text": "(lower compression tennis ball with slower bounce)"
+        },
+        {
+          "role": "heading",
+          "order": 5,
+          "text": "WHERE TO PLAY"
+        },
+        {
+          "role": "body",
+          "order": 6,
+          "text": "Your local tennis court, a pickleball court, a brewery, a parking lot, your driveway—the opportunities to play Red Ball are endless. Just pop up a net on any hard surface and get playing!"
+        },
+        {
+          "role": "cta",
+          "order": 7,
+          "text": "FIND A COURT",
+          "href": "https://www.usta.com/en/home/play/facility-listing.html"
+        },
+        {
+          "role": "heading",
+          "order": 8,
+          "text": "RED IS IN. ARE YOU?"
+        },
+        {
+          "role": "body",
+          "order": 9,
+          "text": "SIGN UP FOR RED BALL TENNIS NEWS, EVENTS, AND A FEW SURPRISES."
+        },
+        {
+          "role": "eyebrow",
+          "order": 10,
+          "text": "EMAIL"
+        },
+        {
+          "role": "eyebrow",
+          "order": 11,
+          "text": "*"
+        },
+        {
+          "role": "eyebrow",
+          "order": 12,
+          "text": "ZIP/POSTAL CODE"
+        },
+        {
+          "role": "eyebrow",
+          "order": 13,
+          "text": "*"
+        },
+        {
+          "role": "eyebrow",
+          "order": 14,
+          "text": "*JOIN THE FUN"
+        },
+        {
+          "role": "body",
+          "order": 15,
+          "text": "*By clicking JOIN THE FUN, you are signing up to receive email communications from USTA and its affiliates about Red Ball Tennis play opportunities, programs and other promotional communications. You agree to and understand that personal information you provide will be used as described in . You must be 13 years of age or older to subscribe to these communications."
+        },
+        {
+          "role": "cta",
+          "order": 16,
+          "text": "USTA's Terms of Use",
+          "href": "https://www.usta.com/en/home/about-usta/who-we-are/national/usta-terms-of-use.html"
+        },
+        {
+          "role": "cta",
+          "order": 17,
+          "text": "USTA's Privacy Policy",
+          "href": "https://www.usta.com/en/home/about-usta/who-we-are/national/usta-privacy-policy.html"
+        }
+      ],
+      "imgCount": 3,
+      "editableTexts": 10,
+      "repeats": [
+        {
+          "unitSelector": "DIV.text-col",
+          "count": 2,
+          "unit": {
+            "headings": 1,
+            "ctas": 0,
+            "imgs": 0,
+            "textRuns": 1
+          },
+          "uniform": false
+        },
+        {
+          "unitSelector": "DIV.need__item",
+          "count": 2,
+          "unit": {
+            "headings": 1,
+            "ctas": 0,
+            "imgs": 1,
+            "textRuns": 2
+          },
+          "uniform": true
+        }
+      ],
+      "block": "columns icons-light + default content + signup-form",
+      "tier": "reconstructive / template-slotted",
+      "shape": "container / simple"
+    }
+  ],
+  "componentModelShapes": {
+    "simple": [
+      "hero",
+      "embed",
+      "signup-form"
+    ],
+    "container": [
+      "cards",
+      "columns"
+    ],
+    "key-value": [
+      "metadata",
+      "section-metadata"
+    ]
+  }
+}

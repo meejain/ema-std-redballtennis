@@ -1,0 +1,8 @@
+source	destination	note
+/en/home.html	/	canonical home
+/en/home/play.html	/play
+/en/home/host.html	/host
+/en/home/404.html	/404
+/en/home/free-racquet-pack.html	/	source 301 → home
+/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html	/	source 301 → /
+/en/home/confirmation.html	https://account.usta.com/	external auth hand-off (dynamics decided-out)

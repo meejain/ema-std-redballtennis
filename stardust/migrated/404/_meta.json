@@ -1,0 +1,164 @@
+{
+  "slug": "404",
+  "type": "static",
+  "renderBranch": "A",
+  "fidelityTier": "archetype",
+  "archetypeSource": "404",
+  "template": null,
+  "modules": [
+    "utility-bar",
+    "site-nav",
+    "breadcrumb",
+    "site-footer",
+    "centered-cta-band"
+  ],
+  "slotsFilled": [],
+  "canonShas": {
+    "header": "fe5297b",
+    "footer": "ed0fd17",
+    "css": "bb18f0d"
+  },
+  "deviations": [],
+  "migrationDecisions": [
+    {
+      "kind": "path-rehome",
+      "from": "/en/home/404.html",
+      "to": "404/index.html",
+      "reason": "MIGRATION-PLAN.md § 1 URL map: short EDS paths; source paths kept alive via stardust/redirects.tsv"
+    }
+  ],
+  "contentDeviations": [
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-usta-sites-dropdown",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-mobile-nav",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-analytics-stack",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-business-decision",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-consent-onetrust",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-credential",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    }
+  ],
+  "gatesPassed": [
+    "provenance",
+    "placeholder-gate",
+    "mobile-adapt",
+    "content-count"
+  ],
+  "sourceFidelityGate": {
+    "breakpoints": {
+      "360": {
+        "structuralRed": 0,
+        "structuralRedBriefScope": 24,
+        "visualFlags": "none",
+        "pixelPct": 0.51,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 1.91,
+        "pass": true,
+        "contentBandPass": true,
+        "why": "Content band exact (anchor y74 h795 = live). Pixel and height pass; header crop (2.88%) and footer crop (3.23%, was 1.91% PASS against the 18:05 canon) fail on canon-owned deltas.",
+        "note": "final round against canon changedAt 2026-09-17T16:27Z (home agent); structuralRed/visual from iter2 unchanged (markup untouched)"
+      },
+      "1440": {
+        "structuralRed": 0,
+        "structuralRedBriefScope": 24,
+        "visualFlags": "none",
+        "pixelPct": 0.1,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 0.63,
+        "pass": true,
+        "contentBandPass": true,
+        "why": "Content band measures exact (anchor y195 h1038 = live; bands 0–500 and 500–1000 at 0.0%). Fails only on |heightΔ| (−26px) and footer crop (2.16%), both owned by the canon footer — see chromeDeltas.",
+        "note": "final round against canon changedAt 2026-09-17T16:27Z (home agent); structuralRed/visual from iter2 unchanged (markup untouched)"
+      }
+    },
+    "motion": {
+      "observed": [
+        "1440 hover .button-core → self.opacity 1 → 0.7 (source ALL-RULES 7633 `.button-core:hover{opacity:.7}`; no transition duration — computed transition 'all 0s')",
+        "1440 hover .footer-links__sites a → color #fff → rgb(207,255,5) (source 14097)",
+        "1440 hover .navigation-menu__list-item-link--level-1 → NO change measured (color stayed #fff)",
+        "1440 click .drop-down__label-wrapper → widget poke recorded no class mutation / transition (instrument samples transform/scrollLeft only; the live Vue toggle is attribute/display based)",
+        "360 click .top-navigation__logo-hamburger → classMutations on .top-navigation__top-bar: +top-navigation__top-bar--opened, +top-to-bottom; transition 'top' 0.3s (source 8872 `transition:top .3s ease,opacity .3s ease`; 9057 `.red-ball-colors .top-navigation__top-bar.top-to-bottom{top:74px}`; 8877 `--opened{padding-bottom:40px;border-bottom:1px solid #8f8f8f;border-radius 0 0 20px 20px;box-shadow:0 6px 6px rgba(0,0,0,.16)}`). Note: live DOM at 360 re-parents .top-navigation__top-bar under .top-navigation__logo.",
+        "no scroll animations, no header timeline states (headerTimeline all null), no entrance animations"
+      ],
+      "implemented": [
+        "button hover opacity .7 — already in canon.css `.button-core:hover{opacity:.7}`; verified on the prototype headlessly (before 1 → after 0.7), pixel count unchanged at t=0 (0.36%)"
+      ],
+      "dead": [
+        "nav level-1 link hover (canon applies #cfff05 — not observed live; see chromeDeltas)",
+        "no page-level entrance/scroll motion to implement"
+      ],
+      "chromeBehaviours": {
+        "dropdown": "poked, no measurable mutation captured",
+        "hamburger": "fired (see observed)",
+        "owner": "home agent (canon chrome.js)"
+      }
+    }
+  },
+  "metadata": {
+    "title": "404",
+    "description": "",
+    "canonical": "https://main--sdt-redballtennis--aemcoder.aem.live/404/"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Red Ball Tennis (USTA)",
+      "url": "https://main--sdt-redballtennis--aemcoder.aem.live",
+      "logo": "https://main--sdt-redballtennis--aemcoder.aem.live/assets/media/red-ball-tennis-wbg-04927f.png",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "United States Tennis Association",
+        "url": "https://www.usta.com/"
+      }
+    }
+  ],
+  "brokenInternalLinks": [],
+  "migratedAt": "2026-09-17T16:42:50.611Z",
+  "designMdSha": "3ce6325",
+  "designJsonSha": "7558fc7",
+  "sourceCurrentSha": "d224b38",
+  "sourceProposedSha": "1b02091",
+  "assetsBundled": 8,
+  "bundledAssetList": [
+    "media/Sites-Icon-4d7f1c.svg",
+    "media/Hamburger-Menu-White-339cdd.svg",
+    "media/Cancel_Bold_White-4f3fe8.svg",
+    "media/red-ball-tennis-wbg-04927f.png",
+    "media/red-ball-logo-mob-c70708.png",
+    "media/red-ball-tennis-circle-5e1c21.svg",
+    "media/red-ball-tennis-wbg-d7e509.png",
+    "favicon.ico"
+  ],
+  "outputPath": "404/index.html",
+  "sourceUrl": "/en/home/404.html"
+}

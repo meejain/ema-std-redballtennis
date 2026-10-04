@@ -1,0 +1,683 @@
+{
+  "discovery": {
+    "fetchTechnique": "headless",
+    "count": 7,
+    "concurrency": 4
+  },
+  "consent": {
+    "method": "auto"
+  },
+  "favicon": {
+    "url": "https://www.redballtennis.com/etc.clientlibs/redball/components/structure/page/clientlibs/resources/icons/favicon.ico?v=2",
+    "file": "assets/favicon.ico"
+  },
+  "crawl": {
+    "failures": []
+  },
+  "dynamicSurface": {
+    "pages": 7,
+    "pagesWithSameSiteData": 7,
+    "pagesWithSearchForm": 0,
+    "pagesHydrated": 6,
+    "truncatedPages": 0,
+    "endpoints": [
+      {
+        "method": "GET",
+        "host": "www.redballtennis.com",
+        "path": "/libs/granite/csrf/token.json",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": true,
+        "example": "https://www.redballtennis.com/libs/granite/csrf/token.json",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "www.redballtennis.com",
+        "path": "/conf/usta/settings/wcm/segments.seg.js",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "text/javascript",
+        "sameSite": true,
+        "example": "https://www.redballtennis.com/conf/usta/settings/wcm/segments.seg.js",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "maps.googleapis.com",
+        "path": "/maps/api/mapsjs/gen_204",
+        "query": [
+          "csp_test"
+        ],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://maps.googleapis.com/maps/api/mapsjs/gen_204",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "cdn.cookielaw.org",
+        "path": "/consent/{uuid}/{uuid}.json",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/0196c5af-1167-713d-890a-4a717f9cee0e.json",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "unitedstatestennisas.tt.omtrdc.net",
+        "path": "/rest/v1/delivery",
+        "query": [
+          "client",
+          "sessionId",
+          "version"
+        ],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "geolocation.onetrust.com",
+        "path": "/cookieconsentpub/v1/geo/location",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "cdn.cookielaw.org",
+        "path": "/consent/{uuid}/{uuid}/en.json",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/019764bc-bccf-7965-9d2c-210b99746f5e/en.json",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "cdn.cookielaw.org",
+        "path": "/scripttemplates/202506.1.0/assets/otCookieSettingsButton.json",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCookieSettingsButton.json",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "cdn.cookielaw.org",
+        "path": "/scripttemplates/202506.1.0/assets/v2/otPcPanel.json",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://cdn.cookielaw.org/scripttemplates/202506.1.0/assets/v2/otPcPanel.json",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "cdn.cookielaw.org",
+        "path": "/scripttemplates/202506.1.0/assets/otCommonStyles.css",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "text/css",
+        "sameSite": false,
+        "example": "https://cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCommonStyles.css",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "cdn.cookielaw.org",
+        "path": "/scripttemplates/202506.1.0/assets/otFloatingRounded.json",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otFloatingRounded.json",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "www.redballtennis.com",
+        "path": "/libs/cq/i18n/dict.en.json",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": true,
+        "example": "https://www.redballtennis.com/libs/cq/i18n/dict.en.json",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "cdn.cookielaw.org",
+        "path": "/logos/static/ot_guard_logo.svg",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "image/svg+xml",
+        "sameSite": false,
+        "example": "https://cdn.cookielaw.org/logos/static/ot_guard_logo.svg",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "bttrack.com",
+        "path": "/engagement/event",
+        "query": [
+          "input"
+        ],
+        "resourceType": "xhr",
+        "contentType": "text/plain",
+        "sameSite": false,
+        "example": "https://bttrack.com/engagement/event",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "bttrack.com",
+        "path": "/engagement/getpixels",
+        "query": [
+          "gid"
+        ],
+        "resourceType": "xhr",
+        "contentType": "text/html",
+        "sameSite": false,
+        "example": "https://bttrack.com/engagement/getpixels",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "dpm.demdex.net",
+        "path": "/id",
+        "query": [
+          "d_fieldgroup",
+          "d_nsid",
+          "d_orgid",
+          "d_rtbd",
+          "d_ver",
+          "d_visid_ver",
+          "ts"
+        ],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://dpm.demdex.net/id",
+        "pages": 5,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "googleads.g.doubleclick.net",
+        "path": "/pagead/id",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://googleads.g.doubleclick.net/pagead/id",
+        "pages": 4,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "jnn-pa.googleapis.com",
+        "path": "/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json+protobuf",
+        "sameSite": false,
+        "example": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+        "pages": 4,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "www.youtube.com",
+        "path": "/youtubei/v1/log_event",
+        "query": [
+          "alt"
+        ],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": false,
+        "example": "https://www.youtube.com/youtubei/v1/log_event",
+        "pages": 4,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "GET",
+        "host": "www.gstatic.com",
+        "path": "/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg",
+        "query": [],
+        "resourceType": "fetch",
+        "contentType": "image/svg+xml",
+        "sameSite": false,
+        "example": "https://www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg",
+        "pages": 3,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "www.google.com",
+        "path": "/ccm/collect",
+        "query": [
+          "apvc",
+          "auid",
+          "dl",
+          "dma",
+          "dr",
+          "dt",
+          "en",
+          "fmt",
+          "frm",
+          "gcd",
+          "gtm",
+          "navt",
+          "npa",
+          "rcb",
+          "rnd",
+          "scrsrc",
+          "tag_exp",
+          "tfd",
+          "tft",
+          "tid",
+          "tids"
+        ],
+        "resourceType": "fetch",
+        "contentType": null,
+        "sameSite": false,
+        "example": "https://www.google.com/ccm/collect",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "www.google.com",
+        "path": "/rmkt/collect/{n}/",
+        "query": [
+          "async",
+          "auid",
+          "bg",
+          "cv",
+          "data",
+          "dma",
+          "en",
+          "ept",
+          "fmt",
+          "frm",
+          "fst",
+          "gcd",
+          "gcp",
+          "gtm",
+          "guid",
+          "hn",
+          "npa",
+          "pscdl",
+          "random",
+          "rcb",
+          "ref",
+          "tag_exp",
+          "tiba",
+          "u_h",
+          "u_w",
+          "url"
+        ],
+        "resourceType": "fetch",
+        "contentType": null,
+        "sameSite": false,
+        "example": "https://www.google.com/rmkt/collect/16540420710/",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "ad.doubleclick.net",
+        "path": "/ccm/s/collect",
+        "query": [
+          "auid",
+          "fmt",
+          "gtm"
+        ],
+        "resourceType": "fetch",
+        "contentType": null,
+        "sameSite": false,
+        "example": "https://ad.doubleclick.net/ccm/s/collect",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "method": "POST",
+        "host": "account.usta.com",
+        "path": "/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "sameSite": true,
+        "example": "https://account.usta.com/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      }
+    ],
+    "thirdPartyScriptHosts": [
+      {
+        "host": "assets.adobedtm.com",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "maps.googleapis.com",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "cdn.bttrack.com",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "connect.facebook.net",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "static.hotjar.com",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "tag.simpli.fi",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "usta.d2.sc.omtrdc.net",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "cdn.cookielaw.org",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "bttrack.com",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "www.youtube.com",
+        "pages": 4,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "static.doubleclick.net",
+        "pages": 4,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "www.google.com",
+        "pages": 4,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "host": "www.redballtennis.com",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "host": "a42cdn.usablenet.com",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "host": "www.googletagmanager.com",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "host": "googleads.g.doubleclick.net",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "host": "ajax.googleapis.com",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "host": "cdn.auth0.com",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      },
+      {
+        "host": "cdn01.basis.net",
+        "pages": 1,
+        "examples": [
+          "confirmation"
+        ]
+      }
+    ],
+    "frameworkHints": [
+      {
+        "hint": "vue",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      },
+      {
+        "hint": "aem-sites",
+        "pages": 6,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      }
+    ],
+    "globalState": [
+      {
+        "name": "dataLayer",
+        "pages": 7,
+        "examples": [
+          "play",
+          "free-racquet-pack",
+          "home"
+        ]
+      }
+    ],
+    "formTargets": [
+      {
+        "action": "https://account.usta.com/u/login",
+        "method": "post",
+        "sameOrigin": true,
+        "search": false,
+        "fieldNames": [
+          "username",
+          "password"
+        ],
+        "pages": 4,
+        "examples": [
+          "confirmation",
+          "confirmation",
+          "confirmation"
+        ]
+      }
+    ]
+  }
+}

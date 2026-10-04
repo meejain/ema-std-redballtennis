@@ -1,0 +1,7 @@
+
+Content diff @ 360px (profile "generic", root ".container.responsivegrid")
+  source: 55 text nodes — 3 headings, 6 eyebrows, 29 CTAs, 17 body; 10 img
+  build: 55 text nodes — 3 headings, 6 eyebrows, 29 CTAs, 17 body; 10 img
+  editable texts (outermost h*/p/ul/ol): source 20 / build 20
+
+Findings: none — content + roles match

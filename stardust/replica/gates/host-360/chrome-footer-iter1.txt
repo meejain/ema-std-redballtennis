@@ -1,0 +1,2 @@
+crop y3427/y3428+319: 3213 px = 2.80% diff → match 97.20% — FAIL (bar 2%)
+  texture: 74.7% thick → thick (blocks/bands — misalignment or missing paint)

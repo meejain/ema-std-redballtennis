@@ -1,0 +1,288 @@
+{
+  "source": "http://localhost:8793/stardust/prototypes/host-proposed.html",
+  "width": 1280,
+  "profile": "eds",
+  "sections": [
+    {
+      "section": "hero",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "This Is Your Game"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "And it's a game best served for all. Tennis experience or not, everyone you know can step in the lines and have the time of their lives."
+        },
+        {
+          "role": "body",
+          "order": 2,
+          "text": "You can organize a league at the local brewery, build team morale at the office, and add a program to the tennis facility. No limits. Just Red Ball Tennis."
+        }
+      ],
+      "imgCount": 3,
+      "editableTexts": 3,
+      "repeats": [
+        {
+          "unitSelector": "DIV.ctn",
+          "count": 2,
+          "unit": {
+            "headings": 1,
+            "ctas": 0,
+            "imgs": 3,
+            "textRuns": 3
+          },
+          "uniform": false
+        },
+        {
+          "unitSelector": "DIV.col",
+          "count": 4,
+          "unit": {
+            "headings": 1,
+            "ctas": 0,
+            "imgs": 0,
+            "textRuns": 1
+          },
+          "uniform": false
+        }
+      ],
+      "block": "hero",
+      "tier": "template-slotted",
+      "shape": "simple"
+    },
+    {
+      "section": "promo",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "REDESIGNED FOR YOU"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "Get the official racquet for Red Ball Tennis!"
+        },
+        {
+          "role": "cta",
+          "order": 2,
+          "text": "Shop Now",
+          "href": "https://www.head.com/en_US/product/redball-23-230056?cid=RBTHeadRacquetShop_20260822_chint_brrbt_owpla_ctpro_endcid"
+        }
+      ],
+      "imgCount": 0,
+      "editableTexts": 2,
+      "repeats": [],
+      "defaultContent": true,
+      "repeatsNote": "AEM grid columns, not repeat units — default content (D1)"
+    },
+    {
+      "section": "play",
+      "items": [
+        {
+          "role": "body",
+          "order": 0,
+          "text": "Host your own red ball event and become an ambassador"
+        },
+        {
+          "role": "cta",
+          "order": 1,
+          "text": "FIND AN EVENT",
+          "href": "/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html"
+        },
+        {
+          "role": "body",
+          "order": 2,
+          "text": "Host your own red ball event and become an ambassador"
+        },
+        {
+          "role": "cta",
+          "order": 3,
+          "text": "HOST AN EVENT",
+          "href": "https://customercare.usta.com/hc/en-us/requests/new?ticket_form_id=29846834371860"
+        },
+        {
+          "role": "body",
+          "order": 4,
+          "text": "Create opportunities and fill gaps at your tennis or pickleball facility with Red Ball Tennis programs!"
+        },
+        {
+          "role": "body",
+          "order": 5,
+          "text": "Take the court to your favorite local and bring all your people. Breweries, bars, or even at your business!"
+        },
+        {
+          "role": "cta",
+          "order": 6,
+          "text": "GET EQUIPPED",
+          "href": "https://ustayeqzp.formstack.com/forms/red_ball_tennis_general_interest?cid=RBTWebCourtHost_20250520_chint_brrbt_owprv_ctldg_endcid"
+        },
+        {
+          "role": "body",
+          "order": 7,
+          "text": "Changeovers typically last 2-4 weeks, expect an email then!"
+        },
+        {
+          "role": "cta",
+          "order": 8,
+          "text": "HOST WITH THE MOST",
+          "href": "https://ustayeqzp.formstack.com/forms/red_ball_tennis_community"
+        }
+      ],
+      "imgCount": 2,
+      "editableTexts": 5,
+      "repeats": [
+        {
+          "unitSelector": "DIV.ctn",
+          "count": 2,
+          "unit": {
+            "headings": 2,
+            "ctas": 2,
+            "imgs": 0,
+            "textRuns": 4
+          },
+          "uniform": false
+        },
+        {
+          "unitSelector": "DIV.ctn",
+          "count": 2,
+          "unit": {
+            "headings": 1,
+            "ctas": 1,
+            "imgs": 0,
+            "textRuns": 2
+          },
+          "uniform": true
+        }
+      ],
+      "block": "cards props host",
+      "tier": "reconstructive",
+      "shape": "container"
+    },
+    {
+      "section": "helpful-links",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "Helpful Links"
+        },
+        {
+          "role": "heading",
+          "order": 1,
+          "text": "Resource Library"
+        },
+        {
+          "role": "eyebrow",
+          "order": 2,
+          "text": "GO"
+        },
+        {
+          "role": "heading",
+          "order": 3,
+          "text": "Program Implementation"
+        },
+        {
+          "role": "eyebrow",
+          "order": 4,
+          "text": "GO"
+        },
+        {
+          "role": "heading",
+          "order": 5,
+          "text": "Marketing Materials"
+        },
+        {
+          "role": "eyebrow",
+          "order": 6,
+          "text": "GO"
+        }
+      ],
+      "imgCount": 3,
+      "editableTexts": 4,
+      "repeats": [],
+      "omitted": true,
+      "note": "hidden on live (aem-GridColumn--default--hide + mobile--hide) — not authored"
+    },
+    {
+      "section": "host-form",
+      "items": [
+        {
+          "role": "heading",
+          "order": 0,
+          "text": "Interested in hosting Red Ball Tennis?"
+        },
+        {
+          "role": "body",
+          "order": 1,
+          "text": "Drop your information below, and we’ll be in touch with details on how to bring Red Ball Tennis to your community."
+        },
+        {
+          "role": "eyebrow",
+          "order": 2,
+          "text": "EMAIL"
+        },
+        {
+          "role": "eyebrow",
+          "order": 3,
+          "text": "*"
+        },
+        {
+          "role": "eyebrow",
+          "order": 4,
+          "text": "ZIP/POSTAL CODE"
+        },
+        {
+          "role": "eyebrow",
+          "order": 5,
+          "text": "*"
+        },
+        {
+          "role": "eyebrow",
+          "order": 6,
+          "text": "*JOIN THE FUN"
+        },
+        {
+          "role": "body",
+          "order": 7,
+          "text": "*By clicking JOIN THE FUN, you are signing up to receive email communications from USTA and its affiliates about Red Ball Tennis play opportunities, programs and other promotional communications. You agree to and understand that personal information you provide will be used as described in . You must be 13 years of age or older to subscribe to these communications."
+        },
+        {
+          "role": "cta",
+          "order": 8,
+          "text": "USTA's Terms of Use",
+          "href": "https://www.usta.com/en/home/about-usta/who-we-are/national/usta-terms-of-use.html"
+        },
+        {
+          "role": "cta",
+          "order": 9,
+          "text": "USTA's Privacy Policy",
+          "href": "https://www.usta.com/en/home/about-usta/who-we-are/national/usta-privacy-policy.html"
+        }
+      ],
+      "imgCount": 1,
+      "editableTexts": 3,
+      "repeats": [],
+      "block": "signup-form",
+      "tier": "template-slotted",
+      "shape": "simple"
+    }
+  ],
+  "componentModelShapes": {
+    "simple": [
+      "hero",
+      "embed",
+      "signup-form"
+    ],
+    "container": [
+      "cards",
+      "columns"
+    ],
+    "key-value": [
+      "metadata",
+      "section-metadata"
+    ]
+  }
+}

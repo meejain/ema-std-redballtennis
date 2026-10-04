@@ -1,0 +1,197 @@
+{
+  "pageType": "program",
+  "archetype": "host",
+  "liveUrl": "https://www.redballtennis.com/en/home/host.html",
+  "prototype": "stardust/prototypes/host-proposed.html",
+  "pageCss": "stardust/prototypes/host.css",
+  "regime": "prototype (standalone prototype vs live page)",
+  "mainSelector": ".container.responsivegrid.full-width--root",
+  "breakpoints": {
+    "1440": {
+      "iterations": 1,
+      "result": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.17,
+        "heightDelta": 0,
+        "headerCropPct": 0.0,
+        "footerCropPct": 0.63,
+        "pass": true
+      },
+      "evidence": {
+        "contentDiff": [
+          "gates/host-1440/content-diff-iter1.txt",
+          "gates/host-1440/content-diff-final.txt"
+        ],
+        "visualDiff": [
+          "gates/host-1440/visual-diff-iter1.txt",
+          "gates/host-1440/visual-diff-final.txt"
+        ],
+        "pixel": [
+          "gates/host-1440/pixel-iter1.txt",
+          "gates/host-1440/pixel-final.txt"
+        ],
+        "anchor": [
+          "gates/host-1440/anchor-live.txt",
+          "gates/host-1440/anchor-proto-iter1.txt"
+        ],
+        "chrome": [
+          "gates/host-1440/chrome-parity-iter1.txt",
+          "gates/host-1440/chrome-header-iter1.txt",
+          "gates/host-1440/chrome-footer-iter1.txt",
+          "gates/host-1440/chrome-header-final.txt",
+          "gates/host-1440/chrome-footer-final.txt"
+        ]
+      },
+      "justified": [
+        {
+          "probe": "chrome-parity",
+          "flag": "ICON signature red-ball-tennis-wbg.png → red-ball-tennis-wbg-04927f.png (header) / -d7e509.png (footer)",
+          "why": "same image, local file carries the 6-char hash suffix; crop gates confirm 0.06% / 0.63%"
+        }
+      ],
+      "residuals": [
+        {
+          "band": "y 2000–2526",
+          "pct": 0.5,
+          "cause": "capture-state: live-only OneTrust cookie-preferences floating badge (fixed, bottom-left) repeats at every stitched chunk; glyph antialiasing on footer links",
+          "flaggedFor": "delivery"
+        }
+      ],
+      "captureState": [
+        {
+          "what": "OneTrust floating preferences badge (#ot-sdk-btn-floating) stays after --dismiss, fixed bottom-left, present in every chunk of the live stitch",
+          "where": "footer band and every chunk seam"
+        }
+      ]
+    },
+    "360": {
+      "iterations": 2,
+      "result": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.63,
+        "heightDelta": 0,
+        "headerCropPct": 0.0,
+        "footerCropPct": 1.91,
+        "pass": true
+      },
+      "iterationLog": [
+        {
+          "iter": 1,
+          "pixelPct": 2.5,
+          "heightDelta": 0,
+          "footerCropPct": 2.8,
+          "hotBand": "y 1500–2000 7.8%",
+          "instrument": "row-profile --columns 7: every class boundary matches to y≈1398, then proto runs +1px to the footer (3427 vs 3428); lift: live mobile hero img 304×230.375 (512×388 rendition) vs local 1024 rendition 304×230.66",
+          "fix": "aspect-ratio: 512/388 on .hero__mobile-image img (mobile media block)"
+        },
+        {
+          "iter": 2,
+          "pixelPct": 0.63,
+          "heightDelta": 0,
+          "headerCropPct": 0.0,
+          "footerCropPct": 1.91,
+          "note": "differing-pixel count moved 33701 → 8500"
+        }
+      ],
+      "evidence": {
+        "contentDiff": [
+          "gates/host-360/content-diff-iter1.txt",
+          "gates/host-360/content-diff-final.txt"
+        ],
+        "visualDiff": [
+          "gates/host-360/visual-diff-iter1.txt",
+          "gates/host-360/visual-diff-final.txt"
+        ],
+        "pixel": [
+          "gates/host-360/pixel-iter1.txt",
+          "gates/host-360/pixel-iter2.txt",
+          "gates/host-360/pixel-final.txt"
+        ],
+        "anchor": [
+          "gates/host-360/anchor-live.txt",
+          "gates/host-360/anchor-proto-iter1.txt",
+          "gates/host-360/anchor-proto-iter2.txt"
+        ],
+        "chrome": [
+          "gates/host-360/chrome-parity-iter1.txt",
+          "gates/host-360/chrome-header-iter2.txt",
+          "gates/host-360/chrome-footer-iter2.txt",
+          "gates/host-360/chrome-header-final.txt",
+          "gates/host-360/chrome-footer-final.txt"
+        ]
+      },
+      "justified": [
+        {
+          "probe": "chrome-parity",
+          "flag": "ICON signatures Hamburger-Menu-White.svg / red-ball-logo-mob.png / red-ball-tennis-wbg.png → local hashed filenames",
+          "why": "same images, hash-suffixed local files; header crop 0.00%, footer crop 1.91%"
+        }
+      ],
+      "residuals": [
+        {
+          "band": "y 500–1000, 1500–2000, 2500–3000, 3500–3747 (≈1% each, 2.5% last)",
+          "pct": 0.63,
+          "cause": "capture-state: live-only OneTrust floating badge (fixed, bottom-left, ~50×56px) repeats in each of the 5 stitched chunks; footer crop 1.91% is mostly that badge plus link-glyph antialiasing",
+          "flaggedFor": "delivery"
+        }
+      ],
+      "captureState": [
+        {
+          "what": "OneTrust floating preferences badge, fixed bottom-left, in every live chunk",
+          "where": "chunk seams y≈840, 1580, 2330, 3070 and footer"
+        }
+      ]
+    }
+  },
+  "hiddenDomMirrored": [
+    "hero: two man.png images (container_hand_copy, default--hide + mobile--hide)",
+    "hero: rbt-host-v1 mobile image (default--hide, shown ≤767px)",
+    "hero: 5/12 photo column (host-red-ball.jpg CSS background, mobile--hide)",
+    "blue band: ambassador container (default--hide) with 2× h5>b + FIND AN EVENT / HOST AN EVENT anchors",
+    "blue band: GET EQUIPPED anchor (default--hide + mobile--hide)",
+    "Helpful Links band (default--hide, hidden at both widths): h2, red-icons-03/01/02 (alts 'Open book icon' / '' / 'Person with megaphone icon'), 3× h3, 3× <button> GO"
+  ],
+  "motion": {
+    "observedFiles": [
+      "stardust/replica/motion/host.json",
+      "stardust/replica/motion/host-360.json"
+    ],
+    "observed": [
+      "1440 hover .button-core: opacity 1 → 0.7 (fired)",
+      "1440 hover .footer-links__sites a: color #fff → rgb(207,255,5) (fired)",
+      "1440 hover .navigation-menu__list-item-link--level-1: NO change (dead on live)",
+      "1440 click .drop-down__label-wrapper: no class mutation, no transform/scroll sample (attribute/state-only toggle)",
+      "360 click .top-navigation__logo-hamburger: classes added top-navigation__top-bar--opened + top-to-bottom on .top-navigation__top-bar; transition top 0.3s",
+      "scroll traversal: 0 animations, 0 transitions, 0 class mutations, headerTimeline all null (no scroll-morph)"
+    ],
+    "implemented": [
+      "button hover opacity .7 — canon.css .button-core:hover / .button-primary-style:hover (no page code)",
+      "footer link hover lime — canon.css .footer-links__sites li.nav-link a:hover (no page code)"
+    ],
+    "dead": [
+      "nav level-1 link hover (canon.css implements a lime hover the live probe did not fire — see chromeDeltas)",
+      "no entrance/scroll animations on this page"
+    ],
+    "pixelAfterMotion": "no page-level motion code added; pixel-final re-run unchanged"
+  },
+  "chromeDeltas": [
+    "canon.css .navigation-menu__list-item--level-1:hover … { color: lime } — motion-observe at 1440 hovered .navigation-menu__list-item-link--level-1 and recorded NO change on live; the hover is dead on live and should be removed from canon",
+    "hamburger (360): live adds BOTH top-navigation__top-bar--opened and top-to-bottom to .top-navigation__top-bar and transitions `top` over 0.3s; canon chrome.js toggles only top-to-bottom and canon.css has no transition on .top-navigation__top-bar",
+    "live body computes overflow: hidden auto (needed at 360: the 340px IN THE WILD image overflows the viewport by 14px on live); set in host.css on body.redball-editable-page — belongs in canon base",
+    "chrome-parity icon signature deltas are filename-hash only (live basename vs local hashed file) at both widths; crops pass"
+  ],
+  "portations": [],
+  "notes": [
+    "Final pixel/crop numbers were re-measured after rebuilding against canon.css/header.html as of 18:33 (canon changed after the iter-1 captures): 1440 0.18% → 0.17%, header crop 0.06% → 0.00%; 360 unchanged.",
+    "Brief scoping bug (confirmed): live querySelector('.container.responsivegrid') returns div.root.container.responsivegrid wrapping header+content+footer; used --main '.container.responsivegrid.full-width--root' per coordinator correction and put those classes on <main>.",
+    "ALL-RULES.txt is missing rules that live in the captured foundation__clientlibs__main.min.css (div.image{margin-bottom:20px;overflow:hidden}, div.image img{display:block}) and usta__components__clientlibs__common.min.css (h1{font-size:100px}, h2{font-size:76px}); the 20px mobile gap under the hero image cost one build-side round to source. The redball page clientlib is nested CSS ('.root.container.responsivegrid{>.cmp-container{…}}') and is emitted raw by the splitter.",
+    "The 8px vertical padding on every AEM column (confirmed by computed lift: section 3 paddingTop/Bottom 8px, .padding-top-none → 0) is not in any captured stylesheet as a plain rule; encoded from the lift.",
+    "lift-host-*.json `elements` is a filtered subset (75/74 nodes) — container divs between lifted nodes are absent, and `display:block` is omitted from `s` so imgs read as block only by elimination.",
+    "crop-compare.mjs stalled once when chained after pixel-compare inside a single 300s Bash call under tee (pixel output printed, crop never returned); the same two commands run standalone completed instantly. Not reproduced, recorded as an observation.",
+    "macOS has no `timeout` binary; the brief's gate snippets are fine but any wrapper using timeout needs gtimeout.",
+    "Wide-viewport fluid check not run against live (no 1920 lift); all widths are encoded as the AEM percentage model (58.33/41.67/75/44.44% etc.), so no frozen px widths exist to diverge. Tablet (768–991) grid not authored (gate widths only) — inherits desktop rules.",
+    "Build helper (outside the repo): /tmp/rbt-host/build.py assembles host-proposed.html from canon/header.html + canon/footer.html + /tmp/rbt-host/main.html; re-run it if canon header/footer change."
+  ]
+}

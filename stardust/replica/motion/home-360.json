@@ -1,0 +1,92 @@
+{
+  "url": "https://www.redballtennis.com/en/home.html",
+  "width": 360,
+  "headerTimeline": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "widgetSamples": [
+    {
+      "sel": ".top-navigation__logo-hamburger",
+      "frames": [
+        {
+          "t": 16261.099999904633,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 16463.299999952316,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 16664.799999952316,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        },
+        {
+          "t": 16867.599999904633,
+          "trackTransform": null,
+          "trackTransition": null,
+          "boxScrollLeft": null,
+          "boxTransform": null,
+          "dots": []
+        }
+      ]
+    }
+  ],
+  "hoverSamples": [],
+  "events": {
+    "animations": [],
+    "transitions": [
+      {
+        "prop": "top",
+        "el": "div.topnavigation.aem-GridColumn.aem-GridColumn--default--12 > nav.top-navigation.red-ball-colors.loadingDone > div.top-navigation__main-bar > div.top-navigation__logo > div.top-navigation__top-bar.top-navigation__top-bar--opened.top-to-bottom",
+        "y": 0,
+        "dur": "0.3s, 0.3s"
+      }
+    ],
+    "classMutations": [
+      {
+        "added": [
+          "top-navigation__top-bar--opened",
+          "top-to-bottom"
+        ],
+        "el": "div.topnavigation.aem-GridColumn.aem-GridColumn--default--12 > nav.top-navigation.red-ball-colors.loadingDone > div.top-navigation__main-bar > div.top-navigation__logo > div.top-navigation__top-bar.top-navigation__top-bar--opened.top-to-bottom",
+        "y": 0
+      },
+      {
+        "added": [
+          "top-to-bottom"
+        ],
+        "el": "div.topnavigation.aem-GridColumn.aem-GridColumn--default--12 > nav.top-navigation.red-ball-colors.loadingDone > div.top-navigation__main-bar > div.top-navigation__logo > div.top-navigation__top-bar.top-navigation__top-bar--opened.top-to-bottom",
+        "y": 0
+      }
+    ]
+  }
+}

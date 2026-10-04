@@ -1,0 +1,654 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:dynamics plan",
+  "writtenAt": "2026-09-17T15:37:51.855Z",
+  "input": "stardust/current/_dynamics.json",
+  "target": "https://main--sdt-redballtennis--aemcoder.aem.live",
+  "migrated": null
+ },
+ "rows": [
+  {
+   "id": "a-cms-app-settings-object-datalayer",
+   "class": "A",
+   "feature": "CMS / app settings object dataLayer",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [],
+   "pattern": "read-settings",
+   "disposition": "static-snapshot",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "— (keys name endpoints, ids, vendors)"
+  },
+  {
+   "id": "a-unknown-third-party-host-bttrack-com",
+   "class": "A",
+   "feature": "unknown third-party host bttrack.com",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "bttrack.com"
+   ],
+   "pattern": "inspect",
+   "disposition": "static-snapshot",
+   "reproducibility": "needs-human-capture",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "inspect the XHR, add a vendor row"
+  },
+  {
+   "id": "a-cms-app-settings-object-granite",
+   "class": "A",
+   "feature": "CMS / app settings object Granite",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [],
+   "pattern": "read-settings",
+   "disposition": "static-snapshot",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "— (keys name endpoints, ids, vendors)"
+  },
+  {
+   "id": "a-cms-app-settings-object-cq",
+   "class": "A",
+   "feature": "CMS / app settings object CQ",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [],
+   "pattern": "read-settings",
+   "disposition": "static-snapshot",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "— (keys name endpoints, ids, vendors)"
+  },
+  {
+   "id": "a-unknown-third-party-host-www-gstatic-com",
+   "class": "A",
+   "feature": "unknown third-party host www.gstatic.com",
+   "pages": 2,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "www.gstatic.com"
+   ],
+   "pattern": "inspect",
+   "disposition": "static-snapshot",
+   "reproducibility": "needs-human-capture",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "inspect the XHR, add a vendor row"
+  },
+  {
+   "id": "a-unknown-third-party-host-jnn-pa-googleapis-com",
+   "class": "A",
+   "feature": "unknown third-party host jnn-pa.googleapis.com",
+   "pages": 2,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "jnn-pa.googleapis.com"
+   ],
+   "pattern": "inspect",
+   "disposition": "static-snapshot",
+   "reproducibility": "needs-human-capture",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "inspect the XHR, add a vendor row"
+  },
+  {
+   "id": "a-unknown-third-party-host-www-google-com",
+   "class": "A",
+   "feature": "unknown third-party host www.google.com",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "www.google.com"
+   ],
+   "pattern": "inspect",
+   "disposition": "static-snapshot",
+   "reproducibility": "needs-human-capture",
+   "status": "pending",
+   "phase": "detect",
+   "decision": "inspect the XHR, add a vendor row"
+  },
+  {
+   "id": "cr-client-framework-vue",
+   "class": "CR",
+   "feature": "client framework vue",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [],
+   "pattern": "settled-dom-snapshot",
+   "disposition": "static-snapshot",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "capture",
+   "decision": "inspect the consumer"
+  },
+  {
+   "id": "d-first-party-data-file-get-libs-granite-csrf-token-json",
+   "class": "D",
+   "feature": "first-party data file GET /libs/granite/csrf/token.json",
+   "pages": 4,
+   "probed": 4,
+   "reach": {
+    "pages": 7,
+    "of": 7
+   },
+   "evidence": [
+    "GET /libs/granite/csrf/token.json → 200"
+   ],
+   "pattern": "sheet-sync",
+   "disposition": "data-fed",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "data",
+   "decision": "none (sync from the source origin)",
+   "hostBound": "dead on target (404)"
+  },
+  {
+   "id": "d-first-party-data-file-get-libs-cq-i18n-dict-en-json",
+   "class": "D",
+   "feature": "first-party data file GET /libs/cq/i18n/dict.en.json",
+   "pages": 3,
+   "probed": 4,
+   "reach": {
+    "pages": 6,
+    "of": 7
+   },
+   "evidence": [
+    "GET /libs/cq/i18n/dict.en.json → 200"
+   ],
+   "pattern": "sheet-sync",
+   "disposition": "data-fed",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "data",
+   "decision": "none (sync from the source origin)",
+   "hostBound": "dead on target (404)"
+  },
+  {
+   "id": "f-form-c0d577f2f-no-action-js-wired-2-fields",
+   "class": "F",
+   "feature": "form \"c0d577f2f\" → no action (JS-wired) (2 fields)",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "text:username,password:password",
+    "state,ulp-login"
+   ],
+   "pattern": "forms",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "forms",
+   "decision": "production endpoint; interim capture ships now"
+  },
+  {
+   "id": "i18n-locale-variants-hc",
+   "class": "I18N",
+   "feature": "locale variants hc",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "https://customercare.usta.com/hc/en-us/requests/new?ticket_form_id=29846834371860"
+   ],
+   "pattern": "locale-tree",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "locale wave",
+   "decision": "scope of the locale trees"
+  },
+  {
+   "id": "i18n-locale-variants-en",
+   "class": "I18N",
+   "feature": "locale variants en",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "https://www.usta.com/en/home/search-profile/find-your-account.html"
+   ],
+   "pattern": "locale-tree",
+   "disposition": "rebuild-native",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "locale wave",
+   "decision": "scope of the locale trees"
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-chrome-only-button-content",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup (chrome only) → button:content",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "Filter Icon"
+   ],
+   "pattern": "chrome-interaction",
+   "disposition": "rebuild-native",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "interactive",
+   "decision": "none (motion-observe evidence)"
+  },
+  {
+   "id": "t-unknown-third-party-host-www-usta-com",
+   "class": "T",
+   "feature": "unknown third-party host www.usta.com",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "www.usta.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-tag-manager-adobe-launch",
+   "class": "T",
+   "feature": "tag manager: Adobe Launch",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "assets.adobedtm.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-cdn-bttrack-com",
+   "class": "T",
+   "feature": "unknown third-party host cdn.bttrack.com",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "cdn.bttrack.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-tag-simpli-fi",
+   "class": "T",
+   "feature": "unknown third-party host tag.simpli.fi",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "tag.simpli.fi"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-analytics-session-replay",
+   "class": "T",
+   "feature": "analytics: session replay",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "static.hotjar.com",
+    "metrics.hotjar.io"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-analytics-adobe-analytics-experience-cloud-id",
+   "class": "T",
+   "feature": "analytics: Adobe Analytics / Experience Cloud ID",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "dpm.demdex.net",
+    "usta.demdex.net",
+    "unitedstatestennisas.tt.omtrdc.net",
+    "usta.d2.sc.omtrdc.net"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-marketing-ad-retargeting-pixel",
+   "class": "T",
+   "feature": "marketing: ad / retargeting pixel",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "connect.facebook.net",
+    "cm.g.doubleclick.net",
+    "cm.everesttech.net",
+    "static.doubleclick.net"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-sync-crwdcntrl-net",
+   "class": "T",
+   "feature": "unknown third-party host sync.crwdcntrl.net",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "sync.crwdcntrl.net"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-consent-onetrust",
+   "class": "T",
+   "feature": "consent: OneTrust",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "cdn.cookielaw.org",
+    "geolocation.onetrust.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "CMP domain script reuse on the new host"
+  },
+  {
+   "id": "t-unknown-third-party-host-www-google-com",
+   "class": "T",
+   "feature": "unknown third-party host www.google.com",
+   "pages": 2,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "www.google.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-yt3-ggpht-com",
+   "class": "T",
+   "feature": "unknown third-party host yt3.ggpht.com",
+   "pages": 2,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "yt3.ggpht.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-ajax-googleapis-com",
+   "class": "T",
+   "feature": "unknown third-party host ajax.googleapis.com",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "ajax.googleapis.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-cdn01-basis-net",
+   "class": "T",
+   "feature": "unknown third-party host cdn01.basis.net",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "cdn01.basis.net"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-tag-manager-google-tag-manager",
+   "class": "T",
+   "feature": "tag manager: Google Tag Manager",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "www.googletagmanager.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-www-google-ch",
+   "class": "T",
+   "feature": "unknown third-party host www.google.ch",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "www.google.ch"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-a42cdn-usablenet-com",
+   "class": "T",
+   "feature": "unknown third-party host a42cdn.usablenet.com",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "a42cdn.usablenet.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-pixel-sync-sitescout-com",
+   "class": "T",
+   "feature": "unknown third-party host pixel-sync.sitescout.com",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "pixel-sync.sitescout.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "t-unknown-third-party-host-pixel-sitescout-com",
+   "class": "T",
+   "feature": "unknown third-party host pixel.sitescout.com",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "pixel.sitescout.com"
+   ],
+   "pattern": "consent-gated-tags",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-business-decision",
+   "status": "pending",
+   "phase": "tags",
+   "decision": "which tags run on the new host; property ids"
+  },
+  {
+   "id": "v-maps-embedded-map-service",
+   "class": "V",
+   "feature": "maps: embedded map service",
+   "pages": 4,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "maps.googleapis.com"
+   ],
+   "pattern": "media-as-url",
+   "disposition": "embed-passthrough",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "media",
+   "decision": "none (player ids are public)"
+  },
+  {
+   "id": "v-iframe-without-src-runtime-injected-embed",
+   "class": "V",
+   "feature": "iframe without src (runtime-injected embed)",
+   "pages": 3,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "onetrust-text-resize"
+   ],
+   "pattern": "embed-passthrough",
+   "disposition": "embed-passthrough",
+   "reproducibility": "needs-human-capture",
+   "status": "pending",
+   "phase": "embeds",
+   "decision": "resolve the runtime src from a rendered capture"
+  },
+  {
+   "id": "v-video-youtube",
+   "class": "V",
+   "feature": "video: YouTube",
+   "pages": 2,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "www.youtube.com",
+    "i.ytimg.com",
+    "https://www.youtube.com/embed/0d6ahBtLavQ",
+    "https://www.youtube.com/embed/MHolYiYJjgM"
+   ],
+   "pattern": "media-as-url",
+   "disposition": "embed-passthrough",
+   "reproducibility": "self",
+   "status": "pending",
+   "phase": "media",
+   "decision": "none (player ids are public)"
+  },
+  {
+   "id": "x-auth-identity-provider",
+   "class": "X",
+   "feature": "auth: identity provider",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "cdn.auth0.com"
+   ],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  },
+  {
+   "id": "x-sign-in-account-links",
+   "class": "X",
+   "feature": "sign-in / account links",
+   "pages": 1,
+   "probed": 4,
+   "reach": null,
+   "evidence": [
+    "https://account.usta.com/u/signup?state=hKFo2SA0LUlZTkt1LVVaSGhILUY1ZnFWZ3hWR0RkNG9sN0lVTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBGaS1kakNhd2ZNQVNGQXphS2ticm9MY2pqWnFiVTZso2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc",
+    "https://www.usta.com/en/home/search-profile/find-your-account.html",
+    "https://account.usta.com/u/login/password-reset-start/migration-and-credentials-authentication?state=hKFo2SA0LUlZTkt1LVVaSGhILUY1ZnFWZ3hWR0RkNG9sN0lVTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBGaS1kakNhd2ZNQVNGQXphS2ticm9MY2pqWnFiVTZso2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc"
+   ],
+   "pattern": "decided-out",
+   "disposition": "decided-out",
+   "reproducibility": "needs-backend",
+   "status": "pending",
+   "phase": "register",
+   "decision": "auth / commerce on the new host?"
+  }
+ ]
+}

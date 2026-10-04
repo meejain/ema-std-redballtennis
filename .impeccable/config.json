@@ -1,0 +1,86 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "stardust/prototypes/play-proposed.html"
+        ],
+        "createdAt": "2026-09-17T16:15:14.305Z",
+        "reason": "replica agent: pure same-design replica of redballtennis.com; colors are the live site's (inconsistency-register is empty by design)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "stardust/canon/**",
+          "stardust/migrated/**",
+          "stardust/prototypes/**"
+        ],
+        "createdAt": "2026-09-17T16:21:36.147Z",
+        "reason": "stardust replica (same-design migration): values are lifted from the live redballtennis.com CSS/computed styles and gated by pixel/content diff against the source; impeccable craft gates do not apply to recreation (replica/reference/recreation-procedure.md)"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "stardust/canon/**",
+          "stardust/migrated/**",
+          "stardust/prototypes/**"
+        ],
+        "createdAt": "2026-09-17T16:21:36.159Z",
+        "reason": "stardust replica (same-design migration): values are lifted from the live redballtennis.com CSS/computed styles and gated by pixel/content diff against the source; impeccable craft gates do not apply to recreation (replica/reference/recreation-procedure.md)"
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "stardust/canon/**",
+          "stardust/migrated/**",
+          "stardust/prototypes/**"
+        ],
+        "createdAt": "2026-09-17T16:21:36.171Z",
+        "reason": "stardust replica (same-design migration): values are lifted from the live redballtennis.com CSS/computed styles and gated by pixel/content diff against the source; impeccable craft gates do not apply to recreation (replica/reference/recreation-procedure.md)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "graphik-fallback",
+        "files": [
+          "styles/styles.css"
+        ],
+        "createdAt": "2026-09-17T16:57:08.992Z",
+        "reason": "EDS foundation agent: metric-matched local fallback @font-face (deploy SKILL.md Step 4 — <brand>-fallback faces sourcing local Arial / Arial Narrow with size-adjust), not a new brand font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "graphik-semibold-fallback",
+        "files": [
+          "styles/styles.css"
+        ],
+        "createdAt": "2026-09-17T16:57:08.992Z",
+        "reason": "EDS foundation agent: metric-matched local fallback @font-face (deploy SKILL.md Step 4 — <brand>-fallback faces sourcing local Arial / Arial Narrow with size-adjust), not a new brand font"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "graphik-xxcond-fallback",
+        "files": [
+          "styles/styles.css"
+        ],
+        "createdAt": "2026-09-17T16:57:08.992Z",
+        "reason": "EDS foundation agent: metric-matched local fallback @font-face (deploy SKILL.md Step 4 — <brand>-fallback faces sourcing local Arial / Arial Narrow with size-adjust), not a new brand font"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "blocks/header/**"
+        ],
+        "createdAt": "2026-09-17T17:03:35.206Z",
+        "reason": "Replica: the flagged rule is the live site's CSS-triangle arrow (border-left 12px + transparent top/bottom) on mobile menu items with a submenu — a lifted value from .level-1-content__mobile-arrow, not a card accent"
+      }
+    ]
+  }
+}

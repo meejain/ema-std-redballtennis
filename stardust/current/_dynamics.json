@@ -1,0 +1,1839 @@
+{
+ "_provenance": {
+  "writtenBy": "stardust:dynamics detect",
+  "writtenAt": "2026-09-17T15:35:40.093Z",
+  "settleMs": 5000,
+  "width": 1440,
+  "urls": [
+   "https://www.redballtennis.com/en/home.html",
+   "https://www.redballtennis.com/en/home/play.html",
+   "https://www.redballtennis.com/en/home/404.html",
+   "https://www.redballtennis.com/en/home/confirmation.html"
+  ],
+  "reachSource": "stardust/current/pages"
+ },
+ "pages": {
+  "/en/home.html": {
+   "url": "https://www.redballtennis.com/en/home.html",
+   "status": 200,
+   "host": "www.redballtennis.com",
+   "title": "Home",
+   "forms": [],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Filter Icon",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "button",
+      "heading": "",
+      "textLen": 11,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "",
+     "textLen": 872,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Privacy Preference Center",
+     "textLen": 2561,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 2,
+   "media": [
+    {
+     "tag": "a",
+     "src": "https://www.playerdevelopment.usta.com/",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "a",
+     "src": "https://www.playerdevelopment.usta.com/",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "iframe",
+     "src": "https://www.youtube.com/embed/0d6ahBtLavQ",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "iframe",
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.redballtennis.com",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://www.youtube.com/embed/0d6ahBtLavQ",
+     "title": null,
+     "w": 450,
+     "h": 315
+    },
+    {
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.redballtennis.com",
+     "title": "Adobe ID Syncing iFrame",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "src": null,
+     "title": "onetrust-text-resize",
+     "w": 0,
+     "h": 0
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en",
+    "hreflang": [],
+    "switcher": [
+     "https://customercare.usta.com/hc/en-us/requests/new?ticket_form_id=29846834371860"
+    ]
+   },
+   "cms": {
+    "dataLayer": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    "Granite": [
+     "Sling",
+     "Util",
+     "HTTP",
+     "I18n",
+     "TouchIndicator",
+     "OptOutUtil",
+     "Toggles",
+     "$",
+     "csrf"
+    ],
+    "CQ": [
+     "shared",
+     "Sling",
+     "I18n",
+     "WCM"
+    ]
+   },
+   "framework": "vue",
+   "globals": [
+    "adobe",
+    "_satellite",
+    "OneTrust",
+    "Optanon",
+    "gtag",
+    "hj"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 8,
+   "inlineFetch": false,
+   "mainText": 1202,
+   "domAddedAfterLoad": 1,
+   "hosts": {
+    "www.redballtennis.com": 44,
+    "www.usta.com": 1,
+    "assets.adobedtm.com": 4,
+    "maps.googleapis.com": 3,
+    "cdn.bttrack.com": 2,
+    "cdn.cookielaw.org": 13,
+    "tag.simpli.fi": 1,
+    "static.hotjar.com": 1,
+    "dpm.demdex.net": 4,
+    "usta.demdex.net": 1,
+    "connect.facebook.net": 2,
+    "unitedstatestennisas.tt.omtrdc.net": 1,
+    "cm.g.doubleclick.net": 2,
+    "cm.everesttech.net": 1,
+    "geolocation.onetrust.com": 1,
+    "www.youtube.com": 19,
+    "usta.d2.sc.omtrdc.net": 1,
+    "sync.crwdcntrl.net": 2,
+    "bttrack.com": 5,
+    "fonts.gstatic.com": 2,
+    "static.doubleclick.net": 2,
+    "googleads.g.doubleclick.net": 2,
+    "www.google.com": 2,
+    "www.gstatic.com": 2,
+    "yt3.ggpht.com": 2,
+    "i.ytimg.com": 2,
+    "jnn-pa.googleapis.com": 2
+   },
+   "thirdPartyHosts": [
+    "www.usta.com",
+    "assets.adobedtm.com",
+    "maps.googleapis.com",
+    "cdn.bttrack.com",
+    "cdn.cookielaw.org",
+    "tag.simpli.fi",
+    "static.hotjar.com",
+    "dpm.demdex.net",
+    "usta.demdex.net",
+    "connect.facebook.net",
+    "unitedstatestennisas.tt.omtrdc.net",
+    "cm.g.doubleclick.net",
+    "cm.everesttech.net",
+    "geolocation.onetrust.com",
+    "www.youtube.com",
+    "usta.d2.sc.omtrdc.net",
+    "sync.crwdcntrl.net",
+    "bttrack.com",
+    "fonts.gstatic.com",
+    "static.doubleclick.net",
+    "googleads.g.doubleclick.net",
+    "www.google.com",
+    "www.gstatic.com",
+    "yt3.ggpht.com",
+    "i.ytimg.com",
+    "jnn-pa.googleapis.com"
+   ],
+   "scripts": [
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery/granite.min.011c0fc0d0cf131bdff879743a353002.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery.min.cf5bdf053ce8fb11dd5d95ebdc71b234.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/shared.min.f431c9860147bcb7a2f1d2b64b3c775b.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/main.min.4579a1cf02be3aabcee9d39402bae08b.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/core/embed/clientlibs.min.ae9c9dd8b304c0dc3021e15825ca9ef0.js",
+    "https://assets.adobedtm.com/15c795eb812c/a5f21beeb0e7/launch-a1fb916dcd62.min.js",
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCLov3ymbgvbvzWQ0UuD2HY1O9IYmjnwnk&libraries=places&callback=emptyCallback",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/jquery.min.dd9b395c741ce2784096e26619e14910.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/utils.min.899004cc02c33efc1f6694b1aee587fd.js",
+    "https://www.redballtennis.com/etc.clientlibs/resources/conf/redball/settings/cloudsettings/contexthub.kernel.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-base.min.9f23b15caa9cd21494b4798ed1982f57.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/components/structure/page/clientlibs.min.c1dc3eb6b805f37a6483cbbb2019481d.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/core/tabs/clientlibs/site.min.875cdb62d1c32eafe2db16d0b32f5e93.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/segmentation.min.4c19a023a5d20beb227fa9b4c0e81bd9.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-auth.min.c003386f2fb81202940dd21f3ff5c423.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/locationmanager.min.0519c2f9474d0ddb14e5b27882a70ecd.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/clientlibs/authUtils.min.16758f0d589c11258e50ae8b38794d64.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_AudienceManagement.min.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement.min.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_ActivityMap.min.js",
+    "https://cdn.bttrack.com/universal/46180",
+    "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+    "https://tag.simpli.fi/sifitag/9834c32e-975a-476d-9f45-7c2c31d50922",
+    "https://static.hotjar.com/c/hotjar-6402177.js?sv=6",
+    "https://maps.googleapis.com/maps-api-v3/api/js/65/14a/geocoder.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-usta-proxy.min.bcbe00faf6f4d865e64de9ce6e5de770.js",
+    "https://connect.facebook.net/en_US/fbevents.js",
+    "https://connect.facebook.net/signals/config/1158921169330278?v=2.9.401&r=stable&domain=www.redballtennis.com&hme=2506fb1e365be93f3ccf36e3d92699c622e55613e451d1a2c96bc6095b3873de&ex_m=117%2C232%2C168%2",
+    "https://cdn.bttrack.com/js/16583/analytics/1.0/analytics.min.js",
+    "https://cdn.cookielaw.org/scripttemplates/202506.1.0/otBannerSdk.js",
+    "https://usta.d2.sc.omtrdc.net/b/ss/usta.global/10/JS-2.27.0-LEWM/s91494526352328?AQB=1&ndh=1&pf=1&callback=s_c_il[1].doPostbacks&et=1&t=17%2F8%2F2026%2017%3A35%3A42%204%20-120&d.&nsid=0&jsonv=1&.d&sdi",
+    "https://bttrack.com/engagement/js?goalId=16583&cb=1789659342307",
+    "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.1gHz1ln_6n0.es5.O/am=AAAAQA/d=1/excm=base,root/br=1/rs=AGKMywGhB9Iy_V5_DBG3oV0ptH8B5t5rWw/m=root,base",
+    "https://www.youtube.com/s/player/1c642fb9/player_embed_tce.vflset/en_US/base.js",
+    "https://static.doubleclick.net/instream/ad_status.js",
+    "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.1gHz1ln_6n0.es5.O/ck=ytembeds.base.Jq6h3vvKR3o.L.W.O/am=AAAAQA/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywEeUn17DOxC82GA-8nZt7w",
+    "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.1gHz1ln_6n0.es5.O/ck=ytembeds.base.Jq6h3vvKR3o.L.W.O/am=AAAAQA/d=1/exm=base,r78Drb,root/excm=base,root/ed=1/br=1/rs=AGKMywEeUn17DOxC82GA",
+    "https://www.google.com/js/th/RYC8J3PCXf8iCrekCzPnIiJ3hvnjabypeoPn7v9UMbA.js"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/libs/granite/csrf/token.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://www.redballtennis.com/libs/granite/csrf/token.json"
+    },
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/conf/usta/settings/wcm/segments.seg.js",
+     "query": [],
+     "status": 200,
+     "contentType": "text/javascript",
+     "example": "https://www.redballtennis.com/conf/usta/settings/wcm/segments.seg.js"
+    },
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/libs/cq/i18n/dict.en.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://www.redballtennis.com/libs/cq/i18n/dict.en.json"
+    }
+   ],
+   "thirdPartyXhr": [
+    "GET maps.googleapis.com/maps/api/mapsjs/gen_204",
+    "GET dpm.demdex.net/id",
+    "GET cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/0196c5af-1167-713d-890a-4a717f9cee",
+    "POST unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery",
+    "GET geolocation.onetrust.com/cookieconsentpub/v1/geo/location",
+    "GET cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/019764bc-bccf-7965-9d2c-210b99746f",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/v2/otPcPanel.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otFloatingRounded.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCookieSettingsButton.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCommonStyles.css",
+    "GET cdn.cookielaw.org/logos/static/ot_guard_logo.svg",
+    "GET googleads.g.doubleclick.net/pagead/id",
+    "GET bttrack.com/engagement/event",
+    "GET bttrack.com/engagement/getpixels",
+    "GET www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg",
+    "POST jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+    "POST www.youtube.com/youtubei/v1/log_event"
+   ],
+   "postBodies": [
+    {
+     "url": "https://unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery?client=unitedstatestennisas&sessionId=8ec1cbde772b48deaff0d70200156529&version=2.11.7",
+     "body": "{\"requestId\":\"e526aa8c95ba4116b8905a758cf381c9\",\"context\":{\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36\",\"clientHints\":{\"mobile\":false,\"platform\":\"macOS\",\"browserUAWithMajorVersion\":\"\\\"HeadlessChrome\\\";v=\\\"153\\\", \\\"Not_A Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"153\\\"\"},\"timeOffsetInMinutes\":120,\"channel\":\"we"
+    },
+    {
+     "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+     "body": "[\"O43z0dpjhgX20SCx4KAo\",\"$GYY5huJRAAZeSj0yfkresZGCCQ2dC9mnAEABEArZ1LifBODjfZFKZpueUqn0rx4Q-WDRLYBEE2xmRLqdFGqFnUynyAqPUJhtgfef4Zxy8U76QCT5lbW13GTAngAAADjOAAAABPQBB-IAV3zi_Rwbb88HQQb2a0MU4mSino0_wI7JmBAm2Sq-nLTDwLIOJEASfsqJs0CHDS-4kGOcmY7MJExvcqCylWDq_s-nvShGqDaRi1GftTTU7GYap_qnnE3V3AUFCCSXbPkNxF8dKqqL0JbjAjiqs-lhEHgJLQCbc_dru7yezAkO2XFRrfCb4EGna-QEjsIyZTgtDbZiDjw7uMDuxJWNyfOONWnzKiDRoNCY02Gcd7givb"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CM2RsNUGEPu00hwQn8-AExC9irAFEOfr0RwQl6_SHBCHrM4cEMW10hwQ4cPSHBD4xIATELGR0RwQgc3OHBDBj9AcEN68zhwQvKTQHBCw-NEcEOKHuCIQhMjSHBDcrdIcELjkzhwQ2vfOHBDM2dIcEParsAUQvoTRHBDDzdIcEKSp0RwQ9vfRHBC9tq4FEPDe0RwQ0Yi4IhCuibgiEJ7QsAUQyfaAExD2ytIcEOar0hwQmY2xBRDxtNAcEImwzhwQiJDRHBDM364FEMuT0hw"
+    },
+    {
+     "url": "https://www.youtube.com/api/stats/atr?ns=yt&el=embedded&cpn=2KpEjZaabWELEJZN&ver=2&cmt=0&fs=0&rt=2.337&euri=https%3A%2F%2Fwww.redballtennis.com%2F&lact=2353&cl=981463291&mos=0&volume=100&cbrand=apple&",
+     "body": "atr=a%3D6%26a2%3D10%26c%3D1789659341%26d%3D56%26t%3D21600%26c1a%3D1%26c6a%3D1%26c6b%3D1%26hh%3DvMJS0GgRWla4ffSflnvr3jW77FU_kZua72G0vOD-yY8%26r1a%3D%24J7g5uNxRAAZeSj0yfkresZGCCQ2dC9mnAEABEArZ1LifBODjfZFKZpueUqn0rx4Q-WDRLYBEE2xmRLqdFGqFnUynyAqPUJhtgfef4Zxy8U76QCT5lbW13GTAngAAADjOAAAAAvQBB-IAV3zi_Rwbb88HQQb2a0MU4mSino0_wI7JmBAm2Sq-nLTDwLIOJEASfsqJs0CHDS-4kGOcmY7MJExvcqCylWDq_s-nvShGqDaRi1GftTTU7GYap_"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CM2RsNUGEPu00hwQn8-AExC9irAFEOfr0RwQl6_SHBCHrM4cEMW10hwQ4cPSHBD4xIATELGR0RwQgc3OHBDBj9AcEN68zhwQvKTQHBCw-NEcEOKHuCIQhMjSHBDcrdIcELjkzhwQ2vfOHBDM2dIcEParsAUQvoTRHBDDzdIcEKSp0RwQ9vfRHBC9tq4FEPDe0RwQ0Yi4IhCuibgiEJ7QsAUQyfaAExD2ytIcEOar0hwQmY2xBRDxtNAcEImwzhwQiJDRHBDM364FEMuT0hw"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CM2RsNUGEPu00hwQn8-AExC9irAFEOfr0RwQl6_SHBCHrM4cEMW10hwQ4cPSHBD4xIATELGR0RwQgc3OHBDBj9AcEN68zhwQvKTQHBCw-NEcEOKHuCIQhMjSHBDcrdIcELjkzhwQ2vfOHBDM2dIcEParsAUQvoTRHBDDzdIcEKSp0RwQ9vfRHBC9tq4FEPDe0RwQ0Yi4IhCuibgiEJ7QsAUQyfaAExD2ytIcEOar0hwQmY2xBRDxtNAcEImwzhwQiJDRHBDM364FEMuT0hw"
+    },
+    {
+     "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+     "body": "[\"O43z0dpjhgX20SCx4KAo\",\"$5Hs5ex9RAAZeSj0yfkregrthSBvHCi6nAEABEArZ1Osv1MsZNFgO4UaUU2sl4LW3MmC_Bymt7n1ZLIWaFL2LlSgJIYaKJ2vR6Q_LqyR-9oEnLpWjXCPbusqfngAAAEPOAAAAA_QBB-IAVbtL7iR-ljnbsuKnXSfljqs3gXeb-0sQB-YmZnWN1mK381PV29MbRrBFLcgy7fM3KT03eYfyHnqSPUJeYpgzJB5woxGP7_QultUsfKAQIR_PVhEKDLQFBPZGj_1bKCq3WT237r-pKZWLAIGBRefi1aPsOn5Di4lkNKO8DvHsuRuD-3Xm131i-YIK3CIar1sVtEqgtzB3BHET2TlY0zD2RWIZ0TNr1V4uy1lrc9mTD8"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNGRsNUGEK6JuCIQ-MSAExC9tq4FEMuT0hwQ4LfRHBCe0LAFEPDe0RwQh6zOHBCBzc4cELyk0BwQ9vfRHBDcrdIcEL6E0RwQhMjSHBDa984cEK7WzxwQvZmwBRDevM4cELjkzhwQ4sPSHBDjh7giELD40RwQ9srSHBC9irAFEMzfrgUQibDOHBDn69EcEMPN0hwQmY2xBRDBj9AcEOar0hwQ9quwBRDFtdIcEKSp0RwQsZHRHBDK-4ATEIiQ0RwQ0Yi4IhCfz4ATEPG00Bw"
+    }
+   ],
+   "textAtLoad": 1202,
+   "mainEmptyAtLoad": false
+  },
+  "/en/home/play.html": {
+   "url": "https://www.redballtennis.com/en/home/play.html",
+   "status": 200,
+   "host": "www.redballtennis.com",
+   "title": "Play",
+   "forms": [],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Filter Icon",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "button",
+      "heading": "",
+      "textLen": 11,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "",
+     "textLen": 872,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Privacy Preference Center",
+     "textLen": 2561,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 2,
+   "media": [
+    {
+     "tag": "a",
+     "src": "https://www.playerdevelopment.usta.com/",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "a",
+     "src": "https://www.playerdevelopment.usta.com/",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "iframe",
+     "src": "https://www.youtube.com/embed/MHolYiYJjgM",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "iframe",
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.redballtennis.com",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://www.youtube.com/embed/MHolYiYJjgM",
+     "title": null,
+     "w": 1500,
+     "h": 900
+    },
+    {
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.redballtennis.com",
+     "title": "Adobe ID Syncing iFrame",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "src": null,
+     "title": "onetrust-text-resize",
+     "w": 0,
+     "h": 0
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "dataLayer": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    "Granite": [
+     "Sling",
+     "Util",
+     "HTTP",
+     "I18n",
+     "TouchIndicator",
+     "OptOutUtil",
+     "Toggles",
+     "$",
+     "csrf"
+    ],
+    "CQ": [
+     "shared",
+     "Sling",
+     "I18n",
+     "WCM"
+    ]
+   },
+   "framework": "vue",
+   "globals": [
+    "adobe",
+    "_satellite",
+    "OneTrust",
+    "Optanon",
+    "gtag",
+    "hj"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 8,
+   "inlineFetch": false,
+   "mainText": 1671,
+   "domAddedAfterLoad": 1,
+   "hosts": {
+    "www.redballtennis.com": 44,
+    "assets.adobedtm.com": 4,
+    "www.usta.com": 1,
+    "maps.googleapis.com": 3,
+    "static.hotjar.com": 1,
+    "cdn.bttrack.com": 2,
+    "cdn.cookielaw.org": 13,
+    "tag.simpli.fi": 1,
+    "dpm.demdex.net": 4,
+    "connect.facebook.net": 2,
+    "usta.demdex.net": 1,
+    "www.youtube.com": 21,
+    "cm.everesttech.net": 1,
+    "unitedstatestennisas.tt.omtrdc.net": 1,
+    "geolocation.onetrust.com": 1,
+    "cm.g.doubleclick.net": 2,
+    "fonts.gstatic.com": 2,
+    "usta.d2.sc.omtrdc.net": 1,
+    "static.doubleclick.net": 2,
+    "bttrack.com": 5,
+    "sync.crwdcntrl.net": 2,
+    "www.google.com": 2,
+    "googleads.g.doubleclick.net": 2,
+    "i.ytimg.com": 2,
+    "jnn-pa.googleapis.com": 2,
+    "metrics.hotjar.io": 1,
+    "www.gstatic.com": 1,
+    "yt3.ggpht.com": 1
+   },
+   "thirdPartyHosts": [
+    "assets.adobedtm.com",
+    "www.usta.com",
+    "maps.googleapis.com",
+    "static.hotjar.com",
+    "cdn.bttrack.com",
+    "cdn.cookielaw.org",
+    "tag.simpli.fi",
+    "dpm.demdex.net",
+    "connect.facebook.net",
+    "usta.demdex.net",
+    "www.youtube.com",
+    "cm.everesttech.net",
+    "unitedstatestennisas.tt.omtrdc.net",
+    "geolocation.onetrust.com",
+    "cm.g.doubleclick.net",
+    "fonts.gstatic.com",
+    "usta.d2.sc.omtrdc.net",
+    "static.doubleclick.net",
+    "bttrack.com",
+    "sync.crwdcntrl.net",
+    "www.google.com",
+    "googleads.g.doubleclick.net",
+    "i.ytimg.com",
+    "jnn-pa.googleapis.com",
+    "metrics.hotjar.io",
+    "www.gstatic.com",
+    "yt3.ggpht.com"
+   ],
+   "scripts": [
+    "https://assets.adobedtm.com/15c795eb812c/a5f21beeb0e7/launch-a1fb916dcd62.min.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/utils.min.899004cc02c33efc1f6694b1aee587fd.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery.min.cf5bdf053ce8fb11dd5d95ebdc71b234.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery/granite.min.011c0fc0d0cf131bdff879743a353002.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-auth.min.c003386f2fb81202940dd21f3ff5c423.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/jquery.min.dd9b395c741ce2784096e26619e14910.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/shared.min.f431c9860147bcb7a2f1d2b64b3c775b.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/main.min.4579a1cf02be3aabcee9d39402bae08b.js",
+    "https://www.redballtennis.com/etc.clientlibs/resources/conf/redball/settings/cloudsettings/contexthub.kernel.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/components/structure/page/clientlibs.min.c1dc3eb6b805f37a6483cbbb2019481d.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-base.min.9f23b15caa9cd21494b4798ed1982f57.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/core/tabs/clientlibs/site.min.875cdb62d1c32eafe2db16d0b32f5e93.js",
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCLov3ymbgvbvzWQ0UuD2HY1O9IYmjnwnk&libraries=places&callback=emptyCallback",
+    "https://www.redballtennis.com/etc.clientlibs/usta/clientlibs/authUtils.min.16758f0d589c11258e50ae8b38794d64.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/segmentation.min.4c19a023a5d20beb227fa9b4c0e81bd9.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/locationmanager.min.0519c2f9474d0ddb14e5b27882a70ecd.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement.min.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_ActivityMap.min.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_AudienceManagement.min.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-usta-proxy.min.bcbe00faf6f4d865e64de9ce6e5de770.js",
+    "https://maps.googleapis.com/maps-api-v3/api/js/65/14a/geocoder.js",
+    "https://static.hotjar.com/c/hotjar-6402177.js?sv=6",
+    "https://cdn.bttrack.com/universal/46180",
+    "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+    "https://tag.simpli.fi/sifitag/9834c32e-975a-476d-9f45-7c2c31d50922",
+    "https://connect.facebook.net/en_US/fbevents.js",
+    "https://connect.facebook.net/signals/config/1158921169330278?v=2.9.401&r=stable&domain=www.redballtennis.com&hme=2506fb1e365be93f3ccf36e3d92699c622e55613e451d1a2c96bc6095b3873de&ex_m=117%2C232%2C168%2",
+    "https://cdn.bttrack.com/js/16583/analytics/1.0/analytics.min.js",
+    "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.1gHz1ln_6n0.es5.O/am=AAAAQA/d=1/excm=base,root/br=1/rs=AGKMywGhB9Iy_V5_DBG3oV0ptH8B5t5rWw/m=root,base",
+    "https://www.youtube.com/s/player/1c642fb9/player_embed.vflset/en_US/base.js",
+    "https://cdn.cookielaw.org/scripttemplates/202506.1.0/otBannerSdk.js",
+    "https://usta.d2.sc.omtrdc.net/b/ss/usta.global/10/JS-2.27.0-LEWM/s9224487937301?AQB=1&ndh=1&pf=1&callback=s_c_il[1].doPostbacks&et=1&t=17%2F8%2F2026%2017%3A35%3A54%204%20-120&d.&nsid=0&jsonv=1&.d&sdid",
+    "https://static.doubleclick.net/instream/ad_status.js",
+    "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.1gHz1ln_6n0.es5.O/ck=ytembeds.base.Jq6h3vvKR3o.L.W.O/am=AAAAQA/d=1/exm=base,root/excm=base,root/ed=1/br=1/rs=AGKMywEeUn17DOxC82GA-8nZt7w",
+    "https://bttrack.com/engagement/js?goalId=16583&cb=1789659354008",
+    "https://www.google.com/js/th/RYC8J3PCXf8iCrekCzPnIiJ3hvnjabypeoPn7v9UMbA.js",
+    "https://www.youtube.com/s/_/ytembeds/_/js/k=ytembeds.base.en_US.1gHz1ln_6n0.es5.O/ck=ytembeds.base.Jq6h3vvKR3o.L.W.O/am=AAAAQA/d=1/exm=base,r78Drb,root/excm=base,root/ed=1/br=1/rs=AGKMywEeUn17DOxC82GA"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/libs/granite/csrf/token.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://www.redballtennis.com/libs/granite/csrf/token.json"
+    },
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/conf/usta/settings/wcm/segments.seg.js",
+     "query": [],
+     "status": 200,
+     "contentType": "text/javascript",
+     "example": "https://www.redballtennis.com/conf/usta/settings/wcm/segments.seg.js"
+    },
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/libs/cq/i18n/dict.en.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://www.redballtennis.com/libs/cq/i18n/dict.en.json"
+    }
+   ],
+   "thirdPartyXhr": [
+    "GET maps.googleapis.com/maps/api/mapsjs/gen_204",
+    "GET dpm.demdex.net/id",
+    "GET cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/0196c5af-1167-713d-890a-4a717f9cee",
+    "POST unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery",
+    "GET geolocation.onetrust.com/cookieconsentpub/v1/geo/location",
+    "GET cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/019764bc-bccf-7965-9d2c-210b99746f",
+    "GET googleads.g.doubleclick.net/pagead/id",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/v2/otPcPanel.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCookieSettingsButton.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otFloatingRounded.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCommonStyles.css",
+    "GET cdn.cookielaw.org/logos/static/ot_guard_logo.svg",
+    "POST jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+    "GET bttrack.com/engagement/event",
+    "GET bttrack.com/engagement/getpixels",
+    "POST www.youtube.com/youtubei/v1/log_event",
+    "GET www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg"
+   ],
+   "postBodies": [
+    {
+     "url": "https://unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery?client=unitedstatestennisas&sessionId=5ecde686a6ab4dd89848d03029e0ad16&version=2.11.7",
+     "body": "{\"requestId\":\"fd7ba952bdfd4a4d86803538f0781518\",\"context\":{\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36\",\"clientHints\":{\"mobile\":false,\"platform\":\"macOS\",\"browserUAWithMajorVersion\":\"\\\"HeadlessChrome\\\";v=\\\"153\\\", \\\"Not_A Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"153\\\"\"},\"timeOffsetInMinutes\":120,\"channel\":\"we"
+    },
+    {
+     "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+     "body": "[\"O43z0dpjhgX20SCx4KAo\",\"$O6Q5pMBRAAZeSj0yfkreyk8vY5W4JfinAEABEArZ1I02iTi2mOakIiHOcJfiwweKCf-xlzqIwpQEOn1lEWrNfJDgt7wdkhtUISg6X9Mjrs92qvlYf_Q0kmgPngAAADnOAAAABPQBB-IAVSghAw9YNImogO6KfVMaioMmHGV0UK0BtwO5T0nbIsQW8AVB-FpgJKtA_ZYHF_FzLdB8ZqT2vQ_S3gStVjwdgGdOcLVJstyGfljC5CANjCsOlLRncP4FBO4bb3_-LQUjidk1TTYDRBA1-UJUCERWggAA2FSnBJDSgOv-qE4DIm11S2yY_mzoUSZv5pivu6Wky_gGqqVKv6U5s6ptGmGGQxtQJddaWxkJ7lbaiwoVSE"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNmRsNUGEJmNsQUQ3rzOHBC45M4cEK3e0RwQyfaAExCu1s8cEL2ZsAUQvYqwBRD2ytIcEMuT0hwQ263SHBDjh7giEMW10hwQhcjSHBD4xIATEOar0hwQiJDRHBDL2dIcELek0RwQkvLRHBDEzdIcEIHNzhwQyvuAExDBj9AcEL22rgUQ4LfRHBC-hNEcEJ7QsAUQpKnRHBCJsM4cEJ_PgBMQ2vfOHBDn69EcEPu00hwQ9quwBRD299EcEPGcsAUQvKTQHBDKv9IcENGIuCI"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNmRsNUGEJmNsQUQ3rzOHBC45M4cEK3e0RwQyfaAExCu1s8cEL2ZsAUQvYqwBRD2ytIcEMuT0hwQ263SHBDjh7giEMW10hwQhcjSHBD4xIATEOar0hwQiJDRHBDL2dIcELek0RwQkvLRHBDEzdIcEIHNzhwQyvuAExDBj9AcEL22rgUQ4LfRHBC-hNEcEJ7QsAUQpKnRHBCJsM4cEJ_PgBMQ2vfOHBDn69EcEPu00hwQ9quwBRD299EcEPGcsAUQvKTQHBDKv9IcENGIuCI"
+    },
+    {
+     "url": "https://www.youtube.com/api/stats/atr?ns=yt&el=embedded&cpn=ryyrDsIxbwtrSjzS&ver=2&cmt=0&fs=0&rt=2.746&euri=https%3A%2F%2Fwww.redballtennis.com%2F&lact=2757&cl=981463291&mos=0&volume=100&cbrand=apple&",
+     "body": "atr=a%3D6%26a2%3D10%26c%3D1789659353%26d%3D56%26t%3D21600%26c1a%3D1%26c6a%3D1%26c6b%3D1%26hh%3DY_1WiiDl_nu6uJNA3_vrzzT9Fn3IB1LKe7kjdMAAF2U%26r1a%3D%24hhk5GX1RAAZeSj0yfkreyk8vY5W4JfinAEABEArZ1I02iTi2mOakIiHOcJfiwweKCf-xlzqIwpQEOn1lEWrNfJDgt7wdkhtUISg6X9Mjrs92qvlYf_Q0kmgPngAAADnOAAAAA_QBB-IAVyghAw9YNJeogO6KfY22RKeGC4mnbZ4LHG7uBZbEM1J1jWbQOTi8-EDdUEuJlqh1GyPwMsnUcnK1yfVg2IoReXOA4mJxRZ2yFYpynWh-Rxj6Ki"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNmRsNUGEJmNsQUQ3rzOHBC45M4cEK3e0RwQyfaAExCu1s8cEL2ZsAUQvYqwBRD2ytIcEMuT0hwQ263SHBDjh7giEMW10hwQhcjSHBD4xIATEOar0hwQiJDRHBDL2dIcELek0RwQkvLRHBDEzdIcEIHNzhwQyvuAExDBj9AcEL22rgUQ4LfRHBC-hNEcEJ7QsAUQpKnRHBCJsM4cEJ_PgBMQ2vfOHBDn69EcEPu00hwQ9quwBRD299EcEPGcsAUQvKTQHBDKv9IcENGIuCI"
+    },
+    {
+     "url": "https://jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT",
+     "body": "[\"O43z0dpjhgX20SCx4KAo\",\"$6nU5dRFRAAZeSj0yfkreK_yFsT3fAvanAEABEArZ1NiGSScsfhYUzTre3oZDkkkK72kCJHedzIRWK3JExr_XdyrCHM5TXPfqHwv9K6uRfcxuVJsSDYp0M2LBngAAADDOAAAAA_QBB-IAVWWv7VrC-5qMmUzdH8bLgv3cIFmauUcTixixBDgz-LMT0o-YhkWYRTsY0SFFWc-Eu7KWOE_XeJK5o9R_sm9WeeijXD5mYePAFjTNYzldUavrV36ZyKQFBPHwlEEEqZqm3qYvBFQ6BeAsXn0zXMAAhoTjN5NTk5giT6SHLP1XKy9TL02sIeBSp9EImysqXaJYzMj-qhLFUVHr6Hg2a6MMYJlAS7BBdRSynsmPF7YMKy"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNyRsNUGEIHNzhwQwY_QHBDFtdIcEK7WzxwQuOTOHBCfz4ATELek0RwQ8ZywBRCe0LAFEPDe0RwQvbauBRDgt9EcEIiQ0RwQyvuAExD4xIATEN68zhwQ8bTQHBCt3tEcEIXI0hwQyr_SHBDmq9IcEL2KsAUQh6zOHBDM364FEK-GzxwQ-7TSHBDM2dIcEMTN0hwQmY2xBRCuibgiEOKHuCIQvoTRHBD299EcEPbK0hwQpKnRHBDa984cENGIuCIQvZmwBRCS8tEcELyk0Bw"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNmRsNUGEJmNsQUQ3rzOHBC45M4cEK3e0RwQyfaAExCu1s8cEL2ZsAUQvYqwBRD2ytIcEMuT0hwQ263SHBDjh7giEMW10hwQhcjSHBD4xIATEOar0hwQiJDRHBDL2dIcELek0RwQkvLRHBDEzdIcEIHNzhwQyvuAExDBj9AcEL22rgUQ4LfRHBC-hNEcEJ7QsAUQpKnRHBCJsM4cEJ_PgBMQ2vfOHBDn69EcEPu00hwQ9quwBRD299EcEPGcsAUQvKTQHBDKv9IcENGIuCI"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNmRsNUGEJmNsQUQ3rzOHBC45M4cEK3e0RwQyfaAExCu1s8cEL2ZsAUQvYqwBRD2ytIcEMuT0hwQ263SHBDjh7giEMW10hwQhcjSHBD4xIATEOar0hwQiJDRHBDL2dIcELek0RwQkvLRHBDEzdIcEIHNzhwQyvuAExDBj9AcEL22rgUQ4LfRHBC-hNEcEJ7QsAUQpKnRHBCJsM4cEJ_PgBMQ2vfOHBDn69EcEPu00hwQ9quwBRD299EcEPGcsAUQvKTQHBDKv9IcENGIuCI"
+    },
+    {
+     "url": "https://www.youtube.com/youtubei/v1/log_event?alt=json",
+     "body": "{\"context\":{\"client\":{\"hl\":\"en\",\"gl\":\"CH\",\"clientName\":56,\"clientVersion\":\"2.20260916.00.00\",\"configInfo\":{\"appInstallData\":\"CNyRsNUGEIHNzhwQwY_QHBDFtdIcEK7WzxwQuOTOHBCfz4ATELek0RwQ8ZywBRCe0LAFEPDe0RwQvbauBRDgt9EcEIiQ0RwQyvuAExD4xIATEN68zhwQ8bTQHBCt3tEcEIXI0hwQyr_SHBDmq9IcEL2KsAUQh6zOHBDM364FEK-GzxwQ-7TSHBDM2dIcEMTN0hwQmY2xBRCuibgiEOKHuCIQvoTRHBD299EcEPbK0hwQpKnRHBDa984cENGIuCIQvZmwBRCS8tEcELyk0Bw"
+    }
+   ],
+   "textAtLoad": 1671,
+   "mainEmptyAtLoad": false
+  },
+  "/en/home/404.html": {
+   "url": "https://www.redballtennis.com/en/home/404.html",
+   "status": 200,
+   "host": "www.redballtennis.com",
+   "title": "404",
+   "forms": [],
+   "controlGroups": [],
+   "triggers": [
+    {
+     "text": "Filter Icon",
+     "href": null,
+     "marker": "aria-haspopup",
+     "inChrome": true,
+     "titleOnTrigger": null,
+     "target": {
+      "role": "button",
+      "heading": "",
+      "textLen": 11,
+      "hasForm": false,
+      "hasIframe": false,
+      "hasVideo": false
+     }
+    }
+   ],
+   "dialogs": [
+    {
+     "role": "dialog",
+     "heading": "",
+     "textLen": 872,
+     "hasForm": false,
+     "hasIframe": false,
+     "hasVideo": false
+    },
+    {
+     "role": "dialog",
+     "heading": "Privacy Preference Center",
+     "textLen": 2561,
+     "hasForm": true,
+     "hasIframe": false,
+     "hasVideo": false
+    }
+   ],
+   "dialogCount": 2,
+   "media": [
+    {
+     "tag": "a",
+     "src": "https://www.playerdevelopment.usta.com/",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "a",
+     "src": "https://www.playerdevelopment.usta.com/",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "iframe",
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.redballtennis.com",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Fwww.redballtennis.com",
+     "title": "Adobe ID Syncing iFrame",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "src": null,
+     "title": "onetrust-text-resize",
+     "w": 0,
+     "h": 0
+    }
+   ],
+   "mounts": [],
+   "auth": [],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en",
+    "hreflang": [],
+    "switcher": []
+   },
+   "cms": {
+    "dataLayer": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7"
+    ],
+    "Granite": [
+     "Sling",
+     "Util",
+     "HTTP",
+     "I18n",
+     "TouchIndicator",
+     "OptOutUtil",
+     "Toggles",
+     "$",
+     "csrf"
+    ],
+    "CQ": [
+     "shared",
+     "Sling",
+     "I18n",
+     "WCM"
+    ]
+   },
+   "framework": "vue",
+   "globals": [
+    "adobe",
+    "_satellite",
+    "OneTrust",
+    "Optanon",
+    "gtag",
+    "hj"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 8,
+   "inlineFetch": false,
+   "mainText": 133,
+   "domAddedAfterLoad": 1,
+   "hosts": {
+    "www.redballtennis.com": 38,
+    "assets.adobedtm.com": 4,
+    "www.usta.com": 1,
+    "maps.googleapis.com": 3,
+    "static.hotjar.com": 1,
+    "cdn.bttrack.com": 2,
+    "cdn.cookielaw.org": 13,
+    "connect.facebook.net": 2,
+    "tag.simpli.fi": 1,
+    "dpm.demdex.net": 4,
+    "usta.demdex.net": 1,
+    "cm.everesttech.net": 1,
+    "unitedstatestennisas.tt.omtrdc.net": 1,
+    "geolocation.onetrust.com": 1,
+    "cm.g.doubleclick.net": 2,
+    "usta.d2.sc.omtrdc.net": 1,
+    "bttrack.com": 5,
+    "sync.crwdcntrl.net": 2
+   },
+   "thirdPartyHosts": [
+    "assets.adobedtm.com",
+    "www.usta.com",
+    "maps.googleapis.com",
+    "static.hotjar.com",
+    "cdn.bttrack.com",
+    "cdn.cookielaw.org",
+    "connect.facebook.net",
+    "tag.simpli.fi",
+    "dpm.demdex.net",
+    "usta.demdex.net",
+    "cm.everesttech.net",
+    "unitedstatestennisas.tt.omtrdc.net",
+    "geolocation.onetrust.com",
+    "cm.g.doubleclick.net",
+    "usta.d2.sc.omtrdc.net",
+    "bttrack.com",
+    "sync.crwdcntrl.net"
+   ],
+   "scripts": [
+    "https://assets.adobedtm.com/15c795eb812c/a5f21beeb0e7/launch-a1fb916dcd62.min.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/utils.min.899004cc02c33efc1f6694b1aee587fd.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery/granite.min.011c0fc0d0cf131bdff879743a353002.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery.min.cf5bdf053ce8fb11dd5d95ebdc71b234.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/jquery.min.dd9b395c741ce2784096e26619e14910.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-auth.min.c003386f2fb81202940dd21f3ff5c423.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/shared.min.f431c9860147bcb7a2f1d2b64b3c775b.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/main.min.4579a1cf02be3aabcee9d39402bae08b.js",
+    "https://www.redballtennis.com/etc.clientlibs/resources/conf/redball/settings/cloudsettings/contexthub.kernel.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/components/structure/page/clientlibs.min.c1dc3eb6b805f37a6483cbbb2019481d.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-base.min.9f23b15caa9cd21494b4798ed1982f57.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/core/tabs/clientlibs/site.min.875cdb62d1c32eafe2db16d0b32f5e93.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/clientlibs/authUtils.min.16758f0d589c11258e50ae8b38794d64.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/segmentation.min.4c19a023a5d20beb227fa9b4c0e81bd9.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/locationmanager.min.0519c2f9474d0ddb14e5b27882a70ecd.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-usta-proxy.min.bcbe00faf6f4d865e64de9ce6e5de770.js",
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCLov3ymbgvbvzWQ0UuD2HY1O9IYmjnwnk&libraries=places&callback=emptyCallback",
+    "https://static.hotjar.com/c/hotjar-6402177.js?sv=6",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_ActivityMap.min.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement.min.js",
+    "https://assets.adobedtm.com/extensions/EP31dbb9c60e404ba1aa6e746d49be6f29/AppMeasurement_Module_AudienceManagement.min.js",
+    "https://cdn.bttrack.com/universal/46180",
+    "https://maps.googleapis.com/maps-api-v3/api/js/65/14a/geocoder.js",
+    "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js",
+    "https://connect.facebook.net/en_US/fbevents.js",
+    "https://tag.simpli.fi/sifitag/9834c32e-975a-476d-9f45-7c2c31d50922",
+    "https://connect.facebook.net/signals/config/1158921169330278?v=2.9.401&r=stable&domain=www.redballtennis.com&hme=2506fb1e365be93f3ccf36e3d92699c622e55613e451d1a2c96bc6095b3873de&ex_m=117%2C232%2C168%2",
+    "https://cdn.bttrack.com/js/16583/analytics/1.0/analytics.min.js",
+    "https://cdn.cookielaw.org/scripttemplates/202506.1.0/otBannerSdk.js",
+    "https://usta.d2.sc.omtrdc.net/b/ss/usta.global/10/JS-2.27.0-LEWM/s99738571352616?AQB=1&ndh=1&pf=1&callback=s_c_il[1].doPostbacks&et=1&t=17%2F8%2F2026%2017%3A36%3A5%204%20-120&d.&nsid=0&jsonv=1&.d&sdid",
+    "https://bttrack.com/engagement/js?goalId=16583&cb=1789659365204"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/libs/granite/csrf/token.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://www.redballtennis.com/libs/granite/csrf/token.json"
+    },
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/conf/usta/settings/wcm/segments.seg.js",
+     "query": [],
+     "status": 200,
+     "contentType": "text/javascript",
+     "example": "https://www.redballtennis.com/conf/usta/settings/wcm/segments.seg.js"
+    },
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/libs/cq/i18n/dict.en.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://www.redballtennis.com/libs/cq/i18n/dict.en.json"
+    }
+   ],
+   "thirdPartyXhr": [
+    "GET maps.googleapis.com/maps/api/mapsjs/gen_204",
+    "GET dpm.demdex.net/id",
+    "GET cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/0196c5af-1167-713d-890a-4a717f9cee",
+    "POST unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery",
+    "GET geolocation.onetrust.com/cookieconsentpub/v1/geo/location",
+    "GET cdn.cookielaw.org/consent/0196c5af-1167-713d-890a-4a717f9cee0e/019764bc-bccf-7965-9d2c-210b99746f",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCookieSettingsButton.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otFloatingRounded.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/v2/otPcPanel.json",
+    "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCommonStyles.css",
+    "GET cdn.cookielaw.org/logos/static/ot_guard_logo.svg",
+    "GET bttrack.com/engagement/event",
+    "GET bttrack.com/engagement/getpixels"
+   ],
+   "postBodies": [
+    {
+     "url": "https://unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery?client=unitedstatestennisas&sessionId=fd45dde0b97648649e14013d0c3092d7&version=2.11.7",
+     "body": "{\"requestId\":\"18bba3d7c7334c76916f874284b4b124\",\"context\":{\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36\",\"clientHints\":{\"mobile\":false,\"platform\":\"macOS\",\"browserUAWithMajorVersion\":\"\\\"HeadlessChrome\\\";v=\\\"153\\\", \\\"Not_A Brand\\\";v=\\\"8\\\", \\\"Chromium\\\";v=\\\"153\\\"\"},\"timeOffsetInMinutes\":120,\"channel\":\"we"
+    }
+   ],
+   "textAtLoad": 133,
+   "mainEmptyAtLoad": false
+  },
+  "/en/home/confirmation.html": {
+   "url": "https://www.redballtennis.com/en/home/confirmation.html",
+   "status": 200,
+   "host": "www.redballtennis.com",
+   "title": "Sign In",
+   "forms": [
+    {
+     "name": "c0d577f2f",
+     "action": null,
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 2,
+     "signature": [
+      "text:username",
+      "password:password"
+     ],
+     "hidden": [
+      "state",
+      "ulp-login"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "c89522a93",
+     "action": null,
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "state",
+      "connection"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "c89522a93",
+     "action": null,
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "state",
+      "connection"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    },
+    {
+     "name": "c89522a93",
+     "action": null,
+     "method": "post",
+     "role": "",
+     "inChrome": false,
+     "fields": 0,
+     "signature": [],
+     "hidden": [
+      "state",
+      "connection"
+     ],
+     "tokens": [],
+     "search": false,
+     "inlineHandler": false
+    }
+   ],
+   "controlGroups": [],
+   "triggers": [],
+   "dialogs": [],
+   "dialogCount": 0,
+   "media": [
+    {
+     "tag": "iframe",
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Faccount.usta.com",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    },
+    {
+     "tag": "iframe",
+     "src": "javascript:false",
+     "account": null,
+     "player": null,
+     "videoId": null,
+     "inDialog": false
+    }
+   ],
+   "iframes": [
+    {
+     "src": "https://usta.demdex.net/dest5.html?d_nsid=0#https%3A%2F%2Faccount.usta.com",
+     "title": "Adobe ID Syncing iFrame",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "src": "javascript:false",
+     "title": null,
+     "w": 0,
+     "h": 0
+    }
+   ],
+   "mounts": [],
+   "auth": [
+    "https://account.usta.com/u/signup?state=hKFo2SA0LUlZTkt1LVVaSGhILUY1ZnFWZ3hWR0RkNG9sN0lVTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBGaS1kakNhd2ZNQVNGQXphS2ticm9MY2pqWnFiVTZso2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc",
+    "https://www.usta.com/en/home/search-profile/find-your-account.html",
+    "https://account.usta.com/u/login/password-reset-start/migration-and-credentials-authentication?state=hKFo2SA0LUlZTkt1LVVaSGhILUY1ZnFWZ3hWR0RkNG9sN0lVTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBGaS1kakNhd2ZNQVNGQXphS2ticm9MY2pqWnFiVTZso2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc",
+    "https://account.usta.com/u/signup?state=hKFo2SA0LUlZTkt1LVVaSGhILUY1ZnFWZ3hWR0RkNG9sN0lVTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBGaS1kakNhd2ZNQVNGQXphS2ticm9MY2pqWnFiVTZso2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc"
+   ],
+   "commerce": {
+    "cart": false,
+    "prices": 0
+   },
+   "locale": {
+    "lang": "en",
+    "hreflang": [],
+    "switcher": [
+     "https://www.usta.com/en/home/search-profile/find-your-account.html"
+    ]
+   },
+   "cms": {
+    "dataLayer": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "push"
+    ]
+   },
+   "framework": null,
+   "globals": [
+    "adobe",
+    "_satellite",
+    "google_tag_manager",
+    "gtag",
+    "hj"
+   ],
+   "clientRendered": [],
+   "listingCandidates": [],
+   "inlineScripts": 12,
+   "inlineFetch": true,
+   "mainText": 368,
+   "domAddedAfterLoad": 4,
+   "hosts": {
+    "www.redballtennis.com": 27,
+    "assets.adobedtm.com": 6,
+    "www.usta.com": 7,
+    "maps.googleapis.com": 1,
+    "account.usta.com": 5,
+    "cdn.auth0.com": 2,
+    "ajax.googleapis.com": 1,
+    "cdn01.basis.net": 1,
+    "dpm.demdex.net": 5,
+    "usta.demdex.net": 1,
+    "www.googletagmanager.com": 2,
+    "cm.g.doubleclick.net": 2,
+    "cm.everesttech.net": 1,
+    "cdn.bttrack.com": 1,
+    "www.google.com": 6,
+    "connect.facebook.net": 2,
+    "googleads.g.doubleclick.net": 2,
+    "ad.doubleclick.net": 1,
+    "tag.simpli.fi": 1,
+    "sync.crwdcntrl.net": 2,
+    "www.google.ch": 2,
+    "a42cdn.usablenet.com": 8,
+    "static.hotjar.com": 1,
+    "usta.d2.sc.omtrdc.net": 1,
+    "pixel-sync.sitescout.com": 1,
+    "pixel.sitescout.com": 1
+   },
+   "thirdPartyHosts": [
+    "assets.adobedtm.com",
+    "www.usta.com",
+    "maps.googleapis.com",
+    "account.usta.com",
+    "cdn.auth0.com",
+    "ajax.googleapis.com",
+    "cdn01.basis.net",
+    "dpm.demdex.net",
+    "usta.demdex.net",
+    "www.googletagmanager.com",
+    "cm.g.doubleclick.net",
+    "cm.everesttech.net",
+    "cdn.bttrack.com",
+    "www.google.com",
+    "connect.facebook.net",
+    "googleads.g.doubleclick.net",
+    "ad.doubleclick.net",
+    "tag.simpli.fi",
+    "sync.crwdcntrl.net",
+    "www.google.ch",
+    "a42cdn.usablenet.com",
+    "static.hotjar.com",
+    "usta.d2.sc.omtrdc.net",
+    "pixel-sync.sitescout.com",
+    "pixel.sitescout.com"
+   ],
+   "scripts": [
+    "https://assets.adobedtm.com/15c795eb812c/a5f21beeb0e7/launch-a1fb916dcd62.min.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/utils.min.899004cc02c33efc1f6694b1aee587fd.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery/granite.min.011c0fc0d0cf131bdff879743a353002.js",
+    "https://www.redballtennis.com/etc.clientlibs/clientlibs/granite/jquery.min.cf5bdf053ce8fb11dd5d95ebdc71b234.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/jquery.min.dd9b395c741ce2784096e26619e14910.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-auth.min.c003386f2fb81202940dd21f3ff5c423.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/shared.min.f431c9860147bcb7a2f1d2b64b3c775b.js",
+    "https://www.redballtennis.com/etc.clientlibs/foundation/clientlibs/main.min.4579a1cf02be3aabcee9d39402bae08b.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/components/structure/page/clientlibs.min.c1dc3eb6b805f37a6483cbbb2019481d.js",
+    "https://www.redballtennis.com/etc.clientlibs/resources/conf/redball/settings/cloudsettings/contexthub.kernel.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/core/tabs/clientlibs/site.min.875cdb62d1c32eafe2db16d0b32f5e93.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-base.min.9f23b15caa9cd21494b4798ed1982f57.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/clientlibs/authUtils.min.16758f0d589c11258e50ae8b38794d64.js",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/segmentation.min.4c19a023a5d20beb227fa9b4c0e81bd9.js",
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyCLov3ymbgvbvzWQ0UuD2HY1O9IYmjnwnk&libraries=places&callback=emptyCallback",
+    "https://www.redballtennis.com/etc.clientlibs/usta/components/clientlibs/locationmanager.min.0519c2f9474d0ddb14e5b27882a70ecd.js",
+    "https://www.redballtennis.com/etc.clientlibs/redball/clientlibs/clientlib-usta-proxy.min.bcbe00faf6f4d865e64de9ce6e5de770.js",
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+    "https://cdn.auth0.com/ulp/react-components/1.219.4/js/libphonenumber-js-bundle.js",
+    "https://assets.adobedtm.com/15c795eb812c/d58caffabb60/launch-ENa9d96587eb694a72b688bbb7a47e5aed.min.js",
+    "https://assets.adobedtm.com/extensions/EP8757b503532a44a68eee17773f6f10a0/AppMeasurement_Module_ActivityMap.min.js",
+    "https://assets.adobedtm.com/extensions/EP8757b503532a44a68eee17773f6f10a0/AppMeasurement.min.js",
+    "https://assets.adobedtm.com/extensions/EP8757b503532a44a68eee17773f6f10a0/AppMeasurement_Module_AudienceManagement.min.js",
+    "https://cdn01.basis.net/assets/up.js?um=1",
+    "https://www.googletagmanager.com/gtag/js?id=AW-16540420710",
+    "https://cdn.bttrack.com/universal/46180",
+    "https://connect.facebook.net/en_US/fbevents.js",
+    "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16540420710/?random=1789659376883&cv=11&fst=1789659376883&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be69f3v9194902338za200zd919490",
+    "https://tag.simpli.fi/sifitag/6ba8a7ee-3f1e-4d96-a8a2-6b2fae150a8f",
+    "https://connect.facebook.net/signals/config/417858394310921?v=2.9.401&r=stable&domain=account.usta.com&hme=2506fb1e365be93f3ccf36e3d92699c622e55613e451d1a2c96bc6095b3873de&ex_m=117%2C232%2C168%2C27%2C",
+    "https://www.googletagmanager.com/gtag/js?id=AW-17059435017",
+    "https://account.usta.com/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs",
+    "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/17059435017/?random=1789659377133&cv=11&fst=1789659377133&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be69g0h2v9219403136za200zd9219",
+    "https://a42cdn.usablenet.com/a42/usta/default/prod/cs-start",
+    "https://static.hotjar.com/c/hotjar-5330072.js?sv=6",
+    "https://a42cdn.usablenet.com/a42/usta/default/prod/channel-loader?d=account.usta.com",
+    "https://a42cdn.usablenet.com/a42/lib/js/r1/1779173995194/core.js",
+    "https://a42cdn.usablenet.com/a42/usta/default/prod/rapid/rs/1789370655791/globalsAll.js",
+    "https://a42cdn.usablenet.com/a42/usta/default/prod/rapid/rs/1789370655791/globals.js",
+    "https://a42cdn.usablenet.com/a42/usta/default/prod/rapid/rs/1789370655791/autocomplete.js",
+    "https://a42cdn.usablenet.com/a42/usta/default/prod/rapid/rs/1789370655791/globalsAttr.js",
+    "https://assets.adobedtm.com/15c795eb812c/d58caffabb60/95d16cc66aa5/RC91bd07a83be04330b293816f40d161cb-source.min.js",
+    "https://usta.d2.sc.omtrdc.net/b/ss/usta.ustacomprod,usta.global/10/JS-2.27.0-LGU4/s93321396021582?AQB=1&ndh=1&pf=1&callback=s_c_il[1].doPostbacks&et=1&t=17%2F8%2F2026%2017%3A36%3A17%204%20-120&cid.&cr"
+   ],
+   "firstPartyApi": [
+    {
+     "method": "GET",
+     "host": "www.redballtennis.com",
+     "path": "/libs/granite/csrf/token.json",
+     "query": [],
+     "status": 200,
+     "contentType": "application/json",
+     "example": "https://www.redballtennis.com/libs/granite/csrf/token.json"
+    }
+   ],
+   "thirdPartyXhr": [
+    "GET dpm.demdex.net/id",
+    "POST www.google.com/ccm/collect",
+    "POST www.google.com/rmkt/collect/16540420710/",
+    "POST ad.doubleclick.net/ccm/s/collect",
+    "POST www.google.com/rmkt/collect/17059435017/",
+    "POST account.usta.com/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs"
+   ],
+   "postBodies": [
+    {
+     "url": "https://www.google.com/rmkt/collect/16540420710/?random=1789659376883&cv=11&fst=1789659376883&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be69f3v9194902338za200zd9194902338xec&gcd=13l3l3l3l1l",
+     "body": ""
+    },
+    {
+     "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&apvc=1&auid=535801113.1789659377&dt=Sign%20In&tid=AW-16540420710&en=page_view&dl=https%3A%2F%2Faccount.usta.com%2Fu%2Flogin%3Fstate%3DhKFo2SA0LUlZTkt1LV",
+     "body": ""
+    },
+    {
+     "url": "https://ad.doubleclick.net/ccm/s/collect?auid=535801113.1789659377&gtm=45be69f3v9194902338za200zd9194902338xec&fmt=8",
+     "body": ""
+    },
+    {
+     "url": "https://www.google.com/rmkt/collect/17059435017/?random=1789659377133&cv=11&fst=1789659377133&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be69g0h2v9219403136za200zd9219403136xec&gcd=13l3l3l3l",
+     "body": ""
+    },
+    {
+     "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=0&auid=535801113.1789659377&dt=Sign%20In&tid=AW-17059435017&en=page_view&dl=https%3A%2F%2Faccount.usta.com%2Fu%2Flogin%3Fstate%3DhKFo2SA0LUlZTkt1LV",
+     "body": ""
+    },
+    {
+     "url": "https://account.usta.com/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs",
+     "body": "{\"sensor_data\":\"3;0;1;2048;3289924;HnJf06jtj50SjgCwKFE7nJs9vPCp6EIRBz7ND3AGgmc=;12,0,0,1,1,0;\\\"\\\"@\\\"M(e\\\">\\\"CLhhu]Y)\\\"B]|\\\")Vl\\\"~,T\\\"x@i\\\"N\\\"i*#$~AA6BO8#he+&c?<n iG#LaUvQmJ7{:WzIGy^YDkuw+<<<6-|ze1}p#{qT_$N0G S!H`*>;(&bCLy+(zt(;PuE9;zWw9HQd`&1(E&2MWdV2R`N6.ycp39dFyT?h rQ\\\"V(4\\\"0Ok\\\"j\\\"XT\\\"}rK\\\"PUe5\\\"$\\\"A@!Sw\\\"e45\\\"qQu\\\";Ya%_\\\"s7/n\\\"J\\\"n:Npo oW%_R=_\\\"*`-\\\"~X<\\\")\\\"n<eWK_g2Jt3La gS+f^Nm)d4v?:h6F#zjExt"
+    },
+    {
+     "url": "https://account.usta.com/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs",
+     "body": "{\"sensor_data\":\"3;0;1;0;3289924;HnJf06jtj50SjgCwKFE7nJs9vPCp6EIRBz7ND3AGgmc=;4,15,0,0,2,168;\\\"L\\\"3n5\\\"OvU !\\\"o\\\"ea(Z\\\"P-?\\\"fd<\\\"hjB1a\\\"x.S2\\\"AJD_\\\"z=TA\\\"zs\\\")h[{R\\\"^8\\\"v!rF\\\"(\\\"\\\"8u4\\\"Abf\\\"dtqxQ*HS.ZQBG>IGB\\\"mG6\\\"(\\\"/Dbamdqm\\\";\\\".*h|\\\"{P754\\\"F0\\\"pe:\\\"x+{\\\", HZ+Go+=\\\"F1n\\\"j\\\"\\\"y%-\\\"9<e\\\"&\\\"SBcH*?XE&]Cn,pA]52J)\\\"Y\\\"U}:X\\\"$\\\"\\\"XId\\\"vL|\\\"!\\\"p*t7Un+mj0QC36=gj9Odj}fS&QI:Yj;o\\\"h\\\"R*R\\\"*oHTsi*a6Dn/BP/:8o?"
+    }
+   ],
+   "textAtLoad": 368,
+   "mainEmptyAtLoad": false
+  }
+ },
+ "findings": [
+  {
+   "id": "a-cms-app-settings-object-datalayer",
+   "class": "A",
+   "feature": "CMS / app settings object dataLayer",
+   "hint": "settings",
+   "evidence": [],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "a-unknown-third-party-host-bttrack-com",
+   "class": "A",
+   "feature": "unknown third-party host bttrack.com",
+   "hint": "inspect",
+   "evidence": [
+    "bttrack.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ]
+  },
+  {
+   "id": "a-cms-app-settings-object-granite",
+   "class": "A",
+   "feature": "CMS / app settings object Granite",
+   "hint": "settings",
+   "evidence": [],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ]
+  },
+  {
+   "id": "a-cms-app-settings-object-cq",
+   "class": "A",
+   "feature": "CMS / app settings object CQ",
+   "hint": "settings",
+   "evidence": [],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ]
+  },
+  {
+   "id": "a-unknown-third-party-host-www-gstatic-com",
+   "class": "A",
+   "feature": "unknown third-party host www.gstatic.com",
+   "hint": "inspect",
+   "evidence": [
+    "www.gstatic.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html"
+   ]
+  },
+  {
+   "id": "a-unknown-third-party-host-jnn-pa-googleapis-com",
+   "class": "A",
+   "feature": "unknown third-party host jnn-pa.googleapis.com",
+   "hint": "inspect",
+   "evidence": [
+    "jnn-pa.googleapis.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html"
+   ]
+  },
+  {
+   "id": "a-unknown-third-party-host-www-google-com",
+   "class": "A",
+   "feature": "unknown third-party host www.google.com",
+   "hint": "inspect",
+   "evidence": [
+    "www.google.com"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "cr-client-framework-vue",
+   "class": "CR",
+   "feature": "client framework vue",
+   "hint": "framework",
+   "evidence": [],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ]
+  },
+  {
+   "id": "d-first-party-data-file-get-libs-granite-csrf-token-json",
+   "class": "D",
+   "feature": "first-party data file GET /libs/granite/csrf/token.json",
+   "api": {
+    "method": "GET",
+    "path": "/libs/granite/csrf/token.json"
+   },
+   "hint": "data",
+   "evidence": [
+    "GET /libs/granite/csrf/token.json → 200"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ],
+   "reach": {
+    "pages": 7,
+    "of": 7
+   }
+  },
+  {
+   "id": "d-first-party-data-file-get-libs-cq-i18n-dict-en-json",
+   "class": "D",
+   "feature": "first-party data file GET /libs/cq/i18n/dict.en.json",
+   "api": {
+    "method": "GET",
+    "path": "/libs/cq/i18n/dict.en.json"
+   },
+   "hint": "data",
+   "evidence": [
+    "GET /libs/cq/i18n/dict.en.json → 200"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ],
+   "reach": {
+    "pages": 6,
+    "of": 7
+   }
+  },
+  {
+   "id": "f-form-c0d577f2f-no-action-js-wired-2-fields",
+   "class": "F",
+   "feature": "form \"c0d577f2f\" → no action (JS-wired) (2 fields)",
+   "signature": [
+    "text:username",
+    "password:password"
+   ],
+   "hint": "forms",
+   "evidence": [
+    "text:username,password:password",
+    "state,ulp-login"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "i18n-locale-variants-hc",
+   "class": "I18N",
+   "feature": "locale variants hc",
+   "hint": "locale",
+   "evidence": [
+    "https://customercare.usta.com/hc/en-us/requests/new?ticket_form_id=29846834371860"
+   ],
+   "pages": [
+    "/en/home.html"
+   ]
+  },
+  {
+   "id": "i18n-locale-variants-en",
+   "class": "I18N",
+   "feature": "locale variants en",
+   "hint": "locale",
+   "evidence": [
+    "https://www.usta.com/en/home/search-profile/find-your-account.html"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "m-modal-trigger-aria-haspopup-chrome-only-button-content",
+   "class": "M",
+   "feature": "modal trigger aria-haspopup (chrome only) → button:content",
+   "hint": "chrome-interaction",
+   "evidence": [
+    "Filter Icon"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-www-usta-com",
+   "class": "T",
+   "feature": "unknown third-party host www.usta.com",
+   "hint": "inspect",
+   "evidence": [
+    "www.usta.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-tag-manager-adobe-launch",
+   "class": "T",
+   "feature": "tag manager: Adobe Launch",
+   "role": "tag manager: Adobe Launch",
+   "hint": "tags",
+   "evidence": [
+    "assets.adobedtm.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-cdn-bttrack-com",
+   "class": "T",
+   "feature": "unknown third-party host cdn.bttrack.com",
+   "hint": "inspect",
+   "evidence": [
+    "cdn.bttrack.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-tag-simpli-fi",
+   "class": "T",
+   "feature": "unknown third-party host tag.simpli.fi",
+   "hint": "inspect",
+   "evidence": [
+    "tag.simpli.fi"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-analytics-session-replay",
+   "class": "T",
+   "feature": "analytics: session replay",
+   "role": "analytics: session replay",
+   "hint": "tags",
+   "evidence": [
+    "static.hotjar.com",
+    "metrics.hotjar.io"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-analytics-adobe-analytics-experience-cloud-id",
+   "class": "T",
+   "feature": "analytics: Adobe Analytics / Experience Cloud ID",
+   "role": "analytics: Adobe Analytics / Experience Cloud ID",
+   "hint": "tags",
+   "evidence": [
+    "dpm.demdex.net",
+    "usta.demdex.net",
+    "unitedstatestennisas.tt.omtrdc.net",
+    "usta.d2.sc.omtrdc.net"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-marketing-ad-retargeting-pixel",
+   "class": "T",
+   "feature": "marketing: ad / retargeting pixel",
+   "role": "marketing: ad / retargeting pixel",
+   "hint": "tags",
+   "evidence": [
+    "connect.facebook.net",
+    "cm.g.doubleclick.net",
+    "cm.everesttech.net",
+    "static.doubleclick.net",
+    "googleads.g.doubleclick.net",
+    "account.usta.com",
+    "ad.doubleclick.net"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-sync-crwdcntrl-net",
+   "class": "T",
+   "feature": "unknown third-party host sync.crwdcntrl.net",
+   "hint": "inspect",
+   "evidence": [
+    "sync.crwdcntrl.net"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-consent-onetrust",
+   "class": "T",
+   "feature": "consent: OneTrust",
+   "role": "consent: OneTrust",
+   "hint": "tags",
+   "evidence": [
+    "cdn.cookielaw.org",
+    "geolocation.onetrust.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-www-google-com",
+   "class": "T",
+   "feature": "unknown third-party host www.google.com",
+   "hint": "inspect",
+   "evidence": [
+    "www.google.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-yt3-ggpht-com",
+   "class": "T",
+   "feature": "unknown third-party host yt3.ggpht.com",
+   "hint": "inspect",
+   "evidence": [
+    "yt3.ggpht.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-ajax-googleapis-com",
+   "class": "T",
+   "feature": "unknown third-party host ajax.googleapis.com",
+   "hint": "inspect",
+   "evidence": [
+    "ajax.googleapis.com"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-cdn01-basis-net",
+   "class": "T",
+   "feature": "unknown third-party host cdn01.basis.net",
+   "hint": "inspect",
+   "evidence": [
+    "cdn01.basis.net"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-tag-manager-google-tag-manager",
+   "class": "T",
+   "feature": "tag manager: Google Tag Manager",
+   "role": "tag manager: Google Tag Manager",
+   "hint": "tags",
+   "evidence": [
+    "www.googletagmanager.com"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-www-google-ch",
+   "class": "T",
+   "feature": "unknown third-party host www.google.ch",
+   "hint": "inspect",
+   "evidence": [
+    "www.google.ch"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-a42cdn-usablenet-com",
+   "class": "T",
+   "feature": "unknown third-party host a42cdn.usablenet.com",
+   "hint": "inspect",
+   "evidence": [
+    "a42cdn.usablenet.com"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-pixel-sync-sitescout-com",
+   "class": "T",
+   "feature": "unknown third-party host pixel-sync.sitescout.com",
+   "hint": "inspect",
+   "evidence": [
+    "pixel-sync.sitescout.com"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "t-unknown-third-party-host-pixel-sitescout-com",
+   "class": "T",
+   "feature": "unknown third-party host pixel.sitescout.com",
+   "hint": "inspect",
+   "evidence": [
+    "pixel.sitescout.com"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "v-maps-embedded-map-service",
+   "class": "V",
+   "feature": "maps: embedded map service",
+   "role": "maps: embedded map service",
+   "hint": "media",
+   "evidence": [
+    "maps.googleapis.com"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html",
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "v-iframe-without-src-runtime-injected-embed",
+   "class": "V",
+   "feature": "iframe without src (runtime-injected embed)",
+   "hint": "embed-runtime",
+   "evidence": [
+    "onetrust-text-resize"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html",
+    "/en/home/404.html"
+   ]
+  },
+  {
+   "id": "v-video-youtube",
+   "class": "V",
+   "feature": "video: YouTube",
+   "role": "video: YouTube",
+   "hint": "media",
+   "evidence": [
+    "www.youtube.com",
+    "i.ytimg.com",
+    "https://www.youtube.com/embed/0d6ahBtLavQ",
+    "https://www.youtube.com/embed/MHolYiYJjgM"
+   ],
+   "pages": [
+    "/en/home.html",
+    "/en/home/play.html"
+   ]
+  },
+  {
+   "id": "x-auth-identity-provider",
+   "class": "X",
+   "feature": "auth: identity provider",
+   "role": "auth: identity provider",
+   "hint": "decided-out",
+   "evidence": [
+    "cdn.auth0.com"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  },
+  {
+   "id": "x-sign-in-account-links",
+   "class": "X",
+   "feature": "sign-in / account links",
+   "hint": "decided-out",
+   "evidence": [
+    "https://account.usta.com/u/signup?state=hKFo2SA0LUlZTkt1LVVaSGhILUY1ZnFWZ3hWR0RkNG9sN0lVTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBGaS1kakNhd2ZNQVNGQXphS2ticm9MY2pqWnFiVTZso2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc",
+    "https://www.usta.com/en/home/search-profile/find-your-account.html",
+    "https://account.usta.com/u/login/password-reset-start/migration-and-credentials-authentication?state=hKFo2SA0LUlZTkt1LVVaSGhILUY1ZnFWZ3hWR0RkNG9sN0lVTqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFBGaS1kakNhd2ZNQVNGQXphS2ticm9MY2pqWnFiVTZso2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc"
+   ],
+   "pages": [
+    "/en/home/confirmation.html"
+   ]
+  }
+ ],
+ "reach": {
+  "pagesWithEvidence": 7,
+  "of": 7,
+  "endpoints": {
+   "GET www.redballtennis.com/conf/usta/settings/wcm/segments.seg.js": 6,
+   "GET www.redballtennis.com/libs/granite/csrf/token.json": 7,
+   "GET maps.googleapis.com/maps/api/mapsjs/gen_204": 6,
+   "GET www.redballtennis.com/libs/cq/i18n/dict.en.json": 6,
+   "GET cdn.cookielaw.org/consent/{uuid}/{uuid}.json": 6,
+   "POST unitedstatestennisas.tt.omtrdc.net/rest/v1/delivery": 6,
+   "GET geolocation.onetrust.com/cookieconsentpub/v1/geo/location": 6,
+   "GET cdn.cookielaw.org/consent/{uuid}/{uuid}/en.json": 6,
+   "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otFloatingRounded.json": 6,
+   "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/v2/otPcPanel.json": 6,
+   "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCookieSettingsButton.json": 6,
+   "GET cdn.cookielaw.org/scripttemplates/202506.1.0/assets/otCommonStyles.css": 6,
+   "GET cdn.cookielaw.org/logos/static/ot_guard_logo.svg": 6,
+   "GET bttrack.com/engagement/event": 6,
+   "GET bttrack.com/engagement/getpixels": 6,
+   "GET dpm.demdex.net/id": 5,
+   "POST www.google.com/ccm/collect": 1,
+   "POST www.google.com/rmkt/collect/{n}/": 1,
+   "POST ad.doubleclick.net/ccm/s/collect": 1,
+   "POST account.usta.com/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs": 1,
+   "GET googleads.g.doubleclick.net/pagead/id": 4,
+   "GET www.gstatic.com/youtube/img/icons/mweb/youtube_fill/logo/v2/67px.svg": 3,
+   "POST jnn-pa.googleapis.com/$rpc/google.internal.waa.v1.Waa/GenerateIT": 4,
+   "POST www.youtube.com/youtubei/v1/log_event": 4
+  },
+  "searchFormPages": 0,
+  "formPages": 1,
+  "triggerPages": {}
+ }
+}

@@ -1,37 +1,426 @@
-.hero-container .hero-wrapper {
-  max-width: unset;
-  padding: 0;
-}
+/* hero — split lead. Geometry = the live AEM grid as computed in stardust/prototypes/{home,play,host}.css
+   (12-col percentages, 15px gutters / 4px ≤767, 8px column padding). Variants: video | prop | photo.
+   Every selector reaches the authored element through its wrapper (EW2). */
+
+/* stylelint-disable selector-class-pattern, no-descending-specificity, number-max-precision -- AEM-grid fractions kept at lifted precision */
 
 .hero {
-  position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-ink);
 }
 
-.hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--background-color);
+.hero .hero-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.hero picture {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+.hero .hero-copy-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.hero img {
-  object-fit: cover;
+.hero .hero-title h1,
+.hero .hero-title h2 {
+  margin: 0;
+}
+
+.hero .hero-title :is(h1, h2) em {
+  font-style: normal;
+  font-family: var(--font-display);
+  color: var(--color-red);
+}
+
+.hero .hero-sub:empty,
+.hero .hero-inline-media:not(:has(img)),
+.hero .hero-embed-source {
+  display: none;
+}
+
+.hero .hero-inline-media p,
+.hero .hero-media-content p {
+  margin: 0;
+  line-height: 0;
+}
+
+.hero .hero-inline-media img,
+.hero .hero-media-content img {
+  display: block;
   width: 100%;
+  height: auto;
+}
+
+.hero .hero-lede p {
+  font-size: 32px;
+  line-height: 34px;
+  color: var(--color-ink);
+}
+
+.hero hr {
+  height: 0;
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid var(--color-paper);
+  box-sizing: content-box;
+}
+
+.hero .hero-media {
+  align-self: stretch;
+}
+
+.hero .hero-media-inner {
   height: 100%;
 }
 
-@media (width >= 900px) {
-  .hero {
-    padding: 40px 32px;
+.hero .hero-embed iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+.hero .hero-photo-mobile,
+.hero .hero-red-rule {
+  display: none;
+}
+
+/* ===== video (home): copy 7/12 + YouTube 5/12 on the red-lines vector ===== */
+.hero.video .hero-copy {
+  width: 58.33333333%;
+}
+
+.hero.video .hero-copy-inner {
+  padding: 32px 30px 64px;
+}
+
+.hero.video .hero-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.hero.video .hero-title,
+.hero.video .hero-sub,
+.hero.video .hero-rule,
+.hero.video .hero-lede {
+  width: calc(100% - 30px);
+  margin: 0 15px;
+  padding: 8px 0;
+}
+
+.hero.video .hero-title h1 {
+  color: var(--color-red);
+}
+
+.hero.video .hero-sub p {
+  font-size: 36px;
+  line-height: 24px;
+  color: var(--color-blue);
+}
+
+.hero.video .hero-sub em {
+  font-style: normal;
+  color: var(--color-red);
+}
+
+.hero.video .hero-rule hr {
+  margin: 7px 0;
+}
+
+.hero.video .hero-inline-media {
+  display: none;
+}
+
+.hero.video .hero-media {
+  width: 41.66666667%;
+}
+
+.hero.video .hero-media-inner {
+  padding: 64px 0;
+  background: url("/img/redball/vector-background-red.svg") 50% center / cover no-repeat;
+}
+
+.hero.video .hero-media-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+  height: 100%;
+}
+
+.hero.video .hero-embed {
+  width: calc(80% - 30px);
+  margin: auto;
+  padding: 8px 0;
+}
+
+.hero.video .hero-media-spacer {
+  display: none;
+}
+
+/* ===== prop (play): copy 8/12 + fixed photo 4/12 ===== */
+.hero.prop .hero-copy {
+  width: 66.66666667%;
+  padding: 64px 30px;
+}
+
+.hero.prop .hero-text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 87.5%;
+}
+
+.hero.prop .hero-title {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  padding: 24px 0; /* the two live `&nbsp;` paragraphs around the h1 (#112) */
+}
+
+.hero.prop .hero-title h1 {
+  color: var(--color-blue);
+}
+
+.hero.prop .hero-sub,
+.hero.prop .hero-rule {
+  display: none;
+}
+
+.hero.prop .hero-lede {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  padding: 8px 0;
+}
+
+.hero.prop .hero-media {
+  width: 33.33333333%;
+}
+
+.hero.prop .hero-media-inner {
+  padding: 224px 0;
+  background: url("/img/redball/rbt-play-v1.jpg") 50% 50% / cover no-repeat;
+}
+
+.hero.prop .hero-media-spacer {
+  height: 16px;
+  margin: 32px 0;
+}
+
+/* ===== photo (host): copy 7/12 + authored edge-bleed photo 5/12 ===== */
+.hero.photo .hero-copy {
+  width: 58.33333333%;
+  padding: 64px 30px 32px;
+}
+
+.hero.photo .hero-text {
+  display: contents;
+}
+
+.hero.photo .hero-title {
+  width: calc(66.66666667% - 40px);
+  margin: 0 20px;
+  padding: 8px 0;
+}
+
+.hero.photo .hero-title h1 {
+  font-size: 100px;
+  line-height: 110px;
+  color: var(--color-blue);
+  text-align: left;
+}
+
+.hero.photo .hero-sub,
+.hero.photo .hero-inline-media {
+  display: none;
+}
+
+.hero.photo .hero-rule {
+  width: 100%;
+  padding: 4px 0;
+}
+
+.hero.photo .hero-rule hr {
+  margin: 7px 0;
+}
+
+.hero.photo .hero-lede {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  padding: 8px 0;
+}
+
+.hero.photo .hero-lede .lede-p + .lede-p {
+  margin-top: 24px; /* the live `&nbsp;` paragraph between the two ledes (#112) */
+}
+
+.hero.photo .hero-media {
+  align-self: center; /* live: the photo column keeps its 505px and centres in the taller copy row */
+  width: 41.66666667%;
+}
+
+.hero.photo .hero-media-inner {
+  position: relative;
+  min-height: 505px;
+  padding: 224px 0;
+  overflow: hidden;
+}
+
+.hero.photo .hero-media-content {
+  position: absolute;
+  inset: 0;
+}
+
+.hero.photo .hero-media-content p {
+  height: 100%;
+}
+
+.hero.photo .hero-media-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero.photo .hero-media-spacer {
+  width: calc(100% - 30px);
+  margin: 0 15px;
+  padding: 8px 0;
+  height: 57px;
+}
+
+/* ===== ≤767: the live mobile grid ===== */
+@media (width <= 767px) {
+  .hero.video .hero-copy,
+  .hero.prop .hero-copy,
+  .hero.photo .hero-copy {
+    width: 100%;
+  }
+
+  /* video */
+  .hero.video .hero-copy-inner {
+    padding: 16px 8px 32px;
+  }
+
+  .hero.video .hero-text {
+    width: 58.33333333%;
+  }
+
+  .hero.video .hero-title,
+  .hero.video .hero-sub,
+  .hero.video .hero-lede {
+    width: calc(100% - 8px);
+    margin: 0 4px;
+  }
+
+  .hero.video .hero-sub p {
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .hero.video .hero-sub em {
+    font-style: italic;
+  }
+
+  .hero.video .hero-rule {
+    display: none;
+  }
+
+  .hero.video .hero-inline-media {
+    display: block;
+    width: 41.66666667%;
+    margin: auto;
+    padding: 8px 0;
+  }
+
+  .hero.video .hero-inline-media-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: url("/img/redball/vector-background-red.svg") 100% center / cover no-repeat;
+  }
+
+  .hero.video .hero-inline-media p {
+    width: calc(50% - 4px);
+    margin: 8px auto;
+  }
+
+  .hero.video .hero-red-rule {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    background-color: var(--color-red);
+  }
+
+  .hero.video .hero-red-rule hr {
+    margin: 0;
+    border-color: transparent;
+  }
+
+  .hero.video .hero-media {
+    width: 100%;
+  }
+
+  .hero.video .hero-media-inner {
+    padding: 32px 0;
+  }
+
+  .hero.video .hero-embed {
+    width: calc(91.66666667% - 8px);
+  }
+
+  /* prop */
+  .hero.prop .hero-copy {
+    padding: 32px 8px;
+  }
+
+  .hero.prop .hero-text {
+    width: 100%;
+  }
+
+  .hero.prop .hero-photo-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .hero.prop .hero-photo-mobile-inner {
+    height: 340px; /* 112px top pad + 4 transparent separators (57px each) on live */
+    background: url("/img/redball/rbt-play-v1.jpg") 50% 50% / cover no-repeat;
+  }
+
+  .hero.prop .hero-media {
+    display: none;
+  }
+
+  /* photo */
+  .hero.photo .hero-copy {
+    padding: 32px 8px 16px;
+  }
+
+  .hero.photo .hero-title {
+    width: calc(100% - 40px);
+  }
+
+  .hero.photo .hero-title h1 {
+    font-size: 54px;
+    line-height: 59.4px;
+  }
+
+  .hero.photo .hero-inline-media {
+    display: block;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    padding: 8px 0 28px; /* 8px column pad + the live div.image margin-bottom 20px */
+  }
+
+  .hero.photo .hero-inline-media img {
+    aspect-ratio: 512 / 388;
+    object-fit: cover;
+  }
+
+  .hero.photo .hero-media {
+    display: none;
   }
 }

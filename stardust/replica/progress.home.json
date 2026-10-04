@@ -1,0 +1,95 @@
+{
+  "pageType": "landing",
+  "archetype": "home",
+  "liveUrl": "https://www.redballtennis.com/en/home.html",
+  "prototype": "stardust/prototypes/home-proposed.html",
+  "pageCss": "stardust/prototypes/home.css",
+  "regime": "prototype (standalone prototype vs live page)",
+  "mainSelector": ".container.responsivegrid.full-width--root",
+  "breakpoints": {
+    "1440": {
+      "iterations": 2,
+      "iterationLog": [
+        "iter1: content 0 findings (55/55 nodes under the OLD root '.container.responsivegrid', which on live is the page ROOT incl. header/footer — prototype wrapped in a matching div.root for symmetry), visual none, pixel 0.22% Δ0, header crop 0.00%, footer crop 0.63%",
+        "iter2 (markup change: brief's new content root '.container.responsivegrid.full-width--root' adopted, root wrapper dropped; canon chrome fixes; chrome.js rewritten): content 0 findings (27/27), visual none, pixel 0.22% Δ0 (identical count 7946 — motion code changed nothing at t=0), header crop 0.00%, footer crop 0.63%"
+      ],
+      "result": { "structuralRed": 0, "visualFlags": "none", "pixelPct": 0.22, "heightDelta": 0, "headerCropPct": 0.0, "footerCropPct": 0.63, "pass": true },
+      "justified": [
+        { "probe": "chrome-parity", "flag": "ICON signature red-ball-tennis-wbg.png → red-ball-tennis-wbg-04927f.png / -d7e509.png (header + footer)", "why": "same asset, locally hashed filename; rect/size paired within 1px" }
+      ],
+      "residuals": [
+        { "band": "y 2267–2510 (footer crop)", "pct": 0.63, "cause": "capture-state: OneTrust floating cookie-settings button (fixed, bottom-left, otFloatingRounded) is painted on live only; 2194 px, thick texture = the icon block", "flaggedFor": "delivery" },
+        { "band": "y 0–1000", "pct": 0.4, "cause": "same OneTrust widget re-painted at each stitched chunk (y≈690) + antialiasing along the diagonal edges of vector-background-red.svg (background-size: cover)", "flaggedFor": "delivery" }
+      ],
+      "captureState": [ { "what": "OneTrust floating cookie-settings shield (fixed widget) present on live captures, absent in prototype", "where": "bottom-left, every stitched chunk" } ]
+    },
+    "360": {
+      "iterations": 2,
+      "iterationLog": [
+        "iter1: content 0 findings (55/55 under old root), visual none, pixel 0.66% Δ0, chrome-parity header: 3 icons vs 2 (Cancel_Bold_White rendered — canon specificity bug), footer icon hash only",
+        "iter2 (same markup/canon changes as 1440): content 0 findings (27/27), visual none, pixel 0.61% Δ0 (count 9007 → 8357: hidden cancel icon), header crop 0.00%, footer crop 1.91%"
+      ],
+      "result": { "structuralRed": 0, "visualFlags": "none", "pixelPct": 0.61, "heightDelta": 0, "headerCropPct": 0.0, "footerCropPct": 1.91, "pass": true },
+      "justified": [
+        { "probe": "chrome-parity", "flag": "ICON signature Hamburger-Menu-White.svg / red-ball-logo-mob.png / red-ball-tennis-wbg.png → locally hashed filenames", "why": "same assets; sizes paired (24×24, 60×44, 100×63)" }
+      ],
+      "residuals": [
+        { "band": "y 3464–3783 (footer crop)", "pct": 1.91, "cause": "capture-state: OneTrust floating cookie-settings button (2194 px, same block as at 1440; 360 footer area is smaller so the share is larger)", "flaggedFor": "delivery" },
+        { "band": "y 500–1000 / 1500–2000 / 2500–3000", "pct": 1.2, "cause": "same OneTrust widget re-painted at every stitched chunk boundary (y≈870, 1750, 2650) + vector-background-red.svg diagonal antialiasing in the hero", "flaggedFor": "delivery" }
+      ],
+      "captureState": [ { "what": "OneTrust floating cookie-settings shield (fixed widget)", "where": "bottom-left of every stitched chunk" } ]
+    }
+  },
+  "motion": {
+    "observed": [
+      "1440 hover .button-core: opacity 1 → 0.7 (stardust/replica/motion/home.json)",
+      "1440 hover .footer-links__sites a: color #fff → #cfff05",
+      "1440 hover .navigation-menu__list-item-link--level-1: NO change (live rule 9070 'li:hover a {color:#cfff05}' exists in the source CSS but did not fire)",
+      "1440 click .drop-down__label-wrapper: aria-expanded false→true, list shown 400×397 at [8,12] via live rule '.drop-down__label-wrapper[aria-expanded=true] + .drop-down__select-list {display:block}' (capture/chrome-open-1440.json; motion-observe records class mutations only, so this attribute state machine was recovered with a dedicated before/after probe)",
+      "360 click .top-navigation__logo-hamburger: classes 'top-navigation__top-bar--opened top-to-bottom' added on .top-navigation__top-bar, transition top .3s ease + opacity .3s ease, panel [0,74,360,257] (padding-bottom 40, radius 0 0 20 20, shadow 0 6px 6px rgba(0,0,0,.16)); Vue re-parents the nav menu into the top bar and sets inline display:block; icons swapped by inline style (menu display:none, cancel display:inline 18×18) (motion/home-360.json + capture/chrome-open-360.json)"
+    ],
+    "implemented": [
+      "canon.css .button-core:hover / .button-primary-style:hover { opacity: .7 }",
+      "canon.css .footer-links__sites li.nav-link a:hover { color: #cfff05 }",
+      "canon chrome.js: dropdown aria-expanded toggle on click (+ .drop-down__close), list shown by the live CSS rule; prototype opened state matches live to the pixel (list, image, slogan, rows, items, close)",
+      "canon chrome.js + canon.css: hamburger state machine — aria-expanded, --opened + top-to-bottom classes on #top-navigation-bar, transition top/opacity .3s, nav menu re-parented into the top bar ≤1369px and shown by inline display:block, icon swap by inline style; opened panel measured identical to live (top bar, 4 rows 59/49/49/49, links, mobile arrow)"
+    ],
+    "dead": [
+      "nav level-1 hover colour (live CSS rule present, runtime probe measured no change) — NOT implemented; the pre-authored canon lime nav hover + colour transition were removed",
+      ".drop-down__select-list-item:hover {color:#00143f} — not probed, not implemented",
+      "Escape-to-close on the dropdown (pre-authored in canon, unobserved) — removed"
+    ]
+  },
+  "chromeDeltas": [],
+  "canonChanges": {
+    "changedAt": "2026-09-17T16:27Z",
+    "note": "Other agents: re-run your pixel round + header/footer crop gates against canon as of 2026-09-17T16:27Z (canon.css, header.html, chrome.js changed; footer.html and fonts.css unchanged).",
+    "files": {
+      "stardust/canon/canon.css": [
+        "base: live type ramp from usta common.min.css (h1 100/h2 76/h3 56/h4 28/h5 22/h6 18px, ≤767px 54/44/36/22/20/16; p 18→16px; p,div,span,button,select,input → Graphik Regular; headings color:unset), bootstrap heading margins (h1-3 20/10, h4-6 10/10) with .cmp-text h1-3 margin unset, hr base (height 0, border-top 1px #fff, margin 20 0), img max-width 100%, div.image img display:block, global label (Semibold 14/18 uppercase, margin-bottom 5) and input[type=text] (56px, 16/24, padding 16, margin-top 12, 1px #565656) rules, .cmp-text base (18/24 #000 left), .cmp-text--alignment-center, .cmp-image__image, .image--align--center, .cmp-embed iframe",
+        "buttons: .button-core / .button-primary-style exact live spec (display:flex, padding 14px, border 2px solid transparent, margin 0 auto, font-size 18px !important, line-height 20px !important, height 56px !important), ≥768 min-width 120 / --large & .button-large-style 280, ≤767 width 100% !important max 280, .button-core--not-fixed-width (min-width max-content; width 100%; max-width none !important), [disabled] spec",
+        "removed `button { font: inherit }` (live buttons keep the UA 13.333px; this made the opened hamburger 24.9px tall vs live 20.5)",
+        "bands: .band--pb-0 (live .padding-bottom-none) and .band--py-8 (bare AEM column padding) utilities next to .red-stripe",
+        "header: nav lime hover + transition removed (dead at runtime); hamburger imgs display:inline (26×26 button as live) and .top-navigation__logo-hamburger .top-navigation__logo-hamburger--cancel {display:none} (was beaten by the img display:block rule → both icons rendered at 360); dropdown list geometry lifted (row padding-left 45, column 50% flex column margin-bottom 20 + 20px sibling gap, item display:block, a line-height normal); .toggle-button live spec; breadcrumb divider padding 6px/8px",
+        "mobile ≤1369: .top-navigation__top-bar transition top .3s ease, opacity .3s ease; .top-navigation__top-bar--opened (padding-bottom 40, border-bottom 1px #fff as computed live, radius 0 0 20 20, shadow 0 6px 6px rgba(0,0,0,.16)); nav menu height auto, li height 100%; .level-1-content__mobile-arrow shown (border triangle 12px #0357b8)",
+        "footer: .footer-xf .separator.separator--mobile {display:none} (specificity fix — the later .separator{display:block} used to win, footer measured 268 vs 242 at 1440); separator hr height 0 (was 1px + 1px border = 2px; footer 322 vs 319 at 360)"
+      ],
+      "stardust/canon/header.html": [ "whitespace between <li class=\"drop-down__select-list-item\"> and <a> (live renders a 4px space before each dropdown link)" ],
+      "stardust/canon/chrome.js": [ "rewritten to the observed state machines (see motion.implemented); Escape handler and class-based menu display dropped" ]
+    },
+    "verifiedNotChanged": [
+      ".footer-links__sites li.nav-link line-height stays inherited 22.857px: lift-home-360 link rects are 39px apart = 22.857 line box + 16px gap, and chrome-parity pairs both links within 1px at both widths (the suggested 18px would shift the second link by 5px)"
+    ]
+  },
+  "portations": [],
+  "notes": [
+    "ARCHETYPE-BRIEF (original) scoped --main to '.container.responsivegrid', which on live is div.root.container.responsivegrid wrapping header+footer; the updated brief's '.container.responsivegrid.full-width--root' is correct and was adopted in iteration 2 (main carries that class; nothing else does).",
+    "capture/css/ALL-RULES.txt is incomplete: every rule of usta__components__clientlibs__common.min.css (h1{font-size:100px}, h2 76px, mobile 54/44, p 18/16px, the global font-family rule, label and input[type=text] specs) is missing, and its flattening keeps the '@media … {' prefix only on the first rule of each block (later rules of the same block lose their media context, and the closing '}' lines make nearest-preceding-@media attribution wrong). Grep the raw .css files in capture/css/ for base rules.",
+    "motion-observe.mjs records class mutations, transitions and hover computed diffs only — attribute-driven state machines (aria-expanded dropdown) and inline-style swaps (hamburger icons, menu display:block) are invisible; both had to be recovered with a manual before/after click probe (capture/chrome-open-probe.mjs → chrome-open-{1440,360}.json). Suggest recording attribute mutations and inline style changes.",
+    "anchor.mjs prints no sections on the live AEM page (no section/.section children under the root) — live side yields only doc height; band mapping had to come from the lift + pixel bands.",
+    "chrome-parity.mjs reports ICON signature deltas for locally hashed asset filenames (same image, basename-hash suffix) — permanent noise for any replica that stores media as <basename>-<hash>; comparing the basename before the hash would silence it.",
+    "stitch-shot --settle (live) leaves the OneTrust floating cookie-settings shield in every chunk; it is the entire footer-crop residual (0.63% / 1.91%) and most of the warm bands. A dismiss/hide of '#ot-sdk-btn-floating' (or a pixel-compare --mask) would remove it.",
+    "content-diff/visual-diff inventories differ by scope but were symmetric under both roots (55/55 and 27/27) — the prototype mirrors the hidden live nodes (mobile-only 22px italic subhead, hand-with-ball image container, red rule container, and the never-shown blue-band container with two h5 + FIND AN EVENT / HOST AN EVENT CTAs).",
+    "The lift's per-element model matched to the pixel once the AEM grid was encoded as rules: responsivegrid columns N/12*100%, leaf columns calc(N% - 30px) + 15px side margins (≤767px: -8px/4px), every column padding 8px 0, padding utilities 32/64 halved at ≤767px, 'justify-content_space-around' = flex + margin:auto !important on every nested column; doc height matched exactly (2510 / 3783) before the first live gate run."
+  ]
+}

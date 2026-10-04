@@ -1,0 +1,846 @@
+{
+  "live": "https://www.redballtennis.com/en/home/404.html",
+  "build": "http://localhost:8793/stardust/prototypes/404-proposed.html",
+  "width": 1440,
+  "tolerance": 1,
+  "regions": [
+    {
+      "name": "header",
+      "findings": [
+        {
+          "kind": "PAIR",
+          "text": ">",
+          "msg": "paddingLeft 6px → 8px; Δw +2px (20→22)"
+        },
+        {
+          "kind": "PAIR",
+          "text": "404",
+          "msg": "Δx +2px (67→69)"
+        },
+        {
+          "kind": "ICON",
+          "text": "",
+          "msg": "icon #0: signature \"red-ball-tennis-wbg.png\" → \"red-ball-tennis-wbg-04927f.png\""
+        }
+      ],
+      "pairs": 7,
+      "inventory": {
+        "live": {
+          "atoms": 7,
+          "icons": 1
+        },
+        "build": {
+          "atoms": 7,
+          "icons": 1
+        }
+      }
+    },
+    {
+      "name": "footer",
+      "findings": [
+        {
+          "kind": "REGION BOX",
+          "msg": "Δh +23px (242→265)"
+        },
+        {
+          "kind": "PAIR",
+          "text": "Terms & Conditions",
+          "msg": "Δy +15px (1350→1365)"
+        },
+        {
+          "kind": "PAIR",
+          "text": "Privacy Policy",
+          "msg": "Δy +15px (1350→1365)"
+        },
+        {
+          "kind": "ICON",
+          "text": "",
+          "msg": "icon #0: signature \"red-ball-tennis-wbg.png\" → \"red-ball-tennis-wbg-d7e509.png\""
+        }
+      ],
+      "pairs": 2,
+      "inventory": {
+        "live": {
+          "atoms": 2,
+          "icons": 1
+        },
+        "build": {
+          "atoms": 2,
+          "icons": 1
+        }
+      }
+    }
+  ],
+  "raw": {
+    "live": {
+      "header": {
+        "found": true,
+        "sel": ".cmp-experiencefragment--header-xf",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 195
+        },
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "atoms": [
+          {
+            "key": "usta sites",
+            "text": "USTA SITES",
+            "tag": "p",
+            "rect": {
+              "x": 53,
+              "y": 21,
+              "w": 75,
+              "h": 18
+            },
+            "box": {
+              "x": 8,
+              "y": 12,
+              "w": 180,
+              "h": 36
+            },
+            "boxTag": "button",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "14px",
+              "fontWeight": "900",
+              "fontStyle": "normal",
+              "lineHeight": "18px",
+              "letterSpacing": "normal",
+              "textTransform": "none",
+              "color": "rgb(0, 0, 0)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "borderRadius": "9999px",
+              "paddingTop": "0px",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "key": "home",
+            "text": "HOME",
+            "tag": "a",
+            "rect": {
+              "x": 316,
+              "y": 100,
+              "w": 53,
+              "h": 25
+            },
+            "box": {
+              "x": 316,
+              "y": 100,
+              "w": 53,
+              "h": 25
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "25px",
+              "letterSpacing": "0.8px",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "play",
+            "text": "PLAY",
+            "tag": "a",
+            "rect": {
+              "x": 419,
+              "y": 100,
+              "w": 43,
+              "h": 25
+            },
+            "box": {
+              "x": 419,
+              "y": 100,
+              "w": 43,
+              "h": 25
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "25px",
+              "letterSpacing": "0.8px",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "host",
+            "text": "HOST",
+            "tag": "a",
+            "rect": {
+              "x": 511,
+              "y": 100,
+              "w": 48,
+              "h": 25
+            },
+            "box": {
+              "x": 511,
+              "y": 100,
+              "w": 48,
+              "h": 25
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "25px",
+              "letterSpacing": "0.8px",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "home",
+            "text": "Home",
+            "tag": "a",
+            "rect": {
+              "x": 8,
+              "y": 174,
+              "w": 36,
+              "h": 13
+            },
+            "box": {
+              "x": 8,
+              "y": 174,
+              "w": 36,
+              "h": 13
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "28px",
+              "letterSpacing": "normal",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "underline"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": ">",
+            "text": ">",
+            "tag": "span",
+            "rect": {
+              "x": 47,
+              "y": 174,
+              "w": 20,
+              "h": 13
+            },
+            "box": {
+              "x": 47,
+              "y": 174,
+              "w": 20,
+              "h": 13
+            },
+            "boxTag": "span",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "28px",
+              "letterSpacing": "normal",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "8px",
+              "paddingBottom": "0px",
+              "paddingLeft": "6px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "404",
+            "text": "404",
+            "tag": "li",
+            "rect": {
+              "x": 67,
+              "y": 167,
+              "w": 23,
+              "h": 28
+            },
+            "box": {
+              "x": 67,
+              "y": 167,
+              "w": 23,
+              "h": 28
+            },
+            "boxTag": "li",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "28px",
+              "letterSpacing": "normal",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          }
+        ],
+        "icons": [
+          {
+            "tag": "img",
+            "rect": {
+              "x": 30,
+              "y": 69,
+              "w": 138,
+              "h": 87
+            },
+            "sig": "red-ball-tennis-wbg.png",
+            "near": ""
+          }
+        ]
+      },
+      "footer": {
+        "found": true,
+        "sel": ".cmp-experiencefragment--footer-xf",
+        "rect": {
+          "x": 0,
+          "y": 1233,
+          "w": 1440,
+          "h": 242
+        },
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "atoms": [
+          {
+            "key": "terms & conditions",
+            "text": "Terms & Conditions",
+            "tag": "a",
+            "rect": {
+              "x": 120,
+              "y": 1350,
+              "w": 160,
+              "h": 13
+            },
+            "box": {
+              "x": 120,
+              "y": 1350,
+              "w": 160,
+              "h": 13
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "18px",
+              "letterSpacing": "-0.54px",
+              "textTransform": "none",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "privacy policy",
+            "text": "Privacy Policy",
+            "tag": "a",
+            "rect": {
+              "x": 310,
+              "y": 1350,
+              "w": 113,
+              "h": 13
+            },
+            "box": {
+              "x": 310,
+              "y": 1350,
+              "w": 113,
+              "h": 13
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "18px",
+              "letterSpacing": "-0.54px",
+              "textTransform": "none",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          }
+        ],
+        "icons": [
+          {
+            "tag": "img",
+            "rect": {
+              "x": 120,
+              "y": 1265,
+              "w": 100,
+              "h": 63
+            },
+            "sig": "red-ball-tennis-wbg.png",
+            "near": ""
+          }
+        ]
+      }
+    },
+    "build": {
+      "header": {
+        "found": true,
+        "sel": "header",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 195
+        },
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "atoms": [
+          {
+            "key": "usta sites",
+            "text": "USTA SITES",
+            "tag": "p",
+            "rect": {
+              "x": 53,
+              "y": 21,
+              "w": 75,
+              "h": 18
+            },
+            "box": {
+              "x": 8,
+              "y": 12,
+              "w": 180,
+              "h": 36
+            },
+            "boxTag": "button",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "14px",
+              "fontWeight": "900",
+              "fontStyle": "normal",
+              "lineHeight": "18px",
+              "letterSpacing": "normal",
+              "textTransform": "none",
+              "color": "rgb(0, 0, 0)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": {
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "borderRadius": "9999px",
+              "paddingTop": "0px",
+              "paddingLeft": "0px"
+            }
+          },
+          {
+            "key": "home",
+            "text": "HOME",
+            "tag": "a",
+            "rect": {
+              "x": 316,
+              "y": 100,
+              "w": 53,
+              "h": 25
+            },
+            "box": {
+              "x": 316,
+              "y": 100,
+              "w": 53,
+              "h": 25
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "25px",
+              "letterSpacing": "0.8px",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "play",
+            "text": "PLAY",
+            "tag": "a",
+            "rect": {
+              "x": 419,
+              "y": 100,
+              "w": 43,
+              "h": 25
+            },
+            "box": {
+              "x": 419,
+              "y": 100,
+              "w": 43,
+              "h": 25
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "25px",
+              "letterSpacing": "0.8px",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "host",
+            "text": "HOST",
+            "tag": "a",
+            "rect": {
+              "x": 511,
+              "y": 100,
+              "w": 48,
+              "h": 25
+            },
+            "box": {
+              "x": 511,
+              "y": 100,
+              "w": 48,
+              "h": 25
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "25px",
+              "letterSpacing": "0.8px",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "home",
+            "text": "Home",
+            "tag": "a",
+            "rect": {
+              "x": 8,
+              "y": 174,
+              "w": 36,
+              "h": 13
+            },
+            "box": {
+              "x": 8,
+              "y": 174,
+              "w": 36,
+              "h": 13
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "28px",
+              "letterSpacing": "normal",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "underline"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": ">",
+            "text": ">",
+            "tag": "span",
+            "rect": {
+              "x": 47,
+              "y": 174,
+              "w": 22,
+              "h": 13
+            },
+            "box": {
+              "x": 47,
+              "y": 174,
+              "w": 22,
+              "h": 13
+            },
+            "boxTag": "span",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "28px",
+              "letterSpacing": "normal",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "8px",
+              "paddingBottom": "0px",
+              "paddingLeft": "8px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "404",
+            "text": "404",
+            "tag": "li",
+            "rect": {
+              "x": 69,
+              "y": 167,
+              "w": 23,
+              "h": 28
+            },
+            "box": {
+              "x": 69,
+              "y": 167,
+              "w": 23,
+              "h": 28
+            },
+            "boxTag": "li",
+            "style": {
+              "fontFamily": "graphik regular",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "28px",
+              "letterSpacing": "normal",
+              "textTransform": "uppercase",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          }
+        ],
+        "icons": [
+          {
+            "tag": "img",
+            "rect": {
+              "x": 30,
+              "y": 69,
+              "w": 138,
+              "h": 87
+            },
+            "sig": "red-ball-tennis-wbg-04927f.png",
+            "near": ""
+          }
+        ]
+      },
+      "footer": {
+        "found": true,
+        "sel": "footer",
+        "rect": {
+          "x": 0,
+          "y": 1233,
+          "w": 1440,
+          "h": 265
+        },
+        "position": "static",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "atoms": [
+          {
+            "key": "terms & conditions",
+            "text": "Terms & Conditions",
+            "tag": "a",
+            "rect": {
+              "x": 120,
+              "y": 1365,
+              "w": 160,
+              "h": 13
+            },
+            "box": {
+              "x": 120,
+              "y": 1365,
+              "w": 160,
+              "h": 13
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "18px",
+              "letterSpacing": "-0.54px",
+              "textTransform": "none",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          },
+          {
+            "key": "privacy policy",
+            "text": "Privacy Policy",
+            "tag": "a",
+            "rect": {
+              "x": 310,
+              "y": 1365,
+              "w": 113,
+              "h": 13
+            },
+            "box": {
+              "x": 310,
+              "y": 1365,
+              "w": 113,
+              "h": 13
+            },
+            "boxTag": "a",
+            "style": {
+              "fontFamily": "graphik semibold",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "lineHeight": "18px",
+              "letterSpacing": "-0.54px",
+              "textTransform": "none",
+              "color": "rgb(255, 255, 255)",
+              "backgroundColor": "rgba(0, 0, 0, 0)",
+              "paddingTop": "0px",
+              "paddingRight": "0px",
+              "paddingBottom": "0px",
+              "paddingLeft": "0px",
+              "borderRadius": "0px",
+              "textDecorationLine": "none"
+            },
+            "boxStyle": null
+          }
+        ],
+        "icons": [
+          {
+            "tag": "img",
+            "rect": {
+              "x": 120,
+              "y": 1280,
+              "w": 100,
+              "h": 63
+            },
+            "sig": "red-ball-tennis-wbg-d7e509.png",
+            "near": ""
+          }
+        ]
+      }
+    }
+  }
+}

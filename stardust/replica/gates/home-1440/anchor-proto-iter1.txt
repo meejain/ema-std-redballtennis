@@ -1,0 +1,2 @@
+doc height 2510px  (http://localhost:8793/stardust/prototypes/home-proposed.html @ 1440)
+  y   2267  h   242  footer

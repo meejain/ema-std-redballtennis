@@ -1,0 +1,536 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-09-17T15:40:00Z",
+    "stardustVersion": "0.21.1",
+    "mode": "descriptive current state (replica promotes verbatim)",
+    "readArtifacts": [
+      "stardust/replica/capture/lift-home-1440.json",
+      "stardust/replica/capture/lift-home-360.json",
+      "stardust/replica/capture/lift-play-1440.json",
+      "stardust/replica/capture/lift-host-1440.json",
+      "stardust/replica/capture/lift-404-1440.json",
+      "stardust/current/pages/*.json"
+    ]
+  },
+  "schemaVersion": 2,
+  "title": "Design System: Red Ball Tennis",
+  "extensions": {
+    "canon": {
+      "source": "replica: preserve mode — canon files authored during recreation from the home archetype and lifted live chrome",
+      "header": "stardust/canon/header.html",
+      "footer": "stardust/canon/footer.html",
+      "css": "stardust/canon/canon.css",
+      "tokens": {
+        "--color-red": "#C80F2F",
+        "--color-blue": "#0A2396",
+        "--color-footer-blue": "#092396",
+        "--color-link": "#0357B8",
+        "--color-ink": "#000000",
+        "--color-body": "#333333",
+        "--color-paper": "#FFFFFF",
+        "--color-rule": "#808080",
+        "--color-field-border": "#565656",
+        "--font-display": "\"Graphik XXCond Bold\", Impact, \"Arial Narrow\", sans-serif",
+        "--font-body": "\"Graphik Regular\", Tahoma, sans-serif",
+        "--font-semibold": "\"Graphik Semibold\", Tahoma, sans-serif",
+        "--radius-pill": "9999px",
+        "--rule-red": "6px solid #C80F2F",
+        "--nav-utility-h": "45px",
+        "--nav-main-h": "100px",
+        "--nav-crumb-h": "28px",
+        "--nav-mobile-h": "44px",
+        "--color-hover-lime": "#CFFF05",
+        "--color-disabled": "#A8A8A8",
+        "--color-disabled-text": "#6D7278"
+      },
+      "compositionalMoves": [
+        "full-bleed horizontal bands separated by a 6px red rule",
+        "condensed display headlines at 100/76/56px, red or blue, centred in bands / left in heroes",
+        "framed-photo prop cards (image contains frame + sticker label) on the blue-balls JPG ground",
+        "one pill CTA per band; white-on-blue-band, blue-on-white-band, black for forms/404",
+        "identical chrome: black utility bar → blue nav → blue breadcrumb strip; blue footer"
+      ]
+    },
+    "modules": [
+      {
+        "id": "utility-bar",
+        "status": "confirmed",
+        "kind": "chrome",
+        "instances": [
+          "home",
+          "play",
+          "host",
+          "404"
+        ],
+        "slots": [
+          {
+            "name": "label",
+            "type": "text"
+          },
+          {
+            "name": "sites",
+            "type": "link-list"
+          }
+        ]
+      },
+      {
+        "id": "site-nav",
+        "status": "confirmed",
+        "kind": "chrome",
+        "instances": [
+          "home",
+          "play",
+          "host",
+          "404"
+        ],
+        "slots": [
+          {
+            "name": "logo",
+            "type": "image"
+          },
+          {
+            "name": "links",
+            "type": "link-list"
+          }
+        ]
+      },
+      {
+        "id": "breadcrumb",
+        "status": "confirmed",
+        "kind": "chrome",
+        "instances": [
+          "home",
+          "play",
+          "host",
+          "404"
+        ],
+        "slots": [
+          {
+            "name": "trail",
+            "type": "link-list"
+          }
+        ]
+      },
+      {
+        "id": "site-footer",
+        "status": "confirmed",
+        "kind": "chrome",
+        "instances": [
+          "home",
+          "play",
+          "host",
+          "404"
+        ],
+        "slots": [
+          {
+            "name": "logo",
+            "type": "image"
+          },
+          {
+            "name": "links",
+            "type": "link-list"
+          }
+        ]
+      },
+      {
+        "id": "hero-split",
+        "status": "confirmed",
+        "instances": [
+          "home",
+          "play",
+          "host"
+        ],
+        "slots": [
+          {
+            "name": "title",
+            "type": "heading"
+          },
+          {
+            "name": "subhead",
+            "type": "rich-text",
+            "required": false
+          },
+          {
+            "name": "lede",
+            "type": "paragraphs"
+          },
+          {
+            "name": "media",
+            "type": "image|embed"
+          }
+        ],
+        "notes": "home: text + YouTube embed over red-lines SVG; play: text + hand-with-balls image on red pattern; host: text + photo (edge-bleed right)"
+      },
+      {
+        "id": "promo-band",
+        "status": "confirmed",
+        "instances": [
+          "home",
+          "play",
+          "host"
+        ],
+        "slots": [
+          {
+            "name": "title",
+            "type": "heading"
+          },
+          {
+            "name": "subline",
+            "type": "text"
+          },
+          {
+            "name": "cta",
+            "type": "link"
+          }
+        ],
+        "notes": "REDESIGNED FOR YOU / Get the official racquet / Shop Now — identical on 3 pages, links to head.com"
+      },
+      {
+        "id": "prop-cards",
+        "status": "confirmed",
+        "instances": [
+          "home",
+          "host"
+        ],
+        "slots": [
+          {
+            "name": "cards",
+            "type": "repeat",
+            "sub": [
+              {
+                "name": "image",
+                "type": "image"
+              },
+              {
+                "name": "copy",
+                "type": "text"
+              },
+              {
+                "name": "cta",
+                "type": "link",
+                "required": false
+              }
+            ]
+          },
+          {
+            "name": "footnote",
+            "type": "text",
+            "required": false
+          },
+          {
+            "name": "cta",
+            "type": "link",
+            "required": false
+          }
+        ],
+        "notes": "on host-play-bg.jpg; host adds a footnote + single centred CTA below both cards"
+      },
+      {
+        "id": "signup-form",
+        "status": "confirmed",
+        "instances": [
+          "home",
+          "play",
+          "host"
+        ],
+        "slots": [
+          {
+            "name": "icon",
+            "type": "image"
+          },
+          {
+            "name": "title",
+            "type": "heading"
+          },
+          {
+            "name": "subtitle",
+            "type": "text"
+          },
+          {
+            "name": "email",
+            "type": "field"
+          },
+          {
+            "name": "zip",
+            "type": "field"
+          },
+          {
+            "name": "submit",
+            "type": "button"
+          },
+          {
+            "name": "legal",
+            "type": "rich-text"
+          }
+        ],
+        "notes": "Vue lead-generation widget; submit disabled until valid; no <form> element"
+      },
+      {
+        "id": "icon-columns",
+        "status": "confirmed",
+        "instances": [
+          "play"
+        ],
+        "slots": [
+          {
+            "name": "columns",
+            "type": "repeat",
+            "sub": [
+              {
+                "name": "icon",
+                "type": "image"
+              },
+              {
+                "name": "title",
+                "type": "heading"
+              },
+              {
+                "name": "lines",
+                "type": "paragraphs"
+              }
+            ]
+          }
+        ],
+        "notes": "HOW TO PLAY / HOW TO SCORE on blue-balls ground; WHAT YOU NEED TO PLAY on white"
+      },
+      {
+        "id": "centered-cta-band",
+        "status": "confirmed",
+        "instances": [
+          "play",
+          "404"
+        ],
+        "slots": [
+          {
+            "name": "image",
+            "type": "image",
+            "required": false
+          },
+          {
+            "name": "title",
+            "type": "heading"
+          },
+          {
+            "name": "copy",
+            "type": "text",
+            "required": false
+          },
+          {
+            "name": "cta",
+            "type": "link"
+          }
+        ]
+      }
+    ],
+    "colorReservations": [
+      {
+        "color": "#C80F2F",
+        "reservedFor": "brand red: H1, RED wordplay spans, band rule, red buttons, red-lines motif"
+      },
+      {
+        "color": "#0357B8",
+        "reservedFor": "inline text links only"
+      },
+      {
+        "color": "#CFFF05",
+        "reservedFor": "hover state of nav links and footer links only"
+      }
+    ],
+    "systemComponentRoles": {
+      "header": "utility-bar + site-nav + breadcrumb (three stacked bars)",
+      "footer": "site-footer (logo + two legal links)",
+      "cta-band": "promo-band (identical on home/play/host)"
+    },
+    "metadata": {
+      "siteName": "Red Ball Tennis",
+      "defaultDescription": "Red Ball Tennis dials up the fun of the tennis game you love, making it easy for starting or returning players to experience a racquet sport.",
+      "favicon": "stardust/current/assets/favicon.ico",
+      "appleTouchIcon": "stardust/current/assets/media/rbt-favicon-180x180-d1914d.png",
+      "keyFacts": [
+        "23-inch racquets",
+        "Tennis \"Red Ball\"",
+        "First to 4 points wins the game",
+        "First to 4 games wins the set"
+      ]
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-hover",
+        "value": "opacity .7 (no transition declared)",
+        "purpose": ".button-core:hover"
+      },
+      {
+        "name": "nav-hover",
+        "value": "color .3s ease-out → #CFFF05",
+        "purpose": "nav links"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "tablet-min",
+        "value": "768px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "1023px"
+      },
+      {
+        "name": "desktop-min",
+        "value": "1024px"
+      },
+      {
+        "name": "wide",
+        "value": "1280px"
+      },
+      {
+        "name": "gate-desktop",
+        "value": "1440px"
+      }
+    ],
+    "fonts": {
+      "policy": "self-hosted first-party faces (see stardust/direction.md § Named assumptions #3)",
+      "files": [
+        {
+          "family": "Graphik Regular",
+          "file": "stardust/current/assets/fonts/Graphik-Regular-App.woff2",
+          "weight": "normal",
+          "licence": "commercial (Commercial Type) — licence held by site owner"
+        },
+        {
+          "family": "Graphik Semibold",
+          "file": "stardust/current/assets/fonts/Graphik-Semibold-App.woff2",
+          "weight": "normal",
+          "licence": "commercial"
+        },
+        {
+          "family": "Graphik XXCond Bold",
+          "file": "stardust/current/assets/fonts/GraphikXXCondensed-Bold-App.woff2",
+          "weight": "normal",
+          "licence": "commercial"
+        },
+        {
+          "family": "USTA Sans",
+          "file": "stardust/current/assets/fonts/USTASans-Bold.otf",
+          "weight": "normal",
+          "licence": "proprietary (USTA)",
+          "observed": false
+        }
+      ]
+    },
+    "componentStyle": {
+      "buttons": "pill",
+      "cards": "image-prop, no surface",
+      "inputs": "square 1px #565656",
+      "separators": "6px red rule between bands"
+    },
+    "voice": {
+      "heroHeadline": "Red Ball Tennis",
+      "heroSubcopy": "REDRAW THE LINES",
+      "firstParagraph": "Red Ball Tennis drops the pressure and dials up the fun of the classic game we all love.",
+      "ctaSamples": [
+        "SHOP NOW",
+        "PLAY YOUR WAY",
+        "SHARE THE LOVE",
+        "*JOIN THE FUN",
+        "FIND A COURT",
+        "HOST WITH THE MOST",
+        "TAKE ME BACK TO THE HOMEPAGE"
+      ],
+      "navItems": [
+        "HOME",
+        "PLAY",
+        "HOST"
+      ],
+      "footerLinks": [
+        "Terms & Conditions",
+        "Privacy Policy"
+      ],
+      "heroImage": "stardust/current/assets/media/hand-with-ball-75c11e.png",
+      "heroMedium": {
+        "kind": "video-embed",
+        "provider": "youtube",
+        "id": "0d6ahBtLavQ",
+        "note": "same-src iframe on home hero"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Blue pill, white uppercase Semibold label.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">SHOP NOW</a>",
+      "css": ".ds-btn{display:inline-block;font-family:'Graphik Semibold',Tahoma,sans-serif;font-size:18px;line-height:20px;text-transform:uppercase;padding:18px 60px;border-radius:9999px;text-decoration:none}.ds-btn-primary{background:#0A2396;color:#fff}"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "White pill on the blue band.",
+      "html": "<a class=\"ds-btn ds-btn-inverse\" href=\"#\">PLAY YOUR WAY</a>",
+      "css": ".ds-btn-inverse{background:#fff;color:#000}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Square 50px field with uppercase label and red asterisk.",
+      "html": "<label class=\"ds-label\"><span class=\"ds-req\">*</span>EMAIL</label><input class=\"ds-input\" type=\"text\">",
+      "css": ".ds-label{display:block;font-family:'Graphik Semibold',Tahoma,sans-serif;font-size:14px;line-height:18px;text-transform:uppercase;margin-bottom:8px}.ds-req{color:#C8102E}.ds-input{width:485px;height:50px;border:1px solid #565656;border-radius:0;background:#fff}"
+    },
+    {
+      "name": "Site Nav",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Blue 100px bar, logo left, three uppercase links.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link ds-active\">HOME</a><a class=\"ds-nav-link\">PLAY</a><a class=\"ds-nav-link\">HOST</a></nav>",
+      "css": ".ds-nav{background:#0A2396;height:100px;display:flex;align-items:center;gap:50px;padding-left:316px}.ds-nav-link{color:#fff;font-family:'Graphik Semibold',Tahoma,sans-serif;font-size:16px;line-height:25px;letter-spacing:.8px;text-transform:uppercase;text-decoration:none}.ds-active{box-shadow:0 8px 0 -6px #fff}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Street-Campaign Poster",
+    "keyCharacteristics": [
+      "two brand colours + black/white",
+      "condensed display type at poster scale",
+      "full-width bands with a red rule",
+      "pill buttons",
+      "framed-photo props on a blue-balls wall",
+      "identical three-bar chrome"
+    ],
+    "rules": [
+      {
+        "name": "The Two-Colour Rule",
+        "body": "Red says Red Ball; blue says USTA. No third hue via CSS.",
+        "section": "colors"
+      },
+      {
+        "name": "The Family-Is-Weight Rule",
+        "body": "Weight changes are family changes; <b> in Graphik Regular renders faux-bold and must be reproduced.",
+        "section": "typography"
+      },
+      {
+        "name": "The No-Shadow Rule",
+        "body": "Shadows live in image assets, never in CSS.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every band full-bleed with a 6px #C80F2F bottom rule where the source has one.",
+      "Do reproduce <b> inside Graphik Regular as faux-bold weight 700.",
+      "Do keep the card sticker labels inside the image assets.",
+      "Do keep pill buttons at 56px with the 18px Semibold uppercase label."
+    ],
+    "donts": [
+      "Don't add shadows, gradients or a page max-width.",
+      "Don't introduce a third hue or normalise the footer blue.",
+      "Don't replace the YouTube embed with a poster."
+    ]
+  }
+}

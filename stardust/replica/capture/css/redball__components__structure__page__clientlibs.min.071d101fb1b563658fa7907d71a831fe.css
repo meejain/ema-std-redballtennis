@@ -1,0 +1,17 @@
+@import(reference) "/apps/redball/components/structure/page/clientlibs/less/variables";@import(reference) "/apps/redball/clientlibs/less/colors";body.redball-editable-page,body.xf-web-container{margin:0}
+.root.container.responsivegrid{>.cmp-container{>.aem-Grid>.aem-GridColumn{padding:0 !important;&.experiencefragment .xf-content-height{>.cmp-container>.aem-Grid>.aem-GridColumn{padding:0 !important}
+}
+}
+}
+}
+*{box-sizing:border-box}
+*::before,*::after{box-sizing:border-box}
+p{margin:0}
+a{text-decoration:none}
+[role="button"]{cursor:pointer}
+@font-face{font-family:'USTA Sans';src:url("../../../../../etc.clientlibs/redball/components/structure/page/clientlibs/resources/fonts/USTASans-Bold.otf") format("opentype");font-weight:normal;font-style:normal}
+@font-face{font-family:'Graphik Regular';src:url("../../../../../etc.clientlibs/redball/components/structure/page/clientlibs/resources/fonts/Graphik-Regular-App.woff2") format("woff2");font-weight:normal;font-style:normal}
+@font-face{font-family:'Graphik Semibold';src:url("../../../../../etc.clientlibs/redball/components/structure/page/clientlibs/resources/fonts/Graphik-Semibold-App.woff2") format("woff2");font-weight:normal;font-style:normal}
+@font-face{font-family:'Graphik XXCond Bold';src:url("../../../../../etc.clientlibs/redball/components/structure/page/clientlibs/resources/fonts/GraphikXXCondensed-Bold-App.woff2") format("woff2");font-weight:normal;font-style:normal}
+.responsivegrid.horizontal-bottom-red-stripe{position:relative}
+.responsivegrid.horizontal-bottom-red-stripe::after{content:"";position:absolute;left:0;right:0;height:16px;background-color:#c80f2f;bottom:8px;width:100%}

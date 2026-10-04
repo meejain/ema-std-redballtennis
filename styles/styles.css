@@ -1,4 +1,16 @@
 /*
+ * ⚠️ FONT LICENSING REQUIRED BEFORE GOING LIVE
+ * This site self-hosts proprietary webfonts captured from redballtennis.com's own
+ * first-party clientlib (see fonts/LICENSING.md):
+ *   - "Graphik Regular", "Graphik Semibold", "Graphik XXCond Bold" — Commercial Type (Graphik)
+ *   - "USTA Sans" — USTA proprietary
+ * The licence is held by USTA for redballtennis.com; embedding on the new host must be
+ * confirmed. Do NOT publish to aem.live until the webfont/embedding licence is confirmed.
+ * Remove path: delete fonts/*.woff2 + their @font-face rules in styles/fonts.css; every stack
+ * below names a metric-matched local fallback second, so the layout keeps its metrics.
+ */
+
+/*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -10,74 +22,129 @@
  * governing permissions and limitations under the License.
  */
 
+/* stardust replica of https://www.redballtennis.com/ — tokens and base rules lifted from
+   stardust/canon/canon.css (itself lifted from the live CSS / computed styles).
+   stylelint: AEM-grid fractions and the live line-height are kept at their lifted precision
+   (chrome-parity compares computed strings); the edit-mode repaint block follows the deploy
+   skill's canonical selector order. */
+/* stylelint-disable number-max-precision, no-descending-specificity */
+
 :root {
-  /* colors */
-  --background-color: white;
+  /* brand colours (DESIGN.json extensions.canon.tokens) */
+  --color-red: #c80f2f;
+  --color-blue: #0a2396;
+  --color-footer-blue: #092396;
+  --color-link: #0357b8;
+  --color-ink: #000;
+  --color-body: #333;
+  --color-paper: #fff;
+  --color-rule: #808080;
+  --color-field-border: #565656;
+  --color-hover-lime: #cfff05;
+  --color-disabled: #a8a8a8;
+  --color-disabled-text: #6d7278;
+  --rule-red: 6px solid var(--color-red);
+
+  /* fonts — brand face first, its metric-matched local fallback second (Step 4) */
+  --font-display: "Graphik XXCond Bold", graphik-xxcond-fallback, "Arial Narrow", impact, sans-serif;
+  --font-body: "Graphik Regular", graphik-fallback, tahoma, sans-serif;
+  --font-semibold: "Graphik Semibold", graphik-semibold-fallback, tahoma, sans-serif;
+  --font-serif: times, "Times New Roman", serif;
+
+  /* layout */
+  --radius-pill: 9999px;
+  --chrome-max: 1440px;
+  --nav-utility-h: 60px;
+  --nav-main-h: 105px;
+  --nav-crumb-h: 30px;
+  --nav-mobile-h: 44px;
+
+  /* chrome reservation (#81): utility bar 60 + main bar 105 + breadcrumb 30 */
+  --nav-height: 195px;
+
+  /* boilerplate compatibility aliases — referenced by the stock demo blocks
+     (cards/columns/hero) until they are rewritten; mapped to brand values. */
+  --background-color: var(--color-paper);
   --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
+  --dark-color: var(--color-body);
+  --text-color: var(--color-body);
+  --link-color: var(--color-link);
+  --link-hover-color: var(--color-link);
+  --body-font-family: var(--font-body);
+  --heading-font-family: var(--font-display);
+  --body-font-size-m: 18px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
+  --heading-font-size-xxl: 100px;
+  --heading-font-size-xl: 76px;
+  --heading-font-size-l: 56px;
+  --heading-font-size-m: 28px;
+  --heading-font-size-s: 22px;
+  --heading-font-size-xs: 18px;
 }
 
-/* fallback fonts */
-@font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
+/* the live mobile chrome switch is 1369px (not 767): 44px main bar + 30px breadcrumb */
+@media (width <= 1369px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    --nav-height: 74px;
   }
 }
 
+/* metric-matched fallback faces — available at first paint; size-adjust computed from the
+   MEASURED rendered width of a test string (brand face ÷ local face, headless Chromium,
+   qa/fontprobe.mjs), ascent/descent/line-gap from the woff2 hhea table ÷ size-adjust. */
+@font-face {
+  font-family: graphik-fallback;
+  src: local("Arial");
+  size-adjust: 101.99%;
+  ascent-override: 88.24%;
+  descent-override: 19.61%;
+  line-gap-override: 19.61%;
+}
+
+@font-face {
+  font-family: graphik-semibold-fallback;
+  src: local("Arial");
+  size-adjust: 101.65%;
+  ascent-override: 70.34%;
+  descent-override: 0%;
+  line-gap-override: 19.68%;
+}
+
+@font-face {
+  font-family: graphik-xxcond-fallback;
+  src: local("Arial Narrow");
+  size-adjust: 65.18%;
+  ascent-override: 109.7%;
+  descent-override: 0%;
+  line-gap-override: 30.68%;
+}
+
+/* ---- reset (#106 border-box, #36 img) ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* live: bootstrap 3 root — 10px (rem base). Blocks are authored in px. */
+  font-size: 10px;
+  background: var(--color-paper);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---- structural layer (boilerplate — keep) ---- */
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  background-color: var(--color-paper);
+  color: var(--color-body);
+
+  /* live: body sets no family and computes Times; every component sets its own */
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.42857;
 }
 
 body.appear {
@@ -86,6 +153,10 @@ body.appear {
 
 header {
   height: var(--nav-height);
+
+  /* the chrome's own ground, so the reserve-vs-actual delta is invisible (#81);
+     the block's .top-navigation carries position/z-index (the mobile panel overlays main) */
+  background: var(--color-blue);
 }
 
 header .header,
@@ -98,31 +169,63 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* ---- base typography (usta common clientlib + redball page clientlib, as computed live) ---- */
+p,
+div,
+span,
+button,
+select,
+input {
+  font-family: var(--font-body);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
   scroll-margin: 40px;
 }
 
-h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
 
-p,
-dl,
-ol,
+h4,
+h5,
+h6 {
+  font-family: var(--font-semibold);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1 { font-size: 100px; }
+h2 { font-size: 76px; }
+h3 { font-size: 56px; }
+h4 { font-size: 28px; }
+h5 { font-size: 22px; }
+h6 { font-size: 18px; }
+
+p {
+  margin: 0;
+  font-size: 18px;
+}
+
 ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+dl,
 pre,
 blockquote {
   margin-top: 0.8em;
@@ -131,7 +234,7 @@ blockquote {
 
 code,
 pre {
-  font-size: var(--body-font-size-s);
+  font-size: 16px;
 }
 
 pre {
@@ -142,8 +245,18 @@ pre {
   white-space: pre;
 }
 
+@media (width <= 767px) {
+  h1 { font-size: 54px; }
+  h2 { font-size: 44px; }
+  h3 { font-size: 36px; }
+  h4 { font-size: 22px; }
+  h5 { font-size: 20px; }
+  h6 { font-size: 16px; }
+  p { font-size: 16px; }
+}
+
 main > div {
-  margin: 40px 16px;
+  margin: 0;
 }
 
 input,
@@ -153,135 +266,143 @@ button {
   font: inherit;
 }
 
-/* links */
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-family: var(--font-semibold);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+/* links (live: #0357b8, no underline, no hover change) */
 a:any-link {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
   overflow-wrap: break-word;
 }
 
-a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
+/* images (#36 — the pipeline emits width/height attrs; height:auto prevents stretching) */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
 
-/* buttons */
+/* ---- buttons: the live .cmp-button.button-core pill (Step 5) ----
+   decorateButtons() classes author-formatted links: <strong><a> → .primary (blue),
+   <em><a> → .secondary (white pill, black text — the inverse pill on blue bands),
+   <em><strong><a> → .accent (red). The unclassed base is the live default pill (black on
+   white text) — used by button.button (forms) and by the `form-band` section style below.
+   Geometry is the LIFTED live pill (stardust/replica/capture/lift-home-1440.json): padding
+   14px all sides + 2px border, height 56px, min-width 120px ≥768; a column-filling button is
+   the block/section style's job (width 100%, max-width none).
+   Live puts letter-spacing 1px on the pill and 0 on its inner label span; the rendered text
+   therefore has 0 tracking, which is what the bare anchor below reproduces. */
 p.button-wrapper {
-  margin: 12px 0;
+  margin: 0;
+  font-size: 18px;
 }
 
 a.button:any-link,
 button.button {
   box-sizing: border-box;
   display: inline-flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  width: max-content;
   max-width: 100%;
+  height: 56px;
   margin: 0;
+  padding: 14px;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
-  font-weight: 500;
-  line-height: 1.25;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-semibold);
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
+  vertical-align: middle;
+  color: var(--color-paper);
+  background-color: var(--color-ink);
   cursor: pointer;
+  outline: 0;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+a.button:any-link:hover,
+a.button:any-link:focus-visible,
+button.button:hover,
+button.button:focus-visible {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+a.button:any-link:active,
+button.button:active {
+  opacity: 0.7;
+  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 50%));
+}
+
 a.button[aria-disabled="true"],
 button.button:disabled {
-  cursor: not-allowed;
+  background-color: var(--color-disabled);
+  color: var(--color-disabled-text);
+  border: 0;
+  box-shadow: none;
+  cursor: default;
   pointer-events: none;
 }
 
 a.button.primary,
 button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
-}
-
-a.button.primary:hover,
-a.button.primary:focus-visible,
-button.button.primary:hover,
-button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
-}
-
-a.button.primary[aria-disabled="true"],
-a.button.primary[aria-disabled="true"]:hover,
-a.button.primary[aria-disabled="true"]:focus-visible,
-button.button.primary:disabled,
-button.button.primary:disabled:hover,
-button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+  background-color: var(--color-blue);
+  color: var(--color-paper);
 }
 
 a.button.secondary,
 button.button.secondary {
-  border-color: var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
 }
 
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-/* high-impact call-to-action */
 a.button.accent,
 button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--color-red);
+  color: var(--color-paper);
 }
 
-a.button.accent:hover,
-a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
+/* black CTA via section context: a default-content section with `style: form-band`
+   (newsletter / form bands, the 404 return button) paints every CTA in it black,
+   whatever emphasis the author used. Blocks may do the same with `.<block> a.button`. */
+main .section.form-band a.button:any-link,
+main .section.form-band button.button {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
 }
 
-a.button.accent[aria-disabled="true"],
-a.button.accent[aria-disabled="true"]:hover,
-a.button.accent[aria-disabled="true"]:focus-visible,
-button.button.accent:disabled,
-button.button.accent:disabled:hover,
-button.button.accent:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+@media (width >= 768px) {
+  a.button:any-link,
+  button.button {
+    min-width: 120px;
+  }
 }
 
-main img {
-  max-width: 100%;
-  width: auto;
-  height: auto;
+@media (width <= 767px) {
+  a.button:any-link,
+  button.button {
+    width: 100%;
+    max-width: 280px;
+  }
 }
 
 .icon {
@@ -295,31 +416,279 @@ main img {
   width: 100%;
 }
 
-/* sections */
+/* ---- sections (structural scaffold, retuned to the live rhythm: full-bleed bands,
+   blocks own their inner AEM-grid geometry) ---- */
 main > .section {
-  margin: 40px 0;
+  margin: 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 main > .section:first-of-type {
   margin-top: 0;
 }
 
-@media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
+/* the page-metadata block leaves an empty section behind (emptySectionCollapse) */
+main .section:empty {
+  display: none;
+}
+
+/* default content: the live AEM leaf column (8px 0 column padding + 15px gutters; 4px ≤767) */
+main .section .default-content-wrapper {
+  padding: 8px 15px;
+}
+
+@media (width <= 767px) {
+  main .section .default-content-wrapper {
+    padding: 8px 4px;
   }
 }
 
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
+/* ---- section styles — the SMALL closed set for default-content sections (D1) ----
+   red-stripe | promo | blue-balls | centered | form-band. One value per section (#120). */
+
+/* red-stripe: the 16px red rule that closes a band (live .horizontal-bottom-red-stripe) */
+main .section.red-stripe {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+main .section.red-stripe::after,
+main .section.promo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  width: 100%;
+  height: 16px;
+  background-color: var(--color-red);
+}
+
+/* promo: centred blue display h2 + bold sub-line + one pill CTA, closed by the red stripe
+   (live home "REDESIGNED FOR YOU" band: padding 32/64, text col 11/12, button col 2/12) */
+main .section.promo {
+  position: relative;
+  padding: 32px 0 64px;
+  color: var(--color-blue);
+}
+
+main .section.promo .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+
+main .section.promo .default-content-wrapper h2 {
+  width: calc(91.66666667% - 30px);
+  margin: 8px auto 0;
+  font-size: 76px;
+  line-height: 1.1;
+  color: var(--color-blue);
+}
+
+main .section.promo .default-content-wrapper p {
+  width: calc(91.66666667% - 30px);
+  margin: 0 auto 8px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+main .section.promo .default-content-wrapper p.button-wrapper {
+  width: calc(16.66666667% - 30px);
+  margin: 17px auto 0; /* live: 17px separator column (was 16 — the whole home/play/host residual) */
+  padding: 8px 0;
+  line-height: 0;
+}
+
+main .section.promo .default-content-wrapper p.button-wrapper a.button:any-link {
+  width: 100%;
+  min-width: max-content;
+  max-width: none;
+}
+
+@media (width <= 767px) {
+  main .section.promo {
+    padding: 16px 0 32px;
+  }
+
+  main .section.promo .default-content-wrapper h2 {
+    width: calc(91.66666667% - 8px);
+    font-size: 44px;
+  }
+
+  main .section.promo .default-content-wrapper p {
+    width: calc(91.66666667% - 8px);
+    font-size: 16px;
+  }
+
+  main .section.promo .default-content-wrapper p.button-wrapper {
+    width: calc(16.66666667% - 8px);
+  }
+}
+
+/* blue-balls: the fixed brand photo ground (root-relative CSS asset, anti-pattern 9b) */
+main .section.blue-balls {
+  padding: 8px 0;
+  background: url("/img/redball/host-play-bg.jpg") 50% center / cover no-repeat;
+  color: var(--color-paper);
+}
+
+main .section.blue-balls .default-content-wrapper :is(h1, h2, h3, h4, h5, h6, p) {
+  color: var(--color-paper);
+}
+
+/* centered: plain centred prose band */
+main .section.centered .default-content-wrapper {
+  text-align: center;
+}
+
+main .section.centered .default-content-wrapper p.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* form-band: black CTAs (rule above) on the plain paper ground */
+main .section.form-band {
+  padding: 8px 0;
+}
+
+/* ---- Experience Workspace edit mode (da.live canvas) — scoped on .prosemirror-editor,
+   which exists ONLY inside the inline editor (EW3/EW6/EW10). ---- */
+
+/* (a) repaint CTAs from their authored marks: the editor drops .button.* classes */
+.prosemirror-editor p > :is(strong, em) > a:any-link,
+.prosemirror-editor p > a:any-link:has(> :is(strong, em):only-child) {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  max-width: 100%;
+  height: 56px;
   margin: 0;
-  padding: 40px 0;
+  padding: 14px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-semibold);
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-paper);
+  background-color: var(--color-ink);
+  white-space: nowrap;
+}
+
+.prosemirror-editor p > a:any-link > :is(strong, em) {
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+.prosemirror-editor p > strong > a:any-link,
+.prosemirror-editor p > a:any-link:has(> strong:only-child) {
+  background-color: var(--color-blue);
+  color: var(--color-paper);
+}
+
+.prosemirror-editor p > em > a:any-link,
+.prosemirror-editor p > a:any-link:has(> em:only-child) {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.prosemirror-editor p > em > strong > a:any-link,
+.prosemirror-editor p > strong > em > a:any-link {
+  background-color: var(--color-red);
+  color: var(--color-paper);
+}
+
+/* (b) card-as-link inner anchor reads like the card text while editing */
+a .prosemirror-editor a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* (c) on-dark / black-context repaints — must stay LAST in the file */
+main .section.form-band .prosemirror-editor p > :is(strong, em) > a:any-link {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+
+/* not-found: the live 404 body — one centred column (8/12, offset 2/12), 238px badge, 76px h2,
+   black filled pill, tall trailing spacer (lifted from the 404 archetype gate at 1440 / 360). */
+main .section.not-found {
+  padding: 64px 0 472px; /* live: 64 top; two 224px spacer separators + column pads below the CTA */
+}
+
+main .section.not-found .default-content-wrapper {
+  width: 66.66666667%;
+  margin-left: 16.66666667%;
+  padding: 0 15px; /* the generic wrapper's 8px vertical pad is not on live (anchors: img 277, h2 555, cta 705) */
+  text-align: center;
+}
+
+main .section.not-found .default-content-wrapper p:has(picture),
+main .section.not-found .default-content-wrapper p:has(img) {
+  margin: 18px 0 40px; /* live: separator column 18 above the badge, 40 between badge and h2 */
+  line-height: 0;
+}
+
+main .section.not-found .default-content-wrapper picture,
+main .section.not-found .default-content-wrapper img {
+  display: inline-block;
+  width: 238px;
+  height: auto;
+}
+
+main .section.not-found .default-content-wrapper h2 {
+  font-family: var(--font-display);
+  font-size: 76px;
+  line-height: 1.1;
+  color: var(--color-ink);
+  padding: 0;
+  margin: 0 0 66px; /* live: h2 639 → button 705 */
+}
+
+main .section.not-found .default-content-wrapper p.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 48.38709677%; /* live CTA 450px inside the 930px inner column */
+  margin: 0 auto;
+}
+
+main .section.not-found .default-content-wrapper p.button-wrapper a.button:any-link {
+  width: 100%;
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+}
+
+@media (width <= 767px) {
+  main .section.not-found {
+    padding: 32px 0 248px; /* live 360: button bottom 621 → footer 869 */
+  }
+
+  main .section.not-found .default-content-wrapper {
+    width: 81.11111111%; /* live 360: column x34 w292 */
+    margin-left: 9.44444444%;
+    padding: 0;
+  }
+
+  main .section.not-found .default-content-wrapper h2 {
+    font-size: 44px;
+  }
+
+  main .section.not-found .default-content-wrapper p.button-wrapper {
+    width: 100%;
+  }
 }

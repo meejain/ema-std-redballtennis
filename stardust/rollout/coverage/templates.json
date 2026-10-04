@@ -1,0 +1,85 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/inventory",
+    "writtenAt": "2026-09-17T17:01:47.468Z",
+    "readArtifacts": [
+      "stardust/migrated"
+    ],
+    "stardustVersion": "0.0.0"
+  },
+  "generatedAt": "2026-09-17T20:05:12.104Z",
+  "templates": [
+    {
+      "id": "landing",
+      "representativeSlug": "home",
+      "pages": [
+        "home"
+      ],
+      "pageCount": 1,
+      "blocks": [
+        "breadcrumb",
+        "hero-split",
+        "promo-band",
+        "prop-cards",
+        "signup-form",
+        "site-footer",
+        "site-nav",
+        "utility-bar"
+      ],
+      "delivery": {
+        "verified": 1,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "program",
+      "representativeSlug": "host",
+      "pages": [
+        "host",
+        "play"
+      ],
+      "pageCount": 2,
+      "blocks": [
+        "breadcrumb",
+        "centered-cta-band",
+        "hero-split",
+        "icon-columns",
+        "promo-band",
+        "prop-cards",
+        "signup-form",
+        "site-footer",
+        "site-nav",
+        "utility-bar"
+      ],
+      "delivery": {
+        "verified": 2,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    },
+    {
+      "id": "static",
+      "representativeSlug": "404",
+      "pages": [
+        "404"
+      ],
+      "pageCount": 1,
+      "blocks": [
+        "breadcrumb",
+        "centered-cta-band",
+        "site-footer",
+        "site-nav",
+        "utility-bar"
+      ],
+      "delivery": {
+        "verified": 1,
+        "deployed": 0,
+        "contentPending": 0,
+        "pending": 0
+      }
+    }
+  ]
+}

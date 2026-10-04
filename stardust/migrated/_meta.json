@@ -1,0 +1,185 @@
+{
+  "slug": "home",
+  "type": "landing",
+  "renderBranch": "A",
+  "fidelityTier": "archetype",
+  "archetypeSource": "home",
+  "template": null,
+  "modules": [
+    "utility-bar",
+    "site-nav",
+    "breadcrumb",
+    "site-footer",
+    "hero-split",
+    "promo-band",
+    "prop-cards",
+    "signup-form"
+  ],
+  "slotsFilled": [],
+  "canonShas": {
+    "header": "fe5297b",
+    "footer": "ed0fd17",
+    "css": "bb18f0d"
+  },
+  "deviations": [],
+  "migrationDecisions": [
+    {
+      "kind": "path-rehome",
+      "from": "/en/home.html",
+      "to": "index.html",
+      "reason": "MIGRATION-PLAN.md § 1 URL map: short EDS paths; source paths kept alive via stardust/redirects.tsv"
+    }
+  ],
+  "contentDeviations": [
+    {
+      "kind": "dynamic-dependency",
+      "row": "f-signup-form",
+      "class": "F",
+      "disposition": "rebuild-native",
+      "reproducibility": "needs-backend",
+      "status": "scaffolded-awaiting-owner",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "v-video-youtube",
+      "class": "V",
+      "disposition": "embed-passthrough",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-usta-sites-dropdown",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "m-mobile-nav",
+      "class": "M",
+      "disposition": "rebuild-native",
+      "reproducibility": "self",
+      "status": "pending",
+      "note": "markup preserved; behaviour delivered by the EDS block per dynamic-features-plan.md"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-analytics-stack",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-business-decision",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    },
+    {
+      "kind": "dynamic-dependency",
+      "row": "t-consent-onetrust",
+      "class": "T",
+      "disposition": "embed-passthrough",
+      "reproducibility": "needs-credential",
+      "status": "scaffolded-awaiting-owner",
+      "note": "tags dropped from static output; re-wired at rollout D2 (disabled by default)"
+    }
+  ],
+  "gatesPassed": [
+    "provenance",
+    "placeholder-gate",
+    "mobile-adapt",
+    "content-count"
+  ],
+  "sourceFidelityGate": {
+    "breakpoints": {
+      "360": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.61,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 1.91,
+        "pass": true
+      },
+      "1440": {
+        "structuralRed": 0,
+        "visualFlags": "none",
+        "pixelPct": 0.22,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 0.63,
+        "pass": true
+      }
+    },
+    "motion": {
+      "observed": [
+        "1440 hover .button-core: opacity 1 → 0.7 (stardust/replica/motion/home.json)",
+        "1440 hover .footer-links__sites a: color #fff → #cfff05",
+        "1440 hover .navigation-menu__list-item-link--level-1: NO change (live rule 9070 'li:hover a {color:#cfff05}' exists in the source CSS but did not fire)",
+        "1440 click .drop-down__label-wrapper: aria-expanded false→true, list shown 400×397 at [8,12] via live rule '.drop-down__label-wrapper[aria-expanded=true] + .drop-down__select-list {display:block}' (capture/chrome-open-1440.json; motion-observe records class mutations only, so this attribute state machine was recovered with a dedicated before/after probe)",
+        "360 click .top-navigation__logo-hamburger: classes 'top-navigation__top-bar--opened top-to-bottom' added on .top-navigation__top-bar, transition top .3s ease + opacity .3s ease, panel [0,74,360,257] (padding-bottom 40, radius 0 0 20 20, shadow 0 6px 6px rgba(0,0,0,.16)); Vue re-parents the nav menu into the top bar and sets inline display:block; icons swapped by inline style (menu display:none, cancel display:inline 18×18) (motion/home-360.json + capture/chrome-open-360.json)"
+      ],
+      "implemented": [
+        "canon.css .button-core:hover / .button-primary-style:hover { opacity: .7 }",
+        "canon.css .footer-links__sites li.nav-link a:hover { color: #cfff05 }",
+        "canon chrome.js: dropdown aria-expanded toggle on click (+ .drop-down__close), list shown by the live CSS rule; prototype opened state matches live to the pixel (list, image, slogan, rows, items, close)",
+        "canon chrome.js + canon.css: hamburger state machine — aria-expanded, --opened + top-to-bottom classes on #top-navigation-bar, transition top/opacity .3s, nav menu re-parented into the top bar ≤1369px and shown by inline display:block, icon swap by inline style; opened panel measured identical to live (top bar, 4 rows 59/49/49/49, links, mobile arrow)"
+      ],
+      "dead": [
+        "nav level-1 hover colour (live CSS rule present, runtime probe measured no change) — NOT implemented; the pre-authored canon lime nav hover + colour transition were removed",
+        ".drop-down__select-list-item:hover {color:#00143f} — not probed, not implemented",
+        "Escape-to-close on the dropdown (pre-authored in canon, unobserved) — removed"
+      ]
+    }
+  },
+  "metadata": {
+    "title": "Home",
+    "description": "Red Ball Tennis dials up the fun of the tennis game you love, making it easy for starting or returning players to experience a racquet sport.",
+    "canonical": "https://main--sdt-redballtennis--aemcoder.aem.live/"
+  },
+  "jsonLd": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Red Ball Tennis (USTA)",
+      "url": "https://main--sdt-redballtennis--aemcoder.aem.live",
+      "logo": "https://main--sdt-redballtennis--aemcoder.aem.live/assets/media/red-ball-tennis-wbg-04927f.png",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "United States Tennis Association",
+        "url": "https://www.usta.com/"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Red Ball Tennis",
+      "url": "https://main--sdt-redballtennis--aemcoder.aem.live",
+      "description": "Red Ball Tennis dials up the fun of the tennis game you love, making it easy for starting or returning players to experience a racquet sport."
+    }
+  ],
+  "brokenInternalLinks": [],
+  "migratedAt": "2026-09-17T16:42:50.611Z",
+  "designMdSha": "3ce6325",
+  "designJsonSha": "7558fc7",
+  "sourceCurrentSha": "738c648",
+  "sourceProposedSha": "7db3c0c",
+  "assetsBundled": 11,
+  "bundledAssetList": [
+    "media/Sites-Icon-4d7f1c.svg",
+    "media/Hamburger-Menu-White-339cdd.svg",
+    "media/Cancel_Bold_White-4f3fe8.svg",
+    "media/red-ball-tennis-wbg-04927f.png",
+    "media/red-ball-logo-mob-c70708.png",
+    "media/hand-with-ball-75c11e.png",
+    "media/play-homepage-dde55e.png",
+    "media/host-homepage-d9112c.png",
+    "media/rbt-favicon-180x180-d1914d.png",
+    "media/red-ball-tennis-wbg-d7e509.png",
+    "favicon.ico"
+  ],
+  "outputPath": "index.html",
+  "sourceUrl": "/"
+}

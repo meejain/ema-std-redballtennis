@@ -1,0 +1,47 @@
+/* stardust replica — 404 page. Every value lifted from stardust/replica/capture/lift-404-{1440,360}.json and
+   stardust/replica/capture/css/ALL-RULES.txt (rule line numbers cited inline). Recreation, not redesign. */
+
+/* outer container: .responsivegrid.padding-top-medium>.cmp-container{padding-top:64px} (ALL-RULES 6059) */
+.band--notfound { padding-top: 64px; background: #fff; }
+
+/* inner container: aem-Grid--12 child default--8 + offset--default--2 → 66.667% / 16.667% (lift 1440: x240 w960) */
+.notfound__inner { display: flow-root; margin-left: 16.66666667%; width: 66.66666667%; max-width: 100%; }
+
+/* grid columns: .responsivegrid .cmp-container>*>.aem-GridColumn{padding:8px 0} (6042) + 15px gutter (lift: hr/h2 930 wide at x255 in a 960 col) */
+.notfound__col { display: flow-root; width: 100%; padding: 8px 15px; }
+
+/* separators: .separator--vertical-paddings--4px{padding:4px 0 !important} (7489); hr border 2px transparent (7485, 7479) */
+.notfound__col--sep { padding-top: 4px; padding-bottom: 4px; }
+.cmp-separator__horizontal-rule { display: block; height: 0; margin: 20px 0; border: 0; border-top: 2px solid transparent; color: #808080; overflow: hidden; }
+.notfound__col--sep-none .cmp-separator__horizontal-rule { margin: 0; }        /* .separator--inner-margins--none hr{margin:0} (7486) */
+.notfound__col--sep-7 .cmp-separator__horizontal-rule { margin: 7px 0; }      /* .separator--vertical-margins--7px hr{margin:7px 0} (7487) */
+
+/* image: .image--align--center>.cmp-image{margin:0 auto} (7521); .cmp-image{width:238px} inline; .cmp-image__image{width:100%} (7562) */
+.notfound__col--image .cmp-image { width: 238px; margin: 0 auto; }
+.notfound__col--image .cmp-image__image { display: block; width: 100%; height: auto; }
+
+/* text: .cmp-text--alignment-center .cmp-text>*{text-align:center} (7579); h2 computed 76px/83.6px "Graphik XXCond Bold" #000 weight 500 (lift 1440) */
+.notfound__col--text .cmp-text h2 { margin: 0; font-family: var(--font-display); font-size: 76px; line-height: 1.1; font-weight: 500; color: #000; text-align: center; }
+
+/* buttons: live .button-core (7626): padding 14px; border 2px solid transparent; display flex; margin 0 auto; height 56px;
+   .button-core--not-fixed-width .button-core{min-width:max-content;width:auto;max-width:none} (7779) → fills the column.
+   desktop column: default--4 of aem-Grid--8 = 50%, offset 3, centred by justify-content_space-around margin:auto (6093) → 450px at 1440 */
+.notfound__col--button { width: 50%; margin: 0 auto; }
+.notfound__col--button .button-core { display: flex; width: auto; min-width: max-content; max-width: none; margin: 0 auto; padding: 14px; border: 2px solid transparent; }
+.notfound__col--button-mobile { display: none; }                               /* .aem-GridColumn--default--hide{display:none} (839) */
+
+/* trailing empty container: padding-top-small+medium+large = 224px (6064), padding-bottom-* = 224px (6072) */
+.notfound__spacer { padding-top: 224px; padding-bottom: 224px; }
+
+@media (max-width: 767px) {
+  .band--notfound { padding-top: 32px; }                                        /* (7151) */
+  .notfound__inner { margin-left: 8.33333333%; width: 83.33333333%; }          /* mobile--10 offset--mobile--1 (lift 360: x30 w300) */
+  .notfound__col { padding-left: 4px; padding-right: 4px; }                    /* lift 360: hr 292 wide at x34 in a 300 col */
+  .notfound__col--text .cmp-text h2 { font-size: 44px; }                       /* lift 360: 44px/48.4px */
+  .notfound__col--button-desktop { display: none; }                            /* .aem-GridColumn--mobile--hide{display:none} (7129) */
+  .notfound__col--button-mobile { display: flow-root; width: 100%; }           /* mobile--10 of aem-Grid--mobile--10 = 100% */
+  .notfound__col--button .button-core { width: 100%; max-width: none; }        /* .button-core--not-fixed-width .button-core{width:100%} (13927) */
+  .button-core--small-fs .cmp-button.button-core,
+  .button-core--small-fs .button-core__text { font-size: 14px; }               /* .button-core--small-fs .cmp-button.button-core{font-size:14px !important} (7785); lift 360 text 14px */
+  .notfound__spacer { padding-top: 112px; padding-bottom: 112px; }             /* (7156, 7164) */
+}

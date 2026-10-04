@@ -1,33 +1,262 @@
-.columns > div {
-  display: flex;
-  flex-direction: column;
+/* columns — icon + copy units. Geometry = stardust/prototypes/play.css §5 (howto, on the
+   blue-balls section) and §6 (need: 1200px centre, 5/12 items). */
+
+/* stylelint-disable selector-class-pattern, no-descending-specificity, number-max-precision -- AEM-grid fractions kept at lifted precision */
+
+.columns {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-ink);
 }
 
-.columns img {
+.columns .columns-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columns .columns-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.columns .col-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.columns .col-icon,
+.columns .col-text {
+  margin: auto;
+  padding: 8px 0;
+}
+
+.columns .col-icon-box p {
+  margin: 0;
+  line-height: 0;
+}
+
+.columns .col-icon-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.columns .col-text {
+  text-align: center;
+}
+
+.columns .col-text :is(h2, h3) {
+  margin: 0;
+  text-align: center;
+}
+
+.columns .col-text p {
+  text-align: center;
+}
+
+/* ===== icons-dark: HOW TO PLAY / HOW TO SCORE on the blue-balls section ===== */
+
+/* the live band has no top padding and pads 8px white below the photo ground */
+main .section.blue-balls.columns-container {
+  padding-top: 0;
+  background-clip: content-box;
+}
+
+.columns.icons-dark {
+  color: var(--color-paper);
+}
+
+.columns.icons-dark .columns-inner {
+  padding-bottom: 8px;
+}
+
+.columns.icons-dark .columns-content {
+  padding: 64px 0;
+}
+
+.columns.icons-dark .col {
+  width: 50%;
+  padding-bottom: 8px;
+}
+
+.columns.icons-dark .col-inner {
+  padding: 32px 0;
+}
+
+.columns.icons-dark .col-icon {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
 
-.columns > div > div {
-  order: 1;
+.columns.icons-dark .col-icon-box {
+  width: 20%;
+  margin: auto;
+  padding: 8px 0;
 }
 
-.columns > div > .columns-img-col {
-  order: 0;
+.columns.icons-dark .col-text {
+  width: calc(66.66666667% - 30px);
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
+.columns.icons-dark .col-text :is(h2, h3),
+.columns.icons-dark .col-text p {
+  color: var(--color-paper);
 }
 
-@media (width >= 900px) {
-  .columns > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+.columns.icons-dark .col-text p {
+  margin-top: 24px; /* the live `&nbsp;` spacer paragraph before each line (#112) */
+}
+
+/* ===== icons-light: WHAT YOU NEED TO PLAY (section head + units + WHERE TO PLAY prose) ===== */
+main .section.columns-container:has(.columns.icons-light) {
+  padding-top: 56px; /* live: band 8 + stripe 8 + centre 8 + centre-inner 32 */
+}
+
+main .section.columns-container:has(.columns.icons-light) .default-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+main .section.columns-container:has(.columns.icons-light) .default-content-wrapper h2 {
+  width: calc(83.33333333% - 30px);
+  margin: 0 auto;
+  padding: 8px 0;
+  font-size: 76px;
+  line-height: 1.1;
+  color: var(--color-red);
+  text-align: center;
+}
+
+main .section.columns-container:has(.columns.icons-light) .default-content-wrapper p {
+  width: calc(83.33333333% - 30px);
+  margin: 16px auto 0; /* 8px h2 pad + 16 = the live `&nbsp;` paragraph under the h2 (#112) */
+  padding: 0 0 8px;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-ink);
+  text-align: center;
+}
+
+main .section.columns-container:has(.columns.icons-light) .default-content-wrapper p.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 30px);
+  margin: 17px auto 0; /* separator column on live: 8px pad + 1px rule + 8px pad */
+  padding: 8px 0 80px; /* 8px column pad + centre-inner 64 + centre 8; the section adds the stripe's 8 */
+  line-height: 0;
+}
+
+main .section.columns-container:has(.columns.icons-light) .default-content-wrapper a.button:any-link {
+  display: flex;
+  width: max-content;
+  min-width: 280px;
+  margin: 0 auto;
+}
+
+.columns.icons-light .columns-inner {
+  padding-bottom: 17px; /* separator column between the units and WHERE TO PLAY (8 + 1 + 8) */
+}
+
+.columns.icons-light .columns-content {
+  justify-content: space-around;
+}
+
+.columns.icons-light .col {
+  width: 41.66666667%;
+  margin: auto;
+}
+
+.columns.icons-light .col-inner {
+  padding: 32px 0;
+}
+
+.columns.icons-light .col-icon {
+  width: calc(80% - 30px);
+}
+
+.columns.icons-light .col-icon-box {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.columns.icons-light .col-text {
+  width: calc(100% - 30px);
+}
+
+.columns.icons-light .col-text :is(h2, h3) {
+  color: var(--color-ink);
+}
+
+@media (width <= 767px) {
+  .columns .columns-inner {
+    max-width: calc(100% - 24px);
   }
 
-  .columns > div > div {
-    flex: 1;
-    order: unset;
+  .columns.icons-dark .columns-content {
+    padding: 32px 0;
+  }
+
+  .columns.icons-dark .col {
+    width: 100%;
+  }
+
+  .columns.icons-dark .col-inner {
+    padding: 16px 0;
+  }
+
+  .columns.icons-dark .col-icon-box {
+    width: calc(33.33333333% - 8px);
+  }
+
+  .columns.icons-dark .col-text {
+    width: calc(100% - 8px);
+  }
+
+  main .section.columns-container:has(.columns.icons-light) {
+    padding-top: 40px;
+  }
+
+  main .section.columns-container:has(.columns.icons-light) .default-content-wrapper {
+    max-width: calc(100% - 24px);
+  }
+
+  main .section.columns-container:has(.columns.icons-light) .default-content-wrapper h2 {
+    width: calc(100% - 8px);
+    font-size: 44px;
+  }
+
+  main .section.columns-container:has(.columns.icons-light) .default-content-wrapper p {
+    width: calc(100% - 8px);
+    font-size: 16px;
+  }
+
+  main .section.columns-container:has(.columns.icons-light) .default-content-wrapper p.button-wrapper {
+    padding-bottom: 48px;
+  }
+
+  main .section.columns-container:has(.columns.icons-light) .default-content-wrapper a.button:any-link {
+    width: 100%;
+    min-width: 0;
+    max-width: 280px;
+  }
+
+  .columns.icons-light .col {
+    width: 50%;
+  }
+
+  .columns.icons-light .col-inner {
+    padding: 16px 0;
+  }
+
+  .columns.icons-light .col-icon {
+    width: calc(66.66666667% - 8px);
+  }
+
+  .columns.icons-light .col-text {
+    width: calc(100% - 8px);
   }
 }

@@ -1,0 +1,391 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:migrate",
+    "writtenAt": "2026-09-17T16:42:50.611Z",
+    "stardustVersion": "0.21.1",
+    "mode": "prep (replica Phase 1) — crawl.mjs --pages --dynamics; typing + module candidates by agent"
+  },
+  "site": {
+    "originUrl": "https://www.redballtennis.com/",
+    "deployUrl": "https://main--sdt-redballtennis--aemcoder.aem.live/",
+    "extractedAt": "2026-09-17T15:33:12.029Z",
+    "pageCap": 0,
+    "totalDiscovered": 7,
+    "crawled": 7,
+    "redirects": [
+      {
+        "from": "/en/home/free-racquet-pack.html",
+        "to": "/en/home.html",
+        "status": 301
+      },
+      {
+        "from": "/en/home/stay-current/national/USTA-awards-wheelchair-tennis-grants.html",
+        "to": "/",
+        "status": 301
+      }
+    ]
+  },
+  "direction": {
+    "resolvedAt": "2026-09-17T15:45:17.633Z",
+    "phrase": "preserve (same-design migration) — replica",
+    "directionFile": "stardust/direction.md",
+    "iaFidelity": "verbatim"
+  },
+  "handsOff": true,
+  "pages": [
+    {
+      "slug": "home",
+      "url": "https://www.redballtennis.com/en/home.html",
+      "title": "Home",
+      "type": "landing",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-09-17T15:33:12.029Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-09-17T15:45:17.633Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-09-17T16:35:00.420Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-09-17T16:35:00.420Z",
+          "approvedBy": "hands-off",
+          "gate": {
+            "360": {
+              "pixelPct": 0.61,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 1.91
+            },
+            "1440": {
+              "pixelPct": 0.22,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 0.63
+            }
+          }
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:39:31.222Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:42:50.611Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/home.json",
+      "prototypePath": "stardust/prototypes/home-proposed.html",
+      "migratedPath": "stardust/migrated/index.html",
+      "note": "also served at /",
+      "fidelityTier": "archetype",
+      "gatesPassed": [
+        "provenance",
+        "placeholder-gate",
+        "mobile-adapt",
+        "content-count"
+      ]
+    },
+    {
+      "slug": "play",
+      "url": "https://www.redballtennis.com/en/home/play.html",
+      "title": "Play",
+      "type": "program",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-09-17T15:33:12.029Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-09-17T15:45:17.633Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-09-17T16:38:35.049Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-09-17T16:38:35.049Z",
+          "approvedBy": "hands-off",
+          "gate": {
+            "360": {
+              "pixelPct": 0.56,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 1.91
+            },
+            "1440": {
+              "pixelPct": 0.13,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 0.63
+            }
+          }
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:39:31.222Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:42:50.611Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/play.json",
+      "prototypePath": "stardust/prototypes/play-proposed.html",
+      "migratedPath": "stardust/migrated/play/index.html",
+      "fidelityTier": "archetype",
+      "gatesPassed": [
+        "provenance",
+        "placeholder-gate",
+        "mobile-adapt",
+        "content-count"
+      ]
+    },
+    {
+      "slug": "host",
+      "url": "https://www.redballtennis.com/en/home/host.html",
+      "title": "Host",
+      "type": "program",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-09-17T15:33:12.029Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-09-17T15:45:17.633Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-09-17T16:37:53.755Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-09-17T16:37:53.755Z",
+          "approvedBy": "hands-off",
+          "gate": {
+            "360": {
+              "pixelPct": 0.63,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 1.91
+            },
+            "1440": {
+              "pixelPct": 0.17,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 0.63
+            }
+          }
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:39:31.222Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:42:50.611Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/host.json",
+      "prototypePath": "stardust/prototypes/host-proposed.html",
+      "migratedPath": "stardust/migrated/host/index.html",
+      "fidelityTier": "archetype",
+      "gatesPassed": [
+        "provenance",
+        "placeholder-gate",
+        "mobile-adapt",
+        "content-count"
+      ]
+    },
+    {
+      "slug": "404",
+      "url": "https://www.redballtennis.com/en/home/404.html",
+      "title": "404",
+      "type": "static",
+      "status": "migrated",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-09-17T15:33:12.029Z"
+        },
+        {
+          "status": "directed",
+          "at": "2026-09-17T15:45:17.633Z"
+        },
+        {
+          "status": "prototyped",
+          "at": "2026-09-17T16:35:00.420Z"
+        },
+        {
+          "status": "approved",
+          "at": "2026-09-17T16:35:00.420Z",
+          "approvedBy": "hands-off",
+          "gate": {
+            "360": {
+              "pixelPct": 0.51,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 1.91
+            },
+            "1440": {
+              "pixelPct": 0.1,
+              "heightDelta": 0,
+              "structuralRed": 0,
+              "headerCropPct": 0,
+              "footerCropPct": 0.63
+            }
+          }
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:39:31.222Z"
+        },
+        {
+          "status": "migrated",
+          "at": "2026-09-17T16:42:50.611Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/404.json",
+      "prototypePath": "stardust/prototypes/404-proposed.html",
+      "migratedPath": "stardust/migrated/404/index.html",
+      "fidelityTier": "archetype",
+      "gatesPassed": [
+        "provenance",
+        "placeholder-gate",
+        "mobile-adapt",
+        "content-count"
+      ]
+    },
+    {
+      "slug": "confirmation",
+      "url": "https://www.redballtennis.com/en/home/confirmation.html",
+      "title": "Confirmation",
+      "type": "unique",
+      "status": "extracted",
+      "history": [
+        {
+          "status": "extracted",
+          "at": "2026-09-17T15:33:12.029Z"
+        }
+      ],
+      "stale": false,
+      "staleReason": null,
+      "currentStatePath": "stardust/current/pages/confirmation.json",
+      "prototypePath": null,
+      "migratedPath": null,
+      "note": "client-side bounce to account.usta.com (Auth0 login); captured page is the external login UI — out of static scope, handled in dynamics as class A (auth) external hand-off"
+    }
+  ],
+  "migrate": {
+    "at": "2026-09-17T16:42:50.611Z",
+    "outputDir": "stardust/migrated/",
+    "selfContained": true,
+    "pageMap": [
+      {
+        "sourceUrl": "/",
+        "outputPath": "index.html",
+        "slug": "home"
+      },
+      {
+        "sourceUrl": "/en/home/play.html",
+        "outputPath": "play/index.html",
+        "slug": "play"
+      },
+      {
+        "sourceUrl": "/en/home/host.html",
+        "outputPath": "host/index.html",
+        "slug": "host"
+      },
+      {
+        "sourceUrl": "/en/home/404.html",
+        "outputPath": "404/index.html",
+        "slug": "404"
+      }
+    ],
+    "totalAssetsBundled": 32,
+    "bundledAssets": [
+      "favicon.ico",
+      "fonts/Graphik-Regular-App.woff2",
+      "fonts/Graphik-Semibold-App.woff2",
+      "fonts/GraphikXXCondensed-Bold-App.woff2",
+      "fonts/USTASans-Bold.otf",
+      "media/Cancel_Bold_White-4f3fe8.svg",
+      "media/Hamburger-Menu-White-339cdd.svg",
+      "media/Sites-Icon-4d7f1c.svg",
+      "media/hand-with-ball-75c11e.png",
+      "media/hit-to-be-fit-403c8b.svg",
+      "media/host-homepage-d9112c.png",
+      "media/host-play-bg-33c81e.jpg",
+      "media/host-red-ball-e309b8.jpg",
+      "media/icon-resources-5-788f05.svg",
+      "media/icon-resources-6-2c7bad.svg",
+      "media/in-the-wild-text-and-image-1856b0.png",
+      "media/man-430c35.png",
+      "media/man-6f51c2.png",
+      "media/on-the-court-5fd7d2.png",
+      "media/play-homepage-dde55e.png",
+      "media/rbt-favicon-180x180-d1914d.png",
+      "media/rbt-host-v1-455e8d.jpeg",
+      "media/rbt-play-v1-50b374.jpg",
+      "media/red-ball-logo-mob-c70708.png",
+      "media/red-ball-tennis-circle-5e1c21.svg",
+      "media/red-ball-tennis-wbg-04927f.png",
+      "media/red-ball-tennis-wbg-d7e509.png",
+      "media/red-icons-01-66de25.png",
+      "media/red-icons-02-7dd0e7.png",
+      "media/red-icons-03-f424a0.png",
+      "media/red-tennis-ball-c7c254.svg",
+      "media/vector-background-red-119880.svg"
+    ],
+    "pages": [
+      {
+        "slug": "home",
+        "file": "stardust/migrated/index.html",
+        "assetsBundled": 11
+      },
+      {
+        "slug": "play",
+        "file": "stardust/migrated/play/index.html",
+        "assetsBundled": 12
+      },
+      {
+        "slug": "host",
+        "file": "stardust/migrated/host/index.html",
+        "assetsBundled": 16
+      },
+      {
+        "slug": "404",
+        "file": "stardust/migrated/404/index.html",
+        "assetsBundled": 8
+      }
+    ],
+    "missingAssets": [],
+    "cleanedAssets": []
+  }
+}

@@ -1,273 +1,611 @@
-/* header and nav layout */
+/* header — redballtennis.com chrome, ported 1:1 from stardust/canon/canon.css
+   (.topnavigation .top-navigation.red-ball-colors + .breadcrumb). Template wrappers keep
+   the live class names; the AUTHORED lists (nav <ul>, dropdown <ul>) and the logo <a> are
+   styled through descendant selectors (EW2). Chrome rows size from content or a plain
+   height — never height + vertical padding on a flex row (#106).
+   stylelint: the live BEM class names (__/--) are kept on purpose so canon.css ports 1:1;
+   cascade order mirrors canon.css. */
+/* stylelint-disable selector-class-pattern, no-descending-specificity */
+
 header .nav-wrapper {
-  background-color: var(--background-color);
   width: 100%;
-  z-index: 2;
-  position: fixed;
 }
 
-header nav {
-  box-sizing: border-box;
-  display: grid;
-  grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
+header .topnavigation {
+  display: block;
+}
+
+header .top-navigation {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-blue);
+  z-index: 1030;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 22.8571px;
+  color: var(--color-body);
+}
+
+/* ---- utility bar (60px) + the USTA SITES dropdown ---- */
+header .top-navigation__top-bar {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0 24px;
-  margin: auto;
-  max-width: 1248px;
-  height: var(--nav-height);
-  padding: 0 24px;
-  font-family: var(--body-font-family);
+  height: 60px;
+  background-color: var(--color-blue);
+  border-bottom: 1px solid #fff;
 }
 
-header nav[aria-expanded='true'] {
-  grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
-  overflow-y: auto;
-  min-height: 100dvh;
+header .top-navigation__top-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  width: var(--chrome-max);
+  max-width: var(--chrome-max);
+  height: 36px;
 }
 
-@media (width >= 900px) {
-  header .nav-wrapper {
-    position: relative;
-  }
-
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
-  }
+header .drop-down {
+  position: relative;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  background: #f8f8f8;
 }
 
-header nav p {
-  margin: 0;
-  line-height: 1;
-}
-
-header nav a:any-link {
-  color: currentcolor;
-}
-
-/* hamburger */
-header nav .nav-hamburger {
-  grid-area: hamburger;
-  height: 22px;
+header .drop-down__wrapper,
+header .drop-down__label-wrapper {
   display: flex;
   align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 10px;
 }
 
-header nav .nav-hamburger button {
-  height: 22px;
-  margin: 0;
+header button.drop-down__label-wrapper {
   border: 0;
-  border-radius: 0;
+  border-radius: var(--radius-pill);
+  background: none;
+  appearance: none;
   padding: 0;
-  background-color: var(--background-color);
-  color: inherit;
-  overflow: initial;
-  text-overflow: initial;
-  white-space: initial;
+  margin: 0;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 13.3333px;
+  color: #000;
 }
 
-header nav .nav-hamburger-icon,
-header nav .nav-hamburger-icon::before,
-header nav .nav-hamburger-icon::after {
-  box-sizing: border-box;
-  display: block;
+header .drop-down__select-icon {
   position: relative;
-  width: 20px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  background: #000;
+  border-radius: 50%;
+  border: 1px solid #848484;
 }
 
-header nav .nav-hamburger-icon::before,
-header nav .nav-hamburger-icon::after {
-  content: '';
+header .drop-down__select-icon::before {
+  content: "";
   position: absolute;
-  background: currentcolor;
+  top: 10px;
+  left: 7px;
+  width: 0;
+  height: 0;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-top: 10px solid #fff;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon,
-header nav[aria-expanded='false'] .nav-hamburger-icon::before,
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  height: 2px;
-  border-radius: 2px;
-  background: currentcolor;
+/* wrapper carries the live .drop-down__label paint; the authored <p> inherits it */
+header .drop-down__label {
+  color: #000;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin: 0 60px 0 0;
+  text-align: center;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::before {
-  top: -6px;
+header .drop-down__label p {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  text-align: inherit;
 }
 
-header nav[aria-expanded='false'] .nav-hamburger-icon::after {
-  top: 6px;
-}
-
-header nav[aria-expanded='true'] .nav-hamburger-icon {
-  height: 22px;
-}
-
-header nav[aria-expanded='true'] .nav-hamburger-icon::before,
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-  top: 3px;
-  left: 1px;
-  transform: rotate(45deg);
-  transform-origin: 2px 1px;
-  width: 24px;
-  height: 2px;
-  border-radius: 2px;
-}
-
-header nav[aria-expanded='true'] .nav-hamburger-icon::after {
-  top: unset;
-  bottom: 3px;
-  transform: rotate(-45deg);
-}
-
-@media (width >= 900px) {
-  header nav .nav-hamburger {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-/* brand */
-header .nav-brand {
-  grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
-  line-height: 1;
-}
-
-header nav .nav-brand img {
-  width: 128px;
-  height: auto;
-}
-
-/* sections */
-header nav .nav-sections {
-  grid-area: sections;
-  flex: 1 1 auto;
+header .drop-down__select-list {
   display: none;
-  visibility: hidden;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 400px;
+  padding-top: 40px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 16%);
 }
 
-header nav[aria-expanded='true'] .nav-sections {
+header .drop-down__label-wrapper[aria-expanded="true"] + .drop-down__select-list {
   display: block;
-  visibility: visible;
-  align-self: start;
 }
 
-header nav .nav-sections ul {
+header .drop-down__label-wrapper[aria-expanded="true"] {
+  z-index: 1001;
+}
+
+header .drop-down__image {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+}
+
+header .drop-down__image img {
+  display: inline;
+  width: 170px;
+  height: auto;
+  vertical-align: middle;
+}
+
+header .drop-down__slogan {
+  font-family: var(--font-semibold);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+header .drop-down__slogan p {
+  margin: 0;
+  font: inherit;
+  color: inherit;
+}
+
+header .drop-down__select-list-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 45px;
+}
+
+/* the authored USTA-sites <ul> (live .drop-down__select-list-column / -item) */
+header .drop-down__select-list-row ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  width: 50%;
+  max-height: 300px;
   list-style: none;
-  padding-left: 0;
-  font-size: var(--body-font-size-s);
+  margin: 0 0 20px;
+  padding: 0;
 }
 
-header nav .nav-sections ul > li {
-  font-weight: 500;
+header .drop-down__select-list-row li {
+  display: block;
+  text-transform: uppercase;
+  color: var(--color-link);
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  min-width: 100%;
+  white-space: nowrap;
 }
 
-header nav .nav-sections .nav-drop > button {
-  all: unset;
+header .drop-down__select-list-row li::before {
   display: inline-block;
-  position: relative;
-  padding-right: 16px;
+  content: "";
+  height: 10px;
+  width: 10px;
+  margin-right: 15px;
+  line-height: 14px;
+  background: var(--color-link);
+  border-radius: 50%;
+}
+
+header .drop-down__select-list-row li a:any-link {
+  font-family: var(--font-semibold);
+  font-weight: normal;
+  font-size: 12px;
+  line-height: normal;
+  text-decoration: underline;
+  color: var(--color-link);
+}
+
+header .drop-down__close {
+  display: inherit;
+  position: absolute;
+  right: 15px;
+  top: 13px;
+  height: 20px;
+  width: 20px;
   cursor: pointer;
 }
 
-header nav .nav-sections .nav-drop > button::after {
-  content: '';
+header .drop-down__close::before,
+header .drop-down__close::after {
   position: absolute;
-  top: 0.5em;
-  right: 2px;
-  transform: rotate(135deg);
-  width: 6px;
-  height: 6px;
-  border: 2px solid currentcolor;
-  border-radius: 0 1px 0 0;
-  border-width: 2px 2px 0 0;
+  left: 8px;
+  content: "";
+  height: 20px;
+  width: 4px;
+  background-color: #5d5d5d;
 }
 
-header nav .nav-sections .nav-drop > button[aria-expanded='true']::after {
-  top: unset;
-  bottom: 0.5em;
-  transform: rotate(315deg);
+header .drop-down__close::before { transform: rotate(45deg); }
+header .drop-down__close::after { transform: rotate(-45deg); }
+
+header .top-navigation__user-section--desktop {
+  display: block;
 }
 
-header nav .nav-sections .nav-drop > button:focus-visible {
-  outline: 2px solid currentcolor;
-  outline-offset: 2px;
+/* ---- main bar (105px): logo + nav ---- */
+header .top-navigation__main-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: var(--chrome-max);
+  height: 105px;
+  margin: 0 auto;
+  padding: 0 30px;
+  background-color: var(--color-blue);
 }
 
-header nav .nav-sections ul > li > ul {
-  margin-top: 0;
+header .top-navigation__logo {
+  flex: 0 0 10%;
+  user-select: none;
 }
 
-header nav .nav-sections ul > li > ul > li {
-  font-weight: 400;
+header .top-navigation__logo-hamburger {
+  display: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 1px;
+  line-height: 22.8571px;
 }
 
-header nav .nav-sections .nav-drop > button[aria-expanded='false'] + ul {
+header .top-navigation__logo-hamburger img {
+  display: inline;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+header .top-navigation__logo-hamburger .top-navigation__logo-hamburger--cancel {
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+header .top-navigation__logo-image {
+  display: inline;
+}
+
+header .top-navigation__logo-image a:any-link {
+  display: block;
+  color: inherit;
+}
+
+header .top-navigation__logo-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+header .top-navigation__logo-image--desktop {
+  display: block;
+}
+
+header .top-navigation__logo-image--mobile {
   display: none;
 }
 
-@media (width >= 900px) {
-  header nav .nav-sections {
-    display: block;
-    visibility: visible;
-    white-space: nowrap;
-  }
+header .top-navigation__navigation-menu {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 148px;
+}
 
-  header nav .nav-sections ul {
-    display: flex;
-    gap: 24px;
+/* the authored nav <ul> (live .navigation-menu__list / __list-item--level-1 / __list-item-link--level-1) */
+header .navigation-menu ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 0 1 auto;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  list-style: none;
+}
+
+header .navigation-menu li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  user-select: none;
+  height: 100%;
+  position: relative;
+}
+
+header .navigation-menu li > a:any-link {
+  display: flex;
+  justify-content: center;
+  flex: 0 1 auto;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: var(--font-semibold);
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.8px;
+  line-height: 25px;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* live: .navigation-menu__list-item-link--level-1.active — no hover change at runtime */
+header .navigation-menu li > a[aria-current="page"] {
+  color: #fff;
+  border-bottom: 4px solid #fff;
+}
+
+/* the dropdown item (nested list) is mobile-only; its sub-list never renders inline (as live) */
+header .navigation-menu li:has(ul) {
+  display: none;
+}
+
+header .navigation-menu li ul {
+  display: none;
+}
+
+/* ---- breadcrumb strip (30px) ---- */
+header .breadcrumb {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-blue);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid var(--color-blue);
+  color: #fff;
+}
+
+header .cmp-breadcrumb {
+  display: block;
+  padding-left: 8px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 28px;
+  height: 28px;
+  max-width: var(--chrome-max);
+}
+
+header .cmp-breadcrumb__navigation {
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: normal;
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 28px;
+  line-height: 28px;
+}
+
+header .cmp-breadcrumb__navigation li {
+  display: list-item;
+  color: #fff;
+}
+
+header .cmp-breadcrumb__navigation li a:any-link {
+  color: #fff;
+  text-decoration: underline;
+}
+
+header .cmp-breadcrumb__navigation-item-divider {
+  color: #fff;
+  padding-left: 6px;
+  padding-right: 8px;
+}
+
+/* ---- mobile chrome — the live switch is 1369px (44px main bar + 30px breadcrumb) ---- */
+@media (width <= 1369px) {
+  header .top-navigation {
     margin: 0;
+    padding: 0;
+    font-weight: 900;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li {
-    flex: 0 1 auto;
-    position: relative;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > ul {
-    display: none;
-    position: relative;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li > button[aria-expanded='true'] + ul {
+  /* the utility bar becomes the slide-down menu panel (hidden above the viewport) */
+  header .top-navigation__top-bar {
     display: block;
     position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
-    background-color: var(--light-color);
-    white-space: initial;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: unset;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    overflow: auto;
+    opacity: 1;
+    transition: top 0.3s ease, opacity 0.3s ease;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 16px;
+  header .top-navigation__top-bar.top-to-bottom {
+    top: 74px;
+  }
+
+  header .top-navigation__top-bar.top-navigation__top-bar--opened {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 6px 6px rgb(0 0 0 / 16%);
+  }
+
+  header .top-navigation__top-bar-wrapper {
+    flex-direction: column;
+    align-items: normal;
+    width: auto;
+    padding: 0;
+    max-width: none;
+    height: auto;
+  }
+
+  header .top-navigation__top-bar .dropdown {
+    display: none;
+  }
+
+  header .top-navigation__main-bar {
+    position: relative;
+    gap: 30px;
+    align-items: normal;
+    margin: 0;
+    padding: 0 8px;
+    width: 100%;
+    max-width: none;
+    height: 44px;
+  }
+
+  header .top-navigation__logo {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    user-select: auto;
+    margin-left: 15px;
+    width: 50%;
+  }
+
+  header .top-navigation__logo-hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  header .top-navigation__logo-image {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  header .top-navigation__logo-image a:any-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  header .top-navigation__logo-image img {
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  header .top-navigation__logo-image--desktop {
+    display: none;
+  }
+
+  header .top-navigation__logo-image--mobile,
+  header .top-navigation__logo-image--desktop:only-child {
+    display: block;
+    height: 100%;
+  }
+
+  header .top-navigation__logo-image--mobile img,
+  header .top-navigation__logo-image--desktop:only-child img {
+    height: 100%;
+  }
+
+  /* the menu is re-parented into the panel by header.js and shown by inline display:block */
+  header .top-navigation__navigation-menu {
+    display: none;
+    background-color: #fff;
+    padding: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  header .navigation-menu ul {
+    display: block;
+    margin-bottom: 10px;
+    height: auto;
+  }
+
+  header .navigation-menu li {
+    display: block;
+    height: 100%;
+  }
+
+  header .navigation-menu li:has(ul) {
+    display: flex;
+  }
+
+  /* each row (live .level-1-content + link) */
+  header .navigation-menu li > a:any-link,
+  header .navigation-menu li:has(ul) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-bottom: 1px dashed #727272;
+    color: var(--color-link);
+    font-family: var(--font-semibold);
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.8px;
+    line-height: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: pre-wrap;
+  }
+
+  header .navigation-menu li:first-child > a:any-link {
+    padding-top: 25px;
+  }
+
+  header .navigation-menu li > a[aria-current="page"] {
+    border-bottom: 1px dashed #727272;
+  }
+
+  header .navigation-menu li:has(ul)::after {
+    content: "";
+    display: block;
     width: 0;
     height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 12px solid var(--color-link);
+    border-right: 4px solid transparent;
   }
 
-  header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 8px 0;
+  header .breadcrumb {
+    height: 30px;
+  }
+
+  header .cmp-breadcrumb {
+    display: flex;
+    line-height: 30px;
+    padding-left: 22px;
+  }
+
+  header .cmp-breadcrumb__navigation {
+    height: 30px;
+    line-height: 30px;
   }
 }
 
-/* tools */
-header nav .nav-tools {
-  grid-area: tools;
+@media (prefers-reduced-motion: reduce) {
+  header .top-navigation__top-bar {
+    transition: none;
+  }
 }

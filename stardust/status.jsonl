@@ -1,0 +1,14 @@
+{"ts":"2026-09-17T15:33:12.029Z","skill":"stardust:extract","phase":"crawl","event":"end","detail":"7/7 live captures (5 distinct pages, 2 redirects to home)","artifact":"stardust/current/"}
+{"ts":"2026-09-17T15:38:09Z","skill":"stardust:replica","phase":"preserve-direction","event":"start"}
+{"ts":"2026-09-17T15:43:28Z","skill":"stardust:dynamics","phase":"triage","event":"end","detail":"12 curated rows, 3 owner decisions, 4 decided-out","artifact":"stardust/dynamic-features.md"}
+{"ts":"2026-09-17T15:45:17.633Z","skill":"stardust:replica","phase":"preserve-direction","event":"end","detail":"4 pages directed; register empty; 12 dynamics rows","artifact":"stardust/direction.md"}
+{"ts":"2026-09-17T15:53:45Z","skill":"stardust:replica","phase":"recreate","event":"start","detail":"canon authored (fonts, canon.css, header, footer, chrome.js); 4 archetypes fan out"}
+{"ts":"2026-09-17T16:39:31Z","skill":"stardust:replica","phase":"recreate+gate","event":"end","detail":"4/4 archetypes approved (hands-off): home 0.22/0.61%, play 0.13/0.56%, host 0.17/0.63%, 404 0.10/0.51%; Δh 0; 0 structural red; chrome crops ≤1.91% (OneTrust floating button)","artifact":"stardust/prototypes/"}
+{"ts":"2026-09-17T16:39:31.222Z","skill":"stardust:migrate","phase":"render","event":"end","detail":"4 migrated, 0 unchanged, 0 failed","artifact":"stardust/migrated/"}
+{"ts":"2026-09-17T16:42:50.611Z","skill":"stardust:migrate","phase":"render","event":"end","detail":"4 migrated, 0 unchanged, 0 failed","artifact":"stardust/migrated/"}
+{"ts":"2026-09-17T17:09:05Z","skill":"stardust:rollout","phase":"A-inventory+B-plan","event":"end","detail":"4 pages, 3 templates, 10 modules → header, footer, hero, cards, columns, signup-form + 2 default-content bands","artifact":"stardust/rollout/plan.json"}
+{"ts":"2026-09-17T17:09:05Z","skill":"stardust:rollout","phase":"C-deliver","event":"start","detail":"foundation + chrome pushed (b2fb2c2); /nav + /footer published; page blocks in conversion"}
+{"ts":"2026-09-17T20:02:49Z","skill":"stardust:qa","phase":"sweep","event":"start","detail":"read-only QA of main--sdt-redballtennis--aemcoder.aem.live"}
+{"ts":"2026-09-17T20:11:44Z","skill":"stardust:rollout","phase":"C-deliver","event":"end","detail":"4/4 pages PUT+preview+live; 0 about:error; published-origin gate home 0.31/3.18%, play 0.17/0.58%, host 0.39/0.89%, 404 0.27/1.11% (Δh 0; home@360 1px)","artifact":"stardust/rollout/coverage/pages.json"}
+{"ts":"2026-09-17T20:11:44Z","skill":"stardust:rollout","phase":"D-assemble+D2-dynamics","event":"end","detail":"redirects.json (17 rows) published; parity 11/11 (forms interim, tags disabled)","artifact":"stardust/qa/dynamics-report.md"}
+{"ts":"2026-09-17T20:11:44Z","skill":"stardust:rollout","phase":"E-verify+F-optimize","event":"end","detail":"4/4 verified (404: 0 h1 = documented fidelity exception); optimize health 80/100, 0 open P1, 4 P2 (JSON-LD ×3, sitemap)","artifact":"stardust/rollout/optimize/scorecard.json"}

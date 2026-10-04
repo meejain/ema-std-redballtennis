@@ -1,0 +1,7 @@
+doc height 3747px  (http://localhost:8793/stardust/prototypes/host-proposed.html @ 360)
+  y     74  h  1005  band.band--hero
+  y   1079  h   225  band.band--promo
+  y   1304  h  1062  band.band--play
+  y      0  h     0  band.band--links
+  y   2367  h  1061  band.band--form
+  y   3428  h   319  footer

@@ -1,0 +1,269 @@
+{
+  "pageType": "static",
+  "archetype": "404",
+  "liveUrl": "https://www.redballtennis.com/en/home/404.html",
+  "prototype": "stardust/prototypes/404-proposed.html",
+  "pageCss": "stardust/prototypes/404.css",
+  "regime": "prototype (standalone prototype gated against the live page)",
+  "canonStateGated": "stardust/canon/canon.css mtime 2026-09-17 18:11:20 (home agent edited canon mid-run; pixel round re-run as iter2 against that state)",
+  "breakpoints": {
+    "360": {
+      "iterations": 3,
+      "iterationNotes": [
+        "iter1 18:08 — pixel 0.69%, heightΔ 0, band exact (y74 h795), footer 319 = live; header crop FAIL 2.88% (canon stacked hamburger icons).",
+        "iter2 18:12 — no prototype change; re-run for the changed canon: footer now 322 (+3), pixel 1.05%, footer crop 1.91% → 3.23%. Movement is canon-only."
+      ],
+      "result": {
+        "structuralRed": 0,
+        "structuralRedBriefScope": 24,
+        "visualFlags": "none",
+        "pixelPct": 0.51,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 1.91,
+        "pass": true,
+        "contentBandPass": true,
+        "why": "Content band exact (anchor y74 h795 = live). Pixel and height pass; header crop (2.88%) and footer crop (3.23%, was 1.91% PASS against the 18:05 canon) fail on canon-owned deltas.",
+        "note": "final round against canon changedAt 2026-09-17T16:27Z (home agent); structuralRed/visual from iter2 unchanged (markup untouched)"
+      },
+      "justified": [
+        {
+          "probe": "content",
+          "flag": "24 🔴 (brief scope) / 0 🔴 (symmetric content scope)",
+          "why": "Same root-container scoping asymmetry as 1440; gates/404-360/content-diff-iter1-scoped.txt: none."
+        }
+      ],
+      "residuals": [],
+      "captureState": []
+    },
+    "1440": {
+      "iterations": 3,
+      "iterationNotes": [
+        "iter1 18:05 — first measurement; content band exact (y195 h1038 both sides); all deltas in canon footer (+23px).",
+        "iter2 18:12 — no prototype change; re-run because canon.css changed under me (footer now 268px, +26px). Differing pixels 7588 → 7640: movement is canon-only."
+      ],
+      "result": {
+        "structuralRed": 0,
+        "structuralRedBriefScope": 24,
+        "visualFlags": "none",
+        "pixelPct": 0.1,
+        "heightDelta": 0,
+        "headerCropPct": 0,
+        "footerCropPct": 0.63,
+        "pass": true,
+        "contentBandPass": true,
+        "why": "Content band measures exact (anchor y195 h1038 = live; bands 0–500 and 500–1000 at 0.0%). Fails only on |heightΔ| (−26px) and footer crop (2.16%), both owned by the canon footer — see chromeDeltas.",
+        "note": "final round against canon changedAt 2026-09-17T16:27Z (home agent); structuralRed/visual from iter2 unchanged (markup untouched)"
+      },
+      "justified": [
+        {
+          "probe": "content",
+          "flag": "24 🔴 MISSING CTA/EYEBROW with the brief's --main \".container.responsivegrid\"",
+          "why": "On live, querySelector('.container.responsivegrid') returns <div class=\"root container responsivegrid\"> which wraps the header XF + content + footer XF, so the live inventory includes 25 chrome CTAs (USTA SITES dropdown links, HOME/PLAY/HOST, breadcrumb, Terms/Privacy) while the build scope is content-only. Re-run with the symmetric content-root selector \".container.responsivegrid.full-width--root\" (live class of the content container, added verbatim to <main>): 'Findings: none — content + roles match' at both widths (gates/404-1440/content-diff-iter1-scoped.txt)."
+        },
+        {
+          "probe": "content",
+          "flag": "🟡 MISSING BODY ×5 / EDITABLE COUNT 8 vs 1 (brief scope)",
+          "why": "Same scoping asymmetry — all five strings are chrome (USTA SITES, VISIT OUR OTHER SITES, MAIN MENU, submenu sr-only label, #redballtennis)."
+        },
+        {
+          "probe": "pixel",
+          "flag": "OneTrust floating cookie button (shield, ~x12 y1420, 56×56) present on the live capture only",
+          "why": "Third-party consent UI persistent button after --dismiss; not site content. Contributes to band y1000–1475 (1.1%) and the footer crop."
+        }
+      ],
+      "residuals": [],
+      "captureState": [
+        {
+          "what": "OneTrust persistent cookie-settings floating button rendered on live after consent dismissal",
+          "where": "bottom-left of viewport, lands in the footer crop"
+        }
+      ]
+    }
+  },
+  "motion": {
+    "observed": [
+      "1440 hover .button-core → self.opacity 1 → 0.7 (source ALL-RULES 7633 `.button-core:hover{opacity:.7}`; no transition duration — computed transition 'all 0s')",
+      "1440 hover .footer-links__sites a → color #fff → rgb(207,255,5) (source 14097)",
+      "1440 hover .navigation-menu__list-item-link--level-1 → NO change measured (color stayed #fff)",
+      "1440 click .drop-down__label-wrapper → widget poke recorded no class mutation / transition (instrument samples transform/scrollLeft only; the live Vue toggle is attribute/display based)",
+      "360 click .top-navigation__logo-hamburger → classMutations on .top-navigation__top-bar: +top-navigation__top-bar--opened, +top-to-bottom; transition 'top' 0.3s (source 8872 `transition:top .3s ease,opacity .3s ease`; 9057 `.red-ball-colors .top-navigation__top-bar.top-to-bottom{top:74px}`; 8877 `--opened{padding-bottom:40px;border-bottom:1px solid #8f8f8f;border-radius 0 0 20px 20px;box-shadow:0 6px 6px rgba(0,0,0,.16)}`). Note: live DOM at 360 re-parents .top-navigation__top-bar under .top-navigation__logo.",
+      "no scroll animations, no header timeline states (headerTimeline all null), no entrance animations"
+    ],
+    "implemented": [
+      "button hover opacity .7 — already in canon.css `.button-core:hover{opacity:.7}`; verified on the prototype headlessly (before 1 → after 0.7), pixel count unchanged at t=0 (0.36%)"
+    ],
+    "dead": [
+      "nav level-1 link hover (canon applies #cfff05 — not observed live; see chromeDeltas)",
+      "no page-level entrance/scroll motion to implement"
+    ],
+    "chromeBehaviours": {
+      "dropdown": "poked, no measurable mutation captured",
+      "hamburger": "fired (see observed)",
+      "owner": "home agent (canon chrome.js)"
+    }
+  },
+  "chromeDeltas": [
+    {
+      "width": 1440,
+      "region": "header",
+      "element": "> (breadcrumb divider span)",
+      "property": "padding-left",
+      "live": "6px (source 7905 `.breadcrumb .cmp-breadcrumb__navigation-item-divider{padding-left:6px;padding-right:8px}`)",
+      "proto": "8px (canon `.cmp-breadcrumb__navigation-item-divider{padding:0 8px}`)",
+      "effect": "divider w 20→22; '404' x 67→69"
+    },
+    {
+      "width": 1440,
+      "region": "header",
+      "element": "404 (breadcrumb active li)",
+      "property": "x",
+      "live": "67",
+      "proto": "69",
+      "cause": "divider padding-left above"
+    },
+    {
+      "width": 1440,
+      "region": "header",
+      "element": "logo img",
+      "property": "src signature",
+      "live": "red-ball-tennis-wbg.png",
+      "proto": "red-ball-tennis-wbg-04927f.png",
+      "note": "same asset, local hashed filename — not a visual delta; rect identical 30,69 138×87"
+    },
+    {
+      "width": 1440,
+      "region": "footer",
+      "element": "footer region box",
+      "property": "height",
+      "live": "242px",
+      "proto": "265px at 18:05 capture, 268px at 18:11 canon",
+      "cause": ".separator--mobile visible at desktop (rule order: `.footer-xf .separator{display:block}` after `.footer-xf .separator--mobile{display:none}`, equal specificity); li.nav-link line-height 22.857px vs live 18px; separator div 2px vs live hr 1px"
+    },
+    {
+      "width": 1440,
+      "region": "footer",
+      "element": "footer logo img",
+      "property": "y",
+      "live": "1265 (footer top +32)",
+      "proto": "1281 (footer top +48)"
+    },
+    {
+      "width": 1440,
+      "region": "footer",
+      "element": "Terms & Conditions / Privacy Policy",
+      "property": "y",
+      "live": "1350",
+      "proto": "1365–1366",
+      "note": "font/size/lh/ls/colour all identical (Graphik Semibold 18px lh18 ls −0.54px #fff); x identical (120 / 310)"
+    },
+    {
+      "width": 1440,
+      "region": "footer",
+      "element": "footer logo img",
+      "property": "src signature",
+      "live": "red-ball-tennis-wbg.png",
+      "proto": "red-ball-tennis-wbg-d7e509.png",
+      "note": "same asset; 100×63 both"
+    },
+    {
+      "width": 1440,
+      "region": "footer",
+      "element": "bottom hr (cmp-separator__horizontal-rule)",
+      "property": "y / height",
+      "live": "1390, 1px, margins 20",
+      "proto": "1415, 2px div, margins 20"
+    },
+    {
+      "width": 360,
+      "region": "header",
+      "element": "hamburger button",
+      "property": "rect",
+      "live": "23,9 26×26 (padding 1px; menu img 24,10 24×24; cancel img display:none)",
+      "proto": "23,−3 26×50 (menu img 24,−2; cancel img 24,22 24×24 rendered)",
+      "cause": "canon `.top-navigation__logo-hamburger img{display:block}` outranks `.top-navigation__logo-hamburger--cancel{display:none}`; source 8905 hides --cancel with `.topnavigation .top-navigation__logo-hamburger--cancel{display:none}` (0,2,0)"
+    },
+    {
+      "width": 360,
+      "region": "header",
+      "element": "icons inventory",
+      "property": "count",
+      "live": "2 (Hamburger-Menu-White.svg, red-ball-logo-mob.png 60×44 at 69,0)",
+      "proto": "3 (adds Cancel_Bold_White svg)"
+    },
+    {
+      "width": 360,
+      "region": "header",
+      "element": "> (breadcrumb divider)",
+      "property": "padding-left",
+      "live": "6px",
+      "proto": "8px",
+      "effect": "'404' x 81→83"
+    },
+    {
+      "width": 360,
+      "region": "footer",
+      "element": "footer region box",
+      "property": "height",
+      "live": "319px",
+      "proto": "319px at 18:08 capture, 322px at 18:11 canon",
+      "cause": "each .separator hr renders 2px (div) vs live 1px"
+    },
+    {
+      "width": 360,
+      "region": "footer",
+      "element": "footer logo / Terms / Privacy / #redballtennis / last hr",
+      "property": "y",
+      "live": "900 / 985 / 1024 / 1094 / 1135",
+      "proto": "901 / 986 / 1025 / 1096 / 1137"
+    },
+    {
+      "width": 360,
+      "region": "footer",
+      "element": "footer logo img",
+      "property": "src signature",
+      "live": "red-ball-tennis-wbg.png",
+      "proto": "red-ball-tennis-wbg-d7e509.png",
+      "note": "same asset"
+    },
+    {
+      "width": 1440,
+      "region": "header",
+      "element": "HOME / PLAY / HOST nav links",
+      "property": ":hover color",
+      "live": "no change measured by motion-observe (stayed #fff); source cascade: 9070 `.red-ball-colors … --level-1:hover .link--level-1{color:#cfff05;border-bottom:unset}` then 9073 same selector `{color:#0357b8}` (later wins), 8940 `transition:color .3s ease-out`",
+      "proto": "canon `.navigation-menu__list-item--level-1:hover .navigation-menu__list-item-link--level-1{color:#cfff05}` fires (verified rgb(207,255,5))",
+      "action": "home agent to re-probe hover with a ≥400ms settle before keeping the lime rule"
+    },
+    {
+      "width": 360,
+      "region": "header",
+      "element": "hamburger click state machine",
+      "property": "classes/transition",
+      "live": "+top-navigation__top-bar--opened +top-to-bottom on .top-navigation__top-bar; transition top .3s ease, opacity .3s ease; --opened adds padding-bottom 40px, border-bottom 1px #8f8f8f, radius 0 0 20px 20px, shadow 0 6px 6px rgba(0,0,0,.16)",
+      "proto": "chrome.js toggles top-to-bottom only; no --opened class, no transition in canon.css"
+    }
+  ],
+  "portations": [],
+  "notes": [
+    "BRIEF/DOC: the brief states `--main \".container.responsivegrid\"` selects 'the outermost content container right after the header' on live. False for this site: the first match is `<div class=\"root container responsivegrid\">` wrapping header XF + content + footer XF. Consequences: content-diff inventories chrome on live only (24 false 🔴 on a page whose content is exact), visual-diff mainHeight = full doc, anchor.mjs prints no sections on live. The unique live content-root selector is `.container.responsivegrid.full-width--root`; I added the live class `full-width--root` to <main> so both sides scope symmetrically and kept both evidence sets (…-iter1.txt = brief scope, …-iter1-scoped.txt = content scope). Recommend the orchestrator adopt the scoped selector for all redballtennis archetypes.",
+    "INSTRUMENT chrome-parity.mjs: `--json <file>` does not write a file — the JSON goes to stdout (the tee'd chrome-parity-iter1.txt IS the JSON; `chrome-parity-iter1.json` was never created). Also the ICON pairing flags a signature mismatch purely from the hashed local filename (red-ball-tennis-wbg.png vs red-ball-tennis-wbg-d7e509.png) — a basename-prefix match would avoid the false finding.",
+    "INSTRUMENT motion-observe.mjs: `--click` widget sampler records only transform/scrollLeft/dots; an aria-expanded/display toggle (the USTA SITES dropdown) yields four null frames and no classMutation, so a fired dropdown reads as 'nothing fired'. Sampling attribute mutations (aria-expanded) and display/visibility of the controlled element would close the gap. Hover sampler reports `transition: 'all'` without the duration.",
+    "INSTRUMENT anchor.mjs: prints no sections on live when the root's children are AEM `div.cmp-container`/`aem-Grid` wrappers (no <section>/landmark) — live-side anchoring was unusable on this site; the lift JSON was the substitute.",
+    "SOURCE CSS gap: the 404 h2 ramp (76px/83.6px desktop, 44px/48.4px mobile, Graphik XXCond Bold, #000) is not present in capture/css/ALL-RULES.txt (the redball page clientlib that sets it appears not to have been split in); values lifted from computed styles in lift-404-{1440,360}.json.",
+    "Live 404 carries two button instances (desktop: grid default--4 of an 8-col grid + offset 3, .aem-GridColumn--mobile--hide; mobile: .button-core--small-fs 14px, default--hide) — both mirrored with the same per-breakpoint display rules so role/granularity parity holds at both widths. Empty .phe-block spacers and .cmp-text__icon are zero-height on live and were dropped.",
+    "The button's 450px width is a grid outcome, not a rule: 50% of the 960px inner grid minus 2×15px gutters; encoded as width:50% + margin auto (justify-content_space-around margin:auto) and .button-core--not-fixed-width width:auto, so it stays fluid.",
+    "Canon changed under this run (canon.css mtime 18:11:20 vs captures at 18:05/18:08): pixel round re-run as iter2 at both widths per the brief; the prototype itself did not change between iterations."
+  ],
+  "files": [
+    "stardust/prototypes/404-proposed.html",
+    "stardust/prototypes/404.css",
+    "stardust/replica/gates/404-1440/{content-diff-iter1.txt,content-diff-iter1-scoped.txt,visual-diff-iter1.txt,visual-diff-iter1-scoped.txt,live.png,proto.png,diff-iter1.png,diff-iter2.png,pixel-iter1.txt,pixel-iter2.txt,anchor-live.txt,anchor-proto-iter1.txt,anchor-proto-iter2.txt,chrome-parity-iter1.txt,crop-header-iter1.txt,crop-header-iter2.txt,crop-footer-iter1.txt,crop-footer-iter2.txt,chrome-header-diff.png,chrome-footer-diff.png}",
+    "stardust/replica/gates/404-360/{content-diff-iter1.txt,content-diff-iter1-scoped.txt,visual-diff-iter1.txt,live.png,proto.png,diff-iter1.png,diff-iter2.png,pixel-iter1.txt,pixel-iter2.txt,anchor-live.txt,anchor-proto-iter1.txt,anchor-proto-iter2.txt,chrome-parity-iter1.txt,crop-header-iter1.txt,crop-header-iter2.txt,crop-footer-iter1.txt,crop-footer-iter2.txt,chrome-header-diff.png,chrome-footer-diff.png}",
+    "stardust/replica/motion/404.json",
+    "stardust/replica/motion/404-360.json",
+    "stardust/replica/progress.404.json"
+  ],
+  "finalGateBy": "coordinator",
+  "finalGateAt": "2026-09-17T16:34:31.975Z"
+}

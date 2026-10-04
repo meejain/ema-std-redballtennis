@@ -1,0 +1,155 @@
+/* stardust replica — play archetype (program page). Every value lifted from the live computed styles
+   (stardust/replica/capture/lift-play-{1440,360}.json) and the source CSS (capture/css/ALL-RULES.txt).
+   Model, not resolved px: AEM 12-col percentages, gutters 30px desktop / 8px mobile (≤767px),
+   component columns carry 8px top/bottom padding unless the container says padding-*-none. */
+
+body.redball-editable-page { overflow-x: hidden; overflow-y: auto; } /* live body: overflow hidden auto (1500px iframe) */
+
+.page-play { font-family: var(--font-body); font-size: 16px; line-height: 22.8571px; color: var(--color-body); }
+
+/* ---- AEM component primitives (type ramp + .cmp-text base live in canon.css) ---- */
+.page-play .cmp-text--center > * { text-align: center; }
+.page-play .t-center { text-align: center; }
+.page-play .text-col, .page-play .button-col, .page-play .image-col, .page-play .separator { padding: 8px 0; }
+.page-play .separator hr { display: block; height: 0; margin: 0; border: 0; border-top: 1px solid #fff; }
+.page-play .separator--transparent hr { margin: 20px 0; border-color: transparent; }
+.page-play .cmp-image__image { display: block; width: 100%; height: auto; }
+
+/* ---- 1. hero ---- */
+.band--hero { padding-bottom: 8px; }
+.hero__grid { display: flex; flex-wrap: wrap; align-items: center; }
+.hero__copy { width: 66.66666667%; padding: 64px 30px; }
+.hero__copy-grid { display: flex; flex-wrap: wrap; align-items: center; }
+.hero__title-col { width: 87.5%; display: flex; flex-wrap: wrap; align-items: center; }
+.hero__title-inner { width: 100%; display: flex; flex-wrap: wrap; align-items: center; }
+.hero__title { width: calc(100% - 40px); margin: 0 20px; }
+.page-play .hero__title, .page-play .hero__title h1 { color: #0a2396; }
+.page-play .hero__red { font-family: var(--font-display); color: #c80f2e; } /* live inline style on the span (usta common gives every span Graphik Regular) */
+.hero__tagline { display: none; }
+.hero__tagline p { font-size: 28px; }
+.hero__photo-mobile { display: none; }
+.hero__lede { width: calc(100% - 40px); margin: 0 20px; }
+.hero__lede-p { font-size: 32px; line-height: 34px; color: #000; }
+.hero__photo { width: 33.33333333%; align-self: stretch; }
+.hero__photo-inner { height: 100%; padding: 224px 0; background: url("/stardust/current/assets/media/rbt-play-v1-50b374.jpg") 50% 50% / cover no-repeat; }
+.hero__photo-spacer { margin: 32px 0; padding: 8px 0; height: 16px; }
+
+/* ---- 2. promo ---- */
+.band--promo.red-stripe { padding-bottom: 0; } /* live: padding-bottom-none wins over the stripe wrapper pad */
+.promo__inner { padding: 32px 0 64px; }
+.promo__grid { display: flex; flex-wrap: wrap; justify-content: space-around; }
+.promo__grid > * { margin: auto; }
+.promo__text { width: calc(91.66666667% - 30px); }
+.page-play .promo__copy, .page-play .promo__copy h2 { color: #0a2396; }
+.separator--full { width: 100%; }
+.promo__cta-col { width: calc(16.66666667% - 30px); }
+.promo__cta { display: flex; min-width: max-content; width: 100%; max-width: none; background-color: #0a2396; }
+
+/* ---- 3. spacer / 4. video ---- */
+.spacer__inner { padding: 8px 0; }
+.band--video { padding: 8px 0; }
+.iframealignment { clear: both; padding: 20px 0; }
+.iframeEmbedded { text-align: center; margin: auto; }
+.iframeEmbedded iframe { border: 0; vertical-align: baseline; }
+.iframe-bottom-spacer { height: 30px; }
+
+/* ---- 5. how to play / score ---- */
+.band--howto { padding-bottom: 8px; }
+.howto__bg { background: #0a2396 url("/stardust/current/assets/media/host-play-bg-33c81e.jpg") 50% 50% / cover no-repeat; }
+.howto__inner { max-width: 1200px; margin: 0 auto; padding-bottom: 8px; }
+.howto__content { display: flex; flex-wrap: wrap; padding: 64px 0; }
+.howto__col { width: 50%; padding-bottom: 8px; }
+.howto__col-inner { padding: 32px 0; }
+.howto__grid { display: flex; flex-wrap: wrap; justify-content: space-around; }
+.howto__grid > * { margin: auto; }
+.howto__image-col { width: 100%; padding: 8px 0; }
+.howto__image-inner { display: flex; flex-wrap: wrap; }
+.howto__image-inner .image-col { width: 20%; margin: auto; }
+.howto__text { width: calc(66.66666667% - 30px); }
+.page-play .howto__copy, .page-play .howto__copy h2 { color: #fff; }
+
+/* ---- 6. what you need / where to play + newsletter ---- */
+.band--need { padding-top: 8px; }
+.band--need.red-stripe { padding-bottom: 0; }
+.need__outer { padding-bottom: 32px; }
+.need__stripe { padding: 8px 0; }
+.need__center { max-width: 1200px; margin: 0 auto; padding: 8px 0; }
+.need__center-inner { padding: 32px 0 64px; }
+.need__grid { display: flex; flex-wrap: wrap; justify-content: space-around; }
+.need__grid > * { margin: auto; }
+.need__heading { width: calc(83.33333333% - 30px); }
+.page-play .need__copy--red, .page-play .need__copy--red h2 { color: #c80f2f; }
+.page-play .need__black { color: #000; }
+.need__item { width: 41.66666667%; }
+.need__item-inner { padding: 32px 0; }
+.need__item-grid { display: flex; flex-wrap: wrap; justify-content: space-around; }
+.need__item-grid > * { margin: auto; }
+.need__icon-col { width: calc(80% - 30px); }
+.need__icon { width: 40%; margin: 0 auto; }
+.need__item-text { width: calc(100% - 30px); }
+.page-play .need__item-text h3 { color: #000; }
+.need__separator, .need__cta-col { width: calc(100% - 30px); }
+.need__cta { display: flex; min-width: 280px; width: max-content; margin: 0 auto; background-color: #c80f2e; color: #fff; }
+
+/* newsletter (v-lead-generation in-page view, values lifted from the vue clientlib) */
+.leadgeneration { padding: 8px 0; }
+.v-lead-generation__in-page-view { background-color: transparent; padding: 30px; }
+.v-lead-generation__in-page-view .v-lead-generation-form { display: flex; flex-direction: column; gap: 8px; padding: 20px; margin: 0 auto; }
+.v-lead-generation-form__icon { display: block; width: 62px; height: 62px; }
+.v-lead-generation-form__title { font-family: var(--font-display); font-weight: 400; font-size: 56px; line-height: 50.5px; color: #000; margin: 10px 0; }
+.v-lead-generation-form__cta-text p { font-family: var(--font-semibold); font-weight: 400; font-size: 16px; line-height: 22px; color: #000; }
+.v-lead-generation-form .inputs-row { display: flex; align-items: end; gap: 30px; margin-top: 20px; }
+.v-lead-generation-form .inputs-row .text-input { width: 40%; margin-top: 30px; }
+.v-base-input { position: relative; }
+.v-base-input label { display: inline-block; width: 100%; max-width: 100%; margin: 0; font-family: var(--font-semibold); font-weight: 400; font-size: 14px; line-height: 18px; text-transform: uppercase; text-align: left; color: #000; }
+.v-lead-generation-form__asterisk { color: #c8102e; margin-right: 2px; }
+.v-base-input__wrapper { position: relative; }
+.v-base-input__wrapper input { display: inline-block; width: 100%; height: 56px; margin: 12px 0 0; padding: 16px; font-family: var(--font-body); font-size: 16px; line-height: 24px; color: #000; background: #fff; border: 1px solid #565656; border-radius: 0; }
+.v-lead-generation-form__buttons .subscribe-button { display: flex; align-items: center; justify-content: center; width: max-content; min-width: 280px; height: 56px; padding: 14px; font-family: var(--font-semibold); font-weight: normal; font-size: 18px; line-height: 20px; letter-spacing: 1px; text-transform: uppercase; text-align: center; color: #fff; background-color: #000; border: 0; border-radius: 9999px; overflow: hidden; }
+.v-lead-generation-form__buttons .subscribe-button:disabled { opacity: .5; cursor: not-allowed; }
+.v-lead-generation-form__terms-description { margin-top: 30px; }
+.v-lead-generation-form__terms-description p { font-family: var(--font-body); color: #000; font-weight: 400; font-size: 16px; line-height: 22px; text-align: left; }
+.v-lead-generation-form__terms-description p a { color: #0357b8; }
+
+/* ---- mobile (source @media (max-width:767px)) ---- */
+@media (max-width: 767px) {
+  .hero__copy { width: 100%; padding: 32px 8px; }
+  .hero__title-col { width: 100%; }
+  .hero__photo-mobile { display: block; width: 100%; }
+  .hero__photo-mobile-inner { padding-top: 112px; background: url("/stardust/current/assets/media/rbt-play-v1-50b374.jpg") 50% 50% / cover no-repeat; }
+  .hero__photo-mobile .separator { width: calc(100% - 40px); margin: 0 20px; }
+  .hero__photo { display: none; }
+
+  .promo__inner { padding: 16px 0 32px; }
+  .promo__text { width: calc(91.66666667% - 8px); }
+  .promo__cta-col { width: calc(16.66666667% - 8px); }
+
+  .iframeEmbedded iframe { width: 100%; }
+
+  .howto__inner { max-width: calc(100% - 24px); }
+  .howto__content { padding: 32px 0; }
+  .howto__col { width: 100%; }
+  .howto__col-inner { padding: 16px 0; }
+  .howto__image-inner .image-col { width: calc(33.33333333% - 8px); }
+  .howto__text { width: calc(100% - 8px); }
+
+  .band--need { margin-top: -0.05px; } /* sub-pixel parity: live band top 3317.766 vs 3317.781 (LayoutUnit accumulation) — without it the ZIP input/legal copy snap 1px lower (regiondiff dy=1 → 0 px) */
+  .need__outer { padding-bottom: 16px; }
+  .need__center { max-width: calc(100% - 24px); }
+  .need__center-inner { padding: 16px 0 32px; }
+  .need__heading { width: calc(100% - 8px); }
+  .need__item { width: 50%; }
+  .need__item-inner { padding: 16px 0; }
+  .need__icon-col { width: calc(66.66666667% - 8px); }
+  .need__item-text { width: calc(100% - 8px); }
+  .need__separator, .need__cta-col { width: calc(100% - 8px); }
+  .need__cta { width: 100%; max-width: 280px; }
+
+  .v-lead-generation-form__title { margin-top: 0; }
+  .v-lead-generation-form .inputs-row { flex-direction: column; align-items: center; gap: 20px; margin-top: 0; }
+  .v-lead-generation-form .inputs-row .text-input { width: 100%; }
+  .v-lead-generation-form .inputs-row .v-lead-generation-form__buttons { width: 100%; display: flex; flex-direction: column; margin-top: 30px; align-items: center; }
+  .v-lead-generation-form__buttons .subscribe-button { width: 100%; max-width: 280px; min-width: 0; }
+  .v-lead-generation-form__terms-description { margin-top: 18px; }
+  .v-lead-generation-form__terms-description p { font-size: 14px; line-height: 18px; }
+}

@@ -1,0 +1,2 @@
+crop y4147+242: 2194 px = 0.63% diff → match 99.37% — PASS
+  texture: 97.2% thick → thick (blocks/bands — misalignment or missing paint)

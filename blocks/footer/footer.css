@@ -1,20 +1,168 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+/* footer — redballtennis.com footer experience fragment, ported 1:1 from
+   stardust/canon/canon.css (.footer-xf). Live geometry: 242px at 1440, 319px at 360.
+   Authored <ul>/<a>/<p> are styled through the template wrappers (EW2).
+   stylelint: live BEM class names and AEM-grid fractions are kept on purpose. */
+/* stylelint-disable selector-class-pattern, no-descending-specificity, number-max-precision */
+
+/* the live footer wrapper is transparent; .footer-xf paints the ground (#31 — no box styles
+   on the live <footer> host itself; no reservation needed below the fold) */
+footer .footer-xf {
+  display: flow-root;
+  background-color: var(--color-footer-blue);
+  padding-top: 32px;
+  padding-bottom: 64px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 22.8571px;
+  color: var(--color-body);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer-xf .footer-logo {
+  display: block;
+  margin-left: 8.33333333%;
+  width: 83.33333333%;
+  margin-bottom: 20px;
 }
 
-footer .footer p {
+footer .footer-xf .footer-logo .cmp-image {
+  width: 100px;
+}
+
+footer .footer-xf .footer-logo a:any-link {
+  display: block;
+}
+
+footer .footer-xf .footer-logo img {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+/* live div.footer (renamed — see footer.js) */
+footer .footer-xf .footer-main {
+  display: block;
+  margin-left: 8.33333333%;
+  width: 75%;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* the authored legal-links <ul> (live .footer-links__sites li.nav-link a) */
+footer .footer-links nav ul {
+  display: flex;
+  gap: 30px;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+footer .footer-links nav li a:any-link {
+  color: #fff;
+  font-family: var(--font-semibold);
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+}
+
+footer .footer-links nav li a:any-link:hover {
+  color: var(--color-hover-lime);
+}
+
+footer .footer-links__social {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+footer .footer-xf .footer-tag {
+  display: none;
+  margin-left: 8.33333333%;
+  width: 83.33333333%;
+}
+
+footer .footer-xf .footer-tag .cmp-text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  text-align: left;
+}
+
+footer .footer-xf .footer-tag .cmp-text p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+}
+
+footer .footer-xf .separator {
+  display: block;
+  width: 100%;
+}
+
+footer .footer-xf .separator.separator--mobile {
+  display: none;
+}
+
+footer .footer-xf .separator hr {
+  display: block;
+  height: 0;
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid transparent;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+footer .footer-xf .separator--mobile hr {
+  margin: 7px 0;
+}
+
+@media (width <= 1023px) {
+  footer .footer-xf {
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+
+  footer .footer-xf .separator.separator--mobile {
+    display: block;
+  }
+
+  footer .footer-xf .footer-main {
+    width: 75%;
+  }
+
+  footer .footer-links {
+    flex-direction: column;
+    gap: 32px;
+    align-items: start;
+  }
+
+  footer .footer-links nav ul {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  footer .footer-links nav li a:any-link {
+    font-size: 24px;
+  }
+
+  footer .footer-xf .footer-tag {
+    display: block;
+  }
+}
+
+@media (width <= 767px) {
+  footer .footer-links nav ul {
+    gap: 16px;
+  }
+
+  footer .footer-links nav li a:any-link {
+    font-size: 18px;
   }
 }

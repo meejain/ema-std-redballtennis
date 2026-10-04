@@ -1,0 +1,469 @@
+
+Visual diff @ 360px (profile "generic") — screenshots in stardust/replica/gates/host-360/vdiff/
+
+build red flags (advisory): none
+
+Full metrics JSON (compare source vs build: heading colors, eyebrow colors, image dims, full-bleed):
+{
+ "source": {
+  "viewport": 360,
+  "blankRender": false,
+  "mainHeight": 3353,
+  "textLen": 1291,
+  "images": [
+   {
+    "src": "Hamburger-Menu-White.svg",
+    "natural": "24x24",
+    "rendered": "24x24",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Cancel_Bold_White.svg",
+    "natural": "18x18",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Sites%20Icon.svg",
+    "natural": "170x28",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg.png",
+    "natural": "528x331",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-logo-mob.png",
+    "natural": "60x44",
+    "rendered": "60x44",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "rbt-host-v1.jpeg",
+    "natural": "512x388",
+    "rendered": "304x230",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "man.png",
+    "natural": "512x388",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "man.png",
+    "natural": "512x388",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "on-the-court.png",
+    "natural": "512x393",
+    "rendered": "292x224",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "in-the-wild-text-and-image.png",
+    "natural": "512x393",
+    "rendered": "340x261",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-icons-03.png",
+    "natural": "512x512",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-icons-01.png",
+    "natural": "512x512",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-icons-02.png",
+    "natural": "512x512",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "rbt-favicon-180x180.png",
+    "natural": "180x180",
+    "rendered": "62x62",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg.png",
+    "natural": "128x80",
+    "rendered": "100x63",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "3610",
+    "natural": "0x0",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "USTA_1c-black_RGB.png",
+    "natural": "1920x530",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "powered_by_logo.svg",
+    "natural": "568x53",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   }
+  ],
+  "headings": [
+   {
+    "tag": "h1",
+    "text": "This Is Your Game",
+    "color": "rgb(10, 35, 150)",
+    "fontSize": "54px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h2",
+    "text": "REDESIGNED FOR YOU",
+    "color": "rgb(10, 35, 150)",
+    "fontSize": "44px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h2",
+    "text": "Helpful Links",
+    "color": "rgb(10, 35, 150)",
+    "fontSize": "44px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h3",
+    "text": "Resource Library",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "36px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h3",
+    "text": "Program Implementation",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "36px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h3",
+    "text": "Marketing Materials",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "36px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   }
+  ],
+  "eyebrows": [
+   {
+    "text": ">",
+    "color": "rgb(255, 255, 255)"
+   },
+   {
+    "text": "*",
+    "color": "rgb(200, 16, 46)"
+   },
+   {
+    "text": "*",
+    "color": "rgb(200, 16, 46)"
+   }
+  ],
+  "flushText": [],
+  "contentBoxes": [
+   {
+    "sel": "cmp-text",
+    "width": 304,
+    "left": 28
+   },
+   {
+    "sel": "cmp-text",
+    "width": 304,
+    "left": 28
+   },
+   {
+    "sel": "cmp-text",
+    "width": 322,
+    "left": 19
+   },
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   },
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   },
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   },
+   {
+    "sel": "v-lead-generation-form__cta-text",
+    "width": 260,
+    "left": 50
+   },
+   {
+    "sel": "v-lead-generation-form__terms-description",
+    "width": 260,
+    "left": 50
+   }
+  ]
+ },
+ "build": {
+  "viewport": 360,
+  "blankRender": false,
+  "mainHeight": 3354,
+  "textLen": 1291,
+  "images": [
+   {
+    "src": "Sites-Icon-4d7f1c.svg",
+    "natural": "170x28",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Hamburger-Menu-White-339cdd.svg",
+    "natural": "24x24",
+    "rendered": "24x24",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Cancel_Bold_White-4f3fe8.svg",
+    "natural": "18x18",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg-04927f.png",
+    "natural": "528x331",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-logo-mob-c70708.png",
+    "natural": "60x44",
+    "rendered": "60x44",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "rbt-host-v1-455e8d.jpeg",
+    "natural": "655x497",
+    "rendered": "304x231",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "man-430c35.png",
+    "natural": "654x496",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "man-6f51c2.png",
+    "natural": "654x496",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "on-the-court-5fd7d2.png",
+    "natural": "512x393",
+    "rendered": "292x224",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "in-the-wild-text-and-image-1856b0.png",
+    "natural": "512x393",
+    "rendered": "340x261",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-icons-03-f424a0.png",
+    "natural": "588x588",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-icons-01-66de25.png",
+    "natural": "588x588",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-icons-02-7dd0e7.png",
+    "natural": "588x588",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "rbt-favicon-180x180-d1914d.png",
+    "natural": "180x180",
+    "rendered": "62x62",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg-d7e509.png",
+    "natural": "128x80",
+    "rendered": "100x63",
+    "stretched": false,
+    "failedToLoad": false
+   }
+  ],
+  "headings": [
+   {
+    "tag": "h1",
+    "text": "This Is Your Game",
+    "color": "rgb(10, 35, 150)",
+    "fontSize": "54px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h2",
+    "text": "REDESIGNED FOR YOU",
+    "color": "rgb(10, 35, 150)",
+    "fontSize": "44px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h2",
+    "text": "Helpful Links",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "44px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h3",
+    "text": "Resource Library",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "36px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h3",
+    "text": "Program Implementation",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "36px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   },
+   {
+    "tag": "h3",
+    "text": "Marketing Materials",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "36px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   }
+  ],
+  "eyebrows": [
+   {
+    "text": ">",
+    "color": "rgb(255, 255, 255)"
+   },
+   {
+    "text": "*",
+    "color": "rgb(200, 16, 46)"
+   },
+   {
+    "text": "*",
+    "color": "rgb(200, 16, 46)"
+   }
+  ],
+  "flushText": [],
+  "contentBoxes": [
+   {
+    "sel": "cmp-text",
+    "width": 304,
+    "left": 28
+   },
+   {
+    "sel": "cmp-text",
+    "width": 304,
+    "left": 28
+   },
+   {
+    "sel": "cmp-text",
+    "width": 322,
+    "left": 19
+   },
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   },
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   },
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   },
+   {
+    "sel": "v-lead-generation-form__cta-text",
+    "width": 260,
+    "left": 50
+   },
+   {
+    "sel": "v-lead-generation-form__terms-description",
+    "width": 260,
+    "left": 50
+   }
+  ]
+ }
+}

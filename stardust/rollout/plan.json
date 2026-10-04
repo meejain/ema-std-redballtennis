@@ -1,0 +1,201 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/plan",
+    "writtenAt": "2026-09-17T17:01:47.542Z",
+    "readArtifacts": [
+      "stardust/rollout/coverage"
+    ],
+    "stardustVersion": "0.0.0"
+  },
+  "generatedAt": "2026-09-17T17:01:47.542Z",
+  "fragments": [],
+  "deliveryOrder": [
+    "host",
+    "play",
+    "home",
+    "404"
+  ],
+  "steps": [
+    {
+      "slug": "host",
+      "path": "/host",
+      "templateId": "program",
+      "status": "pending",
+      "isRepresentative": true,
+      "convert": [
+        {
+          "id": "utility-bar",
+          "edsBlockName": "utility-bar"
+        },
+        {
+          "id": "site-nav",
+          "edsBlockName": "site-nav"
+        },
+        {
+          "id": "breadcrumb",
+          "edsBlockName": "breadcrumb"
+        },
+        {
+          "id": "site-footer",
+          "edsBlockName": "site-footer"
+        },
+        {
+          "id": "hero-split",
+          "edsBlockName": "hero-split"
+        },
+        {
+          "id": "promo-band",
+          "edsBlockName": "promo-band"
+        },
+        {
+          "id": "prop-cards",
+          "edsBlockName": "prop-cards"
+        },
+        {
+          "id": "signup-form",
+          "edsBlockName": "signup-form"
+        }
+      ],
+      "reuse": []
+    },
+    {
+      "slug": "play",
+      "path": "/play",
+      "templateId": "program",
+      "status": "pending",
+      "isRepresentative": true,
+      "convert": [
+        {
+          "id": "icon-columns",
+          "edsBlockName": "icon-columns"
+        },
+        {
+          "id": "centered-cta-band",
+          "edsBlockName": "centered-cta-band"
+        }
+      ],
+      "reuse": [
+        {
+          "id": "utility-bar",
+          "edsBlockName": "utility-bar",
+          "convertedBy": "host"
+        },
+        {
+          "id": "site-nav",
+          "edsBlockName": "site-nav",
+          "convertedBy": "host"
+        },
+        {
+          "id": "breadcrumb",
+          "edsBlockName": "breadcrumb",
+          "convertedBy": "host"
+        },
+        {
+          "id": "site-footer",
+          "edsBlockName": "site-footer",
+          "convertedBy": "host"
+        },
+        {
+          "id": "hero-split",
+          "edsBlockName": "hero-split",
+          "convertedBy": "host"
+        },
+        {
+          "id": "promo-band",
+          "edsBlockName": "promo-band",
+          "convertedBy": "host"
+        },
+        {
+          "id": "signup-form",
+          "edsBlockName": "signup-form",
+          "convertedBy": "host"
+        }
+      ]
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "templateId": "landing",
+      "status": "pending",
+      "isRepresentative": false,
+      "convert": [],
+      "reuse": [
+        {
+          "id": "utility-bar",
+          "edsBlockName": "utility-bar",
+          "convertedBy": "host"
+        },
+        {
+          "id": "site-nav",
+          "edsBlockName": "site-nav",
+          "convertedBy": "host"
+        },
+        {
+          "id": "breadcrumb",
+          "edsBlockName": "breadcrumb",
+          "convertedBy": "host"
+        },
+        {
+          "id": "site-footer",
+          "edsBlockName": "site-footer",
+          "convertedBy": "host"
+        },
+        {
+          "id": "hero-split",
+          "edsBlockName": "hero-split",
+          "convertedBy": "host"
+        },
+        {
+          "id": "promo-band",
+          "edsBlockName": "promo-band",
+          "convertedBy": "host"
+        },
+        {
+          "id": "prop-cards",
+          "edsBlockName": "prop-cards",
+          "convertedBy": "host"
+        },
+        {
+          "id": "signup-form",
+          "edsBlockName": "signup-form",
+          "convertedBy": "host"
+        }
+      ]
+    },
+    {
+      "slug": "404",
+      "path": "/404",
+      "templateId": "static",
+      "status": "pending",
+      "isRepresentative": false,
+      "convert": [],
+      "reuse": [
+        {
+          "id": "utility-bar",
+          "edsBlockName": "utility-bar",
+          "convertedBy": "host"
+        },
+        {
+          "id": "site-nav",
+          "edsBlockName": "site-nav",
+          "convertedBy": "host"
+        },
+        {
+          "id": "breadcrumb",
+          "edsBlockName": "breadcrumb",
+          "convertedBy": "host"
+        },
+        {
+          "id": "site-footer",
+          "edsBlockName": "site-footer",
+          "convertedBy": "host"
+        },
+        {
+          "id": "centered-cta-band",
+          "edsBlockName": "centered-cta-band",
+          "convertedBy": "play"
+        }
+      ]
+    }
+  ]
+}

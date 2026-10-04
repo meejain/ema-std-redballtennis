@@ -1,0 +1,8 @@
+/* stardust canon — brand faces, family names exactly as the live site declares them.
+   Weight is chosen by FAMILY (Regular vs Semibold), all faces are font-weight: normal — a <b>
+   inside "Graphik Regular" renders faux-bold, exactly as live. Files: first-party self-hosted
+   (see stardust/direction.md § Named assumptions #3 — licence decision flagged to the user). */
+@font-face { font-family: "USTA Sans"; src: url("/stardust/current/assets/fonts/USTASans-Bold.otf") format("opentype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Graphik Regular"; src: url("/stardust/current/assets/fonts/Graphik-Regular-App.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Graphik Semibold"; src: url("/stardust/current/assets/fonts/Graphik-Semibold-App.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Graphik XXCond Bold"; src: url("/stardust/current/assets/fonts/GraphikXXCondensed-Bold-App.woff2") format("woff2"); font-weight: normal; font-style: normal; }

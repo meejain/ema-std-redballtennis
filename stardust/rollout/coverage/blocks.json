@@ -1,0 +1,246 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/blocks",
+    "writtenAt": "2026-09-17T17:01:47.499Z",
+    "readArtifacts": [
+      "stardust/rollout/coverage/pages.json"
+    ],
+    "stardustVersion": "0.0.0"
+  },
+  "generatedAt": "2026-09-17T19:55:02.869Z",
+  "blocks": [
+    {
+      "id": "breadcrumb",
+      "label": "breadcrumb",
+      "kind": "module",
+      "signature": "module:breadcrumb",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program",
+        "static"
+      ],
+      "usedByPages": [
+        "404",
+        "home",
+        "host",
+        "play"
+      ],
+      "instanceCount": 4,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "header",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T17:09:05.163Z"
+      }
+    },
+    {
+      "id": "centered-cta-band",
+      "label": "centered-cta-band",
+      "kind": "module",
+      "signature": "module:centered-cta-band",
+      "source": null,
+      "usedByTemplates": [
+        "program",
+        "static"
+      ],
+      "usedByPages": [
+        "404",
+        "play"
+      ],
+      "instanceCount": 2,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "default-content",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T17:09:05.247Z"
+      }
+    },
+    {
+      "id": "hero-split",
+      "label": "hero-split",
+      "kind": "module",
+      "signature": "module:hero-split",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program"
+      ],
+      "usedByPages": [
+        "home",
+        "host",
+        "play"
+      ],
+      "instanceCount": 3,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "hero",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T19:55:02.789Z"
+      }
+    },
+    {
+      "id": "icon-columns",
+      "label": "icon-columns",
+      "kind": "module",
+      "signature": "module:icon-columns",
+      "source": null,
+      "usedByTemplates": [
+        "program"
+      ],
+      "usedByPages": [
+        "play"
+      ],
+      "instanceCount": 1,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "columns",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T19:55:02.842Z"
+      }
+    },
+    {
+      "id": "promo-band",
+      "label": "promo-band",
+      "kind": "module",
+      "signature": "module:promo-band",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program"
+      ],
+      "usedByPages": [
+        "home",
+        "host",
+        "play"
+      ],
+      "instanceCount": 3,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "default-content",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T17:09:05.216Z"
+      }
+    },
+    {
+      "id": "prop-cards",
+      "label": "prop-cards",
+      "kind": "module",
+      "signature": "module:prop-cards",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program"
+      ],
+      "usedByPages": [
+        "home",
+        "host"
+      ],
+      "instanceCount": 2,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "cards",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T19:55:02.815Z"
+      }
+    },
+    {
+      "id": "signup-form",
+      "label": "signup-form",
+      "kind": "module",
+      "signature": "module:signup-form",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program"
+      ],
+      "usedByPages": [
+        "home",
+        "host",
+        "play"
+      ],
+      "instanceCount": 3,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "signup-form",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T19:55:02.869Z"
+      }
+    },
+    {
+      "id": "site-footer",
+      "label": "site-footer",
+      "kind": "module",
+      "signature": "module:site-footer",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program",
+        "static"
+      ],
+      "usedByPages": [
+        "404",
+        "home",
+        "host",
+        "play"
+      ],
+      "instanceCount": 4,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "footer",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T17:09:05.189Z"
+      }
+    },
+    {
+      "id": "site-nav",
+      "label": "site-nav",
+      "kind": "module",
+      "signature": "module:site-nav",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program",
+        "static"
+      ],
+      "usedByPages": [
+        "404",
+        "home",
+        "host",
+        "play"
+      ],
+      "instanceCount": 4,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "header",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T17:09:05.137Z"
+      }
+    },
+    {
+      "id": "utility-bar",
+      "label": "utility-bar",
+      "kind": "module",
+      "signature": "module:utility-bar",
+      "source": null,
+      "usedByTemplates": [
+        "landing",
+        "program",
+        "static"
+      ],
+      "usedByPages": [
+        "404",
+        "home",
+        "host",
+        "play"
+      ],
+      "instanceCount": 4,
+      "delivery": {
+        "status": "converted",
+        "edsBlockName": "header",
+        "blockPath": null,
+        "convertedAt": "2026-09-17T17:09:05.111Z"
+      }
+    }
+  ]
+}

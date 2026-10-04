@@ -1,0 +1,37 @@
+
+Content diff @ 1440px (profile "generic", root ".container.responsivegrid")
+  source: 33 text nodes — 1 headings, 2 eyebrows, 25 CTAs, 5 body; 7 img
+  build: 3 text nodes — 1 headings, 0 eyebrows, 2 CTAs, 0 body; 1 img
+  editable texts (outermost h*/p/ul/ol): source 8 / build 1
+
+Findings: 30 (24 structural 🔴)
+  🔴 MISSING CTA: source cta "TENNISLINK" → https://tennislink.usta.com has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "NATIONAL CAMPUS" → https://www.ustanationalcampus.com has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "NATIONAL TENNIS CENTER" → https://www.ntc.usta.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "PLAYER DEVELOPMENT" → https://www.playerdevelopment.usta.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "SERVE TENNIS" → https://playtennis.usta.com/AccessServeTennis has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "USTA FOUNDATION" → https://www.ustafoundation.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "USTA COACHING" → https://www.ustacoaching.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "USTA" → https://www.usta.com/en/home.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "HOME" → https://www.redballtennis.com/en/home.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "PLAY" → https://www.redballtennis.com/en/home/play.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "HOST" → https://www.redballtennis.com/en/home/host.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "VISIT OUR OTHER SITES" has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "TENNISLINK" → https://tennislink.usta.com has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "NATIONAL CAMPUS" → https://www.ustanationalcampus.com has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "NATIONAL TENNIS CENTER" → https://www.ntc.usta.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "PLAYER DEVELOPMENT" → https://www.playerdevelopment.usta.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "SERVE TENNIS" → https://playtennis.usta.com/AccessServeTennis has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "USTA FOUNDATION" → https://www.ustafoundation.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "USTA COACHING" → https://www.ustacoaching.com/ has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "USTA" → https://www.usta.com/en/home.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "Home" → /en/home.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING EYEBROW: source eyebrow "404" has no build match. A small label present in the source is absent in the build — often a component that classifies its nodes by position rather than content.
+  🔴 MISSING CTA: source cta "Terms & Conditions" → https://www.usta.com/en/home/about-usta/who-we-are/national/usta-terms-of-use.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🔴 MISSING CTA: source cta "Privacy Policy" → https://www.usta.com/en/home/about-usta/who-we-are/national/usta-privacy-policy.html has no build link. A link present in the source is absent in the build — confirm it was intentionally removed.
+  🟡 MISSING BODY: source body "USTA SITES"… not found in build. Source body copy not found in the build — confirm a rewrite vs a drop.
+  🟡 MISSING BODY: source body "VISIT OUR OTHER SITES"… not found in build. Source body copy not found in the build — confirm a rewrite vs a drop.
+  🟡 MISSING BODY: source body "MAIN MENU"… not found in build. Source body copy not found in the build — confirm a rewrite vs a drop.
+  🟡 MISSING BODY: source body "VISIT OUR OTHER SITES submenu"… not found in build. Source body copy not found in the build — confirm a rewrite vs a drop.
+  🟡 MISSING BODY: source body "#redballtennis"… not found in build. Source body copy not found in the build — confirm a rewrite vs a drop.
+  🟡 EDITABLE COUNT: build has 1 outermost editable element(s) vs 8 in the source — fewer outermost editable elements after decoration usually means authored elements were rebuilt/merged — see deploy SKILL.md § Experience Workspace editability contract (run ew-editability-probe.mjs on the build URL for the per-block verdict).

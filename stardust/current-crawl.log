@@ -1,0 +1,13 @@
+[crawl] favicon captured: assets/favicon.ico (https://www.redballtennis.com/etc.clientlibs/redball/components/structure/page/clientlibs/resources/icons/favicon.ico?v=2)
+[crawl] technique=headless pages=7
+[crawl] OK   en-home-play-html  data-endpoints:3 HYDRATED
+[crawl] OK   en-home-free-racquet-pack-html  data-endpoints:3 HYDRATED
+[crawl] OK   en-home-html  data-endpoints:3 HYDRATED
+[crawl] OK   en-home-host-html  data-endpoints:3 HYDRATED
+[crawl] OK   en-home-stay-current-national-usta-awards-wheelchair-tennis-grants-html  data-endpoints:3 HYDRATED
+[crawl] OK   en-home-404-html  data-endpoints:3 HYDRATED
+[crawl] OK   en-home-confirmation-html  data-endpoints:1
+[crawl] DUP  en-home-free-racquet-pack-html  DUP-OF:en-home-html
+[crawl] DUP  en-home-stay-current-national-usta-awards-wheelchair-tennis-grants-html  DUP-OF:en-home-html
+[crawl] dynamic surface (reach): 4 same-site data endpoints, 0 pages with a search form, 6 hydrated — depth + classification: stardust:dynamics
+[crawl] done. 7/7 captured, 0 failed. log: stardust/current/_crawl-log.json

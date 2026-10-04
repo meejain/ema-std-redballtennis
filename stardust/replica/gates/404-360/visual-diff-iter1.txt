@@ -1,0 +1,199 @@
+
+Visual diff @ 360px (profile "generic") — screenshots in stardust/replica/gates/404-360/vdiff/
+
+build red flags (advisory): none
+
+Full metrics JSON (compare source vs build: heading colors, eyebrow colors, image dims, full-bleed):
+{
+ "source": {
+  "viewport": 360,
+  "blankRender": false,
+  "mainHeight": 795,
+  "textLen": 62,
+  "images": [
+   {
+    "src": "Hamburger-Menu-White.svg",
+    "natural": "24x24",
+    "rendered": "24x24",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Cancel_Bold_White.svg",
+    "natural": "18x18",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Sites%20Icon.svg",
+    "natural": "170x28",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg.png",
+    "natural": "528x331",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-logo-mob.png",
+    "natural": "60x44",
+    "rendered": "60x44",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-circle.svg",
+    "natural": "238x238",
+    "rendered": "238x238",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg.png",
+    "natural": "128x80",
+    "rendered": "100x63",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "3610",
+    "natural": "0x0",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "USTA_1c-black_RGB.png",
+    "natural": "1920x530",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "powered_by_logo.svg",
+    "natural": "568x53",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   }
+  ],
+  "headings": [
+   {
+    "tag": "h2",
+    "text": "Sorry, we couldn't find that pag",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "44px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   }
+  ],
+  "eyebrows": [
+   {
+    "text": ">",
+    "color": "rgb(255, 255, 255)"
+   },
+   {
+    "text": "TAKE ME BACK TO THE HOME",
+    "color": "rgb(255, 255, 255)"
+   }
+  ],
+  "flushText": [],
+  "contentBoxes": [
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   }
+  ]
+ },
+ "build": {
+  "viewport": 360,
+  "blankRender": false,
+  "mainHeight": 795,
+  "textLen": 62,
+  "images": [
+   {
+    "src": "Sites-Icon-4d7f1c.svg",
+    "natural": "170x28",
+    "rendered": "0x0",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Hamburger-Menu-White-339cdd.svg",
+    "natural": "24x24",
+    "rendered": "24x24",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "Cancel_Bold_White-4f3fe8.svg",
+    "natural": "18x18",
+    "rendered": "24x24",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg-04927f.png",
+    "natural": "528x331",
+    "rendered": "0x0",
+    "stretched": 0,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-logo-mob-c70708.png",
+    "natural": "60x44",
+    "rendered": "60x44",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-circle-5e1c21.svg",
+    "natural": "238x238",
+    "rendered": "238x238",
+    "stretched": false,
+    "failedToLoad": false
+   },
+   {
+    "src": "red-ball-tennis-wbg-d7e509.png",
+    "natural": "128x80",
+    "rendered": "100x63",
+    "stretched": false,
+    "failedToLoad": false
+   }
+  ],
+  "headings": [
+   {
+    "tag": "h2",
+    "text": "Sorry, we couldn't find that pag",
+    "color": "rgb(0, 0, 0)",
+    "fontSize": "44px",
+    "family": "Graphik XXCond Bold",
+    "fontLoaded": true
+   }
+  ],
+  "eyebrows": [
+   {
+    "text": ">",
+    "color": "rgb(255, 255, 255)"
+   },
+   {
+    "text": "TAKE ME BACK TO THE HOME",
+    "color": "rgb(255, 255, 255)"
+   }
+  ],
+  "flushText": [],
+  "contentBoxes": [
+   {
+    "sel": "cmp-text",
+    "width": 292,
+    "left": 34
+   }
+  ]
+ }
+}

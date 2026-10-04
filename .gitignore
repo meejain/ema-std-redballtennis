@@ -11,3 +11,13 @@ helix-importer-ui
 # Ensure these files are tracked
 !CLAUDE.md
 !AGENTS.md
+
+# stardust / secrets
+.env
+.env.*
+qa/
+
+# qa script layout shims (symlinks to scripts/*)
+/deploy
+/dynamics
+/replica

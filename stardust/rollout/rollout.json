@@ -1,0 +1,37 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/inventory",
+    "writtenAt": "2026-09-17T17:01:47.468Z",
+    "stardustVersion": "0.0.0"
+  },
+  "target": "aem-eds",
+  "site": {
+    "sourceUrl": "https://www.redballtennis.com/",
+    "da": {
+      "org": "aemcoder",
+      "site": "sdt-redballtennis",
+      "ref": "main"
+    },
+    "liveHost": "https://main--sdt-redballtennis--aemcoder.aem.live",
+    "previewHost": "https://main--sdt-redballtennis--aemcoder.aem.page",
+    "repo": "https://github.com/aemcoder/sdt-redballtennis"
+  },
+  "lastRun": {
+    "at": "2026-09-17T20:05:12.104Z",
+    "pages": {
+      "total": 4,
+      "verified": 4,
+      "deployed": 0,
+      "pending": 0,
+      "contentPending": 0,
+      "stale": 0,
+      "failed": 0
+    },
+    "blocks": {
+      "total": 10,
+      "converted": 10,
+      "pending": 0
+    },
+    "verifyFailures": 0
+  }
+}

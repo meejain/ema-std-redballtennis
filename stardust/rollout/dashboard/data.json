@@ -1,0 +1,129 @@
+{
+  "generatedAt": "2026-09-17T20:05:12.165Z",
+  "target": "aem-eds",
+  "site": {
+    "sourceUrl": "https://www.redballtennis.com/",
+    "liveHost": "https://main--sdt-redballtennis--aemcoder.aem.live"
+  },
+  "stageCount": {
+    "identified": 5,
+    "prototyped": 4,
+    "deployed": 4,
+    "optimised": 1
+  },
+  "stageExclusive": {
+    "identified": 1,
+    "prototyped": 0,
+    "deployed": 3,
+    "optimised": 1
+  },
+  "pages": [
+    {
+      "slug": "home",
+      "path": "/",
+      "stage": "deployed",
+      "templateId": "landing",
+      "isTemplate": true,
+      "openFindings": 1
+    },
+    {
+      "slug": "404",
+      "path": "/404",
+      "stage": "optimised",
+      "templateId": "static",
+      "isTemplate": true,
+      "openFindings": 0
+    },
+    {
+      "slug": "confirmation",
+      "path": "/en/home/confirmation.html",
+      "stage": "identified",
+      "templateId": "unique",
+      "isTemplate": false,
+      "openFindings": 0
+    },
+    {
+      "slug": "host",
+      "path": "/host",
+      "stage": "deployed",
+      "templateId": "program",
+      "isTemplate": true,
+      "openFindings": 1
+    },
+    {
+      "slug": "play",
+      "path": "/play",
+      "stage": "deployed",
+      "templateId": "program",
+      "isTemplate": false,
+      "openFindings": 1
+    }
+  ],
+  "templates": [
+    {
+      "id": "landing",
+      "archetype": "home",
+      "pageCount": 1,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 1,
+        "optimised": 0
+      }
+    },
+    {
+      "id": "program",
+      "archetype": "host",
+      "pageCount": 2,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 2,
+        "optimised": 0
+      }
+    },
+    {
+      "id": "static",
+      "archetype": "404",
+      "pageCount": 1,
+      "stages": {
+        "identified": 0,
+        "prototyped": 0,
+        "deployed": 0,
+        "optimised": 1
+      }
+    }
+  ],
+  "blocks": {
+    "total": 10,
+    "converted": 10
+  },
+  "quality": {
+    "overall": 80,
+    "dimensions": {
+      "brand-tensions": null,
+      "design-ux": null,
+      "accessibility": null,
+      "seo": 90,
+      "content-conversion": null,
+      "ai-search": 70,
+      "cross-page": null
+    },
+    "severity": {
+      "P1": 0,
+      "P2": 4,
+      "P3": 0
+    },
+    "history": [
+      80
+    ]
+  },
+  "findings": {
+    "byFixability": {
+      "platform-migration": 4
+    },
+    "byAutofix": {
+      "pending": 4
+    }
+  }
+}

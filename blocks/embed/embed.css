@@ -1,0 +1,36 @@
+/* embed — the live .iframealignment band (stardust/prototypes/play.css §3–4): 16px spacer
+   container + 8px band padding, 20px inner padding, 1500×900 frame (clipped at 1440), 30px tail. */
+
+.embed {
+  padding: 24px 0 8px;
+  overflow: hidden;
+}
+
+.embed .embed-frame {
+  margin: auto;
+  padding: 20px 0 0;
+  text-align: center;
+}
+
+.embed .embed-frame iframe {
+  width: 1500px;
+  max-width: none;
+  height: 900px;
+  border: 0;
+  vertical-align: baseline;
+}
+
+.embed .embed-spacer {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.embed .embed-source {
+  display: none;
+}
+
+@media (width <= 767px) {
+  .embed .embed-frame iframe {
+    width: 100%;
+  }
+}

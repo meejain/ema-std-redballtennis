@@ -1,0 +1,420 @@
+{
+  "_provenance": {
+    "renderedBy": "playwright",
+    "fetchedAt": "2026-09-17T15:30:23.310Z",
+    "waitMode": "medium",
+    "waitMs": 2500,
+    "httpStatus": 200
+  },
+  "slug": "confirmation",
+  "url": "https://www.redballtennis.com/en/home/confirmation.html",
+  "renderedBy": "playwright",
+  "fetchedAt": "2026-09-17T15:30:23.310Z",
+  "finalUrl": "https://account.usta.com/u/login?state=hKFo2SBmcUYwX3NpZjZyZ09JY1BFRTVUbXVaYTVhQmFtandDN6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJPMEtEeDRyRmJDTmk0MVYydGZrTHRVdTZBaDJlMG1Fo2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc",
+  "title": "Sign In",
+  "description": null,
+  "og": {
+    "title": null,
+    "description": null,
+    "image": null,
+    "type": null
+  },
+  "headings": [
+    {
+      "tag": "h1",
+      "text": "Sign In"
+    }
+  ],
+  "body": [
+    "One USTA Account, All Access. Your USTA account works across all USTA platforms — USTA members are limited to one account each.",
+    "Forgot password?",
+    "Don't have an account? Sign up"
+  ],
+  "codeBlocks": [],
+  "ctas": [
+    {
+      "label": "Enable accessibility",
+      "href": null
+    },
+    {
+      "label": "Sign Up",
+      "href": "/u/signup?state=hKFo2SBmcUYwX3NpZjZyZ09JY1BFRTVUbXVaYTVhQmFtandDN6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJPMEtEeDRyRmJDTmk0MVYydGZrTHRVdTZBaDJlMG1Fo2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc"
+    },
+    {
+      "label": "Not sure if you already have a USTA account? Find it here.",
+      "href": "https://www.usta.com/en/home/search-profile/find-your-account.html"
+    },
+    {
+      "label": "Show password",
+      "href": null
+    },
+    {
+      "label": "Forgot password?",
+      "href": "/u/login/password-reset-start/migration-and-credentials-authentication?state=hKFo2SBmcUYwX3NpZjZyZ09JY1BFRTVUbXVaYTVhQmFtandDN6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJPMEtEeDRyRmJDTmk0MVYydGZrTHRVdTZBaDJlMG1Fo2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc"
+    },
+    {
+      "label": "SIGN IN",
+      "href": null
+    },
+    {
+      "label": "Sign up",
+      "href": "/u/signup?state=hKFo2SBmcUYwX3NpZjZyZ09JY1BFRTVUbXVaYTVhQmFtandDN6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJPMEtEeDRyRmJDTmk0MVYydGZrTHRVdTZBaDJlMG1Fo2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc"
+    },
+    {
+      "label": "Continue with Google",
+      "href": null
+    },
+    {
+      "label": "Continue with Apple",
+      "href": null
+    },
+    {
+      "label": "Continue with Facebook",
+      "href": null
+    }
+  ],
+  "links": [
+    "https://account.usta.com/u/signup?state=hKFo2SBmcUYwX3NpZjZyZ09JY1BFRTVUbXVaYTVhQmFtandDN6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJPMEtEeDRyRmJDTmk0MVYydGZrTHRVdTZBaDJlMG1Fo2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc",
+    "https://www.usta.com/en/home/search-profile/find-your-account.html",
+    "https://account.usta.com/u/login/password-reset-start/migration-and-credentials-authentication?state=hKFo2SBmcUYwX3NpZjZyZ09JY1BFRTVUbXVaYTVhQmFtandDN6Fur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDJPMEtEeDRyRmJDTmk0MVYydGZrTHRVdTZBaDJlMG1Fo2NpZNkgSE45UlJmRDFtNVJQa0FnVDR4WXkwbjF6TXJQeDlXUVc"
+  ],
+  "media": {
+    "imgs": [
+      {
+        "src": "https://www.usta.com/content/dam/redballtennis/logos/red-ball-tennis-wbg.png",
+        "alt": "Redball Tennis Logo",
+        "w": 528,
+        "h": 331
+      },
+      {
+        "src": "https://www.usta.com/content/dam/usta/logos/usta-header-logo.png",
+        "alt": "USTA-DIGITAL-PROD",
+        "w": 185,
+        "h": 40
+      },
+      {
+        "src": "https://www.usta.com/content/dam/redballtennis/okta-side-image/redballtennis-side.jpg",
+        "alt": "",
+        "w": 720,
+        "h": 1375
+      }
+    ],
+    "allImgCount": 3,
+    "cssBackgrounds": [],
+    "modals": [],
+    "videos": [],
+    "iframes": []
+  },
+  "customProps": {
+    "--primary-color": "#000000",
+    "--button-font-color": "#ffffff",
+    "--secondary-button-border-color": "#c9cace",
+    "--social-button-border-color": "#c9cace",
+    "--radio-button-border-color": "#c9cace",
+    "--secondary-button-text-color": "#1e212a",
+    "--link-color": "#0357B8",
+    "--title-font-color": "#1e212a",
+    "--font-default-color": "#1e212a",
+    "--widget-background-color": "#ffffff",
+    "--box-border-color": "#ffffff",
+    "--font-light-color": "#65676e",
+    "--input-text-color": "#000000",
+    "--input-border-color": "#c9cace",
+    "--border-default-color": "#c9cace",
+    "--input-background-color": "#ffffff",
+    "--icon-default-color": "#65676e",
+    "--error-color": "#d03c38",
+    "--error-text-color": "#ffffff",
+    "--success-color": "#13a688",
+    "--base-focus-color": "#0357B8",
+    "--transparency-focus-color": "rgba(3,87,184, 0.15)",
+    "--base-hover-color": "#000000",
+    "--transparency-hover-color": "rgba(0,0,0, 0.1)",
+    "--ulp-captcha-widget-theme": "light",
+    "--default-font-size": "1rem",
+    "--small-font-size": "0.75rem",
+    "--title-font-size": "1.5rem",
+    "--lg-font-size": "1rem",
+    "--xl-font-size": "1.25rem",
+    "--spacing": "0.5rem",
+    "--button-border-width": "1px",
+    "--social-button-border-width": "1px",
+    "--radio-border-width": "1px",
+    "--input-border-width": "1px",
+    "--border-radius-outer": "5px",
+    "--box-border-width": "0px",
+    "--prompt-width": "550px",
+    "--logo-background-color": "#0a2396"
+  },
+  "_signals": {
+    "filteredInterstitials": 0,
+    "distinctHeadings": 1,
+    "mainTextLen": 2554,
+    "realImageCount": 3,
+    "trackingOnlyMedia": false,
+    "spaShellSuspect": false,
+    "screenshotMode": "fullPage"
+  },
+  "dynamic": {
+    "endpoints": [
+      {
+        "method": "GET",
+        "host": "www.redballtennis.com",
+        "path": "/libs/granite/csrf/token.json",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": 22,
+        "hits": 1,
+        "example": "https://www.redballtennis.com/libs/granite/csrf/token.json",
+        "sameSite": false
+      },
+      {
+        "method": "GET",
+        "host": "dpm.demdex.net",
+        "path": "/id",
+        "query": [
+          "d_fieldgroup",
+          "d_nsid",
+          "d_orgid",
+          "d_rtbd",
+          "d_ver",
+          "d_visid_ver",
+          "ts"
+        ],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "status": 200,
+        "bytes": 605,
+        "hits": 2,
+        "example": "https://dpm.demdex.net/id",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "www.google.com",
+        "path": "/ccm/collect",
+        "query": [
+          "apvc",
+          "auid",
+          "dl",
+          "dma",
+          "dr",
+          "dt",
+          "en",
+          "fmt",
+          "frm",
+          "gcd",
+          "gtm",
+          "navt",
+          "npa",
+          "rcb",
+          "rnd",
+          "scrsrc",
+          "tag_exp",
+          "tfd",
+          "tft",
+          "tid",
+          "tids"
+        ],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 200,
+        "bytes": null,
+        "hits": 2,
+        "example": "https://www.google.com/ccm/collect",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "www.google.com",
+        "path": "/rmkt/collect/{n}/",
+        "query": [
+          "async",
+          "auid",
+          "bg",
+          "cv",
+          "data",
+          "dma",
+          "en",
+          "ept",
+          "fmt",
+          "frm",
+          "fst",
+          "gcd",
+          "gcp",
+          "gtm",
+          "guid",
+          "hn",
+          "npa",
+          "pscdl",
+          "random",
+          "rcb",
+          "ref",
+          "tag_exp",
+          "tiba",
+          "u_h",
+          "u_w",
+          "url"
+        ],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 200,
+        "bytes": null,
+        "hits": 2,
+        "example": "https://www.google.com/rmkt/collect/16540420710/",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "ad.doubleclick.net",
+        "path": "/ccm/s/collect",
+        "query": [
+          "auid",
+          "fmt",
+          "gtm"
+        ],
+        "resourceType": "fetch",
+        "contentType": null,
+        "status": 204,
+        "bytes": null,
+        "hits": 1,
+        "example": "https://ad.doubleclick.net/ccm/s/collect",
+        "sameSite": false
+      },
+      {
+        "method": "POST",
+        "host": "account.usta.com",
+        "path": "/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs",
+        "query": [],
+        "resourceType": "xhr",
+        "contentType": "application/json",
+        "status": 201,
+        "bytes": null,
+        "hits": 2,
+        "example": "https://account.usta.com/s6rp3rfJAZ1YarUrcw/YYw9NG9um19YpQ/MigqcywGTg/eEgVYRY/5Tgs",
+        "sameSite": true
+      }
+    ],
+    "thirdPartyScriptHosts": [
+      {
+        "host": "www.redballtennis.com",
+        "count": 15
+      },
+      {
+        "host": "a42cdn.usablenet.com",
+        "count": 7
+      },
+      {
+        "host": "assets.adobedtm.com",
+        "count": 6
+      },
+      {
+        "host": "www.googletagmanager.com",
+        "count": 2
+      },
+      {
+        "host": "connect.facebook.net",
+        "count": 2
+      },
+      {
+        "host": "googleads.g.doubleclick.net",
+        "count": 2
+      },
+      {
+        "host": "maps.googleapis.com",
+        "count": 1
+      },
+      {
+        "host": "ajax.googleapis.com",
+        "count": 1
+      },
+      {
+        "host": "cdn.auth0.com",
+        "count": 1
+      },
+      {
+        "host": "cdn01.basis.net",
+        "count": 1
+      },
+      {
+        "host": "cdn.bttrack.com",
+        "count": 1
+      },
+      {
+        "host": "tag.simpli.fi",
+        "count": 1
+      },
+      {
+        "host": "static.hotjar.com",
+        "count": 1
+      },
+      {
+        "host": "usta.d2.sc.omtrdc.net",
+        "count": 1
+      }
+    ],
+    "truncated": false,
+    "inlineData": [],
+    "globalState": [
+      "dataLayer"
+    ],
+    "frameworkHints": [],
+    "forms": [
+      {
+        "action": "https://account.usta.com/u/login",
+        "hasAction": false,
+        "method": "post",
+        "sameOrigin": true,
+        "fieldCount": 2,
+        "fieldNames": [
+          "username",
+          "password"
+        ],
+        "search": false
+      },
+      {
+        "action": "https://account.usta.com/u/login",
+        "hasAction": false,
+        "method": "post",
+        "sameOrigin": true,
+        "fieldCount": 0,
+        "fieldNames": [],
+        "search": false
+      },
+      {
+        "action": "https://account.usta.com/u/login",
+        "hasAction": false,
+        "method": "post",
+        "sameOrigin": true,
+        "fieldCount": 0,
+        "fieldNames": [],
+        "search": false
+      },
+      {
+        "action": "https://account.usta.com/u/login",
+        "hasAction": false,
+        "method": "post",
+        "sameOrigin": true,
+        "fieldCount": 0,
+        "fieldNames": [],
+        "search": false
+      }
+    ],
+    "ariaLiveRegions": 5,
+    "triggers": [],
+    "mediaIds": [],
+    "summary": {
+      "sameSiteEndpoints": 1,
+      "thirdPartyEndpoints": 5,
+      "thirdPartyScriptHosts": 14,
+      "inlineDataBlobs": 0,
+      "forms": 4,
+      "searchForms": 0,
+      "hydrated": false
+    }
+  },
+  "screenshot": "assets/screenshots/confirmation.png",
+  "renderedHtml": "pages/confirmation.html"
+}

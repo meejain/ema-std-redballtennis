@@ -1,0 +1,272 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:extract",
+    "writtenAt": "2026-09-17T15:42:39.940Z",
+    "stardustVersion": "0.21.1",
+    "notes": [
+      "values lifted from computed styles (stardust/replica/capture/lift-*.json) — crawl.mjs does not aggregate palette/type; agent-authored from the lift",
+      "home-only fields from home.json; cross-page fields aggregated over home, play, host, 404 (confirmation excluded: off-origin login page)"
+    ]
+  },
+  "origins": [
+    {
+      "origin": "https://www.redballtennis.com",
+      "role": "primary",
+      "pages": [
+        "home",
+        "play",
+        "host",
+        "404"
+      ]
+    }
+  ],
+  "logo": {
+    "path": "stardust/current/assets/media/red-ball-tennis-wbg-04927f.png",
+    "source": "img.top-navigation__logo-image--desktop",
+    "alt": "USTA Logo Home",
+    "mobile": "stardust/current/assets/media/red-ball-logo-mob-c70708.png",
+    "footer": "stardust/current/assets/media/red-ball-tennis-wbg-d7e509.png"
+  },
+  "favicon": {
+    "path": "stardust/current/assets/favicon.ico",
+    "appleTouch": "stardust/current/assets/media/rbt-favicon-180x180-d1914d.png"
+  },
+  "palette": [
+    {
+      "role": "primary",
+      "name": "usta-red",
+      "value": "#C80F2F",
+      "computed": "rgb(200, 15, 47)",
+      "sources": [
+        "h1",
+        "span.RED",
+        ".horizontal-bottom-red-stripe",
+        "a.cmp-button (play)"
+      ]
+    },
+    {
+      "role": "secondary",
+      "name": "royal-blue",
+      "value": "#0A2396",
+      "computed": "rgb(10, 35, 150)",
+      "sources": [
+        "nav.top-navigation__main-bar",
+        "h2",
+        "b (subhead)",
+        "a.cmp-button (Shop Now)"
+      ]
+    },
+    {
+      "role": "secondary",
+      "name": "footer-blue",
+      "value": "#092396",
+      "sources": [
+        "footer cmp-container style"
+      ]
+    },
+    {
+      "role": "accent",
+      "name": "link-blue",
+      "value": "#0357B8",
+      "computed": "rgb(3, 87, 184)",
+      "sources": [
+        "a (legal copy)"
+      ]
+    },
+    {
+      "role": "text",
+      "name": "ink",
+      "value": "#000000",
+      "sources": [
+        "p (lede)",
+        "label",
+        "button.subscribe-button bg"
+      ]
+    },
+    {
+      "role": "text",
+      "name": "body-grey",
+      "value": "#333333",
+      "sources": [
+        "body"
+      ]
+    },
+    {
+      "role": "background",
+      "name": "paper",
+      "value": "#FFFFFF",
+      "sources": [
+        "body",
+        "a.cmp-button inverse"
+      ]
+    },
+    {
+      "role": "border",
+      "name": "rule-grey",
+      "value": "#808080",
+      "sources": [
+        "hr.cmp-separator__horizontal-rule"
+      ]
+    },
+    {
+      "role": "border",
+      "name": "field-border",
+      "value": "#565656",
+      "sources": [
+        "input"
+      ]
+    }
+  ],
+  "type": {
+    "headingFamily": "Graphik XXCond Bold",
+    "bodyFamily": "Graphik Regular",
+    "emphasisFamily": "Graphik Semibold",
+    "families": [
+      "Graphik XXCond Bold",
+      "Graphik Regular",
+      "Graphik Semibold",
+      "USTA Sans (declared, unused)"
+    ],
+    "sizes": {
+      "h1": "100px/110px",
+      "h2": "76px/83.6px",
+      "h4": "56px/50.5px",
+      "subhead": "36px/24px b",
+      "lede": "32px/34px",
+      "card": "20px/24px",
+      "body": "16px/22px",
+      "button": "18px/20px",
+      "nav": "16px/25px ls.8px",
+      "crumb": "12px",
+      "label": "14px/18px"
+    },
+    "mobile": {
+      "h1": "54px/59.4px",
+      "subhead": "22px/24px",
+      "lede": "32px/34px (unchanged)"
+    },
+    "scaleAudit": {
+      "kind": "ad-hoc",
+      "note": "100/76/56/36/32/20/18/16/14/12 — no consistent ratio"
+    },
+    "files": [
+      {
+        "family": "Graphik Regular",
+        "path": "stardust/current/assets/fonts/Graphik-Regular-App.woff2",
+        "licence": "commercial"
+      },
+      {
+        "family": "Graphik Semibold",
+        "path": "stardust/current/assets/fonts/Graphik-Semibold-App.woff2",
+        "licence": "commercial"
+      },
+      {
+        "family": "Graphik XXCond Bold",
+        "path": "stardust/current/assets/fonts/GraphikXXCondensed-Bold-App.woff2",
+        "licence": "commercial"
+      },
+      {
+        "family": "USTA Sans",
+        "path": "stardust/current/assets/fonts/USTASans-Bold.otf",
+        "licence": "proprietary"
+      }
+    ],
+    "textRendering": {
+      "textRendering": "auto",
+      "webkitFontSmoothing": "auto"
+    }
+  },
+  "spacing": {
+    "bandPaddings": [
+      "20px (small)",
+      "40px (medium)",
+      "60px (large)"
+    ],
+    "gutter": "45px hero left offset; 65px form left offset",
+    "rule": "6px red bottom border between bands"
+  },
+  "motifs": {
+    "borderRadius": {
+      "mode": "9999px (pills)",
+      "other": [
+        "50% (play icon circles)",
+        "0 (inputs, images)"
+      ]
+    },
+    "shadows": [],
+    "gradients": [],
+    "patterns": [
+      "framed-photo prop card (frame + sticker label baked into PNG)",
+      "blue tennis-ball wall JPG ground (host-play-bg.jpg) on home/play/host",
+      "red diagonal court lines SVG (vector-background-red.svg) behind the home hero embed",
+      "red ball pattern photo behind the play hero (host-red-ball.jpg)"
+    ]
+  },
+  "componentStyle": {
+    "buttons": "pill 56px, Semibold 18px uppercase; blue/white/red/black grounds",
+    "inputs": "485×50 square, 1px #565656",
+    "cards": "image prop + copy + pill CTA, no surface"
+  },
+  "systemComponents": [
+    {
+      "role": "utility-bar",
+      "pages": 4,
+      "fingerprint": "USTA SITES dropdown (8 links)"
+    },
+    {
+      "role": "header",
+      "pages": 4,
+      "fingerprint": "logo + HOME/PLAY/HOST"
+    },
+    {
+      "role": "breadcrumb",
+      "pages": 4,
+      "fingerprint": "HOME > <page>"
+    },
+    {
+      "role": "footer",
+      "pages": 4,
+      "fingerprint": "logo + Terms & Conditions + Privacy Policy"
+    },
+    {
+      "role": "cta-band",
+      "pages": 3,
+      "fingerprint": "REDESIGNED FOR YOU / Shop Now"
+    },
+    {
+      "role": "signup-form",
+      "pages": 3,
+      "fingerprint": "EMAIL + ZIP/POSTAL CODE + *JOIN THE FUN"
+    }
+  ],
+  "voice": {
+    "heroHeadline": "Red Ball Tennis",
+    "heroSubcopy": "REDRAW THE LINES",
+    "firstParagraph": "Red Ball Tennis drops the pressure and dials up the fun of the classic game we all love. Whether you’re new to the game, coming back after a break, or just looking to get active, Red Ball makes it easy to jump in. No formal courts, no strict rules, just high-energy play whenever and wherever you want.",
+    "primaryCTALabel": "SHOP NOW",
+    "ctaSamples": [
+      "SHOP NOW",
+      "PLAY YOUR WAY",
+      "SHARE THE LOVE",
+      "*JOIN THE FUN",
+      "FIND A COURT",
+      "HOST WITH THE MOST"
+    ],
+    "navItems": [
+      "HOME",
+      "PLAY",
+      "HOST"
+    ],
+    "footerHeadings": [],
+    "heroImage": "stardust/current/assets/media/hand-with-ball-75c11e.png",
+    "heroMedium": {
+      "kind": "video-embed",
+      "provider": "youtube",
+      "id": "0d6ahBtLavQ"
+    }
+  },
+  "register": "brand",
+  "crossPromo": {
+    "shopNow": "https://www.head.com/en_US/product/redball-23-230056?cid=RBTHeadRacquetShop_20260822_chint_brrbt_owpla_ctpro_endcid"
+  }
+}

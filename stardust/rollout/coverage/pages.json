@@ -1,0 +1,123 @@
+{
+  "_provenance": {
+    "writtenBy": "stardust:rollout/inventory",
+    "writtenAt": "2026-09-17T17:01:47.468Z",
+    "readArtifacts": [
+      "stardust/migrated"
+    ],
+    "stardustVersion": "0.0.0"
+  },
+  "generatedAt": "2026-09-17T20:05:12.104Z",
+  "pages": [
+    {
+      "slug": "404",
+      "path": "/404",
+      "title": "404",
+      "templateId": "static",
+      "source": {
+        "migratedHtml": "stardust/migrated/404/index.html",
+        "metaJson": "stardust/migrated/404/_meta.json",
+        "sourceHash": "sha256:2b3b623fb996a84b2da875545cf77a77c57c11bb083e6f1778a455c4bd4b8f57"
+      },
+      "blocks": [
+        "utility-bar",
+        "site-nav",
+        "breadcrumb",
+        "site-footer",
+        "centered-cta-band"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--sdt-redballtennis--aemcoder.aem.live/404",
+        "deployedAt": "2026-09-17T19:55:02.761Z",
+        "verifiedAt": "2026-09-17T20:05:12.104Z",
+        "error": null
+      }
+    },
+    {
+      "slug": "home",
+      "path": "/",
+      "title": "Home",
+      "templateId": "landing",
+      "source": {
+        "migratedHtml": "stardust/migrated/index.html",
+        "metaJson": "stardust/migrated/_meta.json",
+        "sourceHash": "sha256:aa9017b65eace8c01ffc32ebb5a98fec0e277b5056e4297e41f0841e324fa374"
+      },
+      "blocks": [
+        "utility-bar",
+        "site-nav",
+        "breadcrumb",
+        "site-footer",
+        "hero-split",
+        "promo-band",
+        "prop-cards",
+        "signup-form"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--sdt-redballtennis--aemcoder.aem.page/",
+        "deployedAt": "2026-09-17T19:55:02.671Z",
+        "verifiedAt": "2026-09-17T20:05:11.093Z",
+        "error": null
+      }
+    },
+    {
+      "slug": "host",
+      "path": "/host",
+      "title": "Host",
+      "templateId": "program",
+      "source": {
+        "migratedHtml": "stardust/migrated/host/index.html",
+        "metaJson": "stardust/migrated/host/_meta.json",
+        "sourceHash": "sha256:4a9011fab4fc29300f363c04b2ce518c6165c9421d1a6c2eddb31322b833cf59"
+      },
+      "blocks": [
+        "utility-bar",
+        "site-nav",
+        "breadcrumb",
+        "site-footer",
+        "hero-split",
+        "promo-band",
+        "prop-cards",
+        "signup-form"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--sdt-redballtennis--aemcoder.aem.page/host",
+        "deployedAt": "2026-09-17T19:55:02.735Z",
+        "verifiedAt": "2026-09-17T20:05:11.093Z",
+        "error": null
+      }
+    },
+    {
+      "slug": "play",
+      "path": "/play",
+      "title": "Play",
+      "templateId": "program",
+      "source": {
+        "migratedHtml": "stardust/migrated/play/index.html",
+        "metaJson": "stardust/migrated/play/_meta.json",
+        "sourceHash": "sha256:0a9ffe0a0a054dbc1d8e997926688bb7c43cecc17871a597aa85aff74a8027e5"
+      },
+      "blocks": [
+        "utility-bar",
+        "site-nav",
+        "breadcrumb",
+        "site-footer",
+        "hero-split",
+        "promo-band",
+        "signup-form",
+        "icon-columns",
+        "centered-cta-band"
+      ],
+      "delivery": {
+        "status": "verified",
+        "deployedUrl": "https://main--sdt-redballtennis--aemcoder.aem.page/play",
+        "deployedAt": "2026-09-17T19:55:02.707Z",
+        "verifiedAt": "2026-09-17T20:05:11.093Z",
+        "error": null
+      }
+    }
+  ]
+}

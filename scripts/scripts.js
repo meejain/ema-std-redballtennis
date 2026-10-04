@@ -74,6 +74,26 @@ function buildWidgetAutoBlocks(main) {
 }
 
 /**
+ * Turns an embed URL (YouTube) authored as a plain link ALONE in its section into an
+ * `embed` block (D1: authors never build an embed table). A lone embed link that shares
+ * its section with another block (the home hero's video) is left as default content for
+ * that block to reabsorb.
+ * @param {Element} main The container element
+ */
+function buildEmbedAutoBlocks(main) {
+  const links = [...main.querySelectorAll('a[href*="youtube.com/embed/"], a[href*="youtube.com/watch"], a[href*="youtu.be/"]')];
+  links.forEach((link) => {
+    if (link.closest('.embed, .hero')) return;
+    const p = link.closest('p');
+    if (!p || p.querySelectorAll('a').length !== 1 || p.textContent.trim() !== link.textContent.trim()) return;
+    const section = p.parentElement;
+    const alone = [...section.children].every((c) => c === p || c.classList.contains('section-metadata'));
+    if (!alone) return;
+    p.replaceWith(buildBlock('embed', { elems: [link] }));
+  });
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
@@ -97,6 +117,7 @@ function buildAutoBlocks(main) {
       });
     }
     buildWidgetAutoBlocks(main);
+    buildEmbedAutoBlocks(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);

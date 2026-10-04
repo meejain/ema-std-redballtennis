@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en"><head>
+<!-- stardust:migrate
+  writtenBy:        stardust:migrate
+  writtenAt:        2026-09-17T16:42:50.611Z
+  page:             404
+  slug:             404
+  pagePath:         migrated/404/index.html
+  renderBranch:     A
+  fidelityTier:     archetype
+  sourceProposed:   stardust/prototypes/404-proposed.html
+  sourceCurrent:    stardust/current/pages/404.json
+  againstDirection: stardust/direction.md (preserve mode 2026-09-17T15:45:17.633Z)
+  designMd:         DESIGN.md (sha: 3ce6325)
+  designJson:       DESIGN.json (sha: 7558fc7)
+  canonShas:        header:fe5297b footer:ed0fd17 css:bb18f0d
+  decisionTrace:    _meta.json
+  brokenInternalLinks: 0
+  stardustVersion:  0.21.1
+--><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404</title>
+<link rel="icon" href="../assets/favicon.ico">
+
+
+
+<link rel="canonical" href="https://main--sdt-redballtennis--aemcoder.aem.live/404/">
+<meta property="og:title" content="404">
+<meta property="og:description" content="">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Red Ball Tennis">
+<meta property="og:url" content="https://main--sdt-redballtennis--aemcoder.aem.live/404/">
+<meta name="theme-color" content="#0A2396">
+<meta name="robots" content="index,follow">
+<link rel="apple-touch-icon" href="../assets/media/rbt-favicon-180x180-d1914d.png">
+<style>
+:root {
+  /* stardust token contract (token-contract.md) — values from DESIGN.md / DESIGN.json.extensions.canon.tokens */
+  --heading-font-family: "Graphik XXCond Bold", Impact, "Arial Narrow", sans-serif;
+  --body-font-family: "Graphik Regular", Tahoma, sans-serif;
+  --heading-xxl: 100px; --heading-xl: 76px; --heading-lg: 56px; --heading-md: 36px;
+  --body: 32px; --body-sm: 16px;
+  --line-height-heading: 1.1; --line-height-body: 1.42857;
+  --color-bg: #FFFFFF; --color-fg: #000000; --color-accent: #C80F2F;
+  --spacing-xs: 4px; --spacing-sm: 8px; --spacing-md: 16px; --spacing-lg: 24px; --spacing-xl: 40px; --spacing-2xl: 60px;
+  --section-padding: 40px; --max-width: 1440px; --radius: 9999px;
+}
+
+/* canon fonts */
+/* stardust canon — brand faces, family names exactly as the live site declares them.
+   Weight is chosen by FAMILY (Regular vs Semibold), all faces are font-weight: normal — a <b>
+   inside "Graphik Regular" renders faux-bold, exactly as live. Files: first-party self-hosted
+   (see stardust/direction.md § Named assumptions #3 — licence decision flagged to the user). */
+@font-face { font-family: "USTA Sans"; src: url("../assets/fonts/USTASans-Bold.otf") format("opentype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Graphik Regular"; src: url("../assets/fonts/Graphik-Regular-App.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Graphik Semibold"; src: url("../assets/fonts/Graphik-Semibold-App.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "Graphik XXCond Bold"; src: url("../assets/fonts/GraphikXXCondensed-Bold-App.woff2") format("woff2"); font-weight: normal; font-style: normal; }
+
+/* canon */
+/* stardust canon — redballtennis.com replica. Shared layer for every archetype prototype.
+   Every value is lifted from the live site's CSS (stardust/replica/capture/css/ALL-RULES.txt) or
+   computed styles (stardust/replica/capture/lift-*.json). Recreation, not redesign. */
+
+:root {
+  --color-red: #c80f2f; --color-blue: #0a2396; --color-footer-blue: #092396; --color-link: #0357b8;
+  --color-ink: #000; --color-body: #333; --color-paper: #fff; --color-rule: #808080;
+  --color-field-border: #565656; --color-hover-lime: #cfff05; --color-disabled: #a8a8a8; --color-disabled-text: #6d7278;
+  --font-display: "Graphik XXCond Bold", Impact, "Arial Narrow", sans-serif;
+  --font-body: "Graphik Regular", Tahoma, sans-serif;
+  --font-semibold: "Graphik Semibold", Tahoma, sans-serif;
+  --radius-pill: 9999px;
+  --chrome-max: 1440px;
+}
+
+/* ---- base (bootstrap 3 + usta common clientlib + redball page clientlib, as computed live) ---- */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 10px; -webkit-tap-highlight-color: transparent; background: #fff; }
+body { margin: 0; overflow: hidden auto; /* live: body computes overflow hidden auto (x clipped) */ font-family: Times, "Times New Roman", serif; /* live body sets no family; usta common gives every p/div/span/button/input Graphik Regular */
+  font-size: 16px; line-height: 1.42857; color: var(--color-body); background-color: #fff; }
+p, div, span, button, select, input { font-family: var(--font-body); }
+h1, h2, h3, h4, h5, h6 { font-weight: 500; line-height: 1.1; color: unset; }
+h1, h2, h3 { font-family: var(--font-display); margin-top: 20px; margin-bottom: 10px; }
+h4, h5, h6 { font-family: var(--font-semibold); margin-top: 10px; margin-bottom: 10px; }
+h1 { font-size: 100px; } h2 { font-size: 76px; } h3 { font-size: 56px; } h4 { font-size: 28px; } h5 { font-size: 22px; } h6 { font-size: 18px; }
+p { margin: 0; font-size: 18px; color: unset; }
+@media (max-width: 767px) {
+  h1 { font-size: 54px; } h2 { font-size: 44px; } h3 { font-size: 36px; } h4 { font-size: 22px; } h5 { font-size: 20px; } h6 { font-size: 16px; } p { font-size: 16px; }
+}
+a { color: var(--color-link); text-decoration: none; }
+img { vertical-align: middle; border: 0; max-width: 100% !important; }
+div.image img { display: block; }
+hr { height: 0; margin-top: 20px; margin-bottom: 20px; border: 0; border-top: 1px solid #fff; box-sizing: content-box; overflow: hidden; }
+ul, ol { margin: 0; padding: 0; }
+/* buttons keep the UA font-size (13.333px) as live; only the family is set globally above */
+label { display: inline-block; max-width: 100%; margin-bottom: 5px; font-family: var(--font-semibold); text-transform: uppercase; font-weight: normal; font-size: 14px; line-height: 18px; }
+label span { font-family: var(--font-semibold); text-transform: uppercase; font-weight: normal; font-size: 14px; line-height: 18px; }
+input[type="text"]:not([readonly]), input[type="email"]:not([readonly]), input[type="tel"]:not([readonly]), input[type="number"]:not([readonly]), input[type="password"]:not([readonly]) {
+  height: 56px; font-size: 16px; line-height: 24px; padding: 16px; margin-top: 12px; border: 1px solid var(--color-field-border); width: 100%; border-radius: 0; color: #000; background-color: #fff; }
+input[type="text"]:not([readonly])::placeholder { color: #888b8d; }
+
+/* ---- AEM core components, as computed live ---- */
+.cmp-text { font-size: 18px; line-height: 24px; color: #000; text-align: left; font-weight: 400; }
+.cmp-text h1, .cmp-text h2, .cmp-text h3 { margin-top: unset; margin-bottom: unset; }
+.cmp-text--colored a { color: inherit; }
+.cmp-text--alignment-center .cmp-text > * { text-align: center; }
+.cmp-image__image { width: 100%; }
+.image--align--center > .cmp-image { margin: 0 auto; }
+.cmp-embed iframe { max-width: 100% !important; }
+.cmp-separator__horizontal-rule { color: var(--color-rule); }
+
+/* ---- bands (AEM container model) ---- */
+.band { display: flow-root; position: relative; width: 100%; }
+/* .responsivegrid.horizontal-bottom-red-stripe — the 6px visible red rule between bands */
+.red-stripe { position: relative; padding-bottom: 8px; } /* AEM column padding 8px 0 minus padding-top-none */
+.band--pb-0 { padding-bottom: 0 !important; } /* live: .padding-bottom-none */
+.band--py-8 { padding: 8px 0; } /* live: bare AEM column padding */
+.red-stripe::after { content: ""; position: absolute; left: 0; right: 0; width: 100%; height: 16px; background-color: var(--color-red); bottom: 8px; }
+
+/* ---- buttons (.cmp-button.button-core / .button-primary-style — identical live specs) ---- */
+.button-core, .button-primary-style { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; text-align: center; vertical-align: middle;
+  font-family: var(--font-semibold); font-weight: normal; text-transform: uppercase; letter-spacing: 1px; line-height: 20px !important; font-size: 18px !important;
+  width: max-content; height: 56px !important; padding: 14px; margin: 0 auto; overflow: hidden; cursor: pointer; outline: 0;
+  color: #fff; background-color: #000; border: 2px solid transparent; border-radius: var(--radius-pill) !important; text-decoration: none; }
+.button-core p, .button-core span, .button-core div, .button-primary-style span { font-family: var(--font-semibold); text-transform: uppercase; font-weight: normal; }
+@media (min-width: 768px) { .button-core, .button-primary-style { min-width: 120px; } .button-core--large .button-core, .button-large-style { min-width: 280px; } }
+@media (max-width: 767px) { .button-core, .button-primary-style { width: 100% !important; max-width: 280px; } }
+.button-core:hover, .button-core:active, .button-core:focus, .button-primary-style:hover { color: #fff; outline: 0; text-decoration: none !important; }
+.button-core:hover, .button-primary-style:hover { opacity: .7; }
+.button-core:active, .button-primary-style:active { opacity: .7; filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .5)); }
+.button-core[disabled], .button-primary-style[disabled] { background-color: var(--color-disabled); color: var(--color-disabled-text); border: 0; box-shadow: none; cursor: default; pointer-events: none; }
+.button-core__text { display: inline-flex; align-items: center; position: relative; vertical-align: middle; text-overflow: ellipsis; white-space: nowrap; }
+.button-core__text-content { font-family: var(--font-semibold); text-transform: uppercase; font-weight: normal; letter-spacing: 0; }
+/* wrapper modifiers carried by the AEM .button column */
+.button-core--not-fixed-width .button-core { min-width: max-content; width: 100%; max-width: none !important; }
+
+/* ---- header chrome (.topnavigation .top-navigation.red-ball-colors) ---- */
+.site-header { display: block; }
+.top-navigation { position: relative; width: 100%; background-color: var(--color-blue); z-index: 1030; font-family: var(--font-body); font-size: 16px; line-height: 22.8571px; color: var(--color-body); }
+.top-navigation__top-bar { display: flex; justify-content: center; align-items: center; height: 60px; background-color: var(--color-blue); border-bottom: 1px solid #fff; }
+.top-navigation__top-bar-wrapper { display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 8px; width: 1440px; max-width: 1440px; height: 36px; }
+.drop-down { position: relative; height: 36px; border-radius: var(--radius-pill); background: #f8f8f8; }
+.drop-down__wrapper, .drop-down__label-wrapper { display: flex; align-items: center; height: 100%; width: 100%; gap: 10px; }
+button.drop-down__label-wrapper { border: 0; border-radius: var(--radius-pill); background: none; appearance: none; padding: 0; cursor: pointer; font-family: var(--font-body); font-size: 13.3333px; }
+.drop-down__select-icon { position: relative; display: block; width: 30px; height: 30px; margin-left: 5px; background: #000; border-radius: 50%; border: 1px solid #848484; }
+.drop-down__select-icon::before { content: ""; position: absolute; top: 10px; left: 7px; width: 0; height: 0; border-left: 7.5px solid transparent; border-right: 7.5px solid transparent; border-top: 10px solid #fff; }
+.drop-down__label { color: #000; font-family: var(--font-body); font-size: 14px; font-weight: 900; letter-spacing: 0; line-height: 18px; margin: 0 60px 0 0; text-align: center; }
+.drop-down__select-list { display: none; position: absolute; z-index: 1000; top: 0; left: 0; width: 400px; padding-top: 40px; background-color: #fff; border: 1px solid #e5e5e5; border-radius: 20px; box-shadow: 0 3px 3px rgba(0, 0, 0, .16); }
+.drop-down__label-wrapper[aria-expanded="true"] + .drop-down__select-list { display: block; }
+.drop-down__label-wrapper[aria-expanded="true"] { z-index: 1001; }
+.drop-down__image { width: 100%; margin: 10px 0; text-align: center; }
+.drop-down__slogan { font-family: var(--font-semibold); font-size: 14px; font-weight: normal; line-height: 24px; }
+.drop-down__select-list-row { display: flex; flex-direction: row; width: 100%; padding-left: 45px; }
+.drop-down__select-list-column { display: flex; flex-direction: column; justify-content: flex-start; flex-wrap: wrap; width: 50%; max-height: 300px; list-style: none; margin: 0 0 20px; padding: 0; }
+.drop-down__select-list-column:not(:last-child) { margin-right: 20px; }
+.drop-down__select-list-item { display: block; text-transform: uppercase; color: var(--color-link); font-size: 16px; font-weight: 900; margin-bottom: 10px; min-width: 100%; white-space: nowrap; }
+.drop-down__select-list-item::before { display: inline-block; content: ""; height: 10px; width: 10px; margin-right: 15px; line-height: 14px; background: var(--color-link); border-radius: 50%; }
+.drop-down__select-list-item a { font-family: var(--font-semibold); font-weight: normal; font-size: 12px; line-height: normal; text-decoration: underline; color: var(--color-link); }
+.drop-down__close { display: inherit; position: absolute; right: 15px; top: 13px; height: 20px; width: 20px; cursor: pointer; }
+.drop-down__close::before, .drop-down__close::after { position: absolute; left: 8px; content: ""; height: 20px; width: 4px; background-color: #5d5d5d; }
+.drop-down__close::before { transform: rotate(45deg); } .drop-down__close::after { transform: rotate(-45deg); }
+.top-navigation__user-section--desktop { display: block; }
+
+.top-navigation__main-bar { display: flex; align-items: center; justify-content: flex-start; max-width: 1440px; height: 105px; margin: 0 auto; padding: 0 30px; background-color: var(--color-blue); }
+.top-navigation__logo { flex: 0 0 10%; user-select: none; }
+.top-navigation__logo-hamburger { display: none; background-color: transparent; border: 0; margin: 0; padding: 1px; }
+.top-navigation__logo-hamburger img { display: inline; width: 24px; height: 24px; } /* inline + vertical-align middle → 26×26 button as live */
+.top-navigation__logo-hamburger .top-navigation__logo-hamburger--cancel { display: none; width: 18px; height: 18px; } /* chrome.js swaps the two by inline style, as the live Vue component does */
+.top-navigation__logo-image { display: inline; }
+.top-navigation__logo-image img { width: 100%; height: auto; }
+.top-navigation__logo-image--desktop { display: block; }
+.top-navigation__logo-image--mobile { display: none; }
+.top-navigation__navigation-menu { display: flex; align-items: center; flex: 0 1 auto; margin: 0; width: 100%; height: 100%; padding-left: 148px; }
+.navigation-menu__button-back { display: none; }
+.navigation-menu__list { display: flex; flex-direction: row; align-items: center; flex: 0 1 auto; gap: 50px; padding: 0; margin: 0; height: 100%; list-style: none; }
+.navigation-menu__list-item--level-1 { display: flex; align-items: center; justify-content: center; flex: 0 1 auto; user-select: none; height: 100%; position: relative; }
+.navigation-menu__list-item--level-1 .level-1-content { display: flex; align-items: center; height: 100%; }
+.navigation-menu__list-item-link--level-1 { display: flex; justify-content: center; flex: 0 1 auto; text-transform: uppercase; color: #fff; font-family: var(--font-semibold); font-size: 16px; font-weight: normal; letter-spacing: .8px; line-height: 25px; white-space: nowrap; user-select: none; }
+.navigation-menu__list-item-link--level-1.active { color: #fff; border-bottom: 4px solid #fff; }
+/* no nav hover: live rule 9070 (lime on li:hover) exists but motion-observe measured NO colour change on hover — dead at runtime */
+.navigation-menu__list-item--level-1.navigation-menu__dropdown-item { display: none; }
+.level-1-content__mobile-arrow, .toggle-button, .navigation-menu__sub-list { display: none; }
+.toggle-button { cursor: pointer; background-color: transparent; padding: 0; margin-left: 5px; width: 18px; height: 12px; border-left: 9px solid transparent; border-right: 9px solid transparent; border-top: 12px solid #fff; border-bottom: 0; }
+
+.breadcrumb { height: 30px; margin: 0; padding: 0; background-color: var(--color-blue); border-top: 1px solid #fff; border-bottom: 1px solid var(--color-blue); color: #fff; }
+.cmp-breadcrumb { display: block; padding-left: 8px; font-family: var(--font-body); font-size: 14px; line-height: 28px; height: 28px; max-width: 1440px; }
+.cmp-breadcrumb__navigation { display: inline-flex; font-size: 12px; font-weight: normal; text-transform: uppercase; list-style: none; margin: 0; padding: 0; height: 28px; line-height: 28px; }
+.cmp-breadcrumb__navigation-item { display: list-item; color: #fff; }
+.cmp-breadcrumb__navigation-item a { color: #fff; text-decoration: underline; }
+.cmp-breadcrumb__navigation-item-divider { color: #fff; padding-left: 6px; padding-right: 8px; }
+
+/* mobile chrome — the live switch is 1369px */
+@media (max-width: 1369px) {
+  .top-navigation { margin: 0; padding: 0; font-weight: 900; }
+  .top-navigation__top-bar { display: block; position: absolute; top: -100vh; left: 0; width: 100%; height: unset; background-color: #fff; border-bottom: 1px solid #fff; overflow: auto; opacity: 1; transition: top .3s ease, opacity .3s ease; }
+  .top-navigation__top-bar.top-to-bottom { top: 74px; } /* observed: hamburger click adds --opened + top-to-bottom, transition top .3s */
+  .top-navigation__top-bar.top-navigation__top-bar--opened { padding-bottom: 40px; border-bottom: 1px solid #fff; border-radius: 0 0 20px 20px; box-shadow: 0 6px 6px rgba(0, 0, 0, .16); }
+  .top-navigation__top-bar-wrapper { flex-direction: column; align-items: normal; width: auto; padding: 0; max-width: none; height: auto; }
+  .top-navigation__top-bar .dropdown { display: none; }
+  .top-navigation__main-bar { position: relative; gap: 30px; align-items: normal; margin: 0; padding: 0 8px; width: 100%; max-width: none; height: 44px; }
+  .top-navigation__logo { display: flex; align-items: center; flex: auto; user-select: auto; margin-left: 15px; width: 50%; }
+  .top-navigation__logo-hamburger { display: block; cursor: pointer; }
+  .top-navigation__logo-image { height: 100%; display: flex; align-items: center; padding-left: 20px; }
+  .top-navigation__logo-image img { width: auto; max-height: 100%; max-width: 100%; }
+  .top-navigation__logo-image--desktop { display: none; }
+  .top-navigation__logo-image--mobile { display: block; }
+  .top-navigation__navigation-menu { display: none; background-color: #fff; padding: 0; width: 100%; height: auto; } /* chrome.js moves it into the top bar ≤1369 and shows it by inline display:block, as live */
+  .navigation-menu__list { display: block; margin-bottom: 10px; height: auto; }
+  .navigation-menu__list-item--level-1 { display: block; height: 100%; }
+  .navigation-menu__list-item--level-1.navigation-menu__dropdown-item { display: block; }
+  .navigation-menu__list-item--level-1 .level-1-content { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100%; color: #000; border-bottom: 1px dashed #727272; padding: 15px; }
+  .navigation-menu__list-item--level-1:first-child .level-1-content { padding-top: 25px; }
+  .navigation-menu__list-item-link--level-1 { color: var(--color-link); font-size: 14px; line-height: 18px; text-align: center; white-space: pre-wrap; }
+  .navigation-menu__list-item-link--level-1.active { border-bottom: 0; }
+  .navigation-menu__list-item--level-1 .level-1-content__mobile-arrow { display: block; width: 0; height: 0; border-top: 9px solid transparent; border-bottom: 9px solid transparent; border-left: 12px solid var(--color-link); border-right: 4px solid transparent; }
+  .breadcrumb { height: 30px; }
+  .cmp-breadcrumb { display: flex; line-height: 30px; padding-left: 22px; }
+  .cmp-breadcrumb__navigation { height: 30px; line-height: 30px; }
+}
+
+/* ---- footer chrome (footer experience fragment) ---- */
+.site-footer { display: block; }
+.footer-xf { display: flow-root; background-color: var(--color-footer-blue); padding-top: 32px; padding-bottom: 64px; font-family: var(--font-body); font-size: 16px; line-height: 22.8571px; color: var(--color-body); }
+.footer-xf .footer-logo { display: block; margin-left: 8.33333333%; width: 83.33333333%; margin-bottom: 20px; }
+.footer-xf .footer-logo .cmp-image { width: 100px; }
+.footer-xf .footer-logo img { display: block; width: 100px; height: auto; }
+.footer-xf .footer { display: block; margin-left: 8.33333333%; width: 75%; }
+.footer-links { display: flex; justify-content: space-between; align-items: center; }
+.footer-links__sites { display: flex; gap: 30px; margin: 0; padding: 0; list-style: none; }
+.footer-links__sites li.nav-link a { color: #fff; font-family: var(--font-semibold); font-size: 18px; line-height: 100%; letter-spacing: -0.03em; }
+.footer-links__sites li.nav-link a:hover { color: var(--color-hover-lime); }
+.footer-links__social { display: flex; gap: 18px; margin: 0; padding: 0; list-style: none; }
+.footer-xf .footer-tag { display: none; margin-left: 8.33333333%; width: 83.33333333%; }
+.footer-xf .footer-tag .cmp-text { font-size: 18px; line-height: 24px; color: #fff; text-align: left; }
+.footer-xf .footer-tag .cmp-text p { font-size: 16px; }
+.footer-xf .separator { display: block; width: 100%; }
+.footer-xf .separator.separator--mobile { display: none; }  /* shown only ≤1023px (see below) */
+.footer-xf .separator hr { display: block; height: 0; margin: 20px 0; border: 0; border-top: 1px solid transparent; }
+.footer-xf .separator--mobile hr { margin: 7px 0; }
+@media (max-width: 1023px) {
+  .footer-xf { padding-top: 16px; padding-bottom: 32px; }
+  .footer-xf .separator.separator--mobile { display: block; }
+  .footer-xf .footer { width: 75%; }
+  .footer-links { flex-direction: column; gap: 32px; align-items: start; }
+  .footer-links__sites { flex-direction: column; gap: 24px; }
+  .footer-links__sites li.nav-link a { font-size: 24px; }
+  .footer-xf .footer-tag { display: block; }
+}
+@media (max-width: 767px) {
+  .footer-links__sites { gap: 16px; }
+  .footer-links__sites li.nav-link a { font-size: 18px; }
+}
+
+/* page: 404 */
+/* stardust replica — 404 page. Every value lifted from stardust/replica/capture/lift-404-{1440,360}.json and
+   stardust/replica/capture/css/ALL-RULES.txt (rule line numbers cited inline). Recreation, not redesign. */
+
+/* outer container: .responsivegrid.padding-top-medium>.cmp-container{padding-top:64px} (ALL-RULES 6059) */
+.band--notfound { padding-top: 64px; background: #fff; }
+
+/* inner container: aem-Grid--12 child default--8 + offset--default--2 → 66.667% / 16.667% (lift 1440: x240 w960) */
+.notfound__inner { display: flow-root; margin-left: 16.66666667%; width: 66.66666667%; max-width: 100%; }
+
+/* grid columns: .responsivegrid .cmp-container>*>.aem-GridColumn{padding:8px 0} (6042) + 15px gutter (lift: hr/h2 930 wide at x255 in a 960 col) */
+.notfound__col { display: flow-root; width: 100%; padding: 8px 15px; }
+
+/* separators: .separator--vertical-paddings--4px{padding:4px 0 !important} (7489); hr border 2px transparent (7485, 7479) */
+.notfound__col--sep { padding-top: 4px; padding-bottom: 4px; }
+.cmp-separator__horizontal-rule { display: block; height: 0; margin: 20px 0; border: 0; border-top: 2px solid transparent; color: #808080; overflow: hidden; }
+.notfound__col--sep-none .cmp-separator__horizontal-rule { margin: 0; }        /* .separator--inner-margins--none hr{margin:0} (7486) */
+.notfound__col--sep-7 .cmp-separator__horizontal-rule { margin: 7px 0; }      /* .separator--vertical-margins--7px hr{margin:7px 0} (7487) */
+
+/* image: .image--align--center>.cmp-image{margin:0 auto} (7521); .cmp-image{width:238px} inline; .cmp-image__image{width:100%} (7562) */
+.notfound__col--image .cmp-image { width: 238px; margin: 0 auto; }
+.notfound__col--image .cmp-image__image { display: block; width: 100%; height: auto; }
+
+/* text: .cmp-text--alignment-center .cmp-text>*{text-align:center} (7579); h2 computed 76px/83.6px "Graphik XXCond Bold" #000 weight 500 (lift 1440) */
+.notfound__col--text .cmp-text h2 { margin: 0; font-family: var(--font-display); font-size: 76px; line-height: 1.1; font-weight: 500; color: #000; text-align: center; }
+
+/* buttons: live .button-core (7626): padding 14px; border 2px solid transparent; display flex; margin 0 auto; height 56px;
+   .button-core--not-fixed-width .button-core{min-width:max-content;width:auto;max-width:none} (7779) → fills the column.
+   desktop column: default--4 of aem-Grid--8 = 50%, offset 3, centred by justify-content_space-around margin:auto (6093) → 450px at 1440 */
+.notfound__col--button { width: 50%; margin: 0 auto; }
+.notfound__col--button .button-core { display: flex; width: auto; min-width: max-content; max-width: none; margin: 0 auto; padding: 14px; border: 2px solid transparent; }
+.notfound__col--button-mobile { display: none; }                               /* .aem-GridColumn--default--hide{display:none} (839) */
+
+/* trailing empty container: padding-top-small+medium+large = 224px (6064), padding-bottom-* = 224px (6072) */
+.notfound__spacer { padding-top: 224px; padding-bottom: 224px; }
+
+@media (max-width: 767px) {
+  .band--notfound { padding-top: 32px; }                                        /* (7151) */
+  .notfound__inner { margin-left: 8.33333333%; width: 83.33333333%; }          /* mobile--10 offset--mobile--1 (lift 360: x30 w300) */
+  .notfound__col { padding-left: 4px; padding-right: 4px; }                    /* lift 360: hr 292 wide at x34 in a 300 col */
+  .notfound__col--text .cmp-text h2 { font-size: 44px; }                       /* lift 360: 44px/48.4px */
+  .notfound__col--button-desktop { display: none; }                            /* .aem-GridColumn--mobile--hide{display:none} (7129) */
+  .notfound__col--button-mobile { display: flow-root; width: 100%; }           /* mobile--10 of aem-Grid--mobile--10 = 100% */
+  .notfound__col--button .button-core { width: 100%; max-width: none; }        /* .button-core--not-fixed-width .button-core{width:100%} (13927) */
+  .button-core--small-fs .cmp-button.button-core,
+  .button-core--small-fs .button-core__text { font-size: 14px; }               /* .button-core--small-fs .cmp-button.button-core{font-size:14px !important} (7785); lift 360 text 14px */
+  .notfound__spacer { padding-top: 112px; padding-bottom: 112px; }             /* (7156, 7164) */
+}
+
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Red Ball Tennis (USTA)","url":"https://main--sdt-redballtennis--aemcoder.aem.live","logo":"https://main--sdt-redballtennis--aemcoder.aem.live/assets/media/red-ball-tennis-wbg-04927f.png","parentOrganization":{"@type":"Organization","name":"United States Tennis Association","url":"https://www.usta.com/"}}</script>
+</head><body class="redball-editable-page">
+<header class="site-header" data-canon="">
+
+<div class="topnavigation">
+<nav class="top-navigation red-ball-colors loadingDone">
+  <div id="top-navigation-bar" class="top-navigation__top-bar">
+    <div class="top-navigation__top-bar-wrapper">
+      <div class="dropdown"><div class="drop-down"><div class="drop-down__wrapper">
+        <button class="drop-down__label-wrapper" id="label-id-8" type="button" aria-expanded="false" aria-controls="list-id-8">
+          <span class="drop-down__select-icon" aria-hidden="true"></span>
+          <p class="drop-down__label">USTA SITES</p>
+        </button>
+        <div class="drop-down__select-list">
+          <div class="drop-down__image"><img src="../assets/media/Sites-Icon-4d7f1c.svg" alt="USTA Logo"><p class="drop-down__slogan">VISIT OUR OTHER SITES</p></div>
+          <div class="drop-down__select-list-row">
+            <ul id="list-id-8" class="drop-down__select-list-column" aria-labelledby="label-id-8">
+              <li class="drop-down__select-list-item"><a href="https://tennislink.usta.com" target="_blank">TENNISLINK</a></li>
+              <li class="drop-down__select-list-item"><a href="https://www.ustanationalcampus.com" target="_blank">NATIONAL CAMPUS</a></li>
+              <li class="drop-down__select-list-item"><a href="https://www.ntc.usta.com/" target="_blank">NATIONAL TENNIS CENTER</a></li>
+              <li class="drop-down__select-list-item"><a href="https://www.playerdevelopment.usta.com/" target="_blank">PLAYER DEVELOPMENT</a></li>
+              <li class="drop-down__select-list-item"><a href="https://playtennis.usta.com/AccessServeTennis" target="_blank">SERVE TENNIS</a></li>
+              <li class="drop-down__select-list-item"><a href="https://www.ustafoundation.com/" target="_blank">USTA FOUNDATION</a></li>
+              <li class="drop-down__select-list-item"><a href="https://www.ustacoaching.com/" target="_blank">USTA COACHING</a></li>
+              <li class="drop-down__select-list-item"><a href="https://www.usta.com/en/home.html" target="_blank">USTA</a></li>
+            </ul>
+          </div>
+          <div class="drop-down__close" role="button" tabindex="0" aria-label="Close"></div>
+        </div>
+      </div></div></div>
+      <div class="top-navigation__user-section--desktop"></div>
+    </div>
+  </div>
+  <div class="top-navigation__main-bar">
+    <div class="top-navigation__logo">
+      <button class="top-navigation__logo-hamburger" aria-expanded="false" aria-controls="top-navigation-bar" aria-label="Menu" type="button">
+        <img class="top-navigation__logo-hamburger--menu" src="../assets/media/Hamburger-Menu-White-339cdd.svg" alt="" aria-hidden="true">
+        <img class="top-navigation__logo-hamburger--cancel" src="../assets/media/Cancel_Bold_White-4f3fe8.svg" alt="" aria-hidden="true">
+      </button>
+      <a class="top-navigation__logo-image" href="../index.html">
+        <img class="top-navigation__logo-image--desktop" src="../assets/media/red-ball-tennis-wbg-04927f.png" alt="USTA Logo Home">
+        <img class="top-navigation__logo-image--mobile" src="../assets/media/red-ball-logo-mob-c70708.png" alt="USTA Logo Home">
+      </a>
+    </div>
+    <nav class="top-navigation__navigation-menu navigation-menu" aria-label="Main menu">
+      <div class="navigation-menu__button-back"><button class="navigation-menu__button-back-text">MAIN MENU</button></div>
+      <ul class="navigation-menu__list">
+        <li data-index="0" class="navigation-menu__list-item--level-1"><div class="level-1-content"><div><a id="HOME-label" href="../index.html" title="HOME" class="navigation-menu__list-item-link--level-1" target="_self" data-menu-item-type="navigation">HOME</a></div></div></li>
+        <li data-index="1" class="navigation-menu__list-item--level-1"><div class="level-1-content"><div><a id="PLAY-label" href="../play/index.html" title="PLAY" class="navigation-menu__list-item-link--level-1" target="_self" data-menu-item-type="navigation">PLAY</a></div></div></li>
+        <li data-index="2" class="navigation-menu__list-item--level-1"><div class="level-1-content"><div><a id="HOST-label" href="../host/index.html" title="HOST" class="navigation-menu__list-item-link--level-1" target="_self" data-menu-item-type="navigation">HOST</a></div></div></li>
+        <li data-index="3" class="navigation-menu__list-item--level-1 navigation-menu__dropdown-item">
+          <div class="level-1-content"><div><a id="VISIT-OUR-OTHER-SITES-label" href="" class="navigation-menu__list-item-link--level-1" target="" data-menu-item-type="dropdown">VISIT OUR OTHER SITES</a></div><div class="level-1-content__mobile-arrow" aria-hidden="true"></div></div>
+          <button type="button" class="toggle-button" aria-controls="VISIT-OUR-OTHER-SITES-menu" aria-expanded="false"><span class="sr-only">VISIT OUR OTHER SITES submenu</span></button>
+          <div class="navigation-menu__sub-list"><div class="navigation-menu__sub-list-content-wrapper">
+            <ul id="VISIT-OUR-OTHER-SITES-menu" class="navigation-menu__sub-list-content" aria-labelledby="VISIT-OUR-OTHER-SITES-label">
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://tennislink.usta.com" class="navigation-menu__list-item-link--level-2" target="_blank">TENNISLINK</a></div></div></div></li>
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://www.ustanationalcampus.com" class="navigation-menu__list-item-link--level-2" target="_blank">NATIONAL CAMPUS</a></div></div></div></li>
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://www.ntc.usta.com/" class="navigation-menu__list-item-link--level-2" target="_blank">NATIONAL TENNIS CENTER</a></div></div></div></li>
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://www.playerdevelopment.usta.com/" class="navigation-menu__list-item-link--level-2" target="_blank">PLAYER DEVELOPMENT</a></div></div></div></li>
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://playtennis.usta.com/AccessServeTennis" class="navigation-menu__list-item-link--level-2" target="_blank">SERVE TENNIS</a></div></div></div></li>
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://www.ustafoundation.com/" class="navigation-menu__list-item-link--level-2" target="_blank">USTA FOUNDATION</a></div></div></div></li>
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://www.ustacoaching.com/" class="navigation-menu__list-item-link--level-2" target="_blank">USTA COACHING</a></div></div></div></li>
+              <li class="navigation-menu__list-item--level-2"><div class="list-item"><div class="list-item__content"><div role="heading" aria-level="2"><a href="https://www.usta.com/en/home.html" class="navigation-menu__list-item-link--level-2" target="_blank">USTA</a></div></div></div></li>
+            </ul>
+          </div></div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</nav>
+</div>
+<div class="breadcrumb red-ball-colors"><div class="cmp-breadcrumb cmp-breadcrumb__wrapper">
+  <nav aria-label="Breadcrumb"><ol class="cmp-breadcrumb__navigation">
+    
+    <li class="cmp-breadcrumb__navigation-item"><a class="cmp-breadcrumb__navigation-item--inactive" href="../index.html">Home</a> <span class="cmp-breadcrumb__navigation-item-divider">&gt;</span></li><li class="cmp-breadcrumb__navigation-item--active">404</li>
+  </ol></nav>
+</div></div>
+
+</header>
+<main class="container responsivegrid full-width--root page-404" data-template="static">
+  
+  <section class="band band--notfound" data-section="notfound" data-intent="preserve source section" data-layout="full-bleed">
+    
+    <div class="notfound__inner">
+      
+      <div class="notfound__col notfound__col--sep notfound__col--sep-none"><div class="cmp-separator"><hr class="cmp-separator__horizontal-rule"></div></div>
+      
+      <div class="notfound__col notfound__col--image"><div class="cmp-image"><img class="cmp-image__image" src="../assets/media/red-ball-tennis-circle-5e1c21.svg" alt="Play Red Ball Tennis Logo" width="238" height="238"></div></div>
+      
+      <div class="notfound__col notfound__col--sep notfound__col--sep-7"><div class="cmp-separator"><hr class="cmp-separator__horizontal-rule"></div></div>
+      
+      <div class="notfound__col notfound__col--text"><div class="cmp-text"><h2>Sorry, we couldn't find that page</h2></div></div>
+      
+      <div class="notfound__col notfound__col--sep notfound__col--sep-20"><div class="cmp-separator"><hr class="cmp-separator__horizontal-rule"></div></div>
+      
+      <div class="notfound__col notfound__col--button notfound__col--button-desktop button-core--not-fixed-width"><a class="cmp-button button-core" href="../index.html" target="_self"><span class="cmp-button__text button-core__text"><span class="button-core__text-content">TAKE ME BACK TO THE HOMEPAGE</span></span></a></div>
+      <div class="notfound__col notfound__col--button notfound__col--button-mobile button-core--not-fixed-width button-core--small-fs"><a class="cmp-button button-core" href="../index.html" target="_self"><span class="cmp-button__text button-core__text"><span class="button-core__text-content">TAKE ME BACK TO THE HOMEPAGE</span></span></a></div>
+      
+      <div class="notfound__col notfound__col--spacer"><div class="notfound__spacer"></div></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer" data-canon="">
+
+<div class="footer-xf">
+  <div class="separator separator--mobile"><hr></div>
+  <div class="footer-logo"><div class="cmp-image"><a class="cmp-image__link" href="../index.html" target="_self"><img class="cmp-image__image" alt="Red Ball Logo" title="Red Ball Logo" src="../assets/media/red-ball-tennis-wbg-d7e509.png"></a></div></div>
+  <div class="footer"><div class="footer-links">
+    <nav aria-label="RedBallTennis footer links"><ul class="footer-links__sites">
+      <li class="nav-link"><a href="https://www.usta.com/en/home/about-usta/who-we-are/national/usta-terms-of-use.html" target="_blank">Terms &amp; Conditions</a></li>
+      <li class="nav-link"><a href="https://www.usta.com/en/home/about-usta/who-we-are/national/usta-privacy-policy.html" target="_blank">Privacy Policy</a></li>
+    </ul></nav>
+    <nav aria-label="Social media links"><ul class="footer-links__social"></ul></nav>
+  </div></div>
+  <div class="separator separator--mobile"><hr></div>
+  <div class="footer-tag"><div class="cmp-text"><p><b>#redballtennis</b></p></div></div>
+  <div class="separator"><hr></div>
+</div>
+
+</footer>
+
+
+<script>
+// stardust canon chrome.js — the two chrome interactions motion-observe recorded on the live site
+// (stardust/replica/motion/home.json, home-360.json + capture/chrome-open-{1440,360}.json), as the SAME
+// class / aria / inline-style state machine the live Vue component drives. Inert at t=0 for the gate.
+(function () {
+  // USTA SITES dropdown (1440): click toggles aria-expanded on the label button; the live CSS rule
+  // `.drop-down__label-wrapper[aria-expanded="true"] + .drop-down__select-list { display: block }` shows the list.
+  const dd = document.querySelector('.drop-down__label-wrapper');
+  const close = document.querySelector('.drop-down__close');
+  if (dd) {
+    const set = (open) => dd.setAttribute('aria-expanded', open ? 'true' : 'false');
+    dd.addEventListener('click', () => set(dd.getAttribute('aria-expanded') !== 'true'));
+    if (close) close.addEventListener('click', () => set(false));
+  }
+  // Hamburger (≤1369px): live moves the nav menu into the top bar at mobile widths; the click toggles
+  // aria-expanded, adds `top-navigation__top-bar--opened top-to-bottom` on #top-navigation-bar
+  // (transition top .3s), sets inline display:block on the menu and swaps the two icons by inline style.
+  const burger = document.querySelector('.top-navigation__logo-hamburger');
+  const topBar = document.getElementById('top-navigation-bar');
+  const menu = document.querySelector('.top-navigation__navigation-menu');
+  const mainBar = document.querySelector('.top-navigation__main-bar');
+  if (burger && topBar && menu && mainBar) {
+    const place = () => {
+      const mobile = window.matchMedia('(max-width: 1369px)').matches;
+      if (mobile && menu.parentElement !== topBar) topBar.appendChild(menu);
+      if (!mobile && menu.parentElement !== mainBar) { mainBar.appendChild(menu); menu.style.display = ''; }
+    };
+    place(); window.addEventListener('resize', place);
+    const icon = (cls) => burger.querySelector('.top-navigation__logo-hamburger--' + cls);
+    burger.addEventListener('click', () => {
+      const open = burger.getAttribute('aria-expanded') !== 'true';
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      topBar.classList.toggle('top-navigation__top-bar--opened', open);
+      topBar.classList.toggle('top-to-bottom', open);
+      menu.style.display = open ? 'block' : '';
+      if (icon('menu')) icon('menu').style.display = open ? 'none' : '';
+      if (icon('cancel')) icon('cancel').style.display = open ? 'inline' : '';
+    });
+  }
+})();
+
+</script>
+</body></html>

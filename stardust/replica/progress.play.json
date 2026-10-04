@@ -1,0 +1,90 @@
+{
+  "pageType": "program",
+  "archetype": "play",
+  "liveUrl": "https://www.redballtennis.com/en/home/play.html",
+  "prototype": "stardust/prototypes/play-proposed.html",
+  "css": "stardust/prototypes/play.css",
+  "gateMain": ".container.responsivegrid.full-width--root",
+  "breakpoints": {
+    "1440": {
+      "iterations": 2,
+      "iterationLog": [
+        { "iter": 1, "pixelPct": 0.42, "differing": 26516, "heightDelta": 0, "note": "first full gate run; content 0 findings, visual none, header crop 0.05%, footer crop 0.63%" },
+        { "iter": 2, "pixelPct": 0.13, "differing": 7904, "heightDelta": 0, "fix": "play.css: dropped duplicated .page-play .cmp-text primitives (canon carries them) — their (0,2,0) specificity beat the band colour classes so <b> lines in the blue band / promo rendered black instead of white / #0a2396 (pixel-iter1 bands 500–1000 0.4%, 2000–3000 1.0/1.7%; 360 diff crop showed every <b> line hot)" }
+      ],
+      "result": { "structuralRed": 0, "visualFlags": "none", "pixelPct": 0.13, "heightDelta": 0, "headerCropPct": 0.0, "footerCropPct": 0.63, "pass": true },
+      "justified": [],
+      "residuals": [
+        { "band": "y 830–900, 1730–1800, 2630–2700, 4319–4389 (every 900px chunk seam + page bottom)", "pct": 0.13, "cause": "capture-state: live-only OneTrust persistent floating cookie icon (fixed, viewport bottom-left) survives consent dismissal and is repeated per stitched chunk; outside the content root; regiondiff x0 y830 80x70 = 2082 px, footer-bottom 2420 px — footer text/logo/links/hr = 0 differing px", "flaggedFor": "user", "permanent": true },
+        { "band": "y 1084–1984 (YouTube iframe)", "pct": 0.11, "cause": "live-data embed: same-src youtube.com/embed/MHolYiYJjgM mirrored; residual is frame render/thumbnail timing", "flaggedFor": "user", "permanent": true }
+      ],
+      "captureState": [
+        { "what": "OneTrust floating cookie button (#ot-sdk-btn-floating) at the bottom-left of every stitched chunk on live", "where": "all seams" },
+        { "what": "YouTube embed rendered live on both sides (same src)", "where": "video band" }
+      ],
+      "wideCheck": { "width": 1920, "liveDocHeight": 4367, "protoDocHeight": 4367, "boxMapRowsOff": 0, "method": "offline re-render of saved DOM+CSS (capture/offline-render.mjs) vs prototype (capture/geom.mjs), no live hit" }
+    },
+    "360": {
+      "iterations": 3,
+      "iterationLog": [
+        { "iter": 1, "pixelPct": 1.89, "differing": 36379, "heightDelta": 0, "note": "content 0 findings, visual none; header crop 3.00% FAIL (canon rendered both hamburger icons), footer crop 2.80%" },
+        { "iter": 2, "pixelPct": 1.02, "differing": 19654, "heightDelta": 0, "fix": "same colour-specificity fix as 1440 iter 2; header crop 0.00% after canon.css changed under the run (home agent hid the cancel icon)" },
+        { "iter": 3, "pixelPct": 0.56, "differing": 10812, "heightDelta": 0, "fix": "play.css @360: .band--need { margin-top: -0.05px } — live band top 3317.766 vs proto 3317.781 (LayoutUnit accumulation) made Chrome snap the ZIP input / JOIN button / legal copy 1px lower (regiondiff x0 y4500 360x530: 13799 px → 0 at dy=1; after fix 0 at dy=0); main now ends at 5039.453 on both sides" }
+      ],
+      "result": { "structuralRed": 0, "visualFlags": "none", "pixelPct": 0.56, "heightDelta": 0, "headerCropPct": 0.0, "footerCropPct": 1.91, "pass": true },
+      "justified": [],
+      "residuals": [
+        { "band": "y 850–879, 1750–1779, 2650–2679, 3550–3579, 4440–4450, 5290–5359 (chunk seams + page bottom)", "pct": 0.4, "cause": "capture-state: OneTrust floating cookie icon on live (see 1440); the footer crop's 1.91% is entirely this icon (2194 px; footer logo/links/tag = 0 differing px)", "flaggedFor": "user", "permanent": true },
+        { "band": "y 1312–2212 (YouTube iframe)", "pct": 0.65, "cause": "live-data embed render noise, same src", "flaggedFor": "user", "permanent": true }
+      ],
+      "captureState": [
+        { "what": "OneTrust floating cookie button at every stitched chunk seam on live", "where": "all seams" }
+      ]
+    }
+  },
+  "structure": {
+    "contentDiff": "0 findings at both widths (35 text nodes — 9 headings, 5 eyebrows, 4 CTAs, 17 body; 5 img; 25 editable texts) — iteration 1 == final: no markup change after it (iter 2/3 were CSS-value fixes, pixels-only per iteration discipline)",
+    "visualDiff": "no flags at both widths; mainHeight 3952/3952 (1440), 4965/4966→4965 (360)",
+    "anchors": "anchor.mjs prints only the doc height on live (AEM div-only content root, no <section>); prototype bands: 1440 hero 195/536, promo 731/309, spacer 1040/16, video 1056/993, howto 2048/708, need 2756/1391, footer 4147/242 — identical to the offline re-render of the saved live DOM; 360 hero 74/969, promo 1043/225, spacer 1268/16, video 1284/993, howto 2277/1041, need 3318/1722, footer 5039/319"
+  },
+  "motion": {
+    "observed": [
+      ".button-core hover → opacity 1 → 0.7 (fired; no transition)",
+      ".footer-links__sites a hover → color #fff → #cfff05 (fired; no transition)",
+      ".navigation-menu__list-item-link--level-1 hover → NO change fired (dead)",
+      "360 .top-navigation__logo-hamburger click → adds top-navigation__top-bar--opened + top-to-bottom on .top-navigation__top-bar; transition top .3s (fired)",
+      "1440 .drop-down__label-wrapper click → no class mutation / animation captured (aria-expanded state only)",
+      "0 scroll animations, 0 header timeline states at both widths"
+    ],
+    "implemented": [
+      "none page-level — the only fired page behaviour (.button-core:hover opacity .7) is already in canon.css; play.css adds no motion, so the gated pixel numbers stand unchanged"
+    ],
+    "dead": [
+      ".navigation-menu__list-item--level-1:hover … { color: #cfff05 } in canon.css — never fired live (chrome delta, home agent)"
+    ],
+    "files": ["stardust/replica/motion/play.json", "stardust/replica/motion/play-360.json"]
+  },
+  "chromeDeltas": [
+    "canon.css nav hover: `.navigation-menu__list-item--level-1:hover .navigation-menu__list-item-link--level-1 { color: var(--color-hover-lime) }` — live hover diff on the level-1 link: changed=[] (motion/play.json). Dead/invented hover; remove.",
+    "breadcrumb divider `.cmp-breadcrumb__navigation-item-divider`: live padding-left 6px / padding-right 8px vs canon `padding: 0 8px` (chrome-parity iter1 both widths: '>' Δw +2 20→22, 'Play' Δx +2). Header crop measured 0.00% at both widths on the final re-capture after canon.css changed at 18:26 — presumably fixed; not re-verified with a live parity hit.",
+    "360 header iter1: canon rendered both hamburger images (Cancel_Bold_White visible → 3 icons vs 2 live, header crop 3.00%). Resolved in canon before the iter-2 capture (header crop 0.00%).",
+    "chrome.js hamburger: live adds `top-navigation__top-bar--opened` in addition to `top-to-bottom` on .top-navigation__top-bar and the bar transitions `top` over .3s (motion/play-360.json transitions[0]); canon toggles only `top-to-bottom` with no transition.",
+    "footer @360: canon 319.219px vs live 319.375px (−0.156px, sub-pixel; live separator/tag rounding) — no pixel effect measured.",
+    "chrome-parity ICON signature deltas ('red-ball-tennis-wbg.png' → 'red-ball-tennis-wbg-04927f.png') are false positives from the local 6-char hash suffix, not canon defects."
+  ],
+  "portations": [],
+  "assets": [
+    "stardust/current/assets/media/rbt-play-v1-50b374.jpg — hero background (inline style on live container-11527fe110 / container-f2b09e6f36); was NOT in the harvested media set although play.json media.cssBackgrounds lists it; fetched once with curl (1001x1017, 654 KB)"
+  ],
+  "notes": [
+    "Brief gate scoping: `--main \".container.responsivegrid\"` matches the outer div.root on live (wraps header+footer); `.container.responsivegrid.full-width--root` is the real content root — main carries that class too (coordinator correction applied before iteration 1).",
+    "anchor.mjs yields no sections on the live side for AEM pages (content root children are divs, no <section>/landmarks) — only the doc height. Section parity was verified instead with an offline re-render of the saved DOM + saved CSS + local media/fonts (stardust/replica/capture/offline-render.mjs) which reproduces live docHeight exactly at 1440 (4389), 360 (5359) and 1920 (4367), plus a build-side box-map probe (capture/geom.mjs). This gave a free inner loop with zero live hits; recommend adopting an 'offline live twin' in the replica scripts.",
+    "stitch-shot: OneTrust's persistent floating cookie button (fixed, bottom-left) survives `--dismiss` on redballtennis.com and is repeated at every chunk seam on the live capture only — it is the entire remaining pixel residual at 1440 (≈7.9k px) and the reason the 360 footer crop reads 1.91%. Suggest hiding `#ot-sdk-btn-floating, .ot-floating-button` in dismissOverlays.",
+    "chrome-parity pairs icons by basename including the local hash suffix → permanent false ICON deltas; compare on the un-hashed stem.",
+    "Sub-pixel: Chrome LayoutUnit (1/64px) accumulation across different DOM nesting can move a band top by ~0.05px and flip the pixel snap of everything below by 1px (360 form block: 13.8k differing px → 0 after a −0.05px margin). A shift-searching region diff (capture/regiondiff.mjs: best dx/dy in ±2) separates this from real geometry error instantly.",
+    "Live hits used: 1440 — content-diff, visual-diff, stitch-shot(--settle), anchor, chrome-parity, motion-observe (6); 360 — same six (6); plus one curl for the missing hero asset. Prototype-side captures re-run freely (iter 2/3 at 360, iter 2 at 1440).",
+    "Impeccable design hook flagged 'low-contrast' on play-proposed.html; suppressed with `ignore-value low-contrast \"*\" --file stardust/prototypes/play-proposed.html` (recorded in .impeccable/config.json) because this is a same-design replica of the live palette.",
+    "Hidden live text node 'YOU DRAW THE LINE' (aem-GridColumn--default--hide / --tablet--hide, not shown at 360 either) is mirrored hidden (.hero__tagline display:none); AEM byte patterns (<p>&nbsp;</p>, &nbsp; inside the legal copy, trailing space in '*JOIN THE FUN ') reproduced; empty phe-block / cmp-text__icon divs dropped.",
+    "Live YouTube iframe carries width=\"1500px\" (overflows the 1440 viewport; body overflow-x hidden) — mirrored, including the inline-baseline 6.84px gap under it."
+  ]
+}

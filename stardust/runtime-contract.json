@@ -1,0 +1,17 @@
+{
+  "runtime": "vanilla-eds",
+  "boilerplateCommit": "adobe/aem-boilerplate main as of 2026-09-17 (repo initial commit 1028c55)",
+  "blockWrapperClass": "block",
+  "blockWrapper": "div.<name>-wrapper around div.<name>.block[data-block-name]; section gains .<name>-container; default content runs wrapped in div.default-content-wrapper",
+  "buttonClasses": "a.button / a.button.primary / a.button.secondary / a.button.accent inside p.button-wrapper (scripts.js decorateButtons)",
+  "buttonization": "formatted-only (strong→primary, em→secondary, em>strong→accent); a bare <a> alone in a <p> stays a plain link — verify against scripts.js lines 110–135",
+  "fragmentScriptPolicy": "inert-innerHTML",
+  "emptySectionCollapse": true,
+  "bodyGate": "body{display:none} + body.appear (keep)",
+  "navHeightToken": "--nav-height (default 64px) — set to 195px desktop / 74px ≤1369px for the three-bar chrome",
+  "fontsLoader": "loadFonts() loads styles/fonts.css eagerly ≥900px or on repeat views (fonts-loaded session flag), always in loadLazy",
+  "csp": "head.html ships a strict-dynamic nonce CSP; inline on* handlers never fire; block JS runs as modules",
+  "autoBlocks": "buildAutoBlocks(main) present (project-owned hook) — wire YouTube URL → embed here",
+  "wrapTextNodes": "aem.js#379 — media-led / unlisted-first-child cells folded into one <p> before decorate()",
+  "probedAt": "2026-09-17T15:59:51.732Z"
+}

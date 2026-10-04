@@ -1,0 +1,8 @@
+doc height 5359px  (http://localhost:8793/stardust/prototypes/play-proposed.html @ 360)
+  y     74  h   969  band.band--hero
+  y   1043  h   225  band.band--promo
+  y   1268  h    16  band.band--spacer
+  y   1284  h   993  band.band--video
+  y   2277  h  1041  band.band--howto
+  y   3318  h  1722  band.band--need
+  y   5040  h   319  footer
